@@ -1,0 +1,66 @@
+// This file has been created by ERGOSIGN GmbH - All rights reserved - http://www.ergosign.de
+// DO NOT ALTER OR REMOVE  THIS COPYRIGHT NOTICE OR THIS FILE HEADER.
+//
+// This file and the code contained in it are subject to the agreed contractual terms and conditions,
+// in particular with regard to resale and publication.
+
+
+//.checkbox{
+//  input {
+//    //outline: 1px solid blue;
+//    box-shadow: inset 5px 5px 5px red;
+//
+//
+//
+////    width: 12px;
+////    height: 12px;
+//
+//    -moz-appearance:none;
+//    -webkit-appearance:none;
+//    -o-appearance:none;
+//  }
+//}
+
+//.regular-checkbox {
+//  -webkit-appearance: none;
+//  background-color: #fafafa;
+//  border: 1px solid #cacece;
+//  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+//  padding: 9px;
+//  border-radius: 3px;
+//  display: inline-block;
+//  position: relative;
+//}
+.regular-checkbox {
+    display: none;
+}
+
+.regular-checkbox + label {
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+.regular-checkbox + label:active, .regular-checkbox:checked + label:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.regular-checkbox:checked + label {
+    background-color: #e9ecee;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: #99a1a7;
+}
+
+.regular-checkbox:checked + label:after {
+    content: '\2714';
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: #99a1a7;
+}

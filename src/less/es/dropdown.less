@@ -1,0 +1,170 @@
+// This file has been created by ERGOSIGN GmbH - All rights reserved - http://www.ergosign.de
+// DO NOT ALTER OR REMOVE  THIS COPYRIGHT NOTICE OR THIS FILE HEADER.
+// 
+// This file and the code contained in it are subject to the agreed contractual terms and conditions,
+// in particular with regard to resale and publication.
+
+//== Dropdown
+//
+//## Styling for Dropdowns
+.dropdown {
+    min-width: 160px;
+    padding: 0;
+    .box-shadow(none);
+    display: inline-block;
+    width: auto;
+
+    .dropdown-toggle {
+        background-color: @input-bg;
+        border: 1px solid @es-gray-40;
+        margin-bottom: 0;
+        min-width: inherit;
+        text-align: left;
+        padding: 5px 18px 2px 5px; //caret position absolute
+
+        &:hover {
+            border-color: @es-gray-60;
+        }
+
+        &.btn-icon-toolbar {
+            background-color: transparent;
+            border-color: transparent;
+
+            &:hover {
+                background-color: @es-gray-20;
+            }
+
+            &:active {
+                background-color: @es-gray-40;
+            }
+        }
+
+        .icon {
+            margin-right: 5px;
+        }
+
+        b.caret {
+            position: absolute;
+            right: 6px;
+            top: 12px;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 5px solid black;
+        }
+    }
+
+    &.open .dropdown-toggle {
+        border: 1px solid @es-mid-blue;
+    }
+
+    > li > a {
+        height: 36px;
+        line-height: 36px;
+        padding: 0px 10px 0px 10px;
+    }
+
+    // Active and pressed state
+    > .active,
+    :active {
+        > a {
+            &,
+            &:hover,
+            &:focus {
+                color: @dropdown-link-active-color;
+                text-decoration: none;
+                outline: 0;
+                background-color: @dropdown-link-active-bg;
+            }
+        }
+    }
+
+    // Hover/Focus state
+    > li > a {
+        &:hover,
+        &:focus {
+            color: @dropdown-link-hover-color;
+            background-color: @dropdown-link-hover-bg;
+        }
+    }
+
+    // selected state
+    > .selected > a {
+        background-color: @es-green-20;
+    }
+
+
+
+    //== Dropdown
+    //
+    //## Styling for Dropdowns
+    // http://harvesthq.github.io/chosen/  see http://stackoverflow.com/questions/13575531/what-are-the-differences-between-chosen-and-select2
+    // https://github.com/silviomoreto/bootstrap-select Attention: Work in Progress, but MIT License
+
+    // http://ivaynberg.github.io/select2/#basics GPL Lic, otherwise would be great
+    // http://gregfranko.com/jquery.selectBoxIt.js/?Examples jQuery UI needed (which has javascript-based events)
+
+    // also see dropdown variables in custom-variables.less
+    > .dropdown-menu {
+        //min-width: 160px;
+        min-width: 100%;
+        width: auto;
+        padding: 0;
+        margin-top: 0;
+        .box-shadow(none);
+
+        > li > a {
+            height: 36px;
+            line-height: 36px;
+            padding: 0px 10px 0px 10px;
+        }
+
+        // Active and pressed state
+        > .active,
+        :active {
+
+            > a {
+                &,
+                &:hover,
+                &:focus {
+                    color: @dropdown-link-active-color;
+                    text-decoration: none;
+                    outline: 0;
+                    background-color: @dropdown-link-active-bg;
+                }
+            }
+        }
+
+        // Hover/Focus state
+        > li > a {
+
+            &:hover,
+            &:focus {
+                color: @dropdown-link-hover-color;
+                background-color: @dropdown-link-hover-bg;
+            }
+        }
+
+        // selected state
+        > .selected > a {
+            background-color: @es-green-20;
+        }
+    }
+
+}
+
+//Without javascript
+.no-js .dropdown {
+
+    > a:hover {
+        cursor: default !important;
+    }
+
+    a:hover + .dropdown-menu, .dropdown-menu:hover {
+        display: block;
+    }
+
+    a.disabled:hover + .dropdown-menu {
+        display: none !important;
+    }
+}
+

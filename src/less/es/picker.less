@@ -1,0 +1,134 @@
+// This file has been created by ERGOSIGN GmbH - All rights reserved - http://www.ergosign.de
+// DO NOT ALTER OR REMOVE  THIS COPYRIGHT NOTICE OR THIS FILE HEADER.
+// 
+// This file and the code contained in it are subject to the agreed contractual terms and conditions,
+// in particular with regard to resale and publication.
+
+//== Picker
+//
+//## Styling for Picker
+.picker {
+    margin-top: 12px;
+    border: 0;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+    //Month / year arrow left and right switch
+    .arrow-left {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-right: 7px solid @es-dark-gray;
+        border-right-color: @es-dark-gray;
+        display: inline-block;
+    }
+    .arrow-right {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 7px solid @es-dark-gray;
+        border-left-color: @es-dark-gray;
+        display: inline-block;
+    }
+
+    &.dropdown-menu {
+        border-radius: 0;
+        border: 0;
+        padding: 0;
+        -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &.picker-dropdown {
+        &:before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+        }
+
+        &.picker-orient-left:before,
+        &.picker-orient-left:after,
+        &.picker-orient-right:before,
+        &.picker-orient-right:after {
+            left: 50%;
+            left: calc(50% - 4px);
+        }
+
+        &.picker-orient-top {
+            &:before, &:after {
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-bottom: 7px solid @es-green-60;
+                border-bottom-color: @es-green-60;
+                top: -7px;
+            }
+
+            > div {
+                border-top: 5px solid @es-green-60;
+            }
+        }
+
+        &.picker-orient-bottom {
+            margin-top: -12px;
+
+            &:before, &:after {
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-top: 7px solid @es-green-60;
+                border-top-color: @es-green-60;
+                top: auto;
+                bottom: -7px;
+            }
+
+            > div {
+                border-bottom: 5px solid @es-green-60;
+            }
+        }
+    }
+
+
+
+
+    > div {
+        padding: 5px;
+        display: block;
+    }
+
+    table {
+        border-collapse: separate;
+
+        tr {
+            td {
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                font-size: 13px;
+                padding: 0 !important;
+                text-shadow: 0 1px 0 @es-white;
+                color: @es-dark-gray;
+                border: 1px solid transparent;
+                border-radius: 0;
+                text-align: center;
+            }
+            //td
+        }
+        //tr
+    }
+    //table
+
+    .table {
+        margin-bottom: 0;
+        border-collapse: collapse;
+
+        tr {
+            border-bottom: 1px dotted @es-light-gray-D;
+
+            td {
+                font-size: 14px;
+                padding: 5px 10px 5px 5px !important;
+                text-shadow: none;
+                border: 0;
+                text-align: left;
+            }
+        }
+    }
+}

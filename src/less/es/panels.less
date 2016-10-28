@@ -1,0 +1,228 @@
+@panel-collapsible-chevron-up-iconfont-glyph: "\e624";
+@panel-collapsible-chevron-right-iconfont-glyph: "\e623";
+
+
+//## Styling for Dashboard Widget
+.panel {
+    box-shadow: none;
+    margin: 10px 0px 0;
+    padding: 0 5px;
+    //border-top: 5px solid transparent;
+    border: none;
+
+    &.panel-transparent {
+        background-color: transparent;
+        margin-top: 15px;
+
+        .panel-heading {
+
+            .btn {
+                float: right;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    &.panel-yellow {
+        border-top: 5px solid @es-yellow;
+    }
+
+    &.panel-orange {
+        border-top: 5px solid @es-orange;
+    }
+
+    &.panel-red {
+        border-top: 5px solid @es-red;
+    }
+
+    &.panel-dark-red {
+        border-top: 5px solid @es-dark-red;
+    }
+
+    &.panel-light-blue {
+        border-top: 5px solid @es-light-blue;
+    }
+
+    &.panel-mid-blue {
+        border-top: 5px solid @es-mid-blue;
+    }
+
+    &.panel-blue {
+        border-top: 5px solid @es-blue;
+    }
+
+    &.panel-dark-blue {
+        border-top: 5px solid @es-dark-blue;
+    }
+
+    &.panel-light-green {
+        border-top: 5px solid @es-light-green;
+    }
+
+    .panel-heading {
+        color: @es-mid-gray;
+        min-height: 33px;
+        line-height: inherit;
+        padding: 5px 0 0;
+        border-bottom: 1px dotted @es-gray-100;
+        font-size: 18px;
+        margin-top: 2px;
+
+        > .icon {
+            margin-right: 10px;
+            margin-left: 2px;
+        }
+    }
+
+    .panel-body {
+    	padding:  5px 0;
+
+        .form-group {
+            margin-bottom: 0px;
+
+            .sub-heading {
+                font-size: 18px;
+            }
+
+            .contact-image {
+                margin: 5px 0px;
+            }
+
+            dt {
+                .pull-left();
+                font-weight: normal;
+                clear: both;
+                margin-bottom: 5px;
+            }
+
+            dd {
+                .pull-left();
+                font-weight: bold;
+                padding-left: 5px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+
+//== Expander
+//
+//## Styling for Expander based on the bootstrap sytling for a panel
+
+.panel-group {
+
+	margin-bottom:  10px;
+
+    &.panel-grey-back {
+      background: @es-light-gray-A;
+      padding: 10px 7px;
+      border-bottom: 1px dotted @es-light-gray-C;
+    }
+
+	.panel,
+	.panel .panel-heading {
+		background: transparent;
+		margin:  0;
+		border:  0;
+		height:  auto;
+		line-height:  inherit;
+	}
+
+	.panel-title {
+		font-size: inherit;
+		display: block;
+		height:  28px;
+
+		> a,
+		> span {
+			display: inline-block;
+			float:  left;
+           // min-width: 150px;
+
+            &:hover,
+            &:focus { text-decoration: none; }
+
+            .icon {
+                margin-top: -2px; //finetuning
+
+                &:before {
+                    margin-right:  5px;
+                    content: @panel-collapsible-chevron-up-iconfont-glyph;
+                }
+            }
+		}
+
+        > a {
+            &:hover { color: @es-green-100; }
+        }
+
+
+
+        > a.collapsed > .icon:before {
+            content: @panel-collapsible-chevron-right-iconfont-glyph;
+        }
+
+		.btn-toolbar {
+			display: inline-block;
+			float:  left;
+			margin: 0;
+			padding: 0 5px;
+		}
+	}
+
+	.panel {
+		clear: both;
+
+		.panel-body {
+			padding:  5px 0 0;
+
+			.panel {
+				padding: 0;
+
+				.panel-title {
+					font-size:  @font-size-h5;
+                  > a,
+                  > span {
+                   // min-width: 126px;
+                    padding-left: 23px;
+                  }
+				}
+
+                .panel-body {
+                  p {
+                    margin-left: 20px;
+                  }
+                }
+			}
+		}
+	}
+}
+
+
+.panel-groupline-container {
+    display: block;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+
+    .panel-groupline  {
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        height: 10px;
+        right: 0;
+        border-top: 1px dotted @es-light-gray-C;
+    }
+
+    &.static {
+        margin-top: 10px;
+        overflow: visible;
+    }
+}
+
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body,
+.panel-group .panel-heading + .panel-collapse .panel-body {
+	border:  0;
+}

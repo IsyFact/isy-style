@@ -1,0 +1,42 @@
+/* 
+removed because of DSD-2090
+div.has-feedback div.input-group input.form-control + button.btn-icon, div.has-feedback div.input-group input.form-control + a.btn-tooltip {
+    right: 34px;
+}
+*/
+.input-group .form-control + button.btn-icon, .input-group .form-control + a.btn-tooltip, .has-feedback .input-group .form-control + a.btn-tooltip {
+    border: 0 none;
+    bottom: 2px;
+    margin: 0;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    width: auto;
+    z-index: 2;
+}
+
+.form-control + a.btn-tooltip {
+    padding: 0;
+}
+
+.form-control + a.btn-tooltip .input-group-addon {
+    width: auto;
+    border: none;
+}
+
+.btn.btn-icon.btn-icon-small.input-group-addon.input-only:hover {
+    pointer-events: auto;
+    cursor: auto;
+    background-color: none;
+}
+
+.btn.btn-icon.btn-icon-small.input-group-addon.input-only[disabled] {
+    pointer-events: auto;
+    cursor: auto;
+    opacity: 1;
+}
+
+.form-control[disabled].button-only {
+    cursor: auto;
+}
+

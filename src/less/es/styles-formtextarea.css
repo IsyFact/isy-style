@@ -1,0 +1,20 @@
+
+/* isy:formtextarea */
+.formtextareavieraugenlink {
+    right: 24px !important; 
+    width: 24px !important; 
+}
+
+.formtextareavieraugenbutton {
+    right: 38px;
+    top: 0px;
+    position: absolute;
+}
+
+.formtextareavieraugenhaserror {
+    top: 0px;
+    right: 12px;
+    position: absolute;
+}
+
+

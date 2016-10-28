@@ -1,0 +1,119 @@
+//
+// Modal Styles
+// --------------------------------------------------
+
+// Modal styles are defined here
+
+.modal {
+    &.in {
+        display: table !important;
+        height: 100% !important;
+        padding: 40px;
+        width: auto;
+        margin: auto;
+    }
+
+    .modal-dialog {
+// Modale Dialoge werden in Chrome und Internet Explorer linksbündig dargestellt, daher die folgende Änderung
+//      width: auto;
+        min-width: 920px;
+        max-width: 1100px;
+        display:table-cell;
+        vertical-align:middle;
+        margin: 0 auto;
+
+        .modal-content {
+            background-color: @es-light-gray-B;
+            border-radius: 0 !important;
+            border: 0;
+
+            .modal-header {
+                height: 50px;
+                line-height: 50px;
+                padding: 10px;
+                border-top: solid 8px @es-green-100;
+                border-bottom: 1px dotted @es-gray-60;
+
+                h4 {
+                    font-size: 16px;
+                    font-weight: bold;
+
+                    span {
+                        font-size: 14px;
+                        font-weight: normal;
+                        padding-left: 20px;
+                    }
+                }
+
+
+                &.modal-yellow {
+                    border-top-color: @es-yellow;
+                }
+
+                &.modal-orange {
+                    border-top-color: @es-orange;
+                }
+
+                &.modal-red {
+                    border-top-color: @es-red;
+                }
+
+                &.modal-dark-red {
+                    border-top-color: @es-dark-red;
+                }
+
+                &.modal-light-blue {
+                    border-top-color: @es-light-blue;
+                }
+
+                &.modal-mid-blue {
+                    border-top-color: @es-mid-blue;
+                }
+
+                &.modal-blue {
+                    border-top-color: @es-blue;
+                }
+
+                &.modal-dark-blue {
+                    border-top-color: @es-dark-blue;
+                }
+
+                &.modal-light-green {
+                    border-top-color: @es-light-green;
+                }
+            }
+
+            .modal-body {
+                padding: 10px 12px;
+
+              > .form-horizontal {
+                margin-top: 10px;
+              }
+            }
+
+            .modal-footer {
+                border-top: 1px dotted @es-gray-60;
+                height: 58px;
+
+                button {
+                    margin-bottom: 10px; //override: .modal-footer .btn + .btn
+                }
+
+                .btn-separator-lg:hover, .btn-separator-lg:active {
+                    background-color: transparent;
+                    cursor: default;
+                }
+            }
+
+        } //modal-content
+    }
+}
+
+.modal-backdrop.in {
+    opacity: 0.25;
+}
+
+//NON JS
+.no-js-dialog {
+    margin: 0 12px;
+}

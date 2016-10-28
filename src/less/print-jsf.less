@@ -1,0 +1,193 @@
+@import "styles-jsf.less";
+
+.header-colorbar {
+    display: none;
+}
+
+.navbar {
+    display: none;
+}
+
+.toolbar {
+    display: none;
+}
+
+.print-headline {
+    display: block;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.print-metainformation {
+    display: block;
+    margin-bottom: 15px;
+    border-width: 2px;
+    border-style: solid;    
+}
+
+.icon-nojs {
+    display: none;
+}
+
+#content>div>div>div>div>div.col-lg-2.linksNavigationAbstandRechts {
+    display: none;
+}
+
+#content>div.container-fluid.maincontent>div>div.col-lg-3 {
+    display: none;
+}
+
+#content>div.container-fluid.maincontent>div>div.col-lg-9 {
+    width: 100%;
+}
+
+body>.outer-container.show-info-panel:after {
+    background-color: #FFFFFF;
+    border-left: 0px;
+}
+
+body>.outer-container:before {
+    background-color: #FFFFFF;
+}
+
+#content>div.container-fluid.maincontent>div>div>div>div.col-lg-10 {
+    width: 100%;
+}
+
+body>div>div.main-header>div.header-content>div>form>button {
+    visibility: hidden;
+}
+
+
+body {
+    min-width: 900px;
+    max-width: 1024px;
+}
+
+body > div > div.main-header > div.header-content > div > form > a {
+    display: inline;
+}
+
+.form-label {
+  height : auto;
+  word-wrap: break-word;
+}
+
+a {
+  pointer-events: none;
+}
+
+/* Druckansicht: Deaktivierte button-Tags mit schwarzer Schrift darstellen. */
+button.btn, button.btn[disabled] {
+	color: @es-black;
+	opacity: 1;
+}
+
+/* Druckansicht: Header mit schwarzer Schrift darstellen. */
+.table thead tr th {
+	color: @es-black;
+	a {
+		color: @es-black;
+	}
+}
+
+// ##############################################################
+// ### Form-Elemente
+// ##############################################################
+// Deaktiverte Checkboxen sollen nicht das eigentliche Input Feld darstellen, da ein transparentes PNG Image über das Input-Feld gerendert wird.
+.checkbox label input[disabled] {
+  display:none
+}
+  
+select {
+  border: 1px solid #e1e3e6;
+}
+
+/* Standard-Buttons ausblenden. */
+.btn-default {
+    visibility: hidden;
+}
+
+.header-content button {
+	display: none;
+}
+
+// Für Checkboxen und Radiobuttons soll in der Druckansicht das Bild mit dem Attribut "content" statt "background" angegeben werden, damit es dargestellt wird.
+.checkbox, 
+.checkbox-inline {
+
+	input + span {
+		padding-left: 18px;
+	}
+
+	input[type="checkbox"]:checked + span:before {
+		content: url("../img/controls/cb_checked_default.png");
+	}
+	
+	input[type="checkbox"]:checked:required + span {
+		color: @es-gray-100;
+		&:before { 
+			content: url("../img/controls/cb_checked_default.png");
+			border-color:  @es-gray-60;  	
+		}
+	}
+	
+	input[type="checkbox"]:checked:required:focus + span {
+		color: @es-gray-100;
+		&:before { 
+			content: url("../img/controls/cb_checked_focused.png");
+			border-color:  @es-mid-blue;  	
+		}
+	}
+	
+	input[type="checkbox"]:checked:disabled + span {
+		cursor:  default;
+		&:before {
+		content: url("../img/controls/cb_checked_disabled.png");
+		}
+	}	
+
+	input[type="checkbox"]:checked:focus + span:before { 
+		content: url("../img/controls/cb_checked_focused.png");
+	}
+
+  input[type="checkbox"]:indeterminate + span:before {
+    content: url("../img/controls/cb_tristate.png");
+  }
+}
+
+.radio, 
+.radio-inline {
+	
+	input[type="radio"]:checked + span:before { 
+		content: url("../img/controls/rb_checked_default.png");
+	}
+	
+	input[type="radio"]:checked:required + span {
+		color: @es-gray-100;
+		&:before { 
+			content: url("../img/controls/rb_checked_default.png");
+			border-color:  @es-gray-60;  	
+		}
+	}
+	
+	input[type="radio"]:checked:required:focus + span {
+		color: @es-gray-100;
+		&:before { 
+			content: url("../img/controls/rb_checked_focused.png");
+			border-color:  @es-mid-blue;  	
+		}
+	}
+	
+	input[type="radio"]:checked:disabled + span {
+		cursor:  default;
+		&:before { 
+			content: url("../img/controls/rb_checked_disabled.png");
+		}
+	}
+	input[type="radio"]:checked:focus + span:before { 
+		content: url("../img/controls/rb_checked_focused.png");
+	}	
+}

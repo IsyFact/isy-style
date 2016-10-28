@@ -1,0 +1,220 @@
+/*
+this inherits
+
+
+from bootstrap/print.less:
+
+
+@media print {
+
+  * {
+    text-shadow: none !important;
+    color: #000 !important; // Black prints faster: h5bp.com/s
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  // Don't show links for images, or javascript/internal links
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group; // h5bp.com/t
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  // Chrome (OSX) fix for https://github.com/twbs/bootstrap/issues/11245
+  // Once fixed, we can just straight up remove this.
+  select {
+    background: #fff !important;
+  }
+
+  // Bootstrap components
+  .navbar {
+    display: none;
+  }
+  .table {
+    td,
+    th {
+      background-color: #fff !important;
+    }
+  }
+  .btn,
+  .dropup > .btn {
+    > .caret {
+      border-top-color: #000 !important;
+    }
+  }
+  .label {
+    border: 1px solid #000;
+  }
+
+  .table {
+    border-collapse: collapse !important;
+  }
+  .table-bordered {
+    th,
+    td {
+      border: 1px solid #ddd !important;
+    }
+  }
+
+}
+
+
+
+
+
+
+from bootstrap/responsive-utilities.less:
+
+.visible-print {
+  .responsive-invisibility();
+
+  @media print {
+    .responsive-visibility();
+  }
+}
+.visible-print-block {
+  display: none !important;
+
+  @media print {
+    display: block !important;
+  }
+}
+.visible-print-inline {
+  display: none !important;
+
+  @media print {
+    display: inline !important;
+  }
+}
+.visible-print-inline-block {
+  display: none !important;
+
+  @media print {
+    display: inline-block !important;
+  }
+}
+
+.hidden-print {
+  @media print {
+    .responsive-invisibility();
+  }
+}
+
+
+*/
+
+.print { //in browser view of a printable page
+
+    > .outer-container:before {
+        background-color: @es-white;
+    }
+
+    .print-breadcrumb {
+        font-size: 16px;
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 40px; //distance to print button
+
+        > span {
+            font-weight: normal;
+        }
+    }
+
+    .print-meta {
+        float: right;
+        display: inline-block;
+        line-height: 40px;
+
+    }
+
+}
+
+@media print {
+    * {
+        //do some things on all elements
+
+        //force the browser to print some more colored faces in safari and chrome, e.g. the header-colorbar
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    > .outer-container:before {
+        background-color: @es-white;
+    }
+
+
+    //we want the decorating bar
+    .header-colorbar {
+        display: block !important;
+        height: 10px !important;
+        background: @es-theme-color !important;
+
+        &:before { //only visible if the print settings allow background colors
+            content: "";
+            display: block;
+            height: 10px !important;
+            background: @es-theme-color !important;
+        }
+    }
+
+    .header-content > .pull-right > .btn-group {
+        //hide the form and buttons in the header
+        display: none !important;
+    }
+
+    .arrow-right { display: none !important; }
+    .arrow-down { display: none !important; }
+    .panel {
+        background-color: @es-white;
+    }
+
+    //Buttons und co
+    input[type="submit"], button, .btn-group, .btn-toolbar, .toolbar {
+        display: none;
+    }
+}
+

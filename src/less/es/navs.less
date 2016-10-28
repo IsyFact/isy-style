@@ -1,0 +1,496 @@
+//
+// Navigation Styles
+// --------------------------------------------------
+
+// Navigation styles are defined here
+
+//== Main navigation
+//
+//## Styling for Main navigation
+
+.navbar {
+    list-style: none;
+	margin-bottom:  0;
+	padding:  0;
+	min-height:  0;
+	background-color: transparent;
+	border: 0;
+	
+    > .navbar-color {
+        background-color: @es-dark-blue;
+        min-height: 15px;
+        float:  left;
+        width:  100%;
+        padding-left: 10px;
+
+        &.orange {
+        	background-color: @es-orange;
+        }
+        
+        &.green {
+        	background-color: @es-green-80;
+            color: @es-white;
+        }
+        
+        &.lightBlue {
+        	background-color: @es-light-blue;
+        }
+        
+        &.yellow {
+        	background-color: @es-yellow;
+        }
+        
+        &.red {
+        	background-color: @es-red;
+        }
+    }
+    
+    .nav {
+
+    	&.nav-tabs {
+    		margin: 0 10px  2px;
+    		 &:extend(.clearfix all);
+
+    		> li {
+    			border: 0;
+    			min-width: 0;
+    			padding-bottom:  0;
+    			position:  static;
+    			
+    			> a {
+    				margin:  0;
+    				font-size: 16px;
+    				color: @es-mid-gray;
+    				padding: 4px 15px 2px;
+    			}
+    			
+    			&.active {
+    			
+                  &:after{
+                    display: none;
+                  }
+                  
+    				> a {
+    					font-weight: bold;
+    					color: @es-green-100;
+    					border: 0;
+
+                        //arrow indicator for the selected overlay
+    					&:after {
+    						border-top:  8px solid @es-white;
+    						border-right: 10px solid transparent;
+    						border-left: 10px solid transparent; 
+    						content: "";
+    						bottom: -8px;
+    						content: "";
+    						left: 50%;
+    						margin-left: -8px;
+    						position: absolute;
+    						
+    					}
+    				}
+    				
+    				&:hover, 
+    				&:focus {
+    					> a:after {
+    						z-index: 10000;
+    					}
+    				}
+    			}
+
+                &:focus {
+                    margin: -1px;
+                    border: 1px solid @es-mid-blue;
+                    outline: 0;
+                }
+
+    			// show submenu on hover
+    		    &:hover,
+                &:focus {
+
+                    //style the link itself
+                    > a {
+                        color: @es-green-80;
+                        text-decoration: none;
+
+                        //arrow indicator
+                        &:after {
+                            border-top:  8px solid @es-white;
+                            border-right: 10px solid transparent;
+                            border-left: 10px solid transparent;
+                            content: "";
+                            bottom: -8px;
+                            content: "";
+                            left: 50%;
+                            margin-left: -8px;
+                            position: absolute;
+                            z-index:  10000; //move to front higher than navbar-submenu
+                        }
+                    }
+                }
+
+                &.open {
+
+                  &:hover,
+                  &:focus {
+
+                    > .navbar-submenu {
+                      display: none ;
+                    }
+                  }
+
+                  > .navbar-submenu {
+                    display: block !important;
+                  }
+
+                }
+
+    			// submenu
+    			> .navbar-submenu {
+    				display: none; //hide initially
+    				position: absolute;
+    				width: 100%;
+    				left: 0;
+    				right: 0;
+    				min-height: 100px;
+    				background: @es-gray-20;
+    				left: 0px;
+    				z-index: 9999; //move to the front
+    				.box-shadow(0px 3px 2px -2px rgba(0,0,0,0.3));
+    				overflow: hidden;
+    				border-top:  15px solid @es-dark-blue;
+    				padding: 10px 15px;
+    				
+    				&.orange {
+    					border-color: @es-orange;
+    				}
+    				
+    				&.green {
+    					border-color: @es-green-80;
+    				}
+    				
+    				&.lightBlue {
+    					border-color: @es-light-blue;
+    				}
+    				
+    				&.yellow {
+    					border-color: @es-yellow;
+    				}
+    				
+    				&.red {
+    					border-color: @es-red;
+    				}
+    				
+    				&:hover,
+    				&:focus {
+    					display: block;
+    				}
+    				
+    				.submenu-text {
+    					display: table;
+    					vertical-align: middle;
+    					
+    					> .icon {
+    						display: table-cell;
+    						min-height: 100%;
+    						vertical-align: middle;
+    						font-size: 64px;
+    						color:  @es-gray-40;
+    					}
+    					
+    					> p {
+    						display: table-cell;
+    						min-height: 100%;
+    						vertical-align: middle;
+    						padding-left:  10px;
+    						font-size:  12px;
+    					}
+    				}
+
+                    //submenu item
+    				a {
+    					padding: 8px 10px 5px;
+    					border:  1px solid transparent; 
+    					border-bottom: 1px dotted @es-gray-60;
+    					display:  block;
+    					
+
+                        &:hover {
+                            background: @es-gray-40;
+                            text-decoration: none;
+                            color:  inherit;
+                            border-bottom: 1px dotted @es-gray-40;
+                        }
+
+                        &:active {
+                            background-color: @es-gray-60;
+                            .box-shadow(none);
+                            color:  @es-white;
+                        }
+
+                        &.active {
+                          background-color: @es-green-40;
+                          .box-shadow(none);
+                          color:  inherit;
+                          font-weight: bold;
+                          border-bottom: 1px dotted @es-green-40;
+                        }
+
+                        &:focus {
+                            border:  1px solid @es-mid-blue;
+                          text-decoration: none;
+                        }
+
+                        &.disabled,
+                        &[disabled],
+                        fieldset[disabled] & {
+                            .opacity(0.5);
+                        }
+    				}
+    			}
+    		}
+
+          /*li.open + li {
+            > .navbar-submenu{
+              display: none !important;
+              min-height: 300px;
+            }
+          }*/
+    	}
+    }
+}
+
+// Special style if javascript is deactivated
+.no-js {
+
+  .navbar {
+
+    .nav {
+
+      &.nav-tabs {
+
+        > li {
+
+          // show submenu on hover
+          &:hover,
+          &:focus {
+
+            > .navbar-submenu {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//== Sub navigation 1 (as part of main nav)
+//
+//## Styling for Sub navigation 1 (as part of main nav)
+
+//== Sub navigation 2 (vertical)
+//
+//## Styling for Sub navigation 2 (vertical)
+.nav.nav-pills.nav-stacked {
+
+    li {
+        color: @es-dark-gray;
+        background-color: @es-gray-20;
+
+        & + li {
+            margin-top: 0px;
+
+        }
+
+        > a {
+          padding: 10px 10px 10px 20px;
+            color: @es-dark-gray;
+
+            &:hover {
+                background-color: @es-gray-40;
+            }
+        }
+
+        &.active {
+
+            > a {
+                background-color: @es-green-40;
+                font-weight: bold;
+            }
+
+            &:after {
+              border-left: 12px solid @es-green-40;
+              border-top: 8px dashed transparent;
+              border-bottom: 8px dashed transparent;
+              content: "";
+              margin-top: -8px;
+              position: absolute;
+              right: -12px;
+              top: 50%;
+            }
+        }
+
+        &:active {
+
+            > a {
+                background-color: @es-gray-60;
+            }
+        }
+
+        &.group-header {
+          padding: 12px 10px 5px ;
+          text-transform: uppercase;
+
+          > h5 {
+            text-transform: none;
+            margin:0;
+          }
+        }
+
+
+
+      & + li.group-header {
+        border-top: 1px dotted @es-light-gray-C;
+      }
+    }
+}
+
+//== Inner tabs
+//
+//## Styling for inner tabs
+.nav.nav-tabs {
+    color: @es-dark-gray;
+    border: none;
+    margin-bottom: 20px;
+
+    li {
+        border-left: 1px solid @es-gray;
+        height: 28px;
+
+        &:first-child {
+            border-left: none;
+            margin-left: -5px;
+        }
+
+        a {
+            border: none;
+            background-color: transparent;
+            margin-right: 5px;
+            margin-left: 5px;
+            padding: 4px 10px;
+            color: @es-dark-gray;
+
+            // reset bootstrap default states
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                border: none;
+                background-color: transparent;
+                color: @es-green-100;
+            }
+
+        }
+
+        &.active {
+
+            > a {
+                color: @es-green-100;
+                border-bottom: 2px solid @es-green-100;
+            }
+
+            &:after {
+              border-top: 6px solid @es-green-100;
+              border-left: 6px solid transparent;
+              border-right: 6px solid transparent;
+              content: "";
+              position: absolute;
+              left: 50%;
+              margin-left: -6px;
+
+            }
+        }
+    }
+
+}
+
+//== Wizard Steps
+//
+//## Styling for Wizard Steps
+
+.nav.nav-wizard {
+    padding: 0;
+    margin: 0 0 60px 0;
+
+    li {
+        border-left: none;
+        height: 50px;
+        text-align: center;
+        min-width: 200px;
+
+        a {
+            border: none;
+            background-color: transparent;
+            margin-right: 5px;
+            margin-left: 5px;
+            padding: 4px 10px;
+            color: @es-dark-gray;
+            vertical-align: middle;
+
+            &:hover .icon,
+            &:active,
+            &.active {
+                color: @es-dark-gray;
+            }
+
+            span {
+                vertical-align: middle;
+            }
+
+            > .step {
+                margin-right: 5px;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            > .icon {
+                margin-left: 5px;
+                visibility: hidden;
+            }
+        }
+
+        &.active {
+
+          &:after {
+            border-top: 8px solid @es-green-100;
+            border-left: 8px dashed transparent;
+            border-right: 8px dashed transparent;
+            margin-left: -8px;
+
+          }
+
+            > a {
+                color: @es-dark-gray;
+                border-bottom: 5px solid @es-green-100;
+            }
+        }
+
+        &.done {
+
+            .icon {
+                visibility: visible;
+            }
+        }
+
+        &.disabled,
+        &[disabled] {
+            color: @es-light-gray-E;
+
+            > a {
+                color: @es-light-gray-E;
+            }
+        }
+    }
+}

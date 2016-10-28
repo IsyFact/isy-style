@@ -1,0 +1,123 @@
+// This file has been created by ERGOSIGN GmbH - All rights reserved - http://www.ergosign.de
+// DO NOT ALTER OR REMOVE  THIS COPYRIGHT NOTICE OR THIS FILE HEADER.
+// 
+// This file and the code contained in it are subject to the agreed contractual terms and conditions,
+// in particular with regard to resale and publication.
+
+//== Picker
+//
+//## Styling for Picker
+.charpicker {
+    margin-top: 12px;
+    border: 0;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+    > div { //.charpicker-chars
+        padding: 5px;
+        font-weight: normal;
+        font-size: 13px;
+        color: @es-gray-60;
+    }
+
+    table {
+        border-collapse: separate;
+
+        tr {
+            td {
+                &,
+                &:hover,
+                &.disabled,
+                &.disabled:hover {
+                    background: none;
+                    border-radius: 0;
+                    -webkit-border-radius: 0;
+                    -moz-border-radius: 0;
+                    font-size: 13px;
+                    width: 25px;
+                    height: 25px;
+                    padding: 0 !important;
+                    text-shadow: 0 1px 0 @es-white;
+                    color: @es-dark-gray;
+                    border: 1px solid transparent; //fix for blue focus border
+                }
+
+                &:hover {
+                    background: @es-gray-20;
+                    cursor: pointer;
+                }
+
+                &.active,
+                &.active:hover,
+                &.active:hover,
+                &.active:hover:hover,
+                &.active:focus,
+                &.active:hover:focus,
+                &.active:hover:active,
+                &.active.active,
+                &.active:hover.active,
+                &.active.disabled,
+                &.active:hover.disabled,
+                &.active[disabled],
+                &.active:hover[disabled] {
+                    background-color: @es-gray-40;
+                    text-shadow: 0 1px 0 @es-white; /*override defaults*/
+                    color: @es-dark-gray; /*override defaults*/
+                }
+
+                &.active:hover:active,
+                &.active.disabled:active,
+                &.active.disabled:hover:active,
+                &.active.active,
+                &.active:hover.active,
+                &.active.disabled.active,
+                &.active.disabled:hover.active {
+                    background-color: @es-green-20;
+                    font-weight: bold;
+                    border-radius: 0;
+                    border: 1px solid transparent;
+                    color: @es-dark-gray; /*override defaults*/
+                    text-shadow: 0 1px 0 @es-white; /*override defaults*/
+                }
+
+                &:active,
+                &:hover:active,
+                &.active:active,
+                &.active:hover:active {
+                    background-color: @es-gray-40;
+                }
+
+                &:active {
+                    background-color: @es-gray-40;
+                    text-shadow: 0 1px 0 @es-white; /*override defaults*/
+                    color: @es-dark-gray; /*override defaults*/
+                }
+
+                &:focus, &.focused {
+                    background-color: transparent;
+                    color: @es-dark-gray; /*override defaults*/
+                    border: 1px solid @es-mid-blue;
+                    outline: none;
+                }
+
+                &.disabled,
+                &.disabled:hover,
+                &.disabled:active,
+                &.disabled:hover:active,
+                &.disabled:focus,
+                &.disabled.active,
+                &.disabled.active:active {
+                    text-shadow: 0 1px 0 @es-white;
+                    color: @es-gray-40;
+                    cursor: default;
+                    background: none;
+                    background-color: none;
+                    border: 1px solid transparent;
+                }
+            }
+            //td
+        }
+        //tr
+    }
+    //table
+}

@@ -1,0 +1,204 @@
+// This file has been created by ERGOSIGN GmbH - All rights reserved - http://www.ergosign.de
+// DO NOT ALTER OR REMOVE  THIS COPYRIGHT NOTICE OR THIS FILE HEADER.
+// 
+// This file and the code contained in it are subject to the agreed contractual terms and conditions,
+// in particular with regard to resale and publication.
+
+//== Datepicker
+//
+//## Styling for Datepicker
+.datepicker {
+    margin-top: 12px;
+    border: 0;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+    //Month / year arrow left and right switch
+    .prev:after{
+        content: "";
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-right: 7px solid @es-dark-gray;
+        border-right-color: @es-dark-gray;
+        display: inline-block;
+    }
+    .next:after {
+        content: "";
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 7px solid @es-dark-gray;
+        border-left-color: @es-dark-gray;
+        display: inline-block;
+    }
+
+    > div {
+        padding: 5px;
+    }
+
+    .datepicker-days .dow {
+        font-weight: normal;
+        font-size: 13px;
+        color: @es-gray-60;
+    }
+
+    table {
+        border-collapse: separate;
+
+        tr {
+            td,
+            th {
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                font-size: 13px;
+                width: 25px;
+                height: 25px;
+                padding: 0 !important;
+            }
+
+            th.datepicker-switch {
+                color: @es-dark-gray;
+                font-size: 13px;
+                font-weight: normal;
+            }
+
+            td {
+                &.day, & .month, & .year {
+                    text-shadow: 0 1px 0 @es-white;
+                    color: @es-dark-gray;
+                    border: 1px solid transparent;
+                    border-radius: 0;
+                }
+
+                &.day {
+                    &.old, &.new {
+                        text-shadow: 0 1px 0 @es-white;
+                        color: @es-gray-40;
+                    }
+
+                    &:hover {
+                        background: @es-gray-20;
+                        cursor: pointer;
+                    }
+                }
+
+                .month:hover, .year:hover {
+                    background: @es-gray-20;
+                    cursor: pointer;
+                }
+
+                &.active,
+                &.active:hover,
+                &.active:hover,
+                &.active:hover:hover,
+                &.active:focus,
+                &.active:hover:focus,
+                &.active:hover:active,
+                &.active.active,
+                &.active:hover.active,
+                &.active.disabled,
+                &.active:hover.disabled,
+                &.active[disabled],
+                &.active:hover[disabled] {
+                    background-color: @es-gray-40;
+                    text-shadow: 0 1px 0 @es-white; /*override defaults*/
+                    color: @es-dark-gray; /*override defaults*/
+                }
+
+                &.active:hover:active,
+                &.active.disabled:active,
+                &.active.disabled:hover:active,
+                &.active.active,
+                &.active:hover.active,
+                &.active.disabled.active,
+                &.active.disabled:hover.active,
+                span.active:hover:active,
+                span.active.disabled:active,
+                span.active.disabled:hover:active,
+                span.active.active,
+                span.active:hover.active,
+                span.active.disabled.active,
+                span.active.disabled:hover.active {
+                    background: @es-green-20;
+                    font-weight: bold;
+                    border-radius: 0;
+                    border: 1px solid transparent;
+                    color: @es-dark-gray; /*override defaults*/
+                    text-shadow: 0 1px 0 @es-white; /*override defaults*/
+                }
+
+                &.active:active,
+                &.active:hover:active {
+                    background: @es-gray-40;
+                }
+
+                &.today {
+                    &,
+                    &:hover,
+                    &.disabled,
+                    &.disabled:hover {
+                        background: none;
+                        border: 1px solid @es-green-60;
+                        font-weight: bold;
+                    }
+                    &:hover,
+                    &:hover:hover,
+                    &.disabled:hover,
+                    &.disabled:hover:hover,
+                    &:active,
+                    &:hover:active,
+                    &.disabled:active,
+                    &.disabled:hover:active,
+                    &:hover.active,
+                    &.disabled.active,
+                    &.disabled:hover.active,
+                    &.disabled,
+                    &:hover.disabled,
+                    &.disabled.disabled,
+                    &.disabled:hover.disabled,
+                    &[disabled],
+                    &:hover[disabled],
+                    &.disabled[disabled],
+                    &.disabled:hover[disabled] {
+                        background: @es-gray-20; //hover color
+                    }
+                    &:active,
+                    &:hover:active,
+                    &.disabled:active,
+                    &.disabled:hover:active,
+                    &:hover.active,
+                    &.disabled.active,
+                    &.disabled:hover.active {
+                        background-color: @es-gray-40; //active color
+                    }
+                    &.active {
+                        background-color: @es-green-20;
+                    }
+                    &:hover:hover {
+                        color: #000;
+                    }
+                    &.active:hover {
+                        color: #fff;
+                    }
+
+                }
+
+                &.day:active {
+                    background-color: @es-gray-40;
+                    text-shadow: 0 1px 0 @es-white; /*override defaults*/
+                    color: @es-dark-gray; /*override defaults*/
+                }
+
+                &.day:focus, &.day.focused {
+                    background: transparent;
+                    color: @es-dark-gray; /*override defaults*/
+                    border: 1px solid @es-mid-blue;
+                    outline: none;
+                }
+            }
+            //td
+        }
+        //tr
+    }
+    //table
+}

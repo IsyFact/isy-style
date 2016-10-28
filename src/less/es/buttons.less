@@ -1,0 +1,428 @@
+// This file has been created by ERGOSIGN GmbH - All rights reserved - http://www.ergosign.de
+// DO NOT ALTER OR REMOVE  THIS COPYRIGHT NOTICE OR THIS FILE HEADER.
+//
+// This file and the code contained in it are subject to the agreed contractual terms and conditions,
+// in particular with regard to resale and publication.
+
+
+// Simple Control Styles
+// --------------------------------------------------
+
+// Simple control styles are defined here
+
+//== Buttons
+//
+//## Styling for Buttons (also icon buttons, toolbar buttons, toggles etc)
+
+//Standard style for dialogs
+.btn {
+    color: @es-dark-gray;
+    background-color: transparent;
+    text-shadow: 0px 1px 0px @es-white;
+    margin-bottom:  @main-spacing;
+	font-weight: 300;
+    outline: none;
+
+    &:hover {
+        background-color: @es-gray-20;
+    }
+
+    &:active {
+        background-color: @es-gray-40;
+        .box-shadow(none);
+    }
+
+    &.active {
+      background-color: @es-green-20;
+      .box-shadow(none);
+    }
+    
+    &:focus {
+        border:  1px solid @es-mid-blue;
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        .opacity(0.5);
+        text-shadow: none;
+        cursor: not-allowed;
+    }
+
+    &.disabled:hover,
+    &[disabled]:hover,
+    fieldset[disabled] &:hover {
+        text-shadow: none;
+        cursor: not-allowed;
+    }
+}
+
+.btn-default {
+    //changes text-color, bg, border-color)
+    .button-variant(@es-white; @es-dark-gray; transparent);
+    min-width: 100px;
+    text-shadow: none;
+
+    &:hover {
+        background-color: @es-gray-80;
+    }
+
+    &:active,
+    &.active {
+        background-color: @es-gray-100;
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        .opacity(0.5);
+        text-shadow: none;
+        cursor: not-allowed; //disabled button element on ie8 issue - nicht von allen browsern unterstützt
+    }
+
+    &.disabled:hover,
+    &[disabled]:hover,
+    fieldset[disabled] &:hover {
+        text-shadow: none;
+        cursor: not-allowed;
+    }
+}
+
+.btn-toggle {
+    //changes text-color, bg, border-color)
+    .button-variant(@es-dark-gray; @es-gray-20; @es-white);
+    font-size: 12px;
+    padding: 6px 10px 5px;
+    border:  0;
+    margin-left: 1px;
+    
+    &:first-child {
+    	margin-left:  0;
+    }
+
+    &:focus {
+        background-color: @es-gray-20;
+        border: 0;
+    }
+
+    &:hover,
+    &:active {
+        .box-shadow(none);
+        background-color: @es-gray-40;
+        border: 0;
+    }
+
+    &.active {
+        .box-shadow(none);
+        font-weight: bold;
+        border: 0;
+        background-color: @es-green-40;
+    }
+}
+
+//icon button
+.btn-icon-round {
+    min-width: 26px;
+    padding: 0;
+    min-height: 26px;
+
+    > span {
+        font-size: 12px;
+        text-align: center;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        border-radius: 20px;
+        -moz-border-radius: 20px;
+        -webkit-border-radius: 20px;
+        border: 2px solid @es-light-gray-G;
+
+
+
+        &.icon {
+            color: @es-light-gray-G;
+
+          &:before {
+            top: 4px;
+            position: relative;
+          }
+        }
+    }
+
+    &:hover {
+        background-color: transparent;
+
+        > span {
+            background-color: transparent;
+            border-color: @es-light-gray-H;
+            color: @es-light-gray-H;
+
+            &.icon {
+                color: @es-light-gray-H;
+            }
+        }
+    }
+
+    &:active,
+    &.active {
+        background-color: transparent;
+
+        > span {
+            background-color: transparent;
+            border-color: @es-light-gray-I;
+
+            &.icon {
+                color: @es-light-gray-I;
+            }
+        }
+    }
+}
+
+//with Icon and Label
+.btn-icon {
+    padding: 3px 5px 2px;
+
+    > .caret {
+        margin-left: 5px;
+        border-top: 5px solid;
+        margin-bottom: 5px;
+    }
+
+    &.disabled:hover,
+    &[disabled]:hover,
+    fieldset[disabled] &:hover {
+        text-shadow: none;
+        background-color: transparent;
+        cursor: not-allowed;
+    }
+}
+
+//with Icon and Label (Icon Button Navigation)
+.btn-icon-round-large {
+    min-width: 26px;
+    padding: 0;
+    min-height: 26px;
+    padding-top:3px;
+
+    > span {
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+
+        text-align: center;
+        display: inline-block;
+        border-radius: 30px;
+        -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
+        border: 2px solid @es-light-gray-G;
+        vertical-align: middle;
+        margin-top: -3px;
+
+        &.icon {
+            color: @es-light-gray-G;
+
+            &:before {
+              top: 5px;
+              position: relative;
+            }
+        }
+    }
+
+    &:last-child {
+        > span {
+            margin-right: 0;
+        }
+    }
+
+    &:hover {
+        background-color: transparent;
+        color: @es-green-100;
+
+        > span {
+            background-color: transparent;
+            border-color: @es-light-gray-H;
+            color: @es-light-gray-H;
+
+            &.icon {
+                color: @es-light-gray-H;
+            }
+        }
+    }
+
+    &:active,
+    &.active {
+        background-color: transparent;
+
+        > span {
+            background-color: transparent;
+            border-color: @es-light-gray-I;
+
+            &.icon {
+                color: @es-light-gray-I;
+            }
+        }
+    }
+}
+
+
+.btn-icon-round-small {
+    min-width: 22px;
+    padding: 0;
+    min-height: 22px;
+    width: auto;
+
+    > span {
+        font-size: 12px;
+        width: 22px;
+        height: 22px;
+        margin-right: 5px;
+        line-height: 20px; //fixed input file
+
+        text-align: center;
+        display: inline-block;
+        border-radius: 22px;
+        -moz-border-radius: 22px;
+        -webkit-border-radius: 22px;
+        border: 2px solid @es-light-gray-G;
+
+        &.icon {
+            color: @es-light-gray-G;
+
+          &:before {
+            top: -0.095em;
+			left: -0.03em;
+            position: relative;
+          }
+        }
+    }
+
+    &:hover {
+        background-color: transparent;
+        color: @es-green-100;
+
+        > span {
+            background-color: transparent;
+            border-color: @es-light-gray-H;
+
+
+            &.icon {
+                color: @es-light-gray-H;
+            }
+        }
+    }
+
+    &:active,
+    &.active {
+        background-color: transparent;
+
+        > span {
+            background-color: transparent;
+            border-color: @es-light-gray-I;
+
+            &.icon {
+                color: @es-light-gray-I;
+            }
+        }
+    }
+}
+
+//== Text Links
+//
+//## Styling for Text Links
+.btn-link {
+    padding: 5px 10px 5px 0;
+    
+    &.icon {
+        margin-right: 10px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: transparent;
+        text-decoration: none;
+        color: @es-dark-blue;
+
+		&.icon {
+			color: @es-dark-gray;
+		}
+    }
+
+    &.btn-more {
+        font-size: 13px;
+        margin: 0;
+        padding: 3px 0 0 ;
+
+        &.icon {
+            margin: 2px 0 0 5px;
+            float: right;
+        }
+    }
+}
+
+p {
+	a {
+		padding: 0 0 1px;
+		margin: 0;
+		color: @es-dark-blue;
+		border-bottom: none;
+        text-decoration: none;
+		
+		&:hover {
+			border-bottom: 1px solid @es-dark-blue;
+            text-decoration: none;
+		}
+	}
+}
+// separators for buttons
+//small
+.btn-separator-sm {
+    height: 16px;
+    border-left: 1px dotted @es-gray-60;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+//large
+.btn-separator-lg {
+    .btn;
+    height: 26px;
+    border-left: 1px dotted @es-gray-60;
+    margin-left: 5px;
+    margin-right: -5px;
+}
+.form-group {
+	.btn-link {
+		margin:  0;	
+	}
+}
+
+//Styling for file browsing button (type=input)
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0px 0px 0px;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: transparent;
+        color: @es-green-100;
+    }
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 999px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}

@@ -1,0 +1,44 @@
+// This file has been created by ERGOSIGN GmbH - All rights reserved - http://www.ergosign.de
+// DO NOT ALTER OR REMOVE  THIS COPYRIGHT NOTICE OR THIS FILE HEADER.
+//
+// This file and the code contained in it are subject to the agreed contractual terms and conditions,
+// in particular with regard to resale and publication.
+
+
+.btn-group .btn + .btn {
+    margin-left: 1px;
+}
+
+.btn-group + .btn-group {
+    border-left: 1px dotted @es-light-gray-C;
+    padding-left: 8px;
+    margin-left: 0;
+
+    &.pull-right {
+        border: 0;
+    }
+}
+
+// Optional: Group multiple button groups together for a toolbar
+.btn-toolbar {
+    padding: 5px 10px 5px 10px;
+
+    .btn {
+        margin-bottom: 0;
+    }
+
+    > .btn-group {
+      margin-left: 0;
+    }
+
+    label {
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 0;
+        padding-top: 5px;
+    }
+
+    .btn-icon {
+        margin-right: 5px;
+    }
+}

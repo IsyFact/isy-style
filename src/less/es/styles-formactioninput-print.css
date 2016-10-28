@@ -1,0 +1,26 @@
+
+/* isy:formActionInput */
+.formactioninputvieraugenlink {
+    border: 0 none; 
+    bottom: -3px; 
+    margin: 0; 
+    position: absolute; 
+    right: 24px; 
+    top: -3px; 
+    width: 24px; 
+    z-index: 2;
+}
+
+.formactioninputvieraugenbutton { 
+    border: 0 none;
+    width: 24px;
+}
+
+.formactioninputvieraugenhaserror {
+    right: 58px;
+}
+
+
+.formactioninputvieraugenbuttonhaserror {
+    right: 0px;
+}

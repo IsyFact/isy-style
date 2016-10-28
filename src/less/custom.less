@@ -1,0 +1,610 @@
+// ##############################################################
+// ### Tag-bezogene Definitionen
+// ##############################################################
+
+// Überschreiben der ursprünglichen Höhe (auto), da JSF-Elemente immer eine Size-Attribut rendern
+select[size] {
+	height:@input-height-base
+}
+
+// Setzen des Form-Margins
+form {
+	margin-bottom: 0px;
+}
+
+// ##############################################################
+// ### Modale Dialoge
+// ##############################################################
+
+// CSS-Klassen für Footer von Nicht-JS Elementen ergänzt
+.nojs-modal-footer {
+    text-align: right;
+}
+
+.nojs-modal-footer input {
+    margin-left: 10px;
+}
+
+// CSS-Klassen für Footer von modalen Dialogen. Notwendig da Input-Tags anstatt Button-Tags für JSF-Buttons gerendert werden
+.modal-footer input {
+    margin-bottom: 0;
+}
+
+// Modale Dialoge werden in Chrome und Internet Explorer linksbündig dargestellt, daher die folgende Änderung
+.modal.in {
+    display: block !important;
+}
+
+.modal .modal-dialog {
+    display: block !important;
+    background: #fafafa !important;
+}
+
+.modal-dialog {
+  width: auto;
+}
+
+// ##############################################################
+// ### Panels
+// ##############################################################
+
+// Fokussierte Panels sollen umranded sein
+.panel .panel-title>a:focus {
+  outline: 1px solid #33c6f5 !important;
+}
+
+
+// ##############################################################
+// ### Data Table
+// ##############################################################
+
+// Trefferliste: Größenkorrektur vornehmen
+.rf-data-table {
+	font-size: @font-size-base;
+}
+
+// Tabellenkopf soll nicht verschoben werden
+.rf-data-table thead tr th {
+	position: static;
+}
+
+// ##############################################################
+// ### Validierung
+// ##############################################################
+.rf-validation-messages-table {
+	background-color: @alert-warning-bg;
+	font-size: 13px;
+}
+
+// Validerungsfehler am Label anzeigen
+.form-group.has-error label {
+	
+	color: @es-orange-100;
+
+	a {
+		padding: 0px;
+		border: 0px;
+		margin-top: 0px;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-bottom: 2px;
+	}	
+	span { 
+		color: @es-black;
+	}
+}
+
+.js .form-group > div {
+  padding-right: 34px;
+}
+
+.has-feedback .form-control-feedback {
+  top: 0;
+  right: 0 !important;
+  min-width: 34 !important;
+  z-index: auto; //Fix for bootstrap update v3.1.1->v3.3.6
+  pointer-events: auto; //Fix for bootstrap update v3.1.1->v3.3.6
+}
+
+.has-feedback label ~ .form-control-feedback {
+    top: 0; //Fix for bootstrap update v3.1.1->v3.3.6
+}
+
+// Bei Validierungsfehlern 
+.js .has-error {
+	
+	.input-group-addon {
+		background-color: transparent;
+		
+		&:hover {
+			background-color: @es-gray-20;
+		}
+		span {
+			color: @input-color;
+		}
+	}
+}
+
+.form-group {
+	// Top Abstand setzen
+	top: 3px;
+}
+
+.has-error {
+  .without-border {
+    color:  @es-dark-gray;
+    border-left:  none !important;
+  }
+}
+
+.js .has-error  {
+	button.selectpicker {
+    border: 2px solid #f28502;
+    background-color: #fce7cc;
+		
+	  &:hover {
+	    border: 2px solid #f28502;
+      background-color: #fce7cc;
+	  }
+		
+	  &:active {
+	    border: 2px solid #f28502;
+      background-color: #fce7cc;
+	  }
+  }
+}
+
+.has-error  {
+	select.selectpicker-native {
+    border: 2px solid #f28502;
+    background-color: #fce7cc;
+    padding: 2px 4px !important;
+		
+	  &:hover {
+	    border: 2px solid #f28502;
+      background-color: #fce7cc;
+      padding: 2px 4px !important;
+	  }
+	  &:active {
+	    border: 2px solid #f28502;
+      background-color: #fce7cc;
+      padding: 2px 4px !important;
+	  }
+	  
+  }
+}
+
+// ##############################################################
+// ### Allgemeine Definitionen des Header-Bereichs
+// ##############################################################
+// Style zum No-Javascript-Bild 
+// TODO: Mit Iconmoon Mechanismus einbauen
+.icon-nojs {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+// ##############################################################
+// ### Allgemeine Definitionen des Links-Navigationsbereichs
+// ##############################################################
+// Zusaetzlicher Abstand des optionalen Links-Navigationsbereichts zum Content-Bereich
+.linksNavigationAbstandRechts {
+	padding-right: 10px;
+}
+// Fokussierte Panels sollen umranded sein
+.linksnavigation-option:focus {
+  outline: 1px solid #33c6f5 !important;
+  z-index: 5;
+}
+
+
+// ##############################################################
+// ### Allgemeine Definitionen 
+// ##############################################################
+.white-color {
+	color:#FFFFFF;
+}
+
+.popover-container {
+	position: relative;
+}
+
+
+// Gefüllte Navbar soll höher sein
+.navbar-color-content {
+    min-height: 30px !important;
+    padding-top: 5px !important;
+}
+
+// ##############################################################
+// ### Button-Rows / Button-Groups
+// ##############################################################
+.button-row {
+	input, button {
+		margin-right: 4px;
+		margin-bottom: 0px;
+	}
+	
+	margin-bottom: 10px;
+	
+	.btn-icon-round-large {
+		margin-right: 8px;
+	}
+}
+
+// ##############################################################
+// ### Listpicker
+// ##############################################################
+
+// Der Table-Container für Listpicker, um Scrollbars einzusetzen
+.rf-listpicker-table-container {
+    width: 100%;
+    max-height: 150px;
+    overflow-x: hidden;
+	overflow-y: auto;
+}
+
+// Größenkorrektur vornehmen
+.rf-listpicker-table {
+	font-size: @font-size-base;
+}
+// Abstand in Filterbereich einfügen 
+.listpicker-filter input.form-control{
+	margin-bottom: 10px;
+}
+
+// Das Eingabefeld muss bei Listpickern auf die Standard "form-control" Definition gesetzt werden, 
+// da bei Validierungsfehlern die Klasse "has-error" die "form-control" Elemente überschreibt, 
+// dies aber nicht für den Listpickerfilter geschehen soll.
+.listpicker-filter-input {
+	
+  display: block;
+  width: 100%;
+  height: @input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  padding: @padding-base-vertical @padding-base-horizontal;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @input-color;
+  background-color: @input-bg;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid @input-border;
+  border-radius: @input-border-radius;
+  .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+  .transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  .form-control-focus();
+  &:focus {
+	.box-shadow(none);
+  }
+
+  // Placeholder
+  //.placeholder();
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    background-color: @input-bg-disabled;
+    opacity: 1; // iOS fix for unreadable disabled content
+  }
+
+  // Reset height for `textarea`s
+  textarea& {
+    height: auto;
+  }
+
+}
+
+.listpicker-container input[type="text"] {
+  padding-right: 24px;
+}
+
+/* Der Pfeil im Specialzeichenpicker löschen. */
+.picker.picker-dropdown.picker-orient-top.special-char-picker-widget:before, .picker.picker-dropdown.picker-orient-top.special-char-picker-widget:after {
+  border-bottom: none;
+}
+
+// ##############################################################
+// ### Select-Dropbox / Selectpicker
+// ##############################################################
+
+// Padding korrigieren
+select.form-control.selectpicker-native {
+	padding: 2px 2px;
+	
+	.invalid {
+		padding: 2px 2px;
+	}
+}
+
+.form-group:not(.has-error) button.selectpicker {
+  &:focus {
+	    border: 1px solid #33c6f5 !important;
+  }
+}
+
+// Mindestbreite in Formularen aufheben
+.form-selectonedropdown.dropdown {
+	min-width: 0px;
+}
+
+
+// ##############################################################
+// ### Druckansicht
+// ##############################################################
+// Hiermit werden die Headline und die Metainformationen für die
+// Druckansicht angezeigt. In der normalen Ansicht werden sie ausgeblendet.
+
+.print-headline {
+    display: none;
+}
+
+.print-metainformation {
+    display: none;
+}
+
+// ##############################################################
+// ### Spinner
+// ##############################################################
+.modal-loading {
+    display:    none;
+    position:   fixed;
+    z-index:    1100;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('../img/controls/spinner.gif') 
+                50% 50% 
+                no-repeat;
+}
+// ##############################################################
+// ### Image-Row
+// ##############################################################
+.image-row a {
+
+  &:hover {
+    text-decoration: none;
+  
+  }  
+}
+
+.image-row .img-responsive {
+    display:    inline;
+}
+
+// ##############################################################
+// ### Form-Label
+// ##############################################################
+
+.form-label {
+  height : auto;
+  word-wrap: break-word;
+}
+
+// ##############################################################
+// ### Form-SelectOneDropdown
+// ##############################################################
+
+.form-selectonedropdown {
+  width : 100% !important;
+}
+.dropdown button {
+  padding: 3px 18px 3px 5px !important;
+}
+
+select.form-selectonedropdown {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 3px;
+}
+
+
+// ##############################################################
+// ### Tabs
+// ##############################################################
+
+// Optik fokussierter und überfahrener Tabs verbessert
+#content .nav.nav-tabs li:not(.active) a {
+  border: 1px solid transparent;
+
+  &:focus {
+    border: 1px solid #33c6f5;
+    color: #45484d;
+  }   
+  &:hover {
+    color: #627f0d !important;
+  }
+}
+
+#content .nav.nav-tabs li.active a {
+  border-bottom: 2px solid #627f0d;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  &:focus {
+    border-bottom: 2px solid #33c6f5;
+    border-top: 1px solid #33c6f5;
+    border-left: 1px solid #33c6f5;
+    border-right: 1px solid #33c6f5;
+  }
+}
+
+// ##############################################################
+// ### Button
+// ##############################################################
+
+// Optik fokussierter Buttons angepasst
+.btn-default {
+  &:focus {
+    border: 1px solid #33c6f5; background-color: #89909a;
+  }
+}
+
+.btn-default {
+  &:focus {
+    border: 1px solid #33c6f5; background-color: #89909a;
+  }
+}
+
+.btn-icon-round {
+  &:hover > span.icon {
+    color: #627f0d;
+    border: 2px solid #627f0d;
+  }
+}
+
+.btn-toggle:focus {
+  border: 1px solid #33c6f5 !important;
+}
+.btn-toggle {
+  border: 1px solid #E1E3E6;
+}
+.btn-toggle:hover {
+  border: 1px solid #E1E3E6;
+}
+.btn-toggle.active {
+  border: 1px solid #C0CC9E;
+}
+.btn-toggle.active:hover {
+  border: 1px solid #C0CC9E;
+}
+.btn-toggle.active:focus, .btn-toggle.active:hover {
+	background-color: #C0CC9E;
+}
+
+// ##############################################################
+// ### Wizards
+// ##############################################################
+.nav.nav-wizard.nav-tabs {
+
+	li {
+		float:none;
+		display:inline-block;
+	}
+	
+	// Derzeit werden Links in den Tabs nicht verwendet
+	li a {
+		cursor:default;
+		
+		&:hover {
+			 color: @es-dark-gray;
+		}
+	}
+}
+
+// ##############################################################
+// ### Navigation
+// ##############################################################
+
+// Aktiver Menüpunkt soll beim Überfahren das Handsymbol anzeigen
+.nav li.active a {
+  cursor: pointer !important;
+  cursor: hand  !important;
+}
+
+// Umrandung für Tastatursteuerung
+.main-nav-focus {
+  outline: 1px solid #33c6f5 !important;
+  z-index: 5;
+}
+
+// ##############################################################
+// ### Verwendung des Pointers / der Hand
+// ##############################################################
+
+.cursorPointerHand {
+  cursor: pointer;
+  cursor: hand;
+}
+
+// ##############################################################
+// ### White Space Nowrap
+// ##############################################################
+
+.whiteSpaceNowrap {
+  white-space: nowrap;
+}
+
+// ##############################################################
+// ### Form-Elemente
+// ##############################################################
+// Deaktiverte Checkboxen sollen nicht das eigentliche Input Feld darstellen, da ein transparentes PNG Image über das Input-Feld gerendert wird.
+.checkbox label input[disabled] {
+  display:none
+}
+
+// optionale Pflichtfelder, blau einfärben des Sternchens (required)
+.control-label.mandatory.optional:after {
+    color: #00B8F2;
+}
+
+.form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
+    padding-top: 0px;
+}
+
+// Fix für: Vertikale Ausrichtung bei normalen Checkboxen (mit Label rechts) ist falsch (Text ist 4px zu weit unten)
+.checkbox {
+  margin-top: 0px;
+}
+
+// Vertikale Ausrichtung von Radio zu Label links korrigiert.
+.form-horizontal .radio {
+  margin-top: 4px !important;
+}
+
+// ##############################################################
+// ### Input Felder
+// ##############################################################
+// Aktiviere Padding bei Special Char Eingabefeldern, damit der Text nicht überschrieben wird.
+.input-group input[type="text"].inputWithSpecialCharPicker {
+  padding-right: 24px;
+}
+// Verhindere Anzeige der clear-Buttons im Internet-Explorer
+::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* Wenn ein Zeichenpicker geöffnet ist, wollen wir verbundenes Eingabefeld als fokusiert markieren. */
+.charpicker-focused, .charpicker-focused:hover{
+  box-shadow: none;
+  border: 1px solid #00B8F2;
+}
+
+.input-group .form-control:focus {
+      //Fix for bootstrap update v3.1.1->v3.3.6
+      z-index: auto;
+    }
+
+// ##############################################################
+// ### Header Bereich
+// ##############################################################
+
+.header-content button {
+	margin-left: 8px;
+}
+
+.hyperlink-green {
+  color: #627f0d !important;
+}
+
+// ##############################################################
+// ### IMG Lazy Loading
+// ##############################################################
+img.lazy {
+    background-image: url('../img/controls/spinner.gif');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    min-width: 24px;
+    min-height: 24px;
+}

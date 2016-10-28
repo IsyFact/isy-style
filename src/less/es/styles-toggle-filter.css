@@ -1,0 +1,20 @@
+.toggle-filter .btn {
+    margin-bottom: 5px;
+    background-color: #e1e3e6;
+    color: #45484d;
+}
+
+.toggle-filter .btn.active {
+    background-color: #c0cc9e;
+    font-weight: 700;
+}
+
+.toggle-filter .btn:hover, .toggle-filter .btn:focus {
+    background-color: #a6acb3;
+}
+
+.toggle-filter .btn:active {
+    background-color: #2d2f32;
+    border-color: rgba(0, 0, 0, 0);
+    color: #fff;
+}

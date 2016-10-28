@@ -1,0 +1,42 @@
+// This file has been created by ERGOSIGN GmbH - All rights reserved - http://www.ergosign.de
+// DO NOT ALTER OR REMOVE  THIS COPYRIGHT NOTICE OR THIS FILE HEADER.
+// 
+// This file and the code contained in it are subject to the agreed contractual terms and conditions,
+// in particular with regard to resale and publication.
+
+//== Popover
+//
+//## Styling for Popover
+.popover {
+    min-width: @popover-min-width;
+    width: @popover-min-width;
+    border-radius: 0;
+    border: 1px dotted @popover-border-color;
+    .box-shadow(none);
+    font-size: 13px;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+    padding: 10px;
+
+    .popover-title {
+        font-size: inherit;
+        font-weight: bold;
+        border-bottom: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .popover-content {
+        font-size: inherit;
+        padding: 0;
+    }
+
+    & > .arrow {
+        display: none;
+    }
+
+    &.demo {
+        opacity: 1;
+        display: block;
+        position: relative;
+    }
+}

@@ -1,0 +1,119 @@
+// This file has been created by ERGOSIGN GmbH - All rights reserved - http://www.ergosign.de
+// DO NOT ALTER OR REMOVE  THIS COPYRIGHT NOTICE OR THIS FILE HEADER.
+//
+// This file and the code contained in it are subject to the agreed contractual terms and conditions,
+// in particular with regard to resale and publication.
+
+
+//== Paginator
+//
+//## Styling for Paginator
+.pagination {
+    margin: 0 0 10px 0;
+
+    > li {
+        display: inline; // Remove list-style and block-level defaults
+
+        > a,
+        > span {
+            position: relative;
+            float: left; // Collapse white-space
+            line-height: @line-height-base;
+            text-decoration: none;
+            background-color: transparent;
+            color: @es-mid-gray;
+            border: 0;
+            margin-left: -1px;
+            font-size: @font-size-small;
+            min-width: 20px;
+            padding: 3px 0 0;
+            min-height: 20px;
+            text-align: center;
+
+            &.icon {
+                margin-right: 10px;
+            }
+        }
+
+        > span {
+            color: @es-gray-100;
+        }
+
+        &:first-child {
+            > a,
+            > span {
+                margin-left: 0;
+                margin-right: 10px;
+                .border-left-radius(@border-radius-base);
+            }
+        }
+        &:last-child {
+            > a,
+            > span {
+                margin-left: 10px;
+                margin-right: 0;
+                .border-right-radius(@border-radius-base);
+            }
+        }
+    }
+
+    > li > a {
+        &:hover,
+        &:focus {
+            color: @es-dark-gray;
+            background-color: @es-gray-20;
+            border-color: @pagination-hover-border;
+        }
+
+        &:active {
+            background-color: @es-gray-40;
+        }
+    }
+
+    > li > span {
+        &:hover,
+        &:focus {
+            color: @es-gray-100;
+            background-color: transparent;
+            border-color: none;
+        }
+    }
+
+    > .active > a {
+        &,
+        &:hover,
+        &:focus {
+            z-index: 2;
+            color: @es-dark-gray;
+            background-color: @es-green-20;
+            border-color: none;
+            cursor: default;
+        }
+    }
+
+    > .active > span {
+        &,
+        &:hover,
+        &:focus {
+            z-index: 2;
+            color: @es-gray-100;
+            background-color: transparent;
+            border-color: none;
+            cursor: default;
+        }
+    }
+
+    > .disabled {
+        > span,
+        > span:hover,
+        > span:focus,
+        > a,
+        > a:hover,
+        > a:focus {
+            color: @pagination-disabled-color;
+            background-color: @pagination-disabled-bg;
+            border-color: @pagination-disabled-border;
+            cursor: not-allowed;
+        }
+    }
+}

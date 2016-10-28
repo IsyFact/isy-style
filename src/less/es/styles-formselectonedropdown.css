@@ -1,0 +1,23 @@
+
+/* isy:formCheckbox */
+/* überschreibt das Standard-Aussehen von deaktivierten Checkboxen. Ist notwendig, da diese sonst doppelt angezeigt werden. Einmal das größere
+ Checkbox-Bild aus dem CSS und einmal darüber die original input-checkbox.*/
+.checkbox>label>.form-control[disabled] {
+    opacity: 0;
+}
+
+.formselectonedropdownvieraugenlink {
+    border: 0 none;
+    bottom: -3px;
+    margin: 0;
+    position: absolute;
+    right: 24px;
+    top: -3px;
+    width: 24px;
+    z-index: 2;
+}
+
+.formselectonedropdownvieraugenbutton {
+    border: 0 none;
+    width: 24px;
+}

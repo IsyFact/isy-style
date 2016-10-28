@@ -1,0 +1,48 @@
+// This file has been created by ERGOSIGN GmbH - All rights reserved - http://www.ergosign.de
+// DO NOT ALTER OR REMOVE  THIS COPYRIGHT NOTICE OR THIS FILE HEADER.
+// 
+// This file and the code contained in it are subject to the agreed contractual terms and conditions,
+// in particular with regard to resale and publication.
+
+//== Tooltip
+//
+//## Styling for Tooltip
+.well {
+    padding: 5px;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+
+    &.well-info {
+        overflow: hidden;
+        border-left: 1px dotted @es-gray-40;
+        padding: 10px;
+        box-shadow: none;
+        background-color: @es-gray-20;
+        color: @es-dark-gray;
+        //margin: -12px;
+
+        .well-headline {
+            font-weight: bold;
+
+            span {
+                margin-right: 5px;
+            }
+
+            p {
+                font-size: 13px;
+                font-weight: normal;
+                display: inline;
+                padding-top: 0px;
+            }
+        }
+
+        p {
+            padding-top: 10px;
+            font-size: 12px;
+        }
+    }
+}

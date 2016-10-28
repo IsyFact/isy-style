@@ -1,0 +1,31 @@
+//
+// Master Detail - Detail Styles
+// --------------------------------------------------
+
+// Master Detail - Detail styles are defined here
+
+.master-detail {
+    margin-bottom: 20px;
+
+    .master-detail-master {
+        margin-bottom: 0px;
+        position: relative;
+    }
+
+    .master-detail-detail {
+        border-top: 5px solid @es-gray-60;
+        position: relative;
+        background-color: @es-light-gray-B;
+
+        &:before {
+            border-top: 7px solid @es-gray-60;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            content: "";
+            display: inline-block;
+            left: 50%;
+            left: calc(50% - 4px);
+            position: absolute;
+        }
+    }
+}

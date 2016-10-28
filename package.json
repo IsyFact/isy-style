@@ -1,0 +1,27 @@
+{
+  "name": "bva",
+  "version": "2.0.2",
+  "description": "ISY-Fact styles and templates",
+  "author": "ISY-Fact",
+  "private": true,
+  "dependencies": {
+	"grunt": "^0.4.5",
+	"grunt-contrib-clean": "^0.5.0",
+	"grunt-contrib-concat": "^0.3.0",
+	"grunt-contrib-copy": "^0.5.0",
+	"grunt-contrib-jshint": "^0.8.0",
+	"grunt-contrib-less": "^0.9.0",
+	"grunt-contrib-uglify": "^0.7.0",
+	"grunt-contrib-watch": "^0.5.3",
+	"grunt-contrib-compress": "^0.4.0",
+	"grunt-contrib-connect": "^0.8.0",
+	"grunt-write-bower-json": "^0.0.1",
+	"grunt-rename": "^0.1.4",
+	"grunt-artifactory-artifact": "^0.2.0",
+	"grunt-bump-pom": "^0.0.6"
+  },
+  "main": "Gruntfile.js",
+  "engines": {
+	"node": "*"
+  }
+}

@@ -1,0 +1,218 @@
+// This file has been created by ERGOSIGN GmbH - All rights reserved - http://www.ergosign.de
+// DO NOT ALTER OR REMOVE  THIS COPYRIGHT NOTICE OR THIS FILE HEADER.
+// 
+// This file and the code contained in it are subject to the agreed contractual terms and conditions,
+// in particular with regard to resale and publication.
+
+// layout styling only, no controls!
+
+html {
+  height: 100%;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+    //background-color: @es-light-gray-B;
+    font-weight: 300; // fix for mac browsers no impact for windows browser
+    min-width: 1024px; //as defined in the styleguide
+    max-width: @screen-width-max;
+    position: relative;
+
+    &.show-info-panel {
+        background: url('../img/bgInfoTile.png') repeat-y top right;
+
+        .maincontent {
+            margin-right: 250px;
+        }
+    }
+
+    > .outer-container {
+
+        &:before {
+          content: "";
+          width: 100%;
+          position: absolute;
+          top: 55px;
+          bottom: 0;
+          left:0;
+          background-color: @es-light-gray-B;
+
+        }
+
+        &.show-info-panel {
+
+         &:before {
+            width: 75%;
+          }
+
+
+            &:after {
+              content: "";
+              width: 25%;
+              position: absolute;
+              border-left: 1px dotted @es-gray-40;
+              top: 55px;
+              bottom: 0;
+              right:0;
+              background-color: @es-gray-20;
+
+            }
+        }
+
+        > .main-header { //header with navigation
+            background-color: @es-white;
+            position: relative;
+            z-index: 9;
+
+            > .header-colorbar {
+                height: 10px;
+                background: @es-theme-color;
+            }
+
+            > .header-content {
+                .container-fluid();
+                padding: 20px 10px 0px;
+
+                > .pull-right {
+                    line-height:  0; //float bugfix
+                    > .brand {
+                        img {
+                            margin-right:  15px;
+                        }
+                    }
+
+                    > .usermanagement {
+                    }
+                    // only needed for no-js browsers
+                    > .usermanagement-fallback {
+                        display: none;
+                    }
+                }
+            }
+
+            > .main-nav { //main navigation
+                //layout styles only
+                //.container-fluid();
+
+                //nav components defined in navs.less
+            }
+        }
+
+        > #content {
+            //content
+            position: relative;
+            z-index: 2;
+            //Toolbar
+            .toolbar {
+                padding: 10px 12px 0;
+                border-bottom: 1px dotted @es-light-gray-C;
+                background-color: @es-white;
+
+                > .btn {
+                    margin-right: 5px;
+
+                    &.btn-toggle {
+                        margin-right: 0px;
+                    }
+                }
+
+            }
+
+            .maincontent {
+                padding-top: 10px;
+                //background-color: @es-light-gray-B;
+
+            }
+
+            .reset-maincontent-padding {
+                margin: -10px -5px 10px;
+
+            }
+
+            .maincontent-left {
+                margin-right: 250px;
+            }
+
+            .subnav {
+                margin: 0 0 0 5px;
+            }
+
+            .info-panel {
+                .well;
+                .well-info;
+                float: right;
+                margin-bottom: 0;
+            }
+        }
+
+    }
+}
+
+
+.no-js {
+
+    .usermanagement {
+        display: none;
+    }
+    .usermanagement-fallback {
+        display: block;
+        float: right;
+    }
+}
+
+
+
+//## Styling for Output
+// 3 column layout
+.col {
+
+    span {
+        line-height: 28px;
+    }
+
+    &.col-last {
+        .col-fix {
+            float: right;
+        }
+    }
+
+    &.col-center {
+        .col-fix {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    .col-fix {
+        width: 330px;
+        margin-bottom: 10px;
+    }
+
+    .image-upload {
+        height: 120px;
+
+        > img, button { display: block; }
+
+        img {
+            margin-bottom: 5px;
+            width: 69px;
+            height: 69px;
+        }
+    }
+
+    .spacer {
+        margin-bottom: 25px;
+    }
+}
+
+
+.no-js-dialog {
+    .col-fix {
+        width: 390px;
+    }
+
+}

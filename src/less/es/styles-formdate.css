@@ -1,0 +1,18 @@
+
+/* isy:formDate */
+.formdatevieraugenlink {
+    right: 24px !important; 
+    width: 24px !important; 
+}
+
+.formdatevieraugenbutton {
+    right: 4px;
+    position: absolute;
+}
+
+.formdatevieraugenicon {
+    background-color: #fce7cc !important;
+    border-color: #f28502 !important;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}

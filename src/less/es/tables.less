@@ -1,0 +1,330 @@
+//
+// Table Styles
+// --------------------------------------------------
+
+// Table styles are defined here
+
+//== Table datagrid type 1
+//
+//## Styling for Table datagrid type 1
+.table-container {
+    background-color: @es-white;
+    > .btn-toolbar {
+        background-color: @es-light-gray-A;
+    }
+}
+
+.table {
+    color: @es-dark-gray;
+
+    thead {
+        &:active,
+        &:hover {
+            background-color: @es-white;
+        }
+
+        tr th {
+            color: @es-green-100;
+            background-color: @es-light-gray-A;
+            font-weight: normal;
+            position: relative;
+            .user-select();
+
+            &.sortable {
+                &.sort-up::after {
+                    content: ' ';
+                    position: relative;
+                    left: 10px;
+                    bottom: 3px;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-bottom: 4px solid @es-dark-gray;
+                    border-bottom-color: @es-dark-gray;
+                    display: inline-block;
+                }
+                &.sort-down::after {
+                    content: ' ';
+                    position: relative;
+                    left: 10px;
+                    bottom: 3px;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-top: 4px solid @es-dark-gray;
+                    border-top-color: @es-dark-gray;
+                    display: inline-block;
+                }
+            }
+            
+            > a {
+                color: @es-green-100;
+            }
+        }
+    }
+
+    tr {
+        border-bottom: 1px dotted @es-light-gray-D;
+
+        &:hover {
+            background-color: @es-gray-20;
+        }
+
+        &:active {
+            background-color: @es-gray-40;
+        }
+
+        &.active {
+            background: @es-green-20;
+
+            td {
+                background: @es-green-20;
+            }
+        }
+
+        .control-label {
+            text-align: right;
+        }
+
+        &.details-preview {
+            background-color: @es-green-10;
+        }
+        
+        .detailview-actions {
+          float: left;
+      }
+
+
+        //== Text Links
+        //
+        //## Styling for Text Links
+        .table-link {
+            color: @es-dark-blue;
+            cursor: pointer;
+
+            &.icon {
+                margin-right: 10px;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: transparent;
+                text-decoration: none;
+                border-bottom: 1px solid @es-dark-blue;
+                color: @es-dark-blue;
+
+                .icon {
+                    color: @es-dark-gray;
+                }
+            }
+
+            > .icon {margin-right: 10px;}
+        }
+
+        //Button margin anpassen - Zeilenhöhe
+        .btn.btn-icon-round {
+            margin-bottom: 0px;
+        }
+    }
+
+    &.table-selectable {
+        th.sorted {
+            background-color: @es-green-20;
+        }
+
+        tr td {
+            &:first-child {
+                width: 20px;
+            }
+        }
+
+        .checkbox {
+            margin: 0;
+            //width: 20px;
+
+            input {
+                display: none; //webkit fix
+            }
+        }
+    }
+
+    //Load more
+    + .load-more {
+        position: relative;
+        margin-top: -20px;
+        background: @es-white;
+        padding: 10px 12px;
+        text-align: center;
+
+        &.btn-toolbar {
+            margin-left: 0;
+        }
+
+        > button {
+            margin: 0 auto;
+            display: inline-block;
+        }
+
+        > .pagination {
+            float: right;
+            margin: 0;
+        }
+    }
+
+
+    &.editable-row {
+        background-color: transparent;
+
+        thead:hover {
+            background-color: transparent;
+        }
+
+        tr {
+            border-bottom: none;
+            background-color: transparent;
+
+            &,
+            &:hover,
+            &:active {
+                background-color: transparent;
+            }
+
+            th {
+                background-color: transparent;
+            }
+
+            td {
+                > .form-group {
+                    > div {
+                        width: 100%;
+                        padding: 0;
+                    }
+                }
+
+                &.edit-buttons {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+
+//== Table with optional filter row
+//
+//## Styling for Table with optional filter row
+
+
+//table header title when filter control is present
+table th {
+
+    > span {
+        display: block; //no controls behind the title, force break
+    }
+
+    .dropdown {
+        display: block; //a dropdown as a filter control has full width
+
+        > .dropdown-toggle { width: 100% }
+    }
+}
+
+
+
+//Mixin User Selection
+.user-select (@option:none) {
+    -moz-user-select: @option;
+    -webkit-user-select: @option;
+    -ms-user-select: @option;
+    user-select: @option;
+}
+
+// aus styles-datatable-doubleclick.css
+/** über Doppel-Klick ausgewählte Zeile hervorheben. */
+table.table.highlight-doubleclick > tbody > tr.doubleClickSelectedItem, 
+table.table.highlight-doubleclick > tbody > tr.active.doubleClickSelectedItem, 
+table.table.highlight-doubleclick > tbody > tr.doubleClickSelectedItem > td {
+     background-color: @es-green-20;
+}
+
+/* aktive/selektierte Zeilen nicht hervorheben */
+table.table.highlight-doubleclick > tbody > tr.active, 
+table.table.highlight-doubleclick > tbody > tr.active > td {
+     background-color: inherit;
+}
+
+/* aktive/selektierte Zeilen bei Hover so wie nicht-selektierte Zeilen verhalten */
+table.table.highlight-doubleclick > tbody > tr.active:hover, 
+table.table.highlight-doubleclick > tbody > tr.active > td:hover {
+    background-color: @es-gray-20; 
+}
+
+
+// aus styles-datatable-filter.css
+button.table-clear-all-filter { margin-top: 3px; margin-bottom: 0; }
+a.table-clear-filter + button.btn { display: none; }
+div.filter-dropdown + button.btn { display: none; }
+div.filter-dropdown.dropdown div.btn-group.bootstrap-select.filter-dropdown {
+    width: 100%;
+}
+div.filter-dropdown.dropdown {
+    min-width: 0;
+}
+
+// aus styles-datatable-pagination.css
+tfoot li.page-number.active .btn {
+    background-color: @es-green-20;
+}
+
+tfoot ul.pagination li.pagination-text {
+    vertical-align: middle;
+}
+
+tfoot ul.pagination {
+    margin: 0;
+}
+
+tfoot ul.pagination button.btn {
+    margin: 0;
+}
+
+tfoot ul.pagination > li.pagination-text:first-child > span {
+    float: inherit;
+    margin-right: 0;
+}
+
+tfoot td.pagination-container {
+    width: 100%
+}
+
+tfoot td.pagination-container.NORMAL {
+    text-align: right;
+}
+
+tfoot td.pagination-container.SIMPLE {
+    text-align: center;
+}
+
+tfoot ul.pagination {
+    width: 100%;
+}
+
+table.table tfoot tr:hover {
+    background-color: inherit;
+}
+
+table.table tfoot tr {
+    border: none;
+}
+
+table.table > tfoot > tr > td {
+    padding: 0;
+}
+
+// aus styles-datatable-scroll.css
+div.tablescroll_wrapper table {
+    margin-bottom: 0;
+}
+
+table.tablescroll_head.table {
+    margin-bottom: 0;
+}

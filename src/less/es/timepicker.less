@@ -1,0 +1,84 @@
+/*
+ * Timepicker Component for Twitter Bootstrap
+ *
+ * Copyright 2013 Joris de Wit
+ *
+ * Contributors https://github.com/jdewit/bootstrap-timepicker/graphs/contributors
+ *
+ */
+.bootstrap-timepicker {
+    margin-top: 8px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+.bootstrap-timepicker-widget {
+    margin-top: 8px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+
+    &.dropdown-menu {
+        padding: 0;
+        border: 0;
+        min-width: 90px;
+
+        &:after, &:before {
+            border: 0;
+        }
+
+        &.open {
+            display: inline-block;
+        }
+    }
+
+    //layout for the timepicker input form uses a table
+    table {
+        width: 100%;
+        margin: 0;
+
+        td {
+            text-align: center;
+            height: 30px;
+            width: 40px;
+            margin: 0;
+            padding: 2px;
+
+            &.separator {
+                width: 5px;
+            }
+
+            a {
+                border: 1px transparent solid;
+                width: 100%;
+                display: inline-block;
+                margin: 0;
+                padding: 2px 0;
+                outline: 0;
+                color: #333;
+
+                &:hover {
+                    text-decoration: none;
+                    background-color: #eee;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    border-color: #ddd;
+                    border-radius: 0;
+                }
+
+                &:focus {
+                    text-decoration: none;
+                }
+            }
+
+            input, .form-control {
+                border-radius: 0;
+                width: 30px;
+                margin: 0 auto;
+            }
+
+            span {
+              width: auto;
+            }
+        }
+    }
+}
+

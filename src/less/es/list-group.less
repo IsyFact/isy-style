@@ -1,0 +1,79 @@
+// This file has been created by ERGOSIGN GmbH - All rights reserved - http://www.ergosign.de
+// DO NOT ALTER OR REMOVE  THIS COPYRIGHT NOTICE OR THIS FILE HEADER.
+// 
+// This file and the code contained in it are subject to the agreed contractual terms and conditions,
+// in particular with regard to resale and publication.
+
+// styling of all form controls
+
+
+
+//== Browse & Collect (Lists)
+//
+//## Styling for Browse & Collect
+.list-group-header {
+  color: @es-gray-100;
+  height: 35px;
+  padding: 0px 10px;
+
+  > * {
+    display: inline;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    line-height: 35px;
+  }
+
+  .form-group {
+    float: right;
+    margin-top: 5px; //TODO: Edit when selectbox is styled
+    margin-bottom: 0px;
+  }
+}
+
+.list-group, select.list-group {
+    border-bottom: none;
+    padding: 0;
+
+    .list-group-item, option {
+        padding: 5px 10px;
+        font-size: 14px;
+        margin-bottom: 0px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px dotted @es-gray-40;
+
+        &:hover {
+            background-color: @es-gray-20;
+        }
+
+        &:active {
+            background-color: @es-gray-40;
+        }
+
+        :last-child {
+            border-bottom: none;
+        }
+    }
+
+    option {
+        padding-top: 8px;
+        padding-bottom: 7px;
+    }
+
+    &.read-only {
+
+        .list-group-item {
+
+        &:hover,
+        &:active,
+        &.active {
+            background-color: white;
+        }
+        }
+
+    }
+}

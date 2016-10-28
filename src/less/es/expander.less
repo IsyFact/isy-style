@@ -1,0 +1,99 @@
+// This file has been created by ERGOSIGN GmbH - All rights reserved - http://www.ergosign.de
+// DO NOT ALTER OR REMOVE  THIS COPYRIGHT NOTICE OR THIS FILE HEADER.
+// 
+// This file and the code contained in it are subject to the agreed contractual terms and conditions,
+// in particular with regard to resale and publication.
+
+
+@accordion-expander-chevron-up-iconfont-glyph: "\e624";
+@accordion-expander-chevron-right-iconfont-glyph: "\e623";
+
+
+//== Expander
+//
+//## Styling for Expander
+.accordion {
+
+    .accordion-group {
+        margin-bottom: 10px;
+        clear: both;
+
+        .accordion-heading {
+            display: block;
+            height: 29px;
+
+            > button {
+                float: left;
+                margin-right: 5px;
+            }
+
+            a {
+                float: left;
+                clear: both;
+                color: @es-dark-gray;
+                font-size: 18px;
+                //font-weight: bold;
+                text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.6);
+                margin-right: 10px;
+                text-decoration: none;
+
+                //left icon
+                span {
+                    margin-right: 5px;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    color: @es-green-100;
+                }
+
+                > span.icon:before {
+                    content: @accordion-expander-chevron-up-iconfont-glyph;
+                }
+
+                &.collapsed {
+
+                    > span.icon:before {
+                        content: @accordion-expander-chevron-right-iconfont-glyph;
+                    }
+                }
+            }
+
+            .accordion-line-container {
+                display: block;
+                overflow: hidden;
+
+                .accordion-line {
+                    width: 100%;
+                    //background-color: red;
+                    margin-top: 13px; //TODO: Check that
+                    display: block;
+                    border-top: 1px dotted @es-light-gray-C;
+                }
+            }
+        }
+
+        &.sub-group {
+            padding-left: 23px;
+
+            .accordion-heading {
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &.data-preview {
+            background-color: @es-light-gray-A;
+            padding: 10px 24px 15px 20px;
+            border-bottom: 1px dotted @es-gray-40;
+        }
+    }
+
+    .accordion-group,
+    .accordion-body,
+    .sub-group,
+    .accordion-heading {
+        clear: both;
+    }
+}
