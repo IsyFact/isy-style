@@ -583,6 +583,16 @@ select.form-selectonedropdown {
     height: 0;
 }
 
+     
+input[type="text"]:disabled {
+	cursor: not-allowed;
+}
+
+//Geldbeträge: Text rechts ausrichten, falls explizit so gewünscht.
+.currency-input-text-align-right {
+    text-align: right;
+}
+
 /* Wenn ein Zeichenpicker geöffnet ist, wollen wir verbundenes Eingabefeld als fokusiert markieren. */
 .charpicker-focused, .charpicker-focused:hover{
   box-shadow: none;
