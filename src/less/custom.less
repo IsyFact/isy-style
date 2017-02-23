@@ -53,6 +53,12 @@ form {
   outline: 1px solid #33c6f5 !important;
 }
 
+// Styling für Überschriften der Panels
+.panel-group .panel-title > a h1, .panel-group .panel-title > span h1 {
+    		font-size: inherit;
+    		display: inline;
+}
+
 
 // ##############################################################
 // ### Data Table
@@ -573,6 +579,15 @@ select.form-selectonedropdown {
     display: none;
     width: 0;
     height: 0;
+}
+
+input[type="text"]:disabled {
+	cursor: not-allowed;
+}
+
+//Geldbeträge: Text rechts ausrichten, falls explizit so gewünscht.
+.currency-input-text-align-right {
+    text-align: right;
 }
 
 /* Wenn ein Zeichenpicker geöffnet ist, wollen wir verbundenes Eingabefeld als fokusiert markieren. */
