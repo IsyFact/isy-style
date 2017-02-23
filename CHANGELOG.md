@@ -1,3 +1,12 @@
+# v2.1.0 (unveröffentlicht)
+
+## Neuerungen
+- `IFS-29`:
+	* Deaktivierte Eingabefelder haben einen entsprechenden Cursur.
+    * Einführung von -Tags für Überschriften von Panels.
+    * formCurrencyInput hat neuen, optionalen Parameter zum Ausrichten des Texts.
+
+
 # v2.0.2
 - keine Änderungen.
 
