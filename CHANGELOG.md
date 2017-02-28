@@ -1,9 +1,11 @@
 # v2.1.0 (unveröffentlicht)
+## Bugfixes
+- `IFS-24`: Toolbar im IE "überdeckt" Maskenelemente.
 
 ## Neuerungen
 - `IFS-29`:
 	* Deaktivierte Eingabefelder haben einen entsprechenden Cursur.
-    * Einführung von -Tags für Überschriften von Panels.
+    * Einführung von h-Tags für Überschriften von Panels.
     * formCurrencyInput hat neuen, optionalen Parameter zum Ausrichten des Texts.
 
 
