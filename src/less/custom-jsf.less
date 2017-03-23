@@ -74,6 +74,16 @@ form {
 	position: static;
 }
 
+/*  So wachsen die Tabellen nicht über die DIVs heraus */
+.table-container table {
+    table-layout: fixed;
+}
+
+/* So vergroessern sich die Zellen der Tabellen nicht mit dem Text */
+.table-container table th, td {
+    overflow: hidden;
+}
+
 // ##############################################################
 // ### Validierung
 // ##############################################################

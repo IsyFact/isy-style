@@ -1,6 +1,7 @@
-# v2.1.0 (unveröffentlicht)
+# v2.1.0
 ## Bugfixes
 - `IFS-24`: Toolbar im IE "überdeckt" Maskenelemente.
+- `RF-123`: Fix für fehlerhaftes Tabellen-Layout bei langen Texten in Tabellenspalte.
 
 ## Neuerungen
 - `IFS-29`:
