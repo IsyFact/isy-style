@@ -1,3 +1,6 @@
+# v2.2.0
+- `IFS-17`: Masterpom-lib und isyfact-base aktualisiert, group-id und artifact-id geändert
+
 # v2.1.0
 ## Bugfixes
 - `IFS-24`: Toolbar im IE "überdeckt" Maskenelemente.

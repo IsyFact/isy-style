@@ -159,7 +159,7 @@ module.exports = function (grunt) {
 		compress: {
 			main: {
 				options: {
-					archive: 'www/plis-style-<%= pkg.version %>.zip'
+					archive: 'www/isy-style-<%= pkg.version %>.zip'
 				},
 				files: [
 					{ expand: true, cwd: 'www/', src: ['*/**'], dest: './'}, 
@@ -183,12 +183,12 @@ module.exports = function (grunt) {
 				],
 				options: {
 					publish: [{
-						id: 'de.bund.bva.pliscommon:plis-style:zip',
+						id: 'de.bund.bva.isyfact:isy-style:zip',
 						version: '<%= pkg.version %>', 
 						path: 'dist/'
 					}],
 					parameters: [
-						'build.name=plis-style',
+						'build.name=isy-style',
 						'version=<%= pkg.version %>'
 					]
 				}
