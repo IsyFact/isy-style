@@ -1,5 +1,5 @@
 # v2.2.0
-- `IFS-17`: Masterpom-lib und isyfact-base aktualisiert, group-id und artifact-id geändert
+- `IFS-17`: Umbenennung der Artifact-ID und Group-ID
 
 # v2.1.0
 ## Bugfixes
@@ -13,10 +13,8 @@
     * formCurrencyInput hat neuen, optionalen Parameter zum Ausrichten des Texts.
 
 # v2.0.4
-- `FLUEVE-493` Bugfix: Text kann jetzt im Firefox markiert werden. 99d685b580f0388e9d9e145ef0cf1a9dc1edcd19
-
-# v2.0.2
-- keine Änderungen.
+## Bugfixes
+- Text lässt sich in "neuen" Browsern wieder markieren/kopieren (-webkit-user-select).
 
 # v2.0.0 
 - Merge mit DAISY
