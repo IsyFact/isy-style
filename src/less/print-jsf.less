@@ -191,3 +191,25 @@ select {
 		content: url("../img/controls/rb_checked_focused.png");
 	}	
 }
+
+/* überschreibt das Standard-Aussehen von deaktivierten Checkboxen. Ist notwendig, da diese sonst doppelt angezeigt werden. Einmal das größere
+ Checkbox-Bild aus dem CSS und einmal darüber die original input-checkbox.*/
+.checkbox>label>.form-control[disabled] {
+    opacity: 0;
+}
+
+/* Enabled und Disabled müssen gleich dargestellt werden*/
+.checkbox.vieraugen label input.form-control, 
+.checkbox.vieraugen label input.form-control[disabled] {
+    display: block;
+}
+
+.checkbox .formcheckboxvieraugen, .checkbox .formcheckboxvieraugendisabled  {
+    padding: 0px 0px 2px 0px;
+    margin: 0px;
+    border: 0 none;
+}
+
+.checkbox .formcheckboxvieraugendisabled {
+    opacity: 0.5;
+}

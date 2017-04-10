@@ -1,3 +1,6 @@
+# v2.2.1
+- Fix für das Four-Eyes-Icon
+
 # v2.2.0
 - `IFS-17`: Umbenennung der Artifact-ID und Group-ID
 
