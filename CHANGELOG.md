@@ -18,6 +18,3 @@
 # v2.0.4
 ## Bugfixes
 - Text lässt sich in "neuen" Browsern wieder markieren/kopieren (-webkit-user-select).
-
-# v2.0.0 
-- Merge mit DAISY
