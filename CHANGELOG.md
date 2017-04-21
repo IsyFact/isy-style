@@ -1,3 +1,9 @@
+# v2.2.2
+- Header-Bereich: Linkes und rechtes Logo und der Text, der neben dem rechten Logo stehen soll, sind nun konfigurierbar.
+
+## Hinweise zum Upgrade
+- Anwendungen müssen nun die Konfigurationsparameter 'gui.header.logo.rechts.pfad', 'gui.header.logo.links.pfad' und 'gui.header.text.logo.rechts' setzen, damit die Logos bzw. der Text angezeigt werden.
+
 # v2.2.1
 - Fix für das Four-Eyes-Icon
 
