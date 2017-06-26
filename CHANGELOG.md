@@ -1,3 +1,9 @@
+# v2.2.3
+- Modernisierung des Builds
+- Support für Release als npm Paket
+- Referenzen auf nicht existierende Bilder entfernt
+- Nicht verwendete Templates entfernt
+
 # v2.2.2
 - Header-Bereich: Linkes und rechtes Logo und der Text, der neben dem rechten Logo stehen soll, sind nun konfigurierbar.
 
