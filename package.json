@@ -9,7 +9,7 @@
     "deploy": "grunt deploy"
   },
   "publishConfig": {
-    "registry": "", // Beim Veröffentlichen muss hier die URL einer npm Registry eingetragen werden.
+    "registry": "",
     "access": "restricted"
   },
   "devDependencies": {
