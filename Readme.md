@@ -33,4 +33,12 @@ Mittels `npm version` wird automatisch die Version in der Datei `package.json` g
 ## npm Deployment
 
 * `npm run build` erstellt die Dateien im `/dist` Ordner.
-* `npm publish dist\ --access restricted --"@isyfact:registry=[Artifactory Basis URL]/api/npm/[Artifactory Registry Name e.g. npm-local]/" --username=[User] --password=[Passwort] --email=[User E-Mail]` veröffentlicht die neue Version in eine npm Registry.
+* `npm publish dist\ --access restricted --"@isyfact:registry=[Registry Pfad]"` veröffentlicht die neue Version in eine npm Registry. In einer `.npmrc` sind vorher die entsprechenden Einträge für die Authentifizierung des Nutzers für den Scope `@isyfact` zu setzen.
+
+Beispiel:
+```
+//[Registry Pfad]:_password=[Passwort Hash]
+//[Registry Pfad]:username=[User]
+//[Registry Pfad]:email=[E-Mail]
+//[Registry Pfad]:always-auth=true
+```
