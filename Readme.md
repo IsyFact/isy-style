@@ -33,4 +33,4 @@ Mittels `npm version` wird automatisch die Version in der Datei `package.json` g
 ## npm Deployment
 
 * `npm run build` erstellt die Dateien im `/dist` Ordner.
-* `npm publish /dist --registry [ARTIFACTORY_REGISTRY] --access restricted` veröffentlicht die neue Version in die npm Registry.
+* `npm publish dist\ --access restricted --"@isyfact:registry=[Artifactory Basis URL]/api/npm/[Artifactory Registry Name e.g. npm-local]/" --username=[User] --password=[Passwort] --email=[User E-Mail]` veröffentlicht die neue Version in eine npm Registry.
