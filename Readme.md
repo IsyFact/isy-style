@@ -32,6 +32,5 @@ Mittels `npm version` wird automatisch die Version in der Datei `package.json` g
 
 ## npm Deployment
 
-* `publishConfig.url` in der Datei `package.json` pflegen.
 * `npm run build` erstellt die Dateien im `/dist` Ordner.
-* `npm publish /dist` veröffentlicht die neue Version in die npm Registry, welche in der `publishConfig` konfiguriert wurde.
+* `npm publish /dist --registry [ARTIFACTORY_REGISTRY] --access restricted` veröffentlicht die neue Version in die npm Registry.

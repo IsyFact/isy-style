@@ -1,11 +1,13 @@
+const copyPackageJson = require('./copy-package-json');
+
 // Für das Deployment in eine Artifactory Instanz via Grunt Task deploy
 // muss die folgende Konfiguration gepflegt werden.
 const artifactoryConfig = {
-  url: '', // Basis URL zum Artifactory
-  repository: '', // Name des internen Repositories im Artifactory
-  username: '',
-  password: ''
-};
+    url: '', // Basis URL zum Artifactory
+    repository: '', // Name des internen Repositories im Artifactory
+    username: '',
+    password: ''
+  };
 
 module.exports = function (grunt) {
     grunt.initConfig({
@@ -35,8 +37,7 @@ module.exports = function (grunt) {
         copy: {
             all: {
                 files: [
-                    { expand: true, cwd: 'src/assets/', src: ['**'], dest: 'dist/' },
-                    { expand: true, src: ['package.json'], dest: 'dist/' }
+                    { expand: true, cwd: 'src/assets/', src: ['**'], dest: 'dist/' }
                 ],
                 options: {
                     basePath: 'src/assets'
@@ -78,7 +79,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-artifactory-artifact');
 
-    grunt.registerTask('build', ['clean', 'less', 'copy']);
+    grunt.registerTask('copy-package-json', 'copies changelog and removes private flag and scripts', function() {
+      copyPackageJson();
+    });
+    grunt.registerTask('build', ['clean', 'less', 'copy', 'copy-package-json']);
 	grunt.registerTask('deploy', ['build', 'artifactory:client:publish']);
     grunt.registerTask('default', ['build']);
 };

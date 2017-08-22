@@ -4,13 +4,10 @@
   "description": "ISY-Fact styles and templates",
   "author": "ISY-Fact",
   "license": "UNLICENSED",
+  "private": true,
   "scripts": {
     "build": "grunt build",
     "deploy": "grunt deploy"
-  },
-  "publishConfig": {
-    "registry": "",
-    "access": "restricted"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
