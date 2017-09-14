@@ -84,6 +84,35 @@ form {
     overflow: hidden;
 }
 
+/* Wenn eine Tabellen Spalte sortierbar ist, aber aktuell nicht sortiert ist,
+dann sollen beide Sortier-Symbole (aufsteigend/absteigend) angezeigt werden. */
+
+//Das "aufsteigend" Symbol.
+.table thead tr th.sortable:not(.sorted) span::before {
+    content: ' ';
+    position: relative;
+    left: 10px;
+    bottom: 3px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 4px solid @es-dark-gray;
+    border-bottom-color: @es-dark-gray;
+    display: inline-block;
+}
+
+//Das "absteigend" Symbol.
+.table thead tr th.sortable:not(.sorted) span::after {
+    content: ' ';
+    position: relative;
+    left: 10px;
+    bottom: 3px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    display: inline-block;
+    border-top: 4px solid @es-dark-gray;
+    border-top-color: @es-dark-gray;
+}
+
 // ##############################################################
 // ### Validierung
 // ##############################################################
