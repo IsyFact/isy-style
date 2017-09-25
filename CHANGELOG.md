@@ -1,3 +1,6 @@
+# v2.3.0
+- `IFS-61`: Darstellung sortierbarer Spalten überarbeitet.
+
 # v2.2.3
 - Modernisierung des Builds
 - Support für Release als npm Paket
