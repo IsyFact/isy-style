@@ -24,6 +24,8 @@ Für die Versionspflege sollte das Tool `npm version` genutzt werden (siehe [doc
 * `npm version prerelease` erstellt ein neues Prerelease (Beispiel 2.3.4-5 auf 2.3.4-6)
 
 Mittels `npm version` wird automatisch die Version in der Datei `package.json` gebumpt und ein Tag in dem Format `v2.3.4-5` erstellt.
+Sollte das Erstellen eines Tags nicht erwünscht sein, so kann die Option `--no-git-tag-version` angefügt werden. Beispiel: 
+`npm --no-git-tag-version version prerelease`
 
 ## Artifactory Deployment
 
