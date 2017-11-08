@@ -1,3 +1,9 @@
+# v3.0.0
+- Umstellung auf fontawesome Icons
+ACHTUNG: Die fonts liegen nun auf toplevel in `/fonts` statt `/css/fonts`.
+Die Referenzen zeigen ebenfalls dorthin - z.B. `/css/styles.css` hat folgenden Eintrag `url(../fonts/font-awesome.min.css)`.
+Dies muss bei der Umstellung beachtet werden.
+
 # v2.3.0
 - `IFS-61`: Darstellung sortierbarer Spalten überarbeitet.
 

@@ -43,11 +43,11 @@ module.exports = function (grunt) {
                     basePath: 'src/assets'
                 }
             },
-            iconfont: {
+            fontawesme: {
                 expand: true,
-                cwd: 'src/iconfont/fonts/',
+                cwd: 'node_modules/font-awesome/fonts/',
                 src: "**",
-                dest: "dist/css/fonts/",
+                dest: "dist/fonts/",
                 flatten: true
             }
         },

@@ -16,5 +16,8 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-less": "^1.4.1",
     "less-plugin-clean-css": "^1.5.1"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0"
   }
 }
