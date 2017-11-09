@@ -10,6 +10,7 @@
     "deploy": "grunt deploy"
   },
   "devDependencies": {
+    "font-awesome": "^4.7.0",
     "grunt": "^1.0.1",
     "grunt-artifactory-artifact": "^1.0.1",
     "grunt-contrib-clean": "^1.1.0",
@@ -17,7 +18,5 @@
     "grunt-contrib-less": "^1.4.1",
     "less-plugin-clean-css": "^1.5.1"
   },
-  "dependencies": {
-    "font-awesome": "^4.7.0"
-  }
+  "dependencies": {}
 }
