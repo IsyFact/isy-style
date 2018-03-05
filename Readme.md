@@ -6,6 +6,7 @@ Beinhaltet die original less-Dateien, welche von Ergosign geliefert wurden.
 
 * node.js installieren
 * Der Befehl `npm install` lädt die Dependencies in den `node_modules` Ordner.
+* `npm install grunt` ausführen
 
 ## Build
 
