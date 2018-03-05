@@ -254,31 +254,28 @@ dann sollen beide Sortier-Symbole (aufsteigend/absteigend) angezeigt werden. */
 	position: relative;
 }
 
-//Bug das anzeige leicht verschoben ist bei verschiedenen größen
+// Überschreibe die Vorgabe (normal -8px) für das kleine Dreieck,
+// das in der Navigationsleiste bei dem aktiven Eintrag (ausgewählt bzw. hover)
+// angezeigt wird. 
 .navbar .nav.nav-tabs>li.active>a:after,
 .navbar .nav.nav-tabs>li:hover>a:after{
-	bottom: -7px
+	bottom: -7px;
 }
 
-// Anpassen des Menüs auf kleine breite
+// Überschreibe einen Teil der Vorgaben für das Submenü, das abgezeigt wird,
+// wenn man über einen Eintrag in der Navigationsleiste hovert.
 .navbar .nav.nav-tabs>li>.navbar-submenu{
 	width:auto;
 	top:29px;
 	left:auto;
 	right:auto;
 	padding:0px 0px 10px 0px;
-	border-top:0px
+	border-top:0px;
 }
 
 .navbar-anwendung{
-	padding: 0px 15px
+	padding: 0px 15px;
 }
-
-
-// Anpassen des Menüs auf kleine breite
-.navbar .nav.nav-tabs>li>.navbar-submenu{width:auto;top:29;left:auto;right:auto;padding:0px 0px 10px 0px; border-top:0px}
-
-.navbar-anwendung{padding: 0px 15px}
 
 // Gefüllte Navbar soll höher sein
 .navbar-color-content {
