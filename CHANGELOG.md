@@ -1,3 +1,6 @@
+# v3.1.0 (unveröffentlicht)
+- `IFS-99`: Es wurde eine vereinheitlichte horizontale Navigation implementiert und die Stylings entsprechend daran angepasst.
+
 # v3.0.0
 - Umstellung auf fontawesome Icons
 ACHTUNG: Die fonts liegen nun auf toplevel in `/fonts` statt `/css/fonts`.
