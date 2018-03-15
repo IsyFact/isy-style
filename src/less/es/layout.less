@@ -18,7 +18,7 @@ body {
 body {
     //background-color: @es-light-gray-B;
     font-weight: 300; // fix for mac browsers no impact for windows browser
-    min-width: 1024px; //as defined in the styleguide
+    min-width: 1200px; //as defined in the styleguide
     max-width: @screen-width-max;
     position: relative;
 
@@ -63,14 +63,13 @@ body {
             }
         }
 
-        > .main-header { //header with navigation
+        > header { //header with navigation
             background-color: @es-white;
             position: relative;
             z-index: 9;
 
             > .header-colorbar {
                 height: 10px;
-                background: @es-theme-color;
             }
 
             > .header-content {
@@ -94,7 +93,7 @@ body {
                 }
             }
 
-            > .main-nav { //main navigation
+            > nav { //main navigation
                 //layout styles only
                 //.container-fluid();
 
@@ -102,10 +101,9 @@ body {
             }
         }
 
-        > #content {
-            //content
-            position: relative;
-            z-index: 2;
+        > main { //content
+          position: relative;
+          z-index: 2;
             //Toolbar
             .toolbar {
                 padding: 10px 12px 0;
@@ -122,20 +120,23 @@ body {
 
             }
 
+
             .maincontent {
-                padding-top: 10px;
-                //background-color: @es-light-gray-B;
+              padding-top: 10px;
+              //background-color: @es-light-gray-B;
 
             }
 
             .reset-maincontent-padding {
-                margin: -10px -5px 10px;
+              margin: -10px -5px 10px;
 
             }
+
 
             .maincontent-left {
                 margin-right: 250px;
             }
+
 
             .subnav {
                 margin: 0 0 0 5px;
@@ -144,8 +145,8 @@ body {
             .info-panel {
                 .well;
                 .well-info;
-                float: right;
-                margin-bottom: 0;
+                float:right;
+                margin-bottom:0;
             }
         }
 

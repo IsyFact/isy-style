@@ -153,10 +153,6 @@
             }
 		}
 
-        > a {
-            &:hover { color: @es-green-100; }
-        }
-
 
 
         > a.collapsed > .icon:before {
@@ -168,6 +164,22 @@
 			float:  left;
 			margin: 0;
 			padding: 0 5px;
+		}
+
+		.panel-groupline-container {
+			display: block;
+		    overflow: hidden;
+            height: 100%;
+            position: relative;
+
+		    .panel-groupline  {
+                position: absolute;
+                left: 5px;
+                top: 50%;
+                height: 10px;
+                right: 0;
+		        border-top: 1px dotted @es-light-gray-C;
+		     }
 		}
 	}
 
@@ -198,29 +210,6 @@
 		}
 	}
 }
-
-
-.panel-groupline-container {
-    display: block;
-    overflow: hidden;
-    height: 100%;
-    position: relative;
-
-    .panel-groupline  {
-        position: absolute;
-        left: 5px;
-        top: 50%;
-        height: 10px;
-        right: 0;
-        border-top: 1px dotted @es-light-gray-C;
-    }
-
-    &.static {
-        margin-top: 10px;
-        overflow: visible;
-    }
-}
-
 
 .panel-default > .panel-heading + .panel-collapse > .panel-body,
 .panel-group .panel-heading + .panel-collapse .panel-body {

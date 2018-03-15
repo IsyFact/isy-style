@@ -9,7 +9,13 @@
 
 
 /* Theme color (Header colorbar, links) */
-@es-theme-color:   @es-green-80;
+@es-theme-color: @es-portal-color-80;
+
+@es-portal-color-100: #627F0D;
+@es-portal-color-80: #81993D;
+@es-portal-color-60: #A1B26E;
+@es-portal-color-40: #C0CC9E;
+@es-portal-color-20: #E0E5CF;
 
 //** Common color definitions for interface design
 @es-black:          #231f20;
@@ -34,19 +40,16 @@
 
 @es-orange-100:     #F28502;
 @es-orange-20:      #FCE7CC;
-@es-red-100:        #c41d46;
-@es-red-20:         #e7cfda;
 @es-blue-20:        #CDE4ED;
 @es-blue-10:        #EDF6FA;
 //** also part of portal color definition
 @es-green-20:       #E0E5CF;
-@es-green-10:       #F2F3EE;
 
-//** portal color definitions of BVA
-@es-green-100:      #627F0D;
-@es-green-80:       #81993D;
-@es-green-60:       #A1B26E;
-@es-green-40:       #C0CC9E;
+////** portal color definitions of BVA
+//@es-green-100:      #627F0D;
+//@es-green-80:       #81993D;
+//@es-green-60:       #A1B26E;
+//@es-green-40:       #C0CC9E;
 
 //** application color definitions of BVA
 @es-yellow:         #FFD347;
@@ -94,6 +97,8 @@
 @link-color:            @brand-primary;
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
+//** Link hover decoration.
+@link-hover-decoration: underline;
 
 //** Global spacing between elements
 @main-spacing: 10px; 
@@ -197,7 +202,7 @@
 @table-bg-accent:               #f9f9f9;
 //** Background color used for `.table-hover`.
 @table-bg-hover:                @es-gray-20;
-@table-bg-active:               @es-green-20;
+@table-bg-active:               transparent;
 
 //** Border color for table and cell borders.
 @table-border-color:            none;
@@ -235,6 +240,11 @@
 
 @btn-link-disabled-color:        @gray-light;
 
+// Allows for customizing button radius independently from global border radius
+@btn-border-radius-base:         @border-radius-base;
+@btn-border-radius-large:        @border-radius-large;
+@btn-border-radius-small:        @border-radius-small;
+
 
 //== Forms
 //
@@ -248,9 +258,14 @@
 //** Text color for `<input>`s
 @input-color:                    @es-dark-gray;
 //** `<input>` border color
-@input-border:                   @es-gray-40;
+@input-border:                   @es-gray-20;
 //** `<input>` border radius
 @input-border-radius:            @border-radius-base;
+//** Large `.form-control` border radius
+@input-border-radius-large:      @border-radius-large;
+//** Small `.form-control` border radius
+@input-border-radius-small:      @border-radius-small;
+
 //** Border color for inputs on focus
 @input-border-focus:             @es-mid-blue;
 
@@ -271,6 +286,8 @@
 //** Small `.form-control` height
 @input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
 
+//** `.form-group` margin
+@form-group-margin-bottom:       15px;
 
 @legend-color:                   @gray-dark;
 @legend-border-color:            #e5e5e5;
@@ -280,6 +297,8 @@
 //** Border color for textual input addons
 @input-group-addon-border-color: @input-border;
 
+//** Disabled cursor for form controls and buttons.
+@cursor-disabled:                not-allowed;
 
 //== Dropdowns
 //
@@ -288,23 +307,23 @@
 //** Background for the dropdown menu.
 @dropdown-bg:                    #fff;
 //** Dropdown menu `border-color`.
-@dropdown-border:                @es-gray-40;
+@dropdown-border:                @es-gray-20;
 //** Dropdown menu `border-color` **for IE8**.
-@dropdown-fallback-border:       @es-gray-40;
+@dropdown-fallback-border:       @es-gray-20;
 //** Divider color for between dropdown items.
-@dropdown-divider-bg:            @es-gray-40;
+@dropdown-divider-bg:            @es-gray-20;
 
 //** Dropdown link text color.
 @dropdown-link-color:            @gray-dark;
 //** Hover color for dropdown links.
 @dropdown-link-hover-color:      @es-dark-gray;
 //** Hover background for dropdown links.
-@dropdown-link-hover-bg:         @es-gray-40;
+@dropdown-link-hover-bg:         @es-gray-20;
 
 //** Active dropdown menu item text color.
 @dropdown-link-active-color:     @es-dark-gray;
 //** Active dropdown menu item background color.
-@dropdown-link-active-bg:        @es-gray-60;
+@dropdown-link-active-bg:        @es-gray-40;
 
 //** Disabled dropdown menu item background color.
 @dropdown-link-disabled-color:   @gray-light;
@@ -338,25 +357,25 @@
 
 // Extra small screen / phone
 // Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
-@screen-xs:                  1px; //disable
+@screen-xs:                  1px;
 @screen-xs-min:              @screen-xs;
 @screen-phone:               @screen-xs-min;
 
 // Small screen / tablet
 // Note: Deprecated @screen-sm and @screen-tablet as of v3.0.1
-@screen-sm:                  2px; //disable
+@screen-sm:                  2px;
 @screen-sm-min:              @screen-sm;
 @screen-tablet:              @screen-sm-min;
 
 // Medium screen / desktop
 // Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
-@screen-md:                  3px; //disable
+@screen-md:                  3px; //from 3px to 1600px let grid-md work
 @screen-md-min:              @screen-md;
 @screen-desktop:             @screen-md-min;
 
 // Large screen / wide desktop
 // Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
-@screen-lg:                  4px; //let grid-lg work exclusively
+@screen-lg:                  1600px; //let grid-lg work from 1600px on, otherweise inherit from grid-md
 @screen-lg-min:              @screen-lg;
 @screen-lg-desktop:          @screen-lg-min;
 
@@ -471,7 +490,7 @@
 
 //=== Shared nav styles
 @nav-link-padding:                          10px 15px;
-@nav-link-hover-bg:                         @es-gray-40;
+@nav-link-hover-bg:                         @gray-lighter;
 
 @nav-disabled-link-color:                   @gray-light;
 @nav-disabled-link-hover-color:             @gray-light;
@@ -560,9 +579,9 @@
 @state-warning-bg:               @es-orange-20;
 @state-warning-border:           @es-orange-100;
 
-@state-danger-text:              @es-red-100;
-@state-danger-bg:                @es-red-20;
-@state-danger-border:            @es-red-100;
+@state-danger-text:              @es-orange-100;
+@state-danger-bg:                @es-orange-20;
+@state-danger-border:            @es-orange-100;
 
 
 //== Tooltips
@@ -721,7 +740,8 @@
 @progress-bar-danger-bg:      @brand-danger;
 //** Info progress bar color
 @progress-bar-info-bg:        @brand-info;
-
+//** Variable for setting rounded corners on progress bar.
+@progress-border-radius:      @border-radius-base;
 
 //== List group
 //
@@ -739,9 +759,9 @@
 //** Text color of active list items
 @list-group-active-color:       @es-dark-gray;
 //** Background color of active list items
-@list-group-active-bg:          @es-green-20;
+@list-group-active-bg:          transparent;
 //** Border color of active list elements
-@list-group-active-border:      @es-gray-40;
+@list-group-active-border:      transparent;
 //** Text color for content within active list items
 @list-group-active-text-color:  lighten(@list-group-active-bg, 40%);
 
@@ -918,7 +938,10 @@
 @blockquote-border-color:     @gray-lighter;
 //** Page header border color
 @page-header-border-color:    @gray-lighter;
-
+//** Width of horizontal description list titles
+@dl-horizontal-offset:        @component-offset-horizontal;
+//** Point at which .dl-horizontal becomes horizontal
+@dl-horizontal-breakpoint:    @grid-float-breakpoint;
 
 //== Miscellaneous
 //

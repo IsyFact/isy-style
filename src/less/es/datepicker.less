@@ -16,16 +16,16 @@
     //Month / year arrow left and right switch
     .prev:after{
         content: "";
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
+        border-top: 5px dotted transparent;
+        border-bottom: 5px dotted transparent;
         border-right: 7px solid @es-dark-gray;
         border-right-color: @es-dark-gray;
         display: inline-block;
     }
     .next:after {
         content: "";
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
+        border-top: 5px dotted transparent;
+        border-bottom: 5px dotted transparent;
         border-left: 7px solid @es-dark-gray;
         border-left-color: @es-dark-gray;
         display: inline-block;
@@ -119,7 +119,6 @@
                 span.active:hover.active,
                 span.active.disabled.active,
                 span.active.disabled:hover.active {
-                    background: @es-green-20;
                     font-weight: bold;
                     border-radius: 0;
                     border: 1px solid transparent;
@@ -138,7 +137,6 @@
                     &.disabled,
                     &.disabled:hover {
                         background: none;
-                        border: 1px solid @es-green-60;
                         font-weight: bold;
                     }
                     &:hover,
@@ -172,7 +170,6 @@
                         background-color: @es-gray-40; //active color
                     }
                     &.active {
-                        background-color: @es-green-20;
                     }
                     &:hover:hover {
                         color: #000;

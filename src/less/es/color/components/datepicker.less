@@ -1,0 +1,53 @@
+// This file has been created by ERGOSIGN GmbH - All rights reserved - http://www.ergosign.de
+// DO NOT ALTER OR REMOVE  THIS COPYRIGHT NOTICE OR THIS FILE HEADER.
+//
+// This file and the code contained in it are subject to the agreed contractual terms and conditions,
+// in particular with regard to resale and publication.
+
+//== Datepicker
+//
+//## Styling for Datepicker
+.datepicker {
+
+    table {
+
+        tr {
+
+            td {
+
+                &.active:hover:active,
+                &.active.disabled:active,
+                &.active.disabled:hover:active,
+                &.active.active,
+                &.active:hover.active,
+                &.active.disabled.active,
+                &.active.disabled:hover.active,
+                span.active:hover:active,
+                span.active.disabled:active,
+                span.active.disabled:hover:active,
+                span.active.active,
+                span.active:hover.active,
+                span.active.disabled.active,
+                span.active.disabled:hover.active {
+                    background: @es-portal-color-20;
+                }
+
+                &.today {
+                    &,
+                    &:hover,
+                    &.disabled,
+                    &.disabled:hover {
+                        border: 1px solid @es-portal-color-60;
+                    }
+
+                    &.active {
+                        background-color: @es-portal-color-20;
+                    }
+                }
+            }
+            //td
+        }
+        //tr
+    }
+    //table
+}

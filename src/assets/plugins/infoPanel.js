@@ -56,12 +56,12 @@
         if($(this.options.globalContainerClass).hasClass('show-info-panel')){
             $(this.options.globalContainerClass).removeClass('show-info-panel');
             element.addClass('hide');
-            $parentGrid.removeClass().addClass('col-lg-12');
+            $parentGrid.removeClass().addClass('col-xs-12');
         }
         else {
             $(this.options.globalContainerClass).addClass('show-info-panel');
             element.removeClass('hide');
-            $parentGrid.removeClass().addClass('col-lg-9');
+            $parentGrid.removeClass().addClass('col-xs-9');
         }
 
     };

@@ -6,15 +6,16 @@
 
 // styling of all form controls
 
-
 // Default form layout
 .form-horizontal {
+  /*
   .row + .row {
     margin-top: 20px;
   }
+  */
 
-  .form-group + .form-group {
-    margin-top: 10px;
+  .form-group {
+    margin-bottom: 15px;
   }
 
   &.readonly {
@@ -25,45 +26,47 @@
 
 }
 
+textarea {
+  min-height: 71px;
+  // min-width: 200px;
+  //  resize: none;
+}
 
 // Input Fields with an icon on the right
 .input-icon {
-    position: relative;
+  position: relative;
 
-    input{
-        padding-right: 30px;
-    }
+  input {
+    padding-right: 30px;
+  }
 
-    span{
-        position: absolute;
-        right: 0px;
-        padding: 6px 10px;
-        pointer-events: none; //TODO: Check that
-    }
+  span {
+    position: absolute;
+    right: 0px;
+    padding: 6px 10px;
+    pointer-events: none; //TODO: Check that
+  }
 }
-
-
 
 //## Styling for control-labels
 label {
-    color: @es-gray-80;
-    //float: right;
-    font-weight:  300;
-    max-width: none; // Fix for compatibility with new Bootstrap (v3.3.6)
+  color: @es-gray-100;
+  //float: right;
+  font-weight: 300;
 }
 
-label.required, 
+label.required,
 label.required:hover {
-	color: #F59D35;
+  color: #F59D35;
 }
 
 .control-label.mandatory:after {
-	color:  @brand-danger;
-	content: "*";
-	margin-left: 1px;
-	margin-right: -7px;
-	position: relative;
-	top: -2px;
+  color: @brand-danger;
+  content: "*";
+  margin-left: 1px;
+  margin-right: -7px;
+  position: relative;
+  top: -2px;
 }
 
 //== Checkbox
@@ -76,235 +79,217 @@ label.required:hover {
   min-height: @line-height-computed; // clear the floating input if there is no label text
   margin-top: 10px;
   margin-bottom: 10px;
-  position: relative;	
-  
+  position: relative;
+
   label {
-  	font-weight: 300;
-  	display: inline;
-	padding-left:  7px;
-	margin-bottom:  5px;
-    min-height: 0; // Fix for compatibility with new Bootstrap (v3.3.6)
+    font-weight: 300;
+    padding-left: 25px;
+    margin-bottom: 4px;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
   }
 }
 
-.checkbox-inline, 
+.checkbox-inline,
 .radio-inline {
-    position:  relative;
-    font-weight: 300;
-    padding-left:  0px;
-    margin-bottom:  5px;
+  position: relative;
+  font-weight: 300;
+  padding-left: 25px;
+  margin-bottom: 5px;
 
-> span {
-		margin-left:  7px;
-	}
+ /* > span {
+    margin-left: 7px;
+  }*/
 }
 
 .checkbox,
 .radio,
-.checkbox-inline, 
+.checkbox-inline,
 .radio-inline {
 
-  	
-  	input[type="checkbox"], 
-  	input[type="radio"] {
-  		margin: 1px 0 0;
-  	}
-  	
-  	span {
-  	
-  		line-height:  20px;
-  		
-  		&:before {
-	  		position:  absolute;
-	  		left:  0;
-	  		top:  1px;
-	  		width:  18px;
-	  		height:  18px;
-	  		border:  1px solid @es-gray-60;
-	  		background:  @es-white;
-	  		border-radius: 1px;
-	  		content:  "";
-	  	}
-	  	
-	  	
-  	}
-  
-}
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin: 1px 0 0;
+  }
 
-.checkbox, 
-.checkbox-inline {
-	input[type="checkbox"]:hover + span {
-		color: @es-green-100;
-		&:before {
-			border-color:  @es-gray-100;
-			background: @es-light-gray-B; 
-		}
-	}
-	
-	input[type="checkbox"]:disabled + span {
-		color: @es-light-gray-F;
-		cursor:  default;
-		&:before {
-			background:  @es-light-gray-A;
-			border-color: @es-light-gray-F; 
-		}
-	}
-	
-	input[type="checkbox"]:required + span, .required input[type="checkbox"] + span {
-		color: @es-orange;
-		&:before {
-			border-color:  @es-orange;
-			background:  @es-orange-20;
-		}
-	}
-	
-	input[type="checkbox"]:required:focus + span, .required input[type="checkbox"]:focus + span {
-		color: @es-orange;
-		&:before {
-			border-color:  @es-mid-blue;
-			background:  @es-orange-20;
-		}
-	}
-	
-	input[type="checkbox"]:focus + span {
-		&:before {
-			border-color:  @es-mid-blue;
-			background:  @es-white;
-		}
-	}
+  span {
 
+    line-height: 20px;
 
-	input[type="checkbox"]:checked + span:before {
-		background: url("../img/controls/cb_checked_default.png") -1px -1px no-repeat;
-	}
-	
-	input[type="checkbox"]:checked:required + span {
-		color: @es-gray-100;
-		&:before { 
-			background: url("../img/controls/cb_checked_default.png") -1px -1px no-repeat;
-			border-color:  @es-gray-60;  	
-		}
-	}
-	
-	input[type="checkbox"]:checked:required:focus + span {
-		color: @es-gray-100;
-		&:before { 
-			background: url("../img/controls/cb_checked_focused.png") -1px -1px no-repeat;
-			border-color:  @es-mid-blue;  	
-		}
-	}
-	
-	input[type="checkbox"]:checked:disabled + span {
-		cursor:  default;
-		&:before {
-		background: url("../img/controls/cb_checked_disabled.png") -1px -1px no-repeat;	
-		}
-	}
-	
-	input[type="checkbox"]:checked:focus + span:before { 
-		background: url("../img/controls/cb_checked_focused.png") -1px -1px no-repeat;
-	}
-
-    input[type="checkbox"]:indeterminate + span:before {
-        background: url("../img/controls/cb_tristate.png") -1px -1px no-repeat;
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 18px;
+      height: 18px;
+      border: 1px solid @es-gray-40;
+      background: @es-white;
+      border-radius: 1px;
+      content: "";
     }
-  
-  
-  input[type="checkbox"] {
-    // Fix for compatibility with new Bootstrap (v3.3.6)
-    float: left;
-    position: static;
-  }
 
+  }
 
 }
 
-.radio, 
+.checkbox,
+.checkbox-inline {
+  input[type="checkbox"]:hover + span {
+    &:before {
+      border-color: @es-gray-60;
+      background: @es-light-gray-B;
+    }
+  }
+
+  input[type="checkbox"]:disabled + span {
+    color: @es-light-gray-F;
+    cursor: default;
+    &:before {
+      background: @es-light-gray-A;
+      border-color: @es-light-gray-F;
+    }
+  }
+
+  input[type="checkbox"]:required + span {
+    color: @es-orange;
+    &:before {
+      border-color: @es-orange;
+      background: @es-orange-20;
+    }
+  }
+
+  input[type="checkbox"]:required:focus + span {
+    color: @es-orange;
+    &:before {
+      border-color: @es-mid-blue;
+      background: @es-orange-20;
+    }
+  }
+
+  input[type="checkbox"]:focus + span {
+    &:before {
+      border-color: @es-mid-blue;
+      background: @es-white;
+    }
+  }
+
+  input[type="checkbox"]:checked + span:before {
+    background: url("../img/controls/cb_checked_default.png") -1px -1px no-repeat;
+  }
+
+  input[type="checkbox"]:checked:required + span {
+    color: @es-gray-100;
+    &:before {
+      background: url("../img/controls/cb_checked_default.png") -1px -1px no-repeat;
+      border-color: @es-gray-40;
+    }
+  }
+
+  input[type="checkbox"]:checked:required:focus + span {
+    color: @es-gray-100;
+    &:before {
+      background: url("../img/controls/cb_checked_focused.png") -1px -1px no-repeat;
+      border-color: @es-mid-blue;
+    }
+  }
+
+  input[type="checkbox"]:checked:disabled + span {
+    cursor: default;
+    &:before {
+      background: url("../img/controls/cb_checked_disabled.png") -1px -1px no-repeat;
+    }
+  }
+
+  input[type="checkbox"]:checked:focus + span:before {
+    background: url("../img/controls/cb_checked_focused.png") -1px -1px no-repeat;
+  }
+
+  input[type="checkbox"]:indeterminate + span:before {
+    background: url("../img/controls/cb_tristate.png") -1px -1px no-repeat;
+  }
+
+}
+
+.radio,
 .radio-inline {
-	
-	span:before {
-		border-radius: 9px;
-	}
 
-	input[type="radio"]:hover + span {
-		color:  @es-green-100;
-		&:before {
-			border-color:  @es-gray-100;
-			background: @es-light-gray-B; 
-		}
-	}
-	
-	input[type="radio"]:disabled + span {
-		color: @es-light-gray-F;
-		cursor:  default;
-		&:before {
-			background:  @es-light-gray-A;
-			border-color: @es-light-gray-F; 
-		}
-	}
-	
-	input[type="radio"]:required + span {
-		color: @es-orange;
-		&:before {
-			border-color:  @es-orange;
-			background:  @es-orange-20;
-		}
-	}
-	
-	input[type="radio"]:required:focus + span {
-		color: @es-orange;
-		&:before {
-			border-color:  @es-mid-blue;
-			background:  @es-orange-20;
-		}
-	}
-	
-	input[type="radio"]:focus + span {
-		&:before {
-			border-color:  @es-mid-blue;
-			background:  @es-white;
-		}
-	}
-	
-	
-	input[type="radio"]:checked + span:before { 
-		background: url("../img/controls/rb_checked_default.png") -1px -1px no-repeat;
-	}
-	
-	input[type="radio"]:checked:required + span {
-		color: @es-gray-100;
-		&:before { 
-			background: url("../img/controls/rb_checked_default.png") -1px -1px no-repeat;
-			border-color:  @es-gray-60;  	
-		}
-	}
-	
-	input[type="radio"]:checked:required:focus + span {
-		color: @es-gray-100;
-		&:before { 
-			background: url("../img/controls/rb_checked_focused.png") -1px -1px no-repeat;
-			border-color:  @es-mid-blue;  	
-		}
-	}
-	
-	input[type="radio"]:checked:disabled + span {
-		cursor:  default;
-		&:before { 
-			background: url("../img/controls/rb_checked_disabled.png") -1px -1px no-repeat;	
-		}
-	}
-	input[type="radio"]:checked:focus + span:before { 
-		background: url("../img/controls/rb_checked_focused.png") -1px -1px no-repeat;
-	}
-	
-	input[type="radio"] {
-    // Fix for compatibility with new Bootstrap (v3.3.6)
-    float: left;
-    position: static;
+  span:before {
+    border-radius: 9px;
   }
-	
-}
 
+  input[type="radio"]:hover + span {
+    &:before {
+      border-color: @es-gray-60;
+      background: @es-light-gray-B;
+    }
+  }
+
+  input[type="radio"]:disabled + span {
+    color: @es-light-gray-F;
+    cursor: default;
+    &:before {
+      background: @es-light-gray-A;
+      border-color: @es-light-gray-F;
+    }
+  }
+
+  input[type="radio"]:required + span {
+    color: @es-orange;
+    &:before {
+      border-color: @es-orange;
+      background: @es-orange-20;
+    }
+  }
+
+  input[type="radio"]:required:focus + span {
+    color: @es-orange;
+    &:before {
+      border-color: @es-mid-blue;
+      background: @es-orange-20;
+    }
+  }
+
+  input[type="radio"]:focus + span {
+    &:before {
+      border-color: @es-mid-blue;
+      background: @es-white;
+    }
+  }
+
+  input[type="radio"]:checked + span:before {
+    background: url("../img/controls/rb_checked_default.png") -1px -1px no-repeat;
+  }
+
+  input[type="radio"]:checked:required + span {
+    color: @es-gray-100;
+    &:before {
+      background: url("../img/controls/rb_checked_default.png") -1px -1px no-repeat;
+      border-color: @es-gray-40;
+    }
+  }
+
+  input[type="radio"]:checked:required:focus + span {
+    color: @es-gray-100;
+    &:before {
+      background: url("../img/controls/rb_checked_focused.png") -1px -1px no-repeat;
+      border-color: @es-mid-blue;
+    }
+  }
+
+  input[type="radio"]:checked:disabled + span {
+    cursor: default;
+    &:before {
+      background: url("../img/controls/rb_checked_disabled.png") -1px -1px no-repeat;
+    }
+  }
+  input[type="radio"]:checked:focus + span:before {
+    background: url("../img/controls/rb_checked_focused.png") -1px -1px no-repeat;
+  }
+
+}
 
 //== Radio
 //
@@ -333,187 +318,181 @@ label.required:hover {
 //
 //}
 
-
 input[type="radio"], input[type="checkbox"] {
-    line-height: normal;
-    width: 18px;
-    height:  18px;
-    opacity:  0;
-	border:0 none;
-	margin:  0;
-	background-image: none;
-	background-color: transparent;
-	margin-right:  3px;
+  line-height: normal;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+  border: 0 none;
+  margin: 0;
+  background-image: none;
+  background-color: transparent;
+  margin-right: 3px;
 }
-
 
 //== Input
 //
 //## Styling for Input
 .input-group {
-    width: 100%;
+  width: 100%;
 }
 
 .form-control {
-	.box-shadow(none);
-	&:hover {
-		border:  1px solid @es-gray-60;	
-		
-		&[disabled], 
-		&:disabled {
-			border: 1px solid @es-gray-40;
-		} 
-	}
-	
-	&:focus {
-		.box-shadow(none);
-		border:  1px solid @es-mid-blue;
-	}
-	
-	&[readonly], 
-	&:readonly {
-		border-color: transparent;
-		background: transparent;
-	}
-	
-	
-	&:required, 
-	&[required], 
-	&:invalid,
-	&[invalid] {
-		border: 2px solid @es-orange-100;
-	    background-color: @es-orange-20;	
-	    padding:  2px 4px;
-	}
-	
-	&:invalid,
-	&[invalid] { 
-		margin-right: -50px;
-	}
-	
-	
-	// separate these classes to get it in IE8 to work 
-	&.required,
-	&.invalid {
-		border: 2px solid @es-orange-100;
-	    background-color: @es-orange-20;	
-	    padding:  2px 4px;
-	    &:focus {
-	    	.box-shadow(none);
-	    	border:  2px solid @es-mid-blue;
-	    }
-	}
-	
-	&.readonly {
-		border-color: transparent;
-		background: transparent;
-		&:focus {
-			.box-shadow(none);
-			border:  1px solid @es-mid-blue;
-		}
-	}
+  .box-shadow(none);
+  &:hover {
+    border: 1px solid @es-gray-40;
+
+    &[disabled],
+    &:disabled {
+      border: 1px solid @es-gray-20;
+    }
+  }
+
+  &:focus {
+    .box-shadow(none);
+    border: 1px solid @es-mid-blue;
+  }
+
+  &[readonly],
+  &:readonly {
+    border-color: transparent;
+    background: transparent;
+  }
+
+  &:required,
+  &[required],
+  &:invalid,
+  &[invalid] {
+    border: 2px solid @es-orange-100;
+    background-color: @es-orange-20;
+    padding: 2px 4px;
+  }
+
+  &:invalid,
+  &[invalid] {
+    margin-right: -50px;
+  }
+
+  // separate these classes to get it in IE8 to work
+  &.required,
+  &.invalid {
+    border: 2px solid @es-orange-100;
+    background-color: @es-orange-20;
+    padding: 2px 4px;
+    &:focus {
+      .box-shadow(none);
+      border: 2px solid @es-mid-blue;
+    }
+  }
+
+  &.readonly {
+    border-color: transparent;
+    background: transparent;
+    &:focus {
+      .box-shadow(none);
+      border: 1px solid @es-mid-blue;
+    }
+  }
 }
 
 //Select
 select.form-control {
-    display: inline-block;
-    width: auto;
-    min-width: 160px;
-    padding-top: 6px; //override this in ie8 fix
+  display: inline-block;
+  width: auto;
+  min-width: 160px;
+  padding-top: 6px; //override this in ie8 fix
 
-    > option {
-        padding: 10px;
+  > option {
+    padding: 10px;
 
-        // Active and pressed state
-        > :active {
-            &,
-            &:hover,
-            &:focus {
-                color: @dropdown-link-active-color;
-                text-decoration: none;
-                outline: 0;
-                background-color: @dropdown-link-active-bg;
-            }
-        }
-
-        // Hover/Focus state
-        &:hover,
-        &:focus {
-            color: @dropdown-link-hover-color;
-            background-color: @dropdown-link-hover-bg;
-        }
+    // Active and pressed state
+    > :active {
+      &,
+      &:hover,
+      &:focus {
+        color: @dropdown-link-active-color;
+        text-decoration: none;
+        outline: 0;
+        background-color: @dropdown-link-active-bg;
+      }
     }
+
+    // Hover/Focus state
+    &:hover,
+    &:focus {
+      color: @dropdown-link-hover-color;
+      background-color: @dropdown-link-hover-bg;
+    }
+  }
 }
 
 // Reset the bootstrap default box shadow and border color
 .has-error {
-	.form-control.invalid {
-		.box-shadow(none);
-		&:focus {
-			.box-shadow(none);
-			border-color: @es-orange-100;
-		}
-	}
-	.form-control-feedback {
-		color:  @es-dark-gray;
-		border-left:  2px solid @es-orange-100;
+  .form-control {
+    .box-shadow(none);
+    &:focus {
+      .box-shadow(none);
+      border-color: @es-orange-100;
+    }
+  }
+  .form-control-feedback {
+    color: @es-dark-gray;
+    border-left: 2px solid @es-orange-100;
 
-	}
+  }
 }
 
 .form-control-feedback {
-	top: 0;
-	background-color: @es-light-gray-B ;
-	color:  @es-dark-gray;
-	min-width:  34px;
-	cursor: pointer;
+  top: 0;
+  background-color: @es-light-gray-B;
+  color: @es-dark-gray;
+  min-width: 36px;
+  cursor: pointer;
 
-    > .icon:before {
-      top: 2px;
-      position: relative;
-    }
+  > .icon:before {
+    top: 2px;
+    position: relative;
+  }
 }
 
 .input-group {
 
-	.form-control + a.btn-icon {
-		position: absolute;
-		top:  2px;
-		bottom:  2px;
-		right:  2px;
-		margin:  0;
-		z-index:  2;
-		width:  auto;
-		border:  0;
+  .form-control + a.btn-icon {
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    right: 2px;
+    margin: 0;
+    z-index: 2;
+    width: auto;
+    border: 0;
 
-		&:before {
-			line-height: 18px;
-		}
-	}
+    &:before {
+      line-height: 18px;
+    }
+  }
 }
 
 // addons can also be icons
 .input-group-addon > .icon {
-    background-color: transparent;
-    border: none;
-    line-height: 17px;
-    margin-left: 0;
+  background-color: transparent;
+  border: none;
+  line-height: 17px;
+  margin-left: 0;
 }
-
-
 
 //## Styling form-buttons container
 
 .form-buttons { // also used
 
-    .btn-dialog {
-        float: right;
-        margin: 10px 0 0 5px;
-    }
+  .btn-dialog {
+    float: right;
+    margin: 10px 0 0 5px;
+  }
 
-    &.no-js {
-        border-top: 1px dotted @es-light-gray-C;
-        margin-top: 20px;
-        padding-top: 5px;
-    }
+  &.no-js {
+    border-top: 1px dotted @es-light-gray-C;
+    margin-top: 20px;
+    padding-top: 5px;
+  }
 }
