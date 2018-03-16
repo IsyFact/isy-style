@@ -1,0 +1,12 @@
+/* Klappbarer Linksnavigationsbereich */
+#sidebar {
+    min-width: 100%;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+    width: 16.6667%;
+}
+
+#sidebar.active {
+    margin-left: -16.6667%;
+}
