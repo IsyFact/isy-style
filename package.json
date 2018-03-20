@@ -1,17 +1,16 @@
 {
   "name": "@isyfact/isy-style",
-  "version": "3.1.0-1",
   "description": "ISY-Fact styles and templates",
   "author": "ISY-Fact",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "build": "grunt build",
-    "deploy": "grunt deploy"
+    "build": "grunt build"
   },
   "devDependencies": {
     "font-awesome": "^4.7.0",
     "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
     "grunt-artifactory-artifact": "^1.0.1",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-copy": "^1.0.0",
