@@ -5,8 +5,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
 
-    //var portalColor = '#627F0D';
-    var portalColor = '#FF0000';
+    var portalColor = '#00417a';
 
     grunt.initConfig({
 
