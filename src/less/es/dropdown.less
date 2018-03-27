@@ -16,14 +16,14 @@
 
     .dropdown-toggle {
         background-color: @input-bg;
-        border: 1px solid @es-gray-40;
+        border: 1px solid @es-gray-20;
         margin-bottom: 0;
         min-width: inherit;
         text-align: left;
         padding: 5px 18px 2px 5px; //caret position absolute
 
         &:hover {
-            border-color: @es-gray-60;
+            border-color: @es-gray-40;
         }
 
         &.btn-icon-toolbar {
@@ -87,11 +87,6 @@
         }
     }
 
-    // selected state
-    > .selected > a {
-        background-color: @es-green-20;
-    }
-
 
 
     //== Dropdown
@@ -143,28 +138,18 @@
                 background-color: @dropdown-link-hover-bg;
             }
         }
-
-        // selected state
-        > .selected > a {
-            background-color: @es-green-20;
-        }
     }
 
 }
 
 //Without javascript
 .no-js .dropdown {
-
     > a:hover {
         cursor: default !important;
     }
 
     a:hover + .dropdown-menu, .dropdown-menu:hover {
         display: block;
-    }
-
-    a.disabled:hover + .dropdown-menu {
-        display: none !important;
     }
 }
 

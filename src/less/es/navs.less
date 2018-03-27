@@ -28,7 +28,6 @@
         }
         
         &.green {
-        	background-color: @es-green-80;
             color: @es-white;
         }
         
@@ -43,7 +42,7 @@
         &.red {
         	background-color: @es-red;
         }
-    }
+   }
     
     .nav {
 
@@ -72,14 +71,13 @@
                   
     				> a {
     					font-weight: bold;
-    					color: @es-green-100;
     					border: 0;
 
                         //arrow indicator for the selected overlay
     					&:after {
     						border-top:  8px solid @es-white;
-    						border-right: 10px solid transparent;
-    						border-left: 10px solid transparent; 
+    						border-right: 10px dashed transparent;
+    						border-left: 10px dashed transparent; 
     						content: "";
     						bottom: -8px;
     						content: "";
@@ -110,14 +108,13 @@
 
                     //style the link itself
                     > a {
-                        color: @es-green-80;
                         text-decoration: none;
 
                         //arrow indicator
                         &:after {
                             border-top:  8px solid @es-white;
-                            border-right: 10px solid transparent;
-                            border-left: 10px solid transparent;
+                            border-right: 10px dashed transparent;
+                            border-left: 10px dashed transparent;
                             content: "";
                             bottom: -8px;
                             content: "";
@@ -163,10 +160,6 @@
     				
     				&.orange {
     					border-color: @es-orange;
-    				}
-    				
-    				&.green {
-    					border-color: @es-green-80;
     				}
     				
     				&.lightBlue {
@@ -229,11 +222,9 @@
                         }
 
                         &.active {
-                          background-color: @es-green-40;
                           .box-shadow(none);
                           color:  inherit;
                           font-weight: bold;
-                          border-bottom: 1px dotted @es-green-40;
                         }
 
                         &:focus {
@@ -289,6 +280,7 @@
 //== Sub navigation 1 (as part of main nav)
 //
 //## Styling for Sub navigation 1 (as part of main nav)
+//TODO http://www.eyecon.ro/bootstrap-tabdrop/
 
 //== Sub navigation 2 (vertical)
 //
@@ -297,7 +289,7 @@
 
     li {
         color: @es-dark-gray;
-        background-color: @es-gray-20;
+        background-color: @es-light-gray-A;
 
         & + li {
             margin-top: 0px;
@@ -309,19 +301,17 @@
             color: @es-dark-gray;
 
             &:hover {
-                background-color: @es-gray-40;
+                background-color: @es-gray-20;
             }
         }
 
         &.active {
 
             > a {
-                background-color: @es-green-40;
                 font-weight: bold;
             }
 
             &:after {
-              border-left: 12px solid @es-green-40;
               border-top: 8px dashed transparent;
               border-bottom: 8px dashed transparent;
               content: "";
@@ -335,7 +325,7 @@
         &:active {
 
             > a {
-                background-color: @es-gray-60;
+                background-color: @es-gray-40;
             }
         }
 
@@ -389,22 +379,15 @@
             &.active {
                 border: none;
                 background-color: transparent;
-                color: @es-green-100;
             }
 
         }
 
         &.active {
 
-            > a {
-                color: @es-green-100;
-                border-bottom: 2px solid @es-green-100;
-            }
-
             &:after {
-              border-top: 6px solid @es-green-100;
-              border-left: 6px solid transparent;
-              border-right: 6px solid transparent;
+              border-left: 6px dashed transparent;
+              border-right: 6px dashed transparent;
               content: "";
               position: absolute;
               left: 50%;
@@ -464,7 +447,6 @@
         &.active {
 
           &:after {
-            border-top: 8px solid @es-green-100;
             border-left: 8px dashed transparent;
             border-right: 8px dashed transparent;
             margin-left: -8px;
@@ -473,7 +455,6 @@
 
             > a {
                 color: @es-dark-gray;
-                border-bottom: 5px solid @es-green-100;
             }
         }
 

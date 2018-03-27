@@ -1,0 +1,146 @@
+//
+// Navigation Styles
+// --------------------------------------------------
+
+// Navigation styles are defined here
+
+//== Main navigation
+//
+//## Styling for Main navigation
+
+.navbar {
+
+    > .navbar-color {
+
+        &.green {
+            background-color: @es-portal-color-80;
+        }
+    }
+
+    .nav {
+
+        &.nav-tabs {
+
+            > li {
+
+                &.active {
+
+                    > a {
+                        color: @es-portal-color-100;
+                    }
+                }
+
+                // show submenu on hover
+                &:hover,
+                &:focus {
+
+                    //style the link itself
+                    > a {
+                        color: @es-portal-color-80;
+                    }
+                }
+
+                // submenu
+                > .navbar-submenu {
+
+                    &.green {
+                        border-color: @es-portal-color-80;
+                    }
+
+
+                    //submenu item
+                    a {
+                        &.active {
+                            background-color: @es-portal-color-40;
+                            border-bottom: 1px dotted @es-portal-color-40;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//== Sub navigation 1 (as part of main nav)
+//
+//## Styling for Sub navigation 1 (as part of main nav)
+//TODO http://www.eyecon.ro/bootstrap-tabdrop/
+
+//== Sub navigation 2 (vertical)
+//
+//## Styling for Sub navigation 2 (vertical)
+.nav.nav-pills.nav-stacked {
+
+    li {
+
+        &.active {
+
+            > a {
+                background-color: @es-portal-color-40;
+            }
+
+            &:after {
+                border-left: 12px solid @es-portal-color-40;
+            }
+        }
+    }
+}
+
+//== Inner tabs
+//
+//## Styling for inner tabs
+.nav.nav-tabs {
+
+    li {
+
+        a {
+
+            // reset bootstrap default states
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                color: @es-portal-color-100;
+            }
+
+        }
+
+        &.active {
+
+            > a {
+                color: @es-portal-color-100;
+                border-bottom: 2px solid @es-portal-color-100;
+            }
+
+            &:after {
+                border-top: 6px solid @es-portal-color-100;
+
+            }
+        }
+    }
+
+}
+
+//== Wizard Steps
+//
+//## Styling for Wizard Steps
+
+.nav.nav-wizard {
+
+    li {
+
+        &.active {
+
+            &:after {
+                border-top: 8px solid @es-portal-color-100;
+
+            }
+
+            > a {
+                border-bottom: 5px solid @es-portal-color-100;
+            }
+        }
+
+    }
+}

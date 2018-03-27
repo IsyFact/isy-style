@@ -9,9 +9,6 @@
 //## Styling for Table datagrid type 1
 .table-container {
     background-color: @es-white;
-    > .btn-toolbar {
-        background-color: @es-light-gray-A;
-    }
 }
 
 .table {
@@ -24,8 +21,8 @@
         }
 
         tr th {
-            color: @es-green-100;
-            background-color: @es-light-gray-A;
+            color: @es-gray-100;
+            background-color: @es-white;
             font-weight: normal;
             position: relative;
             .user-select();
@@ -54,10 +51,6 @@
                     display: inline-block;
                 }
             }
-            
-            > a {
-                color: @es-green-100;
-            }
         }
     }
 
@@ -72,25 +65,13 @@
             background-color: @es-gray-40;
         }
 
-        &.active {
-            background: @es-green-20;
-
-            td {
-                background: @es-green-20;
-            }
-        }
-
         .control-label {
             text-align: right;
         }
 
         &.details-preview {
-            background-color: @es-green-10;
+            background-color: @es-light-gray-B;
         }
-        
-        .detailview-actions {
-          float: left;
-      }
 
 
         //== Text Links
@@ -128,7 +109,7 @@
 
     &.table-selectable {
         th.sorted {
-            background-color: @es-green-20;
+            background-color: @es-blue-10;
         }
 
         tr td {
@@ -139,7 +120,7 @@
 
         .checkbox {
             margin: 0;
-            //width: 20px;
+            width: 20px;
 
             input {
                 display: none; //webkit fix
@@ -194,7 +175,7 @@
 
             td {
                 > .form-group {
-                    > div {
+                    > div { //.col-sm-10
                         width: 100%;
                         padding: 0;
                     }
@@ -240,22 +221,22 @@ table th {
 
 // aus styles-datatable-doubleclick.css
 /** über Doppel-Klick ausgewählte Zeile hervorheben. */
-table.table.highlight-doubleclick > tbody > tr.doubleClickSelectedItem, 
-table.table.highlight-doubleclick > tbody > tr.active.doubleClickSelectedItem, 
+table.table.highlight-doubleclick > tbody > tr.doubleClickSelectedItem,
+table.table.highlight-doubleclick > tbody > tr.active.doubleClickSelectedItem,
 table.table.highlight-doubleclick > tbody > tr.doubleClickSelectedItem > td {
      background-color: @es-green-20;
 }
 
 /* aktive/selektierte Zeilen nicht hervorheben */
-table.table.highlight-doubleclick > tbody > tr.active, 
+table.table.highlight-doubleclick > tbody > tr.active,
 table.table.highlight-doubleclick > tbody > tr.active > td {
      background-color: inherit;
 }
 
 /* aktive/selektierte Zeilen bei Hover so wie nicht-selektierte Zeilen verhalten */
-table.table.highlight-doubleclick > tbody > tr.active:hover, 
+table.table.highlight-doubleclick > tbody > tr.active:hover,
 table.table.highlight-doubleclick > tbody > tr.active > td:hover {
-    background-color: @es-gray-20; 
+    background-color: @es-gray-20;
 }
 
 
@@ -272,7 +253,7 @@ div.filter-dropdown.dropdown {
 
 // aus styles-datatable-pagination.css
 tfoot li.page-number.active .btn {
-    background-color: @es-green-20;
+    background-color: @es-blue-20;
 }
 
 tfoot ul.pagination li.pagination-text {

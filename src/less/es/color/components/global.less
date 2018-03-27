@@ -1,0 +1,44 @@
+.portal-color-list {
+  padding:  0;
+  .portal-color {
+    padding-left: 45px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      width: 35px;
+      height: 35px;
+      content: '';
+      background: @es-portal-color-100;
+      position: absolute;
+      left: 5px;
+    }
+
+    &.portal-color-80 {
+      &:before {
+        background: @es-portal-color-80;
+      }
+    }
+    &.portal-color-60 {
+      &:before {
+        background: @es-portal-color-60;
+      }
+    }
+    &.portal-color-40 {
+      &:before {
+        background: @es-portal-color-40;
+      }
+    }
+    &.portal-color-20 {
+      &:before {
+        background: @es-portal-color-20;
+      }
+    }
+  }
+}
+
+code {
+  background: @es-portal-color-20;
+}
+

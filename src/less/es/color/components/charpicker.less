@@ -1,0 +1,30 @@
+// This file has been created by ERGOSIGN GmbH - All rights reserved - http://www.ergosign.de
+// DO NOT ALTER OR REMOVE  THIS COPYRIGHT NOTICE OR THIS FILE HEADER.
+//
+// This file and the code contained in it are subject to the agreed contractual terms and conditions,
+// in particular with regard to resale and publication.
+
+//== Picker
+//
+//## Styling for Picker
+.charpicker {
+    table {
+        tr {
+            td {
+
+                &.active:hover:active,
+                &.active.disabled:active,
+                &.active.disabled:hover:active,
+                &.active.active,
+                &.active:hover.active,
+                &.active.disabled.active,
+                &.active.disabled:hover.active {
+                    background-color: @es-portal-color-20;
+                }
+            }
+            //td
+        }
+        //tr
+    }
+    //table
+}
