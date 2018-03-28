@@ -1,3 +1,8 @@
+# v4.0.0
+- `IFS-73`: Integration der Style-Änderungen von Ergosign. ACHTUNG: Diese Styles sind zum Teil inkompatibel zur isy-style-3.0.0
+- `IFS-74`: isy-style aus Build der isy-web herausgelöst. Die isy-style ist als zusätzliche Maven-Depedency einzubinden. 
+- `IFS-107`: Anpassung von Farben über Konfiguration möglich (siehe README.md)
+
 # v3.0.0
 - Umstellung auf fontawesome Icons
 ACHTUNG: Die fonts liegen nun auf toplevel in `/fonts` statt `/css/fonts`.
