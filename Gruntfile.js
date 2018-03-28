@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
 
-    var portalColor = '#00417a';
+    var portalColor = '#004179';
 
     grunt.initConfig({
 
@@ -27,7 +27,7 @@ module.exports = function (grunt) {
                 },
                 files: [{
                     src: "src/less/es/color/color-base.less",
-                    dest: "src/assets/css/color.css"
+                    dest: "target/color.css"
                 }]
             },
             production: {
