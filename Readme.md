@@ -10,6 +10,7 @@ In der Datei `Gruntfile.js` kann eine Basisfarbe / Portalfarbe konfiguriert werd
 `var portalColor = '#00417a';`
 
 Von dieser werden viele der weiteren Farbstyles abgeleitet.
+Nach der Generierung befinden sich die Farb-Styles in `target/color.css`.
 
 ## Lizenzinformationen
 
