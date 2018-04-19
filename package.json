@@ -1,7 +1,5 @@
 {
   "name": "isy-style-js",
-  "version": "1.5.0-rc1",
-  "description": "JS/CSS files for isy-style",
   "author": "Bundesverwaltungsamt",
   "license": "Apache-2.0",
   "private": true,
