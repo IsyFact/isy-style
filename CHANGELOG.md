@@ -1,3 +1,6 @@
+# v4.0.1
+- `IFS-192`: Checkboxes, Radiobuttons etc. nicht korrekt dargestellt
+
 # v4.0.0
 - `IFS-73`: Integration der Style-Änderungen von Ergosign. ACHTUNG: Diese Styles sind zum Teil inkompatibel zur isy-style-3.0.0
 - `IFS-74`: isy-style aus Build der isy-web herausgelöst. Die isy-style ist als zusätzliche Maven-Depedency einzubinden. 
