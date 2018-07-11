@@ -1530,11 +1530,19 @@ Um die entsprechende Behandlung solcher Fehler zu ermöglichen, müssen folgende
 
 * Für alle Flows muss ein globaler Übergang auf die Fehlerseite eingerichtet
 werden
+
+:desc-listing-flowtransitionOnException: Flow Übergang auf Fehlerseite
+[id="listing-flowtransitionOnException",reftext="{listing-caption} {counter:listings }"]
+.{desc-listing-flowtransitionOnException}
 [source,xml]
 ----
 <transition on-exception="java.lang.Exception" to="fehler"/>
 ----
 * In der `faces-config.xml` muss der JSF Exception Handler konfiguriert werden:
+
+:desc-listing-flowExceptionHandlerKonfiguration: Flow JSF Exception Handler Konfiguration
+[id="listing-flowExceptionHandlerKonfiguration",reftext="{listing-caption} {counter:listings }"]
+.{desc-listing-flowExceptionHandlerKonfiguration}
 [source,xml]
 ----
 <factory>
@@ -1728,109 +1736,9 @@ Somit ist keine Verwendung von Datenbankmitteln notwendig.
 [[jsf-webgui-demoanwendung]]
 == JSF WebGui Demoanwendung
 
-TIP: Die JSP WebGui Demoanwendung im Package `isy-webgui` wird kontinuierlich auf den aktuellen Stand gehalten.
- Die Dokumentationsbeschreibung dieses Kapitels ist jedoch veraltet (initial, Jahr 2015) und muss überarbeitet werden.
-
-
-Die PLIS-Webgui ist eine kleine Beispielanwendung, die die Java-Bibliotheken PLIS-Web und PLIS-Style einsetzt.
-Die Anwendung zeigt die Features der Bibliothek beispielhaft.
-Bei Änderungen an der PLIS-Web und der PLIS-Style muss auch die PLIS-Webgui nachgezogen werden.
-
-Erklärungen zur Nutzung der PLIS-Web (inkl. PLIS-Style) sind unter Nutzung der Web-Bibliothek zu finden.
-
-:desc-table-webguianwendungshistorie: Historie der WebGui Anwendungsversionen
-[id="table-webguianwendungshistorie",reftext="{table-caption} {counter:tables}"]
-.{desc-table-webguianwendungshistorie}
-|===
-|Version |Datum |Änderung
-
-|v1.0.0
-|13.02.2015
-|Initiale Auslieferung
-|===
-
-
-*Einleitung*
-
-Es wurden HTML5 Markup und Stylesheets sowie grafische Assets für eine webbasierte Benutzeroberfläche entwickelt.
-Für die Entwicklung wurde der BVA User Interface Style Guide zugrunde gelegt.
-
-Dieses Dokument beschreibt die technische Entwicklung seitens Ergosign und beinhaltet Informationen über die Projektstruktur sowie Richtlinien für Entwickler, die diese Styles und Templates implementieren.
-
-*Gelieferte Dateien*
-
-Es wird eine Sammlung von Dateien inklusive Quelldateien, Tools und auslieferungsfertigen Dateien mit der folgenden Dateistruktur zur Verfügung gestellt (die Einrückung und Verzeichnisse in Großbuchstaben spiegeln die Dateistruktur wider):
-
-* ICONLIBRARY (Quelldateien)
-** … .svg (SVG-Vektorgrafiken, die als Grundlage zum Aufbau des Icon-Fonts dienen)
-* SRC (Quelldateien)
-** ASSETS (Statische Dateien, die während eines Build-Prozesses in den www Ordner kopiert werden)
-
-***  CSS
-****  bootstrap-timepicker.min.css (Style für ein jQuery Plugin)
-****  datepicker.css (Style für ein jQuery Plugin)
-****  ie8fixes.css (Stylesheet, das nur mit dem IE8 geladen wird)
-****  magnific-popup.css (Style für ein jQuery Plugin)
-
-*** IMG
-**** CONTROLS
-***** … .png (Grafiken für Bedienelemente (Controls))
-***** …. .png (Grafiken für das Seitenlayout und die Inhaltsdarstellung)
-
-*** LIB (JavaScript-Bibliotheken wie jQuery)
-**** … .js
-
-*** PLUGINS (JavaScript Plugins für jQuery und Bootstrap, Layout-Skripte)
-**** … .js
-
-** ICONFONT (Ein komplettes http://icomoon.io[icomoon.io] Icon-Font-Paket)
-*** style.css (Stylesheet mit importierten Icon-Font-Angaben)
-*** … (Sonstige Dateien)
-
-** JS (Applikationsspezifischer JavaScript-Code)
-*** es.js (Code für prototypische Interaktionen)
-*** onload.js (JavaScript-Code, der beim Öffnen einer Seite geladen wird)
-
-** LESS (Quelldateien der Stylesheets)
-***  BOOTSTRAP (Original Stylesheet-Quelldateien von Bootstrap (unverändert))
-*** ES (Applikationsspezifisch angepasste Less Dateien)
-*** THIRDPARTY (Less Dateien aus anderen Quellen)
-*** custom.less (Spezifische Anpassungen)
-*** print.less (Anpassungen speziell für die Druckausgabe)
-*** styles.less (Hauptdatei (less) für die Kompilierung)
-
-** TEMPLATES (Teilelemente der Seiten in HTML5 Markup)
-*** … .tpl (Kopf-, Fuß- und Inhaltsbereich getrennt)
-
-* WWW (Verzeichnis für kompilierte Dateien – beinhaltet vorkomplierte Assets.
-Dateien nicht bearbeiten!)
-** CSS (Stylesheets)
-*** FONTS (Beinhaltet Web-Font-Dateien für den Icon-Font)
-*** bootstrap-timepicker.min.css
-*** datepicker.css
-*** ie8fixes.css
-*** magnific-popup.css
-*** print.less (Stylesheet für die Druckausgabe)
-*** styles.css (Hauptstylesheet)
-
-** IMG (Bitmap Grafiken)
-** JS (Applikationsspezifisches JavaScript)
-*** es.js
-*** onload.debug.js
-*** onload.js
-*** onload.js.map
-
-**  LIB (JavaScript Bibliotheken, iQuery, Bootstrap)
-**  PLUGINS (Plugins für jQuery oder Bootstrap)
-** index.html (Übersicht über die Bedienelemente und Absprungseite für die einzelnen Templates)
-** … .html (Weitere statische Seitentemplates)
-
-
-*changelog.md* (detaillierte Änderungshistorie)
-
-*package.json* (Definitionen der Projekt-Module inklusive Abhängigkeiten für das Grunt-BuildSystem)
-
-*Gruntfile.js* (Ergosign spezifische Konfigurationen für das Grunt-Build-System, um das Frontend zu kompilieren)
+Die isy-webgui ist eine kleine Beispielanwendung, die die Java-Bibliotheken isy-web und isy-style einsetzt.
+Die Anwendung zeigt die Features der JSP Komponenten-Bibliothek der isy-web beispielhaft.
+Bei Änderungen an der isy-web und der isy-style wird die isy-webgui kontinuierlich aktualisiert.
 
 
 [[jsf-webgui-implementierungshinweise]]
@@ -2713,6 +2621,7 @@ image::image183.png[align="center", width="627",height="137"]
 *plis-web kleiner als 4.0*
 
 Beispiel:
+
 :desc-listing-dataTableHeader: Beispiel für dataTableHeader
 [id="listing-dataTableHeader",reftext="{listing-caption} {counter:listings }"]
 .{desc-listing-dataTableHeader}
@@ -3572,6 +3481,704 @@ Für den Einsatz mit der plis-validation (Bean Validation) wird bereits ein GuiV
 Diese können dann dem ValidationController übergeben werden.
 Als Referenz wird dabei automatisch der Property-Path der ConstraintViolation verwendet.
 
+=== JSF Seitenelemente
+
+
+[[hauptfenster]]
+==== Hauptfenster
+
+Das im Styleguide beschriebene Anwendungslayout besteht im allgemeinen aus einem Hauptfenster mit einem Header und einem Inhaltsbereich, dessen Inhalt je nach Seitentyp und Applikation variieren kann.
+
+:desc-image-aufbauapplikationsseite: Aufbau einer Applikationsseite
+[id="image-aufbauapplikationsseite",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-aufbauapplikationsseite}
+image::image57.png[align="center", width="629",height="526"]
+
+
+*Aufbau*
+
+* Header Bereich
+* Linksnavigation (optional)
+* Inhaltsbereich
+
+
+[[header-bereich]]
+===== Header Bereich
+
+Der Header Bereich enthält allgemeine Informationen der Applikation.
+
+:desc-image-headersolo: Header
+[id="image-headersolo",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-headersolo}
+image::image36.png[align="center", width="629",height="104"]
+
+:desc-image-aufbaudesheaderbereichs: Aufbau des Header-Bereiches
+[id="image-aufbaudesheaderbereichs",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-aufbaudesheaderbereichs}
+image::image37.png[align="center", width="629",height="149"]
+
+
+*Aufbau*
+
+* *A* Logo des Portalanbieters
+* *B* Farbmarkierung des Applikationsportals
+* *C* Logo des Applikationsportals
+* *D* Login-Information
+* *E + F* Hauptnavigation und Subnavigation als Flyout (siehe Kapitel Horizontale Navigation)
+
+[[headerbereich-bestandteile]]
+===== Headerbereich Bestandteile
+
+*_Navigationsleiste und Nutzerbereich_*
+
+Derzeit wird die Navigationsleiste im Header Bereich noch statisch geladen.
+Jede Anwendung muss daher die Ressource +
+   `/WEB-INF/gui/common/seitenelemente/navigation.xhtml` +
+mit einer spezifischen Anpassung überschreiben.
+
+
+Der Nutzerbereich wird nicht von der isy-web zur Verfügung gestellt, da sich z.B. das Verhalten des Logout Buttons in verschiedenen Betriebsumgebungen unterscheiden kann (unterschiedliche HTTP Parameter, etc.). Konkrete Anwendungen müssen über die Konfigurationseinstellung `gui.header.nutzerbereich.xhtml.src` das XHTML angeben, welches den Nutzerbereich definiert.
+Die Angabe der Konfiguration ist verpflichtend.
+
+*_Titel_*
+
+Den Titel gibt es nur auf Applikations-Detailseiten (s. Implementierungshinweise dort).
+
+
+*_Maskentexte_*
+
+Maskentexte, die nur innerhalb eines bestimmten Flows verwendet werden, können in der Konfigurationsdatei <Flow-Name>.properties im Ordner `resources/nachrichten/maskentexte` definiert werden.
+Wenn die jeweilige Konfigurationsdatei vorhanden ist, werden die Maskentexte automatisch geladen und in die Variable msg_currentflow abgespeichert.
+Die Maskentexte des jeweiligen Flows können dann beispielsweise wie folgt ausgelesen werden:
+
+:desc-listing-maskentexteKonfigurierbar: Maskentexte über Konfiguratiosdatei
+[id="listing-maskentexteKonfigurierbar",reftext="{listing-caption} {counter:listings }"]
+.{desc-listing-maskentexteKonfigurierbar}
+[source, xml]
+----
+<h:outputText value="#\{msg_currentflow.MAS_Ueberschrift}" />
+----
+
+Auf übergreifende Maskentexte aus der Konfigurationsdatei 
+`resources/nachrichten/maskentexte.properties` 
+kann über die Variable msg zugegriffen werden.
+
+===== Applikationsseiten
+
+Applikationsseiten werden über den Controller `ApplikationseiteController` und das Model `ApplikationseiteModel` realisiert.
+
+Wenn eine Applikationsseite erstellt werden soll, dann muss der Flow der Applikationsseite vom Flow `applikationseiteParentFlow` erben.
+Es muss weiterhin ein Controller erstellt werden, der vom `AbstractGuiController` erbt und ein Model, das vom `AbstractMaskenModel` erbt. Die XHTML-Seiten der ViewStates müssen alle vom Template `/WEB-INF/gui/common/layout/applikation.xhtml` erben.
+
+Der `ApplikationseiteController` stellt sicher, dass alle layoutspezifischen Funktionen (z.B. der Linksnavigation) einer Applikationsseite initialisiert und zur Verfügung gestellt werden.
+Abweichungen vom Standardvorgehen (z.B. Linksnavigation ausblenden) können durch Zugriff auf den Controller und Model in spezifischeren Controllern beim Initialisieren durchgeführt werden.
+
+Neben dem `ApplikationseiteController` existiert auch der `BasisController`.
+Dieser bietet Zugriff auf seitentypunabhängige Layoutfunktionen (z.B. modalen Dialog anzeigen).
+
+Siehe weiterhin die Hinweise in den Seiten Header Bereich, Linksnavigation und Quicklinks.
+
+===== Applikation Detailseite
+
+Applikationsdetailseiten werden über den Controller `DetailseiteController` und das Model `DetailseiteModel` realisiert.
+
+Wenn eine Applikationsdetailseite erstellt werden soll, dann muss der Flow der Applikationsdetailseite vom Flow `detailseiteParentFlow` erben.
+Es muss weiterhin ein Controller erstellt werden, der vom `AbstractGuiController` erbt und ein Model, das vom `AbstractMaskenModel` erbt.
+Die XHTML-Seiten der ViewStates müssen alle vom Template `/WEB-INF/gui/common/layout/applikationDetailseite.xhtml` erben.
+
+Der DetailseiteController stellt sicher, dass alle layoutspezifischen Funktionen (z.B. der Seitentoolbar sowie Buttons in der Toolbar) einer Detailseite initialisiert und zur Verfügung gestellt werden.
+Abweichungen vom Standardvorgehen (z.B. Seitentoolbar ausblenden, Druckbutton einblenden, Informationsbereich einblenden) können durch Zugriff auf den Controller und Model in spezifischeren Controllern beim Initialisieren durchgeführt werden.
+
+Neben dem `DetailseiteController` existiert auch der `BasisController`.
+Dieser bietet Zugriff auf seitentypunabhängige Layoutfunktionen
+
+(z.B. modalen Dialog anzeigen).
+
+_Titel_
+
+Der TitlesListener (Listener für Spring-Webflow) ermöglicht es, dass konfigurierte Nachrichten anhand von Namenskonventionen automatisch als Title (Title-Tag), Headline (Titelzeile) oder Breadcrumb verwendet werden.
+Der TitlesListener ist automatisch eingebunden und muss nicht explizit aktiviert werden.
+
+Folgende Angaben sind zulässig:
+
+`MAS_\{FlowName}_Title` +
+`MAS_\{FlowName}_\{ViewState}_Title` +
+`MAS_\{FlowName}_Headline` +
+`MAS_\{FlowName}_\{ViewState}_Headline` +
+`MAS_\{FlowName}_Breadcrumb` +
+`MAS_\{FlowName}_\{ViewState}_Breadcrumb`
+
+Die Angaben müssen sich in den Anwendungsressourcen (analog zu anderen Nachrichten) befinden und über eine MessageSource-Bean ("messageSource") der PLIS-Web zur Verfügung gestellt werden.
+
+Wenn vorhanden, werden stets die Angaben mit ViewState verwendet, ansonsten die Angaben ohne ViewState.
+In der Flowdefinition können die zu verwendenden Texte überschrieben werden, indem die Attribute titleKey , breadcrumbKey und headlineKey gesetzt werden.
+Wenn für
+
+den Title keine Angabe gefunden werden kann, dann wird der Wert von MAS_Global_Title verwendet.
+Weiterhin kann mit `MAS_Global_Title_Prefix` ein globaler Präfix für den Title gesetzt werden.
+
+Weiterhin kann über eine Angabe von `<ui:define name="titel"/>` in Seiten definiert werden, welche Inhalte rechts neben dem bereits definierten Title (Title-Tag) ausgegeben werden (seit Version 3.1.x der plis-web). Im Folgenden ein Beispiel:
+
+:desc-listing-zusatzmaskentitel: Zusatz-Maskentitel im Headerbereich
+[id="listing-zusatzmaskentitel",reftext="{listing-caption} {counter:listings }"]
+.{desc-listing-zusatzmaskentitel}
+[source, xml]
+----
+<ui:define name="titel"> 
+   <h:outputText value="zusätzlicher Text" /> </ui:define> Über die Angaben
+<ui:define name="titelzeileInfoLinks"/> bzw. <ui:define name="titelzeileInfoRechts"/> kann
+----
+
+weiterhin definiert werden, welche Inhalte zusätzlich direkt rechts neben der Headline (Titelzeile) angezeigt werden bzw.
+ganz am rechten Rand der Headline angezeigt werden (seit Version 3.1.x der plis-web). Im Folgenden ein Beispiel: 
+
+:desc-listing-titelzeileninfo: Titelzeileninfo
+[id="listing-titelzeileninfo",reftext="{listing-caption} {counter:listings }"]
+.{desc-listing-titelzeileninfo}
+[source, xml]
+----
+<ui:define name="titelzeileInfoLinks"> 
+   <h:outputText value="zusätzlicher Text" /> 
+</ui:define>
+<ui:define name="titelzeileInfoRechts"> 
+   <h:outputText value="zusätzlicher Text" /> 
+</ui:define>
+----
+
+_Hinweis:_ Die Breadcrumbfunktionalität ist derzeit noch nicht vollständig umgesetzt.
+
+==== Dialoge
+
+Modale Dialoge werden mit dem Tag `<isy:modalDialogContent>` definiert.
+Der Dialog besitzt folgende Facets:
+* Der Header-Bereich
+* Der Body-Bereich
+* Der Footer-Bereich
+
+
+Beispiel:
+
+:desc-listing-jspModalerDialog: Modaler Dialog
+[id="listing-jspModalerDialog",reftext="{listing-caption} {counter:listings }"]
+.{desc-listing-jspModalerDialog}
+[source, xml]
+----
+<ui:define name="modalDialog">
+   <isy:modalDialogContent>
+     <f:facet name="modalHeader">\{msg.MEL_Lichtbild_anzeigen_Titel}</f:facet>
+     <f:facet name="modalBody">
+     <div class="form-horizontal">
+        ...
+     </div>
+     </f:facet>
+     <f:facet name="modalFooter">
+        <div class="form-horizontal readonly">
+           ...
+        </div>
+      </f:facet>
+   </isy:modalDialogContent>
+ </ui:define>
+----
+
+Das Tag `<isy:modalDialogContent>` wird über den UI-Platzhalter modalDialog eingefügt.
+Dieser Platzhalter sorgt dafür, dass je nach JavaScript Verfügbarkeit, der Inhalt des modalen Fensters entweder als Inhalt oder als eigenständiger Dialog gerendert wird.
+Die Funktionsweise des modalen Dialogs ist in das Basis-Layout eingebunden.
+Um einen Dialog zu öffnen muss dieser als eigener View-State (in Spring-Webflow) definiert werden.
+Beim Eintreten in den Flow wird das modale Fenster über einen Aufruf des BasisController geöffnet.
+Beim Verlassen des View-States wird dieser wieder geschlossen.
+Beispiel:
+
+:desc-listing-openCloseModaleDialoge: Öffnen und Schließen von modalen Dialogen
+[id="listing-openCloseModaleDialoge",reftext="{listing-caption} {counter:listings }"]
+.{desc-listing-openCloseModaleDialoge}
+[source, xml]
+----
+<view-state id="lichtbildAnzeigenViewState" model="maskenModel">
+   <on-entry>
+      <evaluate expression="basisController.showModalDialog()"/>
+   </on-entry>
+
+   ...
+
+   <transition on="schliesseModalenDialog" to="gesamtauskunftAnzeigenViewState">
+      <evaluate expression="basisController.hideModalDialog()"/>
+   </transition>
+
+</view-state>
+----
+
+Um im Hintergrund weiterhin das aktuelle Fenster anzuzeigen, genügt es den bisherigen View-State entsprechend zu vererben.
+
+[[dialoge-ohne-javascript]]
+===== Dialoge ohne JavaScript
+
+image::image77.png[image,width=35,height=33]
+
+Die modalen Dialoge werden automatisch in das Layout integriert, sofern kein JavaScript verfügbar ist.
+
+:desc-image-keinjavascriptdialog: Kein JavaScript – Dialog
+[id="image-keinjavascriptdialog",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-keinjavascriptdialog}
+image::image78.png[align="center", width="629",height="525"]
+
+:desc-image-keinjavascriptmeldung: Kein JavaScript – Meldungsdialog
+[id="image-keinjavascriptmeldung",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-keinjavascriptmeldung}
+image::image79.png[align="center", width="629",height="526"]
+
+:desc-image-keinjavascriptwizard: Kein JavaScript – Wizard
+[id="image-keinjavascriptwizard",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-keinjavascriptwizard}
+image::image80.png[align="center", width="629",height="525"]
+
+
+===== Meldungsdialoge
+
+Meldungsdialoge werden eingesetzt, wenn der Benutzer in seinem Arbeitsablauf unterbrochen werden muss.
+
+:desc-image-meldungsdialogobjloeschen: Meldungsdialog – Objekt löschen
+[id="image-meldungsdialogobjloeschen",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-meldungsdialogobjloeschen}
+image::image82.png[align="center", width="329",height="163"]
+
+
+:desc-image-aufbaumeldungsdialog: Aufbau Meldungsdialog
+[id="image-aufbaumeldungsdialog",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-aufbaumeldungsdialog}
+image::image83.png[align="center", width="325",height="162"]
+
+
+Für Meldungsdialoge gibt es derzeit keine Umsetzung.
+Bei Bedarf können diese über die normalen modalen Dialoge umgesetzt werden (Dialoge).
+
+[[wizard]]
+===== Wizard
+
+Mit „Wizard", auch Assistent genannt, wird eine geführte Abfolge von Interaktionsschritten bezeichnet.
+
+:desc-image-dialogwizard1: Beispiel eines Dialog Wizards
+[id="image-dialogwizard1",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-dialogwizard1}
+image::image88.png[align="center", scaledwidth="96%"]
+
+Der Wizard ist in der plis-web ab Version 3.1.x verfügbar. Wizards werden mit dem Tag <isy:wizard> definiert.
+
+Folgende Parameter sind zulässig:
+
+* wizardDialogModel: Das Model des Wizards
+* width: Die Breite des modalen Dialogs (optionale Angabe)
+* globalConfig: Eine spezifische globale Konfiguration, falls notwendig
+
+
+Der Wizard besitzt folgende Facets:
+
+* wizardHeader: Der Header-Bereich
+* wizardBody: Der Body-Bereich
+* modalFooter: Der Footer-Bereich
+* wizardFooterRightButtons: Ergänzungen zu den angezeigten Buttons auf der linken Seite
+* wizardFooterLeftButtons: Ergänzungen zu den angezeigten Buttons auf der rechten Seite
+
+Beispiel:
+
+:desc-listing-wirardModaleDialoge: Modaler Wizard
+[id="listing-wirardModaleDialoge",reftext="{listing-caption} {counter:listings }"]
+.{desc-listing-wirardModaleDialoge}
+[source, xml]
+----
+<isy:wizard wizardDialogModel="#\{wdm}">
+   <f:facet name="wizardHeader">Testheader</f:facet>
+   <f:facet name="wizardBody">
+       <ui:param name="aktuelleWizardSeite" value="#\{wdm.getActiveWizardDialogPage()}" />
+       <!-- In Abhängigkeit der ID werden die entsprechenden Seiten angezeigt. -->
+       <ui:fragment rendered="#\{wdm.getActiveWizardDialogPageId().equals('1')}">
+          <ui:include src="page1.xhtml" />
+       </ui:fragment>
+       <ui:fragment rendered="#\{wdm.getActiveWizardDialogPageId().equals('2')}">
+          <ui:include src="page2.xhtml" /> </ui:fragment>
+       <ui:fragment rendered="#\{wdm.getActiveWizardDialogPageId().equals('3')}">
+          <ui:include src="page3.xhtml" />
+       </ui:fragment>
+       <ui:fragment rendered="#\{wdm.getActiveWizardDialogPageId().equals('4')}">
+          <ui:include src="page4.xhtml" />
+       </ui:fragment>
+   </f:facet>
+</isy:wizard>
+----
+Eine einzelne Seite eines Wizards wird über ein WizardDialogPage-Objekt definiert.
+Eine WizardDialogPage hat u.A. folgende Attribute:
+
+* wizardDialogPageId: Eine ID, welche die Wizardseite eindeutig innerhalb des Wizards identifiziert
+* pageDone: Seite wurde abgearbeitet
+* pageSuccessful: Seite wurde erfolgreich oder nicht erfolgreich abgearbeitet
+* pageDisabled: Seite wurde deaktiviert
+* buttonCancelActivated: Ob der Button aktiviert ist oder nicht
+* buttonPreviousActivated: Ob der Button aktiviert ist oder nicht
+* buttonAbortActivated: Ob der Button aktiviert ist oder nicht
+* buttonCompleteActivated: Ob der Button aktiviert ist oder nicht
+* buttonNextActivated: Ob der Button aktiviert ist oder nicht
+* title: Title der Wizardseite
+
+Weiterhin muss zu einem Wizard ein WizardDialogModel-Objekt definiert werden. Ein WizardDialogModel hat folgende Attribute und Methoden:
+
+* activeWizardDialogPageId: Die ID der aktuell aktiven Seite
+* nextActiveWizardDialogPageId: Die ID der neuen Seite
+* wizardDialogPages: Liste von den einzelnen Seiten des Wizards (WizardDialogPage-Objekte)
+* public boolean isPageDone(String id): Ob die Seite mit der angegebenen ID schon abgearbeitet wurde.
+* public boolean isPageDisabled(String id): Ob die Seite mit der angegebenen ID deaktiviert ist.
+* public WizardDialogPage getActiveWizardDialogPage(): Gibt die momentan aktive Seite zurück.
+* public WizardDialogPage getWizardDialogPage(String wizardDialogPageId): Gibt die Seite zur angegebenen ID zurück.
+
+Für die Verwendung eines Wizards muss ein Controller erstellt werden, der vom `WizardDialogController` erbt.
+Folgende Methoden müssen dabei überschrieben werden:
+
+* public boolean finish(WizardDialogModel model): Beendet die Verarbeitung des Wizards
+* public boolean cancel(WizardDialogModel model): Bricht die Verarbeitung ab
+
+Folgende Methoden können genutzt und optional überschrieben werden:
+
+* initializeDefaultPages(WizardDialogModel model): Initialisiert die Pages des Wizards mit dem Standardverhalten
+* public boolean next(WizardDialogModel model): Rufe nächste Seite auf
+* public boolean previous(WizardDialogModel model): Rufe vorherige Seite auf
+
+[[drucklayout]]
+==== Drucklayout
+
+Wenn Daten aus der Applikation gedruckt werden sollen, muss der Inhalt für den Druck optimiert werden.
+Die Definitionen des Druck-Layouts können über ein CSS Druck-Stylesheet geregelt werden.
+Zum Beispiel sollten nicht benötigte Elemente ausgeblendet und Farben für den Druck optimiert werden.
+
+
+:desc-image-seitendruck1: Seitendruck über Druck-Funktion des Browsers
+[id="image-seitendruck1",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-seitendruck1}
+image::image96.png[align="center", scaledwidth="96%"]
+
+Für jede Seite besteht die Möglichkeit eine generische Druckansicht anzuzeigen.
+Diese Druckansicht kann in einem eigenene View-State definiert werden.
+Durch Aufruf des BasisControllers wird sie aktiviert oder deaktiviert.
+
+Beispiel:
+
+:desc-listing-druckAnsichtGenerisch: Generische Druckansicht anzeigen
+[id="listing-druckAnsichtGenerisch",reftext="{listing-caption} {counter:listings }"]
+.{desc-listing-druckAnsichtGenerisch}
+[source, xml]
+----
+<view-state id="auskunftAnzeigenDruckansichtViewState" model="auskunftAnzeigenModel">
+    <on-entry>
+       <evaluate expression="basisController.showPrintView()"/>
+    </on-entry>
+</view-state>
+----
+
+Über den Vererbungsmechanismus zwischen XHTML Seiten oder durch Angabe einer spezifischen View kann dadurch die komplette Seite in eine Druckansicht versetzt werden.
+In der Druckansicht werden alle Elemente ohne JavaScript angezeigt und das Format entsprechend angepasst.
+Mit der Druckfunktion des Browsers kann diese dann ausgedruckt werden.
+Ruft man die Druckfunktion des Browsers direkt auf (ohne zuvor auf die Druckansicht geöffnet zu haben), so wird nur das angepasste CSS (print.css) verwendet.
+Es erfolgen keine spezifischen Anpassungen von Elementen (z.B. alle Tabs anzeigen).
+
+Das Tag `<isy:print-metainformation>` kann benutzt werden, um Metainformationen zum Druck anzuzeigen.
+Der Inhalt dieses Tags wird nur ausgegeben, sofern die Druckansicht aktiviert ist.
+Es enthält folgende Parameter:
+
+* warning: Ein Text, welcher ausgegeben werden soll, falls ein Nutzer die Druckfunktion des Browsers nutzt, jedoch nicht die Druckansicht aktiviert hat.
+Standard: leer.
+
+[[drucken-bestimmter-inhaltesbereiche]]
+===== Drucken bestimmter Inhaltsbereiche
+
+Neben der allgemeinen Druck-Funktion des Browsers kann der Benutzer über explizite Drucken-Buttons bestimmte Bereiche ausdrucken.
+
+Für eine spezifische Druckansicht von Komponenten kann über einen eigenen View-State die generische Druckansicht (siehe Drucklayout) verwendet werden.
+Alternativ dazu können die Inhalte der Druckansicht auch selbst definiert und optimiert werden.
+Zur Prüfung ob die Druckansicht aktiviert wurde dient das BasisModel.
+
+===== Schnellnavigation 
+
+*NOCH NICHT IMPLEMENTIERT*
+
+Optional kann sich zur schnellen Navigation zwischen mehreren Ergebnissen ein Control zentriert in der Seiten-Toolbar befinden.
+Es besteht aus Zurück- und Vor-Buttons, die durch die Anzeige der aktuellen Position und der Gesamtmenge getrennt sind.
+Die Gesamtmenge entspricht der Anzahl der Objekte in der dahinterliegenden Übersichtsliste.
+
+[[jsf-nutzung-isy-web]]
+=== JSF Nutzung der isy-web
+
+Der vorliegende Styleguide ist in einer Java Bibliothek (`isy-web`) umgesetzt.
+Diese Bibliothek enthält notwendige Abhängigkeiten (Maven), Spring-Konfigurationen, CSS-Dateien, JSF-Komponenten (Composite Components) sowie zugehörige JSF-Templates (.xhtml). Die Bibliothek PLIS-Web setzt wiederum die Bibliothek PLIS-Style ein.
+In der `isy-style` werden die CSS-, JavaScript- und Bilddateien des Styleguides abgelegt und für die Nutzung komprimiert und kompiliert.
+
+In diesem Abschnitt werden die Grundlagen zur Nutzung der `isy-web` erläutert.
+Details zur Architektur und weitere Vorgaben finden sich im Register Factory Detailkonzept Komponente Web GUI (TODO: Link ergänzen).
+
+*Einbindung in Anwendung*
+
+Bei Einsatz der `isy-web` werden viele Konfigurationen bereits vorgenommen.
+Die Anwendung muss nur noch wenige Einstellungen vornehmen.
+Nachfolgend werden diese Schritte erläutert.
+
+==== JSP Konfiguration Maven
+
+Die Maven Abhängigkeit für die `isy-web` lautet:
+
+:desc-listing-jspMavenIsy: Einbindung der isy-web in Maven
+[id="listing-jspMavenIsy",reftext="{listing-caption} {counter:listings }"]
+.{desc-listing-jspMavenIsy}
+[source, xml]
+----
+<dependency>
+
+<groupId>de.bund.bva.pliscommon</groupId>
+   <artifactId>isy-web</artifactId>
+   <version>x.y.z</version>
+
+</dependency>
+----
+
+Die Bibliothek bringt alle notwendigen Abhängigkeiten mit (Spring, Spring-Webflow, JSF, etc.). Anpassungen an den Abhängigkeiten können direkt in der Abhängigkeitsdefinition der Anwendung durchgeführt werden.
+
+==== JSP Konfiguration web.xml
+
+Die web.xml der Anwendung muss entsprechend den Vorgaben konfiguriert werden (siehe Detailkonzept). Aus Sicht der Styleguide-Umsetzung ist vor allem die Konfiguration des ApplicationIntialisierungFilter wichtig.
+Dieser Filter ist zuständig für die JavaScript Erkennung und die damit verbunden Konfiguration der globalen Einstellungen für die Session des Nutzers.
+Beispiel:
+
+:desc-listing-jspWebXmlKonfiguration: JSP web.xml Konfiguration
+[id="listing-jspWebXmlKonfiguration",reftext="{listing-caption} {counter:listings }"]
+.{desc-listing-jspWebXmlKonfiguration}
+[source, xml]
+----
+<filter> <filter-name>applicationInitialisierungFilter</filter-name>
+
+<filter-class>de.bund.bva.isyfact.common.web.servlet.filter.ApplicationInitialisierungFilter</filter-class>
+
+<!-- Optionaler Parameter: Der Parameter "urlsToSkip" dient zur Aufnahme von Url-Pfaden, relativ zum ApplicationContext-Pfad, die von der Filterung ausgenommen werden.
+Mehrere Url-Pfade sind kommasepatiert anzugeben.
+Es ist
+
+pro Url ein fuehrendes "/" anzugeben. -->
+
+<init-param> <param-name>urlsToSkip</param-name>
+   <param-value>/app/resources</param-value>
+</init-param>
+
+<!-- Plicht-Parameter: Der Parameter "urlApplicationInitialisierung" enthaelt die Url zur Application-Initialisierungsseite.
+Es ist ein fuehrendes "/" anzugeben. -->
+
+<init-param>
+   <param-name>urlApplicationInitialisierung</param-name>
+   <param-value>/app/common/init/applicationInitialisierung.xhtml</param-value>
+</init-param> </filter>
+----
+
+==== JSP Konfiguration Spring
+
+Folgende Konfiguration müssen in die anwendungsspezifische Spring-Konfiguration übernommen werden:
+
+* Für die GUI/Spring-Webflow: +
+<import resource="classpath:resources/isy-web/spring/webflow.xml"/>
+* Für die Widgets und Controller: +
+<import resource="classpath:resources/isy-web/spring/controller.xml"/>
+* Für Spring-Security: +
+<import resource="classpath:resources/isy-web/spring/isy-sicherheit-web.xml"/>
+
+Die eingebundenen Spring-Konfigurationen erwarten folgende Beans unter dem angegebenen Namen vorzufinden:
+
+* Konfiguration ("konfiguration") Die Konfigurationsschnittstelle aus der isy-konfiguration.
+* MessageSource ("messageSource") Die MessageSource (aus Spring Core) der Anwendung.
+* AufrufKontextVerwalter ("aufrufKontextVerwalter") Den AufrufKontextVerwalter aus der isy-aufrufkontext zum Zugriff auf Nutzerinformationen.
+* AufrufKontextFactory ("aufrufKontextFactory") Die AufrufKontextFactory aus der isy-aufrufkontext zum Erzeugen von AufrufKontext-Objekten.
+* Sicherheit ("sicherheit") Die Sicherheit aus der isy-sicherheit.
+* AusnahmeIdMapper ("ausnahmeIdMappper") Ein konkreter Ausnahme-ID-Mapper.
+Zuständig für die Fehlerbehandlung in der GUI.
+
+
+==== JSP Konfiguration Renderer
+
+Derzeit muss noch folgende Konfiguration in die faces-config.xml der Anwendung aufgenommen werden:
+
+:desc-listing-jspRenderer: JSP Renderer Konfiguration
+[id="listing-jspRenderer",reftext="{listing-caption} {counter:listings }"]
+.{desc-listing-jspRenderer}
+[source,xml]
+----
+<!-- Spezifische Renderer müssen hier erneut angegeben werden, um die existierenden Renderer aus der Tomahawk Bibliothek zu überschreiben -->
+ <render-kit>
+    <!-- Spezieller Renderer für t:radio Elemente, welcher kein Label rendert. -->
+    <renderer> <component-family>org.apache.myfaces.Radio</component-family>
+    <renderer-type>org.apache.myfaces.Radio</renderer-type>
+    <renderer-class>de.bund.bva.isyfact.common.web.jsf.renderer.NoLabelHtmlRadioRenderer</renderer-class>
+    </renderer>
+
+<!-- Spezieller Renderer für Checkboxen, welcher kein Label rendert. -->
+   <renderer>
+      <component-family>org.apache.myfaces.Checkbox</component-family>
+      <renderer-type>org.apache.myfaces.Checkbox</renderer-type>
+      <renderer-class>de.bund.bva.isyfact.common.web.jsf.renderer.NoLabelHtmlCheckboxRenderer</renderer-class>
+      </renderer>
+  </render-kit>
+----
+
+==== Zugriff auf die isyFact Bibliothek
+
+Zur Steuerung des Frameworks werden Controller und Models definiert, welche durch Einbindung der Spring-Konfiguration automatisch über Spring verfügbar sind, bzw.
+per EL-Expressions in XHTML und Flows benutzt werden können (siehe Bean-Name in Klammern). Dies sind folgende:
+
+* GlobalConfigurationController ("globalConfigurationController") mit GlobalConfigurationModel ("globalConfigurationModel" -ConversationScope) Enthält die globale Konfiguration der Nutzer-Session (z.B. Informationen über JavaScript Status)
+* GlobalFlowController ("globalFlowController") mit GlobalFlowModel ("globalFlowModel" - FlowScope) Kontrolliert Zustände für einen konkreten Flow und bietet Zugriff auf querschnittsfunktionalität wie den MessageController und ValidationController (siehe unten)
+* BasisController ("basisController") mit BasisModel ("basisModel" - FlowScope) Vereinigt die gemeinsamen Elemente und die Steuerung des Layouts für alle Seitentypen innerhalb der Anwendung.
+Konfiguriert z.B. den Zugriff auf den Informationesbereich und auf die Seitentoolbar.
+Stell Funktionen für die Druckansicht und für die Anzeige von modalen Dialogen zur Verfügung.
+* ApplikationseiteController ("applikationseiteController") mit ApplikationseiteModel ("applikationseiteModel" - FlowScope) bzw.
+DetailseiteController ("detailseiteController") mit DetailseiteModel ("detailseiteModel" - FlowScope) Konkrete Controller für die derzeit existierenden Seitentypen (siehe Applikationsseite und Applikation Detailseite).
+
+Weiterhin existieren Controller für Teilbereiche:
+
+* ErrorController ("errorController") mit ErrorModel ("errorModel" - FlowScope) Spezieller Controller und Model für die Darstellung der Fehlerseite.
+* ValidationController ("validationController") mit ValidationModel ("validationModel" - FlashScope) Zuständig für die Verarbeitung von ValidationMessages (siehe auch Validierung).
+* MessageController ("messageController") Verwaltet den Zugriff auf die FacesMessages im aktuellen FacesContext.
+Stellt Methoden zur Ausgabe von Nachrichten bereit (siehe Vali dierung).
+* LinksnavigationController ("linksnavigationController") und LinksnavigationModel ("linksnavigationModel" - FlowScope). Steuert die Linksnavigation.
+Bietet Methoden zum manuellen Überschreiben der Linksnavigation (siehe Linksnavigation)
+* QuicklinksController ("quicklinksController") und QuicklinksModel ("quicklinksModel - FlowScope). Steuert die Quicklinks.
+Bietet Methoden zum Anlegen und Entfernen von Quicklinks (siehe Quicklinks).
+
+==== Zugriff auf das Layout
+
+Die Vorgabetemplates können über die JSF-Template Mechanismen eingebunden werden.
+Das Framework stellt die Templates `/WEB-INF/gui/common/layout/applikation.xhtml` (Applikationseite) und `/WEB-INF/gui/common/layout/applikationDetailseite.xhtml` (Detailseite) zur Verfügung.
+Diese erben wiederum von `/WEB-INF/gui/common/layout/basis.xhtml`, welches das grundlegende Layout vorgibt und alle notwendigen Skripte und Ressourcen einbindet.
+
+Die Templates bieten folgende Schnittstellen über den ui:define/ui:insert Mechanismus von JSF an:
+
+* inhaltsbereich: Der eigentliche Inhaltsbereich der Seite.
+
+* headIncludes: Zum Einbinden von weiteren Ressourcen in den HTML Header.
+
+* script: Zum Einbinden von seitenspezifischen JavaScript.
+
+* modalDialogPlaceholder: Zum Einbinden von modalen Dialogen.
+
+* printMetaInformation: Die Stelle um Meta-Informationen für Druckausgaben zu hinterlegen.
+
+* form: Zusätzliche Form-Elemente können hier eingebunden werden.
+Normalerweise stellt das Layout ein Form bereit.
+Für spezifische Anpassungen (z.B. AJAX-Listpicker) müssen jedoch eigene Forms definiert werden.
+
+
+Das CSS für den Styleguide wird automatisch geladen und eingebunden.
+Zur anwendungsspezifischen Anpassung des CSS können folgende Dateien in der Anwendung verwendet werden:
+
+* /css/custom-styles.css - Spezielle CSS Klassen für die Anwendung.
+
+* /css/custom-print.css - Spezielle CSS Klassen für die Druckansicht der Anwendung.
+
+
+==== Beispiel - Erzeugen einer neuen Maske
+
+Im folgenden werden die Schritte aufgezeigt, welche durchgeführt werden müssen, um eine neue Maske mit der Nutzung des Styleguides anzulegen:
+
+*Erzeugen eines Controllers und eines MaskenModels*
+
+* Controller muss von AbstractGuiController erben.
+* Controller muss in Spring als Bean konfiguriert werden.
+* Model muss von AbstractMaskenModel erben.
+
+==== Erzeugen der Flow-Definition für Spring-Webflow
+
+Beispiel:
+
+:desc-listing-jspFlowDefinitionWebFlow: JSP Flow Definition für Spring-Webflow
+[id="listing-jspFlowDefinitionWebFlow",reftext="{listing-caption} {counter:listings }"]
+.{desc-listing-jspFlowDefinitionWebFlow}
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?> <flow xmlns="http://www.springframework.org/schema/webflow" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/webflow[http://www.springframework.org/schema/webflow http://www.springframework.org/schema/web]http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd[flow/spring-webflow-2.0.xsd]"
+
+parent="applikationseiteParentFlow">
+
+<secured attributes="..."/>
+
+   <var name="beispielseiteMaskenModel"
+       class="de.bund.bva....BeispielseiteMaskenModel"/>
+
+   <on-start>
+      <evaluate expression="beispielseiteMaskenController.initialisiereModel(beispielseiteMaskenModel)"/>
+   </on-start>
+
+   <view-state id="beispielseiteViewState" model="beispielseiteMaskenModel">
+      ...
+   </view-state>
+
+   <end-state id="beendet" />
+
+</flow>
+----
+
+Je nach Seitentyp muss entweder der detailseiteParentFlow oder der applikationseiteParentFlow als Parent-Flow angegeben werden.
+Das Model wird als Variable definiert und damit im Flow erzeugt ("beispielseiteMaskenModel"). In der on-start Definition wird der Controller aufgerufen, um das Model zu initialisieren.
+Dieser Schritt ist optional.
+
+==== Erzeugen eines View-States
+
+Beispiel:
+
+:desc-listing-jspViewState: JSP ViewState
+[id="listing-jspViewState",reftext="{listing-caption} {counter:listings }"]
+.{desc-listing-jspViewState}
+[source,xml]
+----
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd[http://www.w3.org/TR/xhtml1/DTD/xhtm]http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd[l1-transitional.dtd]">
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ui="http://java.sun.com/jsf/facelets" 
+   xmlns:h="http://java.sun.com/jsf/html" 
+   xmlns:f="http://java.sun.com/jsf/core" 
+   xmlns:sf="http://www.springframework.org/tags/faces" 
+   xmlns:isy="http://java.sun.com/jsf/composite/isyfact" 
+   template="/WEB-INF/gui/common/layout/applikation.xhtml">
+
+   <!-- Zusätzliches JS einbinden -->
+   <ui:define name="script">
+      <script type="text/javascript" src=".../beispielseite.js" />
+   </ui:define>
+
+   <!-- Form für AJAX-Seiteninhalt definieren -->
+   <ui:define name="form">
+     <h:form id="listpickerAjaxForm">
+        <isy:formListpickerAjaxContent ... />
+     </h:form>
+    </ui:define>
+
+   <!-- Metainformationen für die Druckausgabe -->
+   <ui:define name="printMetaInformation">
+      <ui:include src="...xhtml"/>
+   </ui:define>
+
+   <!-- Der Inhaltsbereich -->
+   <ui:define name="inhaltsbereich">
+      ...
+   </ui:define>
+</ui:composition>
+----
+
+Je nach Seitentyp muss entweder `/WEB-INF/gui/common/layout/applikationDetailseite.xhtml` oder
+`/WEB-INF/gui/common/layout/applikation.xhtml` als Template angegeben werden.
+
+==== Fehlerbehandlung
+
+siehe auch System-Meldungen und Validierung.
+
+Die Darstellung von technischen Ausnahmefehlern wird bereits automatisch von der Bibliothek übernommen.
+Für Fehler beim Zugriff auf den Anwendungskern kann zusätzlich eine Fehlerbehandlung im Controller eingeführt werden (try/catch). So können checked und unchecked Exceptions abgefangen werden.
+Der MessageController bietet hierzu Methoden (writeException, writeAndLogException) zum Loggen und Erzeugen von Fehlern/Warnungen im Nachrichtenbereich an.
+
+Es gelten folgende Regelen:
+
+* Fachliche Fehler (PlisBusinessException) werden als Warnmeldungen im Nachrichtenbereich der GUI angezeigt
+* Andere Fehler (Laufzeitfehler, PlisTechnicalException, PlisTechnicalRuntimeException) werden mit einer technische Fehlermeldung im Nachrichtenbereich der GUI angezeigt.
+
 
 [[konfiguration]]
 = Konfiguration
@@ -4319,7 +4926,7 @@ Es sollte ein Standard-Titel und Präfix für die Anwendung angelegt werden.
 
 Für alle Masken sollte eine zugehörige Hilfe verfügbar sein, und der Aufruf auf die Seite muss überprüft werden.
 
-[[fehlerbehandlung]]
+[[generische-fehlermeldung]]
 == Fehlerbehandlung
 
 Alle Exceptions werden an einer definierten Stelle behandelt.
