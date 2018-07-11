@@ -1,7 +1,7 @@
 [[register-factory]]
 Register Factory
 
-image:image1.png[image,width=669,height=84]
+image::image1.png[image,width=669,height=84]
 
 Der Register Factory Standard beinhaltet auch den Styleguide für die Erstellung von Informationssystemen, die eigenständig oder in einem Portal-Kontext betrieben werden.
 
@@ -23,8 +23,8 @@ Des Weiteren werden allgemeingültige Prinzipien erläutert, die bei der Konzept
 Abschliessenden werden die Vorgaben für die zu unterstützenden Browser festgehalten.
 
 
-//image:image11.png[image,width=140,height=154]
-image:image11.png[image, align="right", width=140,height=154]
+//image::image11.png[image,width=140,height=154]
+image::image11.png[image, align="right", width=140,height=154]
 
 [[einfuehrung-in-den-style-guide]]
 === Einführung in den Style Guide
@@ -559,7 +559,7 @@ Es gelten folgende Regelen:
 Im Folgenden werden die Fenstertypen und das allgemeine Layoutverhalten der Applikation beschrieben.
 
 
-image:image24.png[image,width=140,height=526]
+image::image24.png[image,width=140,height=526]
 
 [[layout-resizing]]
 === Layout & Resizing
@@ -1278,7 +1278,7 @@ Um im Hintergrund weiterhin das aktuelle Fenster anzuzeigen, genügt es den bish
 [[dialoge-ohne-javascript]]
 ==== Dialoge ohne JavaScript
 
-image:image77.png[image,width=35,height=33]
+image::image77.png[image,width=35,height=33]
 
 Hat ein Benutzer kein JavaScript, werden Dialoge in das Hauptfenster integriert.
 
@@ -1675,7 +1675,7 @@ Der Fokus in diesem Kapitel liegt auf den Interaktionen, die während dieser Auf
 In den Kapiteln Bedienelemente und Design Patterns können die jeweiligen Spezifikationen der benutzen Elemente nachgelesen werden.
 
 
-image:image105.png[image,width=140,height=142]
+image::image105.png[image,width=140,height=142]
 
 [[objekt-suchen]]
 === Objekt suchen
@@ -1756,7 +1756,7 @@ image::image107.png[align="center", scaledwidth="100%",width="687",height="227"]
 Die abschließenden Buttons am unteren rechten Rand sollten wie bei Dialogen durch eine horizontale Linie abgegrenzt werden.
 Wichtig ist dabei, dass die horizontale Linie nicht bis zum Rand gehen darf, sondern wie die Controls einen Abstand zu ihrem umgebenden Container einhält.
 
-image:image108.png[image,width=399,height=249]
+image::image108.png[image,width=399,height=249]
 
 [[objekt-anzeigen]]
 === Objekt anzeigen
@@ -1809,7 +1809,7 @@ Optional kann sich zur schnellen Navigation zwischen mehreren Ergebnissen ein Co
 Es besteht aus Zurück- und Vor-Buttons, die durch die Anzeige der aktuellen Position und der Gesamtmenge getrennt sind.
 Die Gesamtmenge entspricht der Anzahl der Objekte in der dahinterliegenden Übersichtsliste.
 
-image:image111.png[image,width=399,height=250]
+image::image111.png[image,width=399,height=250]
 
 *Richtlinien zur Interaktion*
 
@@ -2079,7 +2079,7 @@ Diese Ausnahmen werden an den entsprechenden Stellen erläutert.
 
 *Funktionalität ohne JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Viele heutzutage übliche Bedienelemente, Gestaltungslösungen und Komfortfunktionen für Webapplikationen setzen die Benutzung von JavaScript voraus.
 Ohne die Verwendung von JavaScript sind die Möglichkeiten der Benutzerinteraktion mit Webseiten demzufolge stark eingeschränkt.
@@ -2223,7 +2223,7 @@ image::image135.png[align="center", scaledwidth="100%",width="490",height="51"]
 
 *Hinweis zur Implementierung*
 
-image:image136.png[image,width=15,height=15]
+image::image136.png[image,width=15,height=15]
 
 Implementierung in JSF / plis-web
 
@@ -2289,7 +2289,7 @@ Zum Beispiel kann man unter dem Button „Exportieren" die Funktionen „Exporti
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Ohne JavaScript können die Funktionen die im Menü Button zusammen gefasst sind nicht direkt ausgeführt werden.
 
@@ -2619,7 +2619,7 @@ Falls eine Vorbelegung jedoch potentiell risikobehaftet ist, sollte das Eingabef
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Es gelten die gleichen Regeln und Einschränkungen wie im Kapitel Validierung beschrieben.
 
@@ -2933,7 +2933,7 @@ Falls keine übergeordnete Logik angewendet wird, sollten die Elemente aufsteige
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Da durch das Dropdown Menü keine Funktionen unmittelbar ausgelöst werden, bleibt die Funktionalität auch ohne JavaScript vorhanden.
 Es kann allerdings zu optischen Abweichungen kommen.
@@ -3139,7 +3139,7 @@ Und der Tab wird rechts neben dem letzten Tab in der Tabbar dargestellt.
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Ohne JavaScript gibt es kein Taboverflow Menü. Die Tabs werden hintereinander dargestellt, notfalls in zwei Zeilen.
 Da die Darstellung von Tabs in mehreren Zeilen möglichst zu vermeiden ist, sollte eine Umstrukturierung der Inhalte geprüft werden.
@@ -3535,7 +3535,7 @@ image::image183.png[align="center", width="627",height="137"]
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=55]
+image::image131.png[image,width=54,height=55]
 
 Ohne JavaScript kann die Sortierung nur durch das Neu-Laden der Seite bewirkt werden.
 
@@ -3615,7 +3615,7 @@ Mittels der Umschalt-Taste und Klick auf das erste und letzte Element wird der d
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Ohne JavaScript ist die Selektion von Tabellenzeilen nur über Checkboxen möglich.
 
@@ -3778,11 +3778,11 @@ Man spricht in diesem Fall von einer so genannten „Tri State Check Box"__.__
 Sollte eine Gruppe von Checkboxen aus einer großen Anzahl von Optionen bestehen, kann die Gruppe auf mehrere Spalten platzsparend und übersichtlich angezeigt werden.
 
 
-image:image192.png[image,width=517,height=210]
+image::image192.png[image,width=517,height=210]
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Ohne JavaScript ist die Darstellung des Tristates nicht möglich.
 
@@ -3980,7 +3980,7 @@ Elemente die einer Validierung unterzogen werden (vor allem in Formularen) werde
 
 Ein Design Pattern ist eine Kombination aus Standardelementen, welche in dieser Kombination für verschiedene Aufgaben oder Situationen benutzt werden können.
 
-image:image195.png[image,width=140,height=718]
+image::image195.png[image,width=140,height=718]
 
 
 [[navigation]]
@@ -4045,7 +4045,7 @@ Sie entspricht immer dem gerade aktiven Hauptnavigationspunkt.
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Ohne JavaScript lässt sich das Menü der Subnavigation nicht über die komplette Breite des Screens darstellen.
 Hierfür werden die Menüpunkte der Subnavigation vertikal unter dem Menüpunkt der Hauptnavigation angeordnet, Beispiel siehe <<image-hauptnavigationSubmenue>>.
@@ -4309,7 +4309,7 @@ Ebenso ist wichtig, dass man per Tooltip die komplette Information einsehen kann
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Ohne JavaScript ist das anzeigen der Wertehilfen in einem extra Menü nicht möglich.
 Zur Eingabe der Daten werden die normalen Eingabefelder genutzt.
@@ -4570,7 +4570,7 @@ Die Attribute müssen ohne zu scrollen auf einen Blick ersichtlich sein.
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Generell kann die Funktionalität auch ohne JavaScript beibehalten werden.
 Jedes Hinzufügen oder Entfernen einer Zeile bedingt allerdings ein Neu-Laden der Seite.
@@ -4703,7 +4703,7 @@ Hierfür wird eine Filteroption zur Verfügung gestellt z.B. „Alle".
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Generell kann die Funktionalität auch ohne JavaScript beibehalten werden.
 Jeder Wechsel des Filters bedingt allerdings ein Neu-Laden der Seite.
@@ -4815,7 +4815,7 @@ können), wie z.B. die Spalte mit den Checkboxen, muss man einen Platzhalter mit
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Die Komfortfunktionen der Filter-Zeile können ohne JavaScript nicht zur Verfügung gestellt werden.
 Die Filter-Zeile ist in diesem Fall nicht vorhanden und wird auch nicht angezeigt.
@@ -4860,7 +4860,7 @@ Zielliste und Quellliste sollten immer gleich breit sein.
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Ohne JavaScript kann zu optischen Abweichungen in der Darstellung kommen, die Funktionalität sollte allerdings beibehalten werden.
 
@@ -4965,7 +4965,7 @@ Das Layout sollte sich an den Regeln des Formular-Layouts orientieren (siehe Kap
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Ohne JavaScript ist die Vorschau innerhalb einer Tabelle nicht möglich.
 Die entsprechenden Buttons zum öffnen der Vorschau sollten nicht angezeigt werden.
@@ -5013,7 +5013,7 @@ Für sehr komplexe Daten kann es sinnvoll sein einen Expander (Progressive Discl
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Ohne JavaScript können die Detaildaten nur durch Klick auf einen Button oder Link angezeigt werden.
 Hierfür kann zum Beispiel der Kennzeichner in einer Tabellenzeile genutzt werden (ähnlich wie beim Aufruf der Detailseite aus einer Tabelle heraus, siehe Kapitel Selektionsver halten in einer Tabelle).
@@ -5061,7 +5061,7 @@ Die Inhalte des Containers passen sich nur bis zu einer gewissen Größe an, und
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Ohne JavaScript werden alle Daten direkt angezeigt.
 Elemente sind nicht ein- und ausklappbar.
@@ -5299,7 +5299,7 @@ Ein gleichmäßiges und konsistentes Layout von Screens und Formularen ist essen
 Klar strukturierte Inhalte erleichtern dem Benutzer das schnelles Scannen und Erfassen von Informationen.
 Schlecht gelayoutete Screens können die Produktivität und die Zufriedenheit des Benutzers erheblich verschlechtern.
 
-*image:image238.png[image,width=140,height=154]
+*image::image238.png[image,width=140,height=154]
 
 [[virtuelles-raster]]
 === Virtuelles Raster
@@ -5470,7 +5470,7 @@ Die Komponente besitzt folgende Facets:
 Das System sollte für den Benutzer möglichst intuitiv und einfach zu bedienen sein.
 Die hier beschriebenen Möglichkeiten können den Benutzer beim Umgang mit dem System unterstützen und die Bedienung vereinfachen.
 
-*image:image247.png[image,width=140,height=193]
+*image::image247.png[image,width=140,height=193]
 
 [[autosuggestion]]
 === Autosuggestion
@@ -5491,7 +5491,7 @@ Gibt es mehr als 10 mögliche passende Werte, so werden die ersten 10 Werte ange
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Ohne JavaScript nicht vorhanden.
 
@@ -5524,7 +5524,7 @@ Gibt der Benutzer keine Daten ein und klickt auf ein anderes Element (Fokuswechs
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Ohne JavaScript kann es bei der Anzeige von Platzhaltern in einigen Browsern kommen, wie zum Beispiel in IE8/IE9.
 
@@ -5570,7 +5570,7 @@ Stattdessen sollte der Tooltip kurz und prägnant beschreiben, was ein Objekt be
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Können ohne JavaScript nicht umgesetzt werden.
 
@@ -5625,7 +5625,7 @@ Der Fortschritts-Spinner empfiehlt sich aufgrund seiner geringen Ausmaße insbes
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=54]
+image::image131.png[image,width=54,height=54]
 
 Ohne JavaScript nicht vorhanden.
 
@@ -5728,7 +5728,7 @@ image::image264.png[align="center", width="685",height="145"]
 
 *Kein JavaScript*
 
-image:image131.png[image,width=54,height=55]
+image::image131.png[image,width=54,height=55]
 
 Ohne JavaScript können die Hinweise zu den Fehlermeldungen nicht über das Informationsicon dargestellt werden, da Tooltips nicht unterstützt werden.
 
@@ -5812,7 +5812,7 @@ Beispiel: Bei der Eingabe eines Datums können sowohl Trennstriche als auch Punk
 Alle Bedienelemente und Funktionen sollten auch ohne Maus bedienbar sein.
 Neben der Eingabe von Zeichen wird die Tastatur auch zur Navigation sowie zur Ausführung häufig genutzter Aktionen
 
-image:image265.png[image,width=140,height=65]
+image::image265.png[image,width=140,height=65]
 
 genutzt.
 
@@ -5888,7 +5888,7 @@ In Formularen wird initial das erste Element aus dem Inhaltsbereich (links oben)
 Der Ablauf der Tabulatoren erfolgt von links nach rechts und oben nach unten.
 In der folgenden Abbildung wird beispielhaft der Ablauf der Tabulatorreihenfolge dargestellt:
 
-image:image268.png[image,width=500,height=147]
+image::image268.png[image,width=500,height=147]
 
 *_Seitenbereiche_*
 
@@ -5998,7 +5998,7 @@ Verschiedenartige Informationen rufen dabei unterschiedliche Aufmerksamkeitsstuf
 So werden Schaltflächen, Labels und andere interaktive Elemente gewöhnlich zuerst gescannt, während statischer Text eher selten gelesen wird.
 
 
-*image:image270.png[image,width=140,height=243]
+*image::image270.png[image,width=140,height=243]
 
 
 *Allgemeine Richtlinien*
@@ -6137,7 +6137,7 @@ Im Folgenden werden Farben, Icons und Schriften definiert, die für das Visuelle
 // .{desc-image-ausschnittinhaltsverzfarben}
 // image::image285.png[align="center", width="140",height="296"]
 
-*image:image285.png[image,width=140,height=296]
+*image::image285.png[image,width=140,height=296]
 
 [[farben-ueberschrift]]
 === Farben
@@ -6417,95 +6417,95 @@ http://fontawesome.io/icons/[ Font-Awesome-Icons]
 |===
 |Icon |CSS-Klasse |Funktionen
 
-|image:image294.png[image,width="24",height="24"]
+|image::image294.png[image,width="24",height="24"]
 |fa-times
 |Abbrechen, Ablehnen, Filterzelle leeren, Stornieren
 
-|image:image295.png[image,width="24",height="24"]
+|image::image295.png[image,width="24",height="24"]
 |fa-car
 |Abholen
 
-|image:image296.png[image,width="24",height="24"]
+|image::image296.png[image,width="24",height="24"]
 |fa-sign-out
 |Abmelden
 
-|image:image297.png[image,width="24",height="24"]
+|image::image297.png[image,width="24",height="24"]
 |fa-sign-in
 |Anmelden
 
-|image:image298.png[image,width="24",height="24"]
+|image::image298.png[image,width="24",height="24"]
 |fa-unlock
 |Aktivieren, Freischalten
 
-|image:image299.png[image,width="24",height="24"]
+|image::image299.png[image,width="24",height="24"]
 |fa-refresh
 |Aktualisieren
 
-|image:image300.png[image,width="24",height="24"]
+|image::image300.png[image,width="24",height="24"]
 |fa-check
 |Akzeptieren, Annehmen, Erledigen, Zustimmen
 
-|image:image301.png[image,width="24",height="24"]
+|image::image301.png[image,width="24",height="24"]
 |fa-paperclip
 |Anhänge
 
-|image:image302.png[image,width="24",height="24"]
+|image::image302.png[image,width="24",height="24"]
 |fa-reply
 |Antworten
 
-|image:image303.png[image,width="24",height="24"]
+|image::image303.png[image,width="24",height="24"]
 |fa-eye
 |Anzeigen
 
-|image:image304.png[image,width="24",height="24"]
+|image::image304.png[image,width="24",height="24"]
 |fa-file-archive-o
 |Archiv, aus Archiv zurück holen
 
-|image:image305.png[image,width="24",height="24"]
+|image::image305.png[image,width="24",height="24"]
 |fa-pencil
 |Bearbeiten, Bearbeitung fortsetzen, Editieren, Korrigieren
 
-|image:image306.png[image,width="24",height="24"]
+|image::image306.png[image,width="24",height="24"]
 |fa-user
 |Benutzer, User
 
-|image:image307.png[image,width="24",height="24"]
+|image::image307.png[image,width="24",height="24"]
 |fa-file-image-o
 |Bild, Bild anzeigen
 
-|image:image308.png[image,width="24",height="24"]
+|image::image308.png[image,width="24",height="24"]
 |fa-font
 |Buchstaben-Picker
 
-|image:image309.png[image,width="24",height="24"]
+|image::image309.png[image,width="24",height="24"]
 |fa-download
 |Datei laden, Download, Herunterladen, Laden von Daten
 
-|image:image310.png[image,width="24",height="24"]
+|image::image310.png[image,width="24",height="24"]
 |fa-list-alt
 |Datensatz anzeigen, Detailauskunft
 
-|image:image311.png[image,width="24",height="24"]
+|image::image311.png[image,width="24",height="24"]
 |fa-share-square-o
 |Daten senden, Daten übermitteln, Senden, Versenden
 
-|image:image312.png[image,width="24",height="24"]
+|image::image312.png[image,width="24",height="24"]
 |fa-file
 |Dokument erstellen, Erstmeldung
 
-|image:image313.png[image,width="24",height="24"]
+|image::image313.png[image,width="24",height="24"]
 |fa-file-text-o
 |Druckansicht
 
-|image:image314.png[image,width="24",height="24"]
+|image::image314.png[image,width="24",height="24"]
 |fa-print
 |Drucken
 
-|image:image315.png[image,width="24",height="24"]
+|image::image315.png[image,width="24",height="24"]
 |fa-cog
 |Einstellung, Einstellungen
 
-|image:image316.png[image,width="24",height="24"]
+|image::image316.png[image,width="24",height="24"]
 |fa-mouse-pointer
 |Eintrag auswählen
 |===
@@ -6516,108 +6516,108 @@ http://fontawesome.io/icons/[ Font-Awesome-Icons]
 |===
 |Icon |CSS-Klasse |Funktionen
 
-|image:image317.png[image,width="24",height="24"]
+|image::image317.png[image,width="24",height="24"]
 |fa-file-minus
 |Entfernen
 
-|image:image318.png[image,width="24",height="24"]
+|image::image318.png[image,width="24",height="24"]
 |fa-check-square-o
 |Entscheiden
 
-|image:image319.png[image,width="24",height="24"]
+|image::image319.png[image,width="24",height="24"]
 |fa-plus
 |Ergänzen
 
-|image:image320.png[image,width="24",height="24"]
+|image::image320.png[image,width="24",height="24"]
 |fa-bell
 |Erinnerung
 
-|image:image321.png[image,width="24",height="24"]
+|image::image321.png[image,width="24",height="24"]
 |fa-upload
 |Exportieren
 
-|image:image322.png[image,width="24",height="24"]
+|image::image322.png[image,width="24",height="24"]
 |fa-exclamation-triangle
 |Fehler, Fehlerhaft
 
-|image:image323.png[image,width="24",height="24"]
+|image::image323.png[image,width="24",height="24"]
 |fa-eraser
 |Felder leeren
 
-|image:image324.png[image,width="24",height="24"]
+|image::image324.png[image,width="24",height="24"]
 |fa-check-circle
 |Fertig, Abgeschlossen
 
-|image:image325.png[image,width="24",height="24"]
+|image::image325.png[image,width="24",height="24"]
 |fa-filter
 |Filter ausfüllen
 
-|image:image326.png[image,width="24",height="24"]
+|image::image326.png[image,width="24",height="24"]
 |fa-history
 |Historie
 
-|image:image327.png[image,width="24",height="24"]
+|image::image327.png[image,width="24",height="24"]
 |fa-info-circle
 |Info
 
-|image:image328.png[image,width="24",height="24"]
+|image::image328.png[image,width="24",height="24"]
 |fa-arrow-circle-down
 |Importieren
 
-|image:image329.png[image,width="24",height="24"]
+|image::image329.png[image,width="24",height="24"]
 |fa-calendar
 |Kalender
 
-|image:image330.png[image,width="24",height="24"]
+|image::image330.png[image,width="24",height="24"]
 |fa-address-card
 |Kontakt
 
-|image:image331.png[image,width="24",height="24"]
+|image::image331.png[image,width="24",height="24"]
 |fa-list
 |List Picker (Objektauswahl)
 
-|image:image332.png[image,width="24",height="24"]
+|image::image332.png[image,width="24",height="24"]
 |fa-trasch
 |Löschen
 
-|image:image333.png[image,width="24",height="24"]
+|image::image333.png[image,width="24",height="24"]
 |fa-envelope
 |Mail
 
-|image:image334.png[image,width="24",height="24"]
+|image::image334.png[image,width="24",height="24"]
 |fa-envelope-o
 |Nachrichten
 
-|image:image335.png[image,width="24",height="24"]
+|image::image335.png[image,width="24",height="24"]
 |fa-thumb-tack
 |Notiz
 
-|image:image336.png[image,width="24",height="24"]
+|image::image336.png[image,width="24",height="24"]
 |fa-folder-open-o
 |Seite öffnen
 
-|image:image337.png[image,width="24",height="24"]
+|image::image337.png[image,width="24",height="24"]
 |fa-floppy-o
 |Sichern, Speichern
 
-|image:image338.png[image,width="24",height="24"]
+|image::image338.png[image,width="24",height="24"]
 |fa-search
 |Suchen, Suche wiederholen, Neue Suche, Durchsuchen,
  letzte Suche
 
-|image:image339.png[image,width="24",height="24"]
+|image::image339.png[image,width="24",height="24"]
 |fa-list-ul
 |Trefferliste
 
-|image:image340.png[image,width="24",height="24"]
+|image::image340.png[image,width="24",height="24"]
 |fa-arrow-circle-left
 |Vorheriger
 
-|image:image341.png[image,width="24",height="24"]
+|image::image341.png[image,width="24",height="24"]
 |fa-arrow-circle-right
 |Weiter, Nächster
 
-|image:image342.png[image,width="24",height="24"]
+|image::image342.png[image,width="24",height="24"]
 |fa-repeat
 |Wiederholen
 
@@ -6627,23 +6627,23 @@ http://fontawesome.io/icons/[ Font-Awesome-Icons]
 |===
 |Icon |CSS-Klasse |Funktionen
 
-|image:image343.png[image,width="24",height="24"]
+|image::image343.png[image,width="24",height="24"]
 |fa-star
 |Wiedervorlage
 
-|image:image344.png[image,width="24",height="24"]
+|image::image344.png[image,width="24",height="24"]
 |fa-clock-o
 |Zeit, Time Picker
 
-|image:image345.png[image,width="24",height="24"]
+|image::image345.png[image,width="24",height="24"]
 |fa-arrow-circle-o-left
 |Zurück (Navigation)
 
-|image:image346.png[image,width="24",height="24"]
+|image::image346.png[image,width="24",height="24"]
 |fa-share
 |Zurückgeben (an Sender)
 
-|image:image347a.png[image,width="24",height="24"]
+|image::image347a.png[image,width="24",height="24"]
 |fa-user
 |Zuständigkeit
 |===
@@ -7143,7 +7143,7 @@ Hexadezimalfarbwerte sollten möglichst kurz geschrieben werden (z. B. #fff).
 
 Es werden nur Kleinbuchstaben verwendet
 
-*image:image355.png[image,width=500,height=241]
+*image::image355.png[image,width=500,height=241]
 
 *Benutzungsrichtlinien*
 

@@ -1,0 +1,19 @@
+*Dokument-Informationen*
+
+|====
+|Dokumenten-ID:| BVA Styleguide
+|====
+
+NOTE: Das Detailkonzept zur Komponente Web GUI und die Bibliothek isy-web werden zurzeit grundlegend überarbeitet. Der vorliegende Stand dieses Dokuments beschreibt noch nicht alle neuen Funktionen von isy-web 4.x.
+
+//|Datum |Version |Änderungsgrund
+//|05.07.2018|0.1 |Übernahme des BVA-Style Guide vom ACCSO-Wiki nach AsciiDoc
+
+
+*Java Bibliothek / IT-System*
+
+[cols="5,2,3",options="header"]
+|====
+|Name |Art |Version
+|isy-style |Bibliothek |4.1.0
+|====
