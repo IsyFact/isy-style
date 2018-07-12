@@ -4526,10 +4526,10 @@ image::11_Applikations_Wizard_Objektanlage_5_2017-08-25.png[align="center", widt
 
 
 [[kapital-plis-style]]
-== PLIS-Style
+== Bibliothek isy-style
 
-In der PLIS-Style werden die CSS-, JavaScript- und Bilddateien des Styleguides abgelegt und für die Nutzung komprimiert und kompiliert.
-Die Unterseiten dieser Seite enthalten die technische Dokumentation zur PLIS-Style mit den Themen WEB-UI-Entwicklung, Styles & Templates.
+In der Register-Factory-Framework Bibliothek isy-style werden die CSS-, JavaScript- und Bilddateien des Styleguides abgelegt und für die Nutzung komprimiert und kompiliert.
+Die Unterseiten dieser Seite enthalten die technische Dokumentation zur isy-style mit den Themen WEB-UI-Entwicklung, Styles & Templates.
 
 .Historie der PLIS-Style
 [cols="20%,20%,60%", width="90%", align="center"]

@@ -1,9 +1,0 @@
-
-== Tabellenverzeichnis
-
-<<table-RuleViewFkt>> {desc-table-RuleViewFkt}
-
-<<table-SeitenrahmenStandardwerte>> {desc-table-SeitenrahmenStandardwerte}
-
-<<table-SeitenrahmenStandardwerteGruppen>> {desc-table-SeitenrahmenStandardwerteGruppen}
-

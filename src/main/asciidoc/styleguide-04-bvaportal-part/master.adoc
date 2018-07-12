@@ -2,7 +2,7 @@
 include::../common/isyfact-attributes.adoc[]
 include::../common/attributes.adoc[]
 //
-:doctitle: BVA Styleguide
+:doctitle: BVA Styleguide - BVA Portal Extrakt
 :title: {doctitle}
 
 // Zwangsplatz des TOC
