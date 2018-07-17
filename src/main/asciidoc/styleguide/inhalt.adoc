@@ -4210,241 +4210,240 @@ In der folgenden Tabelle sind mögliche Icons und deren Funktion dargestellt sow
 Eine Gesamtübersicht der zur Verfügung stehenden Icons finden Sie unter:
 http://fontawesome.io/icons/[ Font-Awesome-Icons]
 
-// Page break
-<<<
-*Übersicht verwendeter Icons*
-
 .Übersicht verwendeter Icons
+ifdef::backend-pdf[]
+[cols="^1a,2,5"]
+endif::[]
+ifdef::backend-html5[]
+[cols="^1,2,5"]
+endif::[]
 |===
 |Icon |CSS-Klasse |Funktionen
 
-|image::image294.png[image,width="24",height="24"]
+|icon:times[2x]
 |fa-times
 |Abbrechen, Ablehnen, Filterzelle leeren, Stornieren
 
-|image::image295.png[image,width="24",height="24"]
+|icon:car[2x]
 |fa-car
 |Abholen
 
-|image::image296.png[image,width="24",height="24"]
+|icon:sign-out[2x]
 |fa-sign-out
 |Abmelden
 
-|image::image297.png[image,width="24",height="24"]
+|icon:sign-in[2x]
 |fa-sign-in
 |Anmelden
 
-|image::image298.png[image,width="24",height="24"]
+|icon:unlock[2x]
 |fa-unlock
 |Aktivieren, Freischalten
 
-|image::image299.png[image,width="24",height="24"]
+|icon:refresh[2x]
 |fa-refresh
 |Aktualisieren
 
-|image::image300.png[image,width="24",height="24"]
+|icon:check[2x]
 |fa-check
 |Akzeptieren, Annehmen, Erledigen, Zustimmen
 
-|image::image301.png[image,width="24",height="24"]
+|icon:paperclip[2x]
 |fa-paperclip
 |Anhänge
 
-|image::image302.png[image,width="24",height="24"]
+|icon:reply[2x]
 |fa-reply
 |Antworten
 
-|image::image303.png[image,width="24",height="24"]
+|icon:eye[2x]
 |fa-eye
 |Anzeigen
 
-|image::image304.png[image,width="24",height="24"]
+|icon:file-archive-o[2x]
 |fa-file-archive-o
 |Archiv, aus Archiv zurück holen
 
-|image::image305.png[image,width="24",height="24"]
+|icon:pencil[2x]
 |fa-pencil
 |Bearbeiten, Bearbeitung fortsetzen, Editieren, Korrigieren
 
-|image::image306.png[image,width="24",height="24"]
+|icon:user[2x]
 |fa-user
 |Benutzer, User
 
-|image::image307.png[image,width="24",height="24"]
+|icon:file-image-o[2x]
 |fa-file-image-o
 |Bild, Bild anzeigen
 
-|image::image308.png[image,width="24",height="24"]
+|icon:font[2x]
 |fa-font
 |Buchstaben-Picker
 
-|image::image309.png[image,width="24",height="24"]
+|icon:download[2x]
 |fa-download
 |Datei laden, Download, Herunterladen, Laden von Daten
 
-|image::image310.png[image,width="24",height="24"]
+|icon:list-alt[2x]
 |fa-list-alt
 |Datensatz anzeigen, Detailauskunft
 
-|image::image311.png[image,width="24",height="24"]
+|icon:share-square-o[2x]
 |fa-share-square-o
 |Daten senden, Daten übermitteln, Senden, Versenden
 
-|image::image312.png[image,width="24",height="24"]
+|icon:file[2x]
 |fa-file
 |Dokument erstellen, Erstmeldung
 
-|image::image313.png[image,width="24",height="24"]
+|icon:file-text-o[2x]
 |fa-file-text-o
 |Druckansicht
 
-|image::image314.png[image,width="24",height="24"]
+|icon:print[2x]
 |fa-print
 |Drucken
 
-|image::image315.png[image,width="24",height="24"]
+|icon:cog[2x]
 |fa-cog
 |Einstellung, Einstellungen
 
-|image::image316.png[image,width="24",height="24"]
+|icon:mouse-pointer[2x]
 |fa-mouse-pointer
 |Eintrag auswählen
-|===
 
-
-
-<<<
-|===
-|Icon |CSS-Klasse |Funktionen
-
-|image::image317.png[image,width="24",height="24"]
-|fa-file-minus
+|icon:minus[2x]
+|fa-minus
 |Entfernen
 
-|image::image318.png[image,width="24",height="24"]
+|icon:check-square-o[2x]
 |fa-check-square-o
 |Entscheiden
 
-|image::image319.png[image,width="24",height="24"]
+|icon:plus[2x]
 |fa-plus
 |Ergänzen
 
-|image::image320.png[image,width="24",height="24"]
+|icon:bell[2x]
 |fa-bell
 |Erinnerung
 
-|image::image321.png[image,width="24",height="24"]
+|icon:upload[2x]
 |fa-upload
 |Exportieren
 
-|image::image322.png[image,width="24",height="24"]
+|icon:exclamation-triangle[2x]
 |fa-exclamation-triangle
 |Fehler, Fehlerhaft
 
-|image::image323.png[image,width="24",height="24"]
+|icon:eraser[2x]
 |fa-eraser
 |Felder leeren
 
-|image::image324.png[image,width="24",height="24"]
+|icon:check-circle[2x]
 |fa-check-circle
 |Fertig, Abgeschlossen
 
-|image::image325.png[image,width="24",height="24"]
+|icon:filter[2x]
 |fa-filter
 |Filter ausfüllen
 
-|image::image326.png[image,width="24",height="24"]
+|icon:history[2x]
 |fa-history
 |Historie
 
-|image::image327.png[image,width="24",height="24"]
+|icon:info-circle[2x]
 |fa-info-circle
 |Info
 
-|image::image328.png[image,width="24",height="24"]
+|icon:arrow-circle-down[2x]
 |fa-arrow-circle-down
 |Importieren
 
-|image::image329.png[image,width="24",height="24"]
+|icon:calendar[2x]
 |fa-calendar
 |Kalender
 
-|image::image330.png[image,width="24",height="24"]
+ifdef::backend-pdf[]
+// asciidoctor-pdf nutzt leider eine ältere Version von FontAwesome (4.6.x) (über prawn-icons 1.3.0) als asciidoctor (4.7.x).
+// fa-address-card ist erst ab FontAwesome 4.7.0 enthalten.
+|image::image330.png[align="left",width="24",height="24"]
 |fa-address-card
 |Kontakt
+endif::[]
 
-|image::image331.png[image,width="24",height="24"]
+ifdef::backend-html5[]
+|icon:address-card[2x]
+|fa-address-card
+|Kontakt
+endif::[]
+
+|icon:list[2x]
 |fa-list
 |List Picker (Objektauswahl)
 
-|image::image332.png[image,width="24",height="24"]
-|fa-trasch
+|icon:trash[2x]
+|fa-trash
 |Löschen
 
-|image::image333.png[image,width="24",height="24"]
+|icon:envelope[2x]
 |fa-envelope
 |Mail
 
-|image::image334.png[image,width="24",height="24"]
+|icon:envelope-o[2x]
 |fa-envelope-o
 |Nachrichten
 
-|image::image335.png[image,width="24",height="24"]
+|icon:thumb-tack[2x]
 |fa-thumb-tack
 |Notiz
 
-|image::image336.png[image,width="24",height="24"]
+|icon:folder-open-o[2x]
 |fa-folder-open-o
 |Seite öffnen
 
-|image::image337.png[image,width="24",height="24"]
+|icon:floppy-o[2x]
 |fa-floppy-o
 |Sichern, Speichern
 
-|image::image338.png[image,width="24",height="24"]
+|icon:search[2x]
 |fa-search
 |Suchen, Suche wiederholen, Neue Suche, Durchsuchen,
  letzte Suche
 
-|image::image339.png[image,width="24",height="24"]
+|icon:list-ul[2x]
 |fa-list-ul
 |Trefferliste
 
-|image::image340.png[image,width="24",height="24"]
+|icon:arrow-circle-left[2x]
 |fa-arrow-circle-left
 |Vorheriger
 
-|image::image341.png[image,width="24",height="24"]
+|icon:arrow-circle-right[2x]
 |fa-arrow-circle-right
 |Weiter, Nächster
 
-|image::image342.png[image,width="24",height="24"]
+|icon:repeat[2x]
 |fa-repeat
 |Wiederholen
 
-|===
-
-<<<
-|===
-|Icon |CSS-Klasse |Funktionen
-
-|image::image343.png[image,width="24",height="24"]
+|icon:star[2x]
 |fa-star
 |Wiedervorlage
 
-|image::image344.png[image,width="24",height="24"]
+|icon:clock-o[2x]
 |fa-clock-o
 |Zeit, Time Picker
 
-|image::image345.png[image,width="24",height="24"]
+|icon:arrow-circle-o-left[2x]
 |fa-arrow-circle-o-left
 |Zurück (Navigation)
 
-|image::image346.png[image,width="24",height="24"]
+|icon:share[2x]
 |fa-share
 |Zurückgeben (an Sender)
 
-|image::image347a.png[image,width="24",height="24"]
+|icon:user[2x]
 |fa-user
 |Zuständigkeit
 |===
