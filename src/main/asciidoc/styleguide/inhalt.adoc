@@ -4455,73 +4455,72 @@ endif::[]
 :desc-image-bsplogin: Login Screen
 [id="image-bsplogin",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bsplogin}
-image::01_Login_2017-08-25.png[align="center", width="432",height="410"]
+image::01_Login_2017-08-25.png[align="center"]
 
 :desc-image-bspdashboard: Dashboard
 [id="image-bspdashboard",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspdashboard}
-image::02_Dashboard_2017-08-25.png[align="center", width="432",height="410"]
+image::02_Dashboard_2017-08-25.png[align="center"]
 
 :desc-image-bspsubmenue: Submenü
 [id="image-bspsubmenue",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspsubmenue}
-image::02_Submenü_2017-08-25.png[align="center", width="432",height="410"]
+image::02_Submenü_2017-08-25.png[align="center"]
 
 :desc-image-bspdashboardunterseite: Dashboard Unterseite
 [id="image-bspdashboardunterseite",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspdashboardunterseite}
-image::03_Dashboard_Unterseite_2017-08-25.png[align="center", width="432",height="410"]
+image::03_Dashboard_Unterseite_2017-08-25.png[align="center"]
 
 :desc-image-bspapplikationsseite: Applikationsseite
 [id="image-bspapplikationsseite",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspapplikationsseite}
-image::04_Applikationsseite_2017-08-25.png[align="center", width="432",height="410"]
+image::04_Applikationsseite_2017-08-25.png[align="center"]
 
 :desc-image-bspapplikationsdetaila: Applikation Detailseite – Beispiel A
 [id="image-bspapplikationsdetaila",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspapplikationsdetaila}
-image::05_Applikations_Detailseite_1_2017-08-25.png[align="center", width="432",height="410"]
+image::05_Applikations_Detailseite_1_2017-08-25.png[align="center"]
 
 :desc-image-bspapplikationsdetailb: Applikation Detailseite – Beispiel B
 [id="image-bspapplikationsdetailb",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspapplikationsdetailb}
-image::05_Applikations_Detailseite_2_2017-08-25.png[align="center", width="432",height="410"]
+image::05_Applikations_Detailseite_2_2017-08-25.png[align="center"]
 
 :desc-image-bspapplikationsdetailc: Applikation Detailseite – Beispiel C
 [id="image-bspapplikationsdetailc",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspapplikationsdetailc}
-image::05_Applikations_Detailseite_3_2017-08-25.png[align="center", width="432",height="410"]
+image::05_Applikations_Detailseite_3_2017-08-25.png[align="center"]
 
 :desc-image-bspdialogobjektanlage: Dialog Objektanlage
 [id="image-bspdialogobjektanlage",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspdialogobjektanlage}
-image::06_Applikations_Dialog_Objektanlage_2017-08-25.png[align="center", width="432",height="410"]
+image::06_Applikations_Dialog_Objektanlage_2017-08-25.png[align="center"]
 
 :desc-image-bspwizardobjektanlage1a: Wizard Objekt Anlage - Schritt 1a
 [id="image-bspwizardobjektanlage1a",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspwizardobjektanlage1a}
-image::07_Applikations_Wizard_Objektanlage_1_2017-08-25.png[align="center", width="432",height="410"]
+image::07_Applikations_Wizard_Objektanlage_1_2017-08-25.png[align="center"]
 
 :desc-image-bspwizardobjektanlage1b: Wizard Objekt Anlage - Schritt 1b
 [id="image-bspwizardobjektanlage1b",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspwizardobjektanlage1b}
-image::08_Applikations_Wizard_Objektanlage_2_2017-08-25.png[align="center", width="432",height="410"]
+image::08_Applikations_Wizard_Objektanlage_2_2017-08-25.png[align="center"]
 
 :desc-image-bspwizardobjektanlage1c: Wizard Objekt Anlage - Schritt 2
 [id="image-bspwizardobjektanlage1c",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspwizardobjektanlage1c}
-image::09_Applikations_Wizard_Objektanlage_3_2017-08-25.png[align="center", width="432",height="410"]
+image::09_Applikations_Wizard_Objektanlage_3_2017-08-25.png[align="center"]
 
 :desc-image-bspwizardobjektanlage1d: Wizard Objekt Anlage - Schritt 3
 [id="image-bspwizardobjektanlage1d",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspwizardobjektanlage1d}
-image::10_Applikations_Wizard_Objektanlage_4_2017-08-25.png[align="center", width="432",height="410"]
+image::10_Applikations_Wizard_Objektanlage_4_2017-08-25.png[align="center"]
 
 :desc-image-bspwizardobjektanlage1e: Wizard Objekt Anlage - Schritt 4
 [id="image-bspwizardobjektanlage1e",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspwizardobjektanlage1e}
-image::11_Applikations_Wizard_Objektanlage_5_2017-08-25.png[align="center", width="432",height="410"]
-
+image::11_Applikations_Wizard_Objektanlage_5_2017-08-25.png[align="center"]
 
 [[kapitel-plis-style]]
 == Bibliothek isy-style
