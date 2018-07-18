@@ -46,7 +46,7 @@ module.exports = function (grunt) {
         copy: {
             assets: {
                 files: [
-                    { expand: true, cwd: 'src/assets/', src: ['css/ie8fixes.css', 'img/**', 'lib/**', 'plugins/**'], dest: 'src/main/resources/META-INF/resources/' }
+                    { expand: true, cwd: 'src/assets/', src: ['img/**', 'lib/**', 'plugins/**'], dest: 'src/main/resources/META-INF/resources/' }
                 ],
                 options: {
                     basePath: 'src/assets'
