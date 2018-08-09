@@ -34,7 +34,7 @@ stages:
   - deploy
 cache:
   paths:
-    - .m2/repository
+   - .m2/repository
 
 .doctemplate : &vorlage
   image: ruby:2.3
@@ -50,12 +50,6 @@ cache:
    - 'asciidoctor-pdf -a revnumber=1.5x -a revdate=09.07.2018 -a icons=font -a sectanchors -a idprefix -a docinfo1 -a pdf-stylesdir=../theme -a pdf-style=isyfact -a pdf-fontsdir=../theme/fonts/ master.adoc -o styleguide.pdf'
 
 
-# Validate merge requests using JDK8
-build:jdk8:
-  stage: build
-  script:
-    - 'mvn $MAVEN_CLI_OPTS compile'
-
 build:docs_branch:
   <<: *vorlage
   artifacts:
@@ -70,18 +64,57 @@ build:docs_branch:
    - master@IsyFact/isy-style
 
 
+build:docs_master:
+  <<: *vorlage
+  artifacts:
+   name: "$CI_PROJECT_NAME-$CI_COMMIT_REF_SLUG-$CI_JOB_ID"
+   paths:
+   - "src/main/asciidoc/styleguide/*.pdf"
+   - "src/main/asciidoc/styleguide/*.html"
+   expire_in: 1 day
+  only:
+   - master@IsyFact/isy-style
+  except:
+   - schedules
+
+build:docs_master_schedule:
+  <<: *vorlage
+  artifacts:
+   name: "$CI_PROJECT_NAME-$CI_COMMIT_REF_SLUG-$CI_JOB_ID"
+   paths:
+   - "src/main/asciidoc/styleguide/*.pdf"
+   - "src/main/asciidoc/styleguide/*.html"
+   expire_in: 2 days
+  only:
+   - master@IsyFact/isy-style
+   - schedules
+
+# Validate merge requests using JDK8
+build:jdk8:
+  stage: build
+  script:
+   - 'mvn $MAVEN_CLI_OPTS compile'
+  except:
+   - schedules
+
 # Verify merge requests using JDK8
 test:jdk8:
   stage: test
   script:
-    - 'mvn $MAVEN_CLI_OPTS test'
+   - 'mvn $MAVEN_CLI_OPTS test'
+  except:
+   - schedules
 
 package:jdk8:
   stage: package
   script:
-    - 'mvn $MAVEN_CLI_OPTS package'
+   - 'mvn $MAVEN_CLI_OPTS package'
+  except:
+   - schedules
 
 deploy:jdk8:
   stage: deploy
   script:
-    - 'mvn $MAVEN_CLI_OPTS deploy'
+   - 'mvn $MAVEN_CLI_OPTS deploy'
+  except:
+   - schedules
