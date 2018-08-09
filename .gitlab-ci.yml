@@ -23,7 +23,6 @@ variables:
   # when running from the command line.
   # `installAtEnd` and `deployAtEnd`are only effective with recent version of the corresponding plugins.
   MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version -DinstallAtEnd=true -DdeployAtEnd=true"
-
 # Cache downloaded dependencies and plugins between builds.
 # To keep cache across branches add 'key: "$CI_JOB_REF_NAME"'
 image: maven:3-jdk-8
@@ -36,11 +35,37 @@ cache:
   paths:
     - .m2/repository
 
+.doctemplate : &vorlage
+  image: ruby:2.3
+  stage: build
+  script:
+   - cat /proc/version
+   - gem install asciidoctor-pdf --pre
+   - asciidoctor-pdf -v
+   - cd src/main/asciidoc/styleguide
+   - asciidoctor -b html5 -a revnumber=1.5x -a revdate=09.07.2018 -a icons=font -a sectanchors -a idprefix -a docinfo1 -a data-uri -a stylesdir=../theme -a stylesheet=isyfact.css master.adoc -o styleguide.html
+   - asciidoctor-pdf -a revnumber=1.5x -a revdate=09.07.2018 -a icons=font -a sectanchors -a idprefix -a docinfo1 -a pdf-stylesdir=../theme -a pdf-style=isyfact -a pdf-fontsdir=../theme/fonts/ master.adoc -o styleguide.pdf
+
+
 # Validate merge requests using JDK8
 build:jdk8:
   stage: build
   script:
     - 'mvn $MAVEN_CLI_OPTS compile'
+
+build:docs_branch:
+  <<: *vorlage
+  artifacts:
+   name: "$CI_PROJECT_NAME-$CI_COMMIT_REF_SLUG-$CI_JOB_ID"
+   paths:
+   - "src/main/asciidoc/styleguide/*.pdf"
+   - "src/main/asciidoc/styleguide/*.html"
+   expire_in: 1 week
+ only:
+   - branches@IsyFact/isy-style
+ except:
+   - master@IsyFact/isy-style
+
 
 # Verify merge requests using JDK8
 test:jdk8:
