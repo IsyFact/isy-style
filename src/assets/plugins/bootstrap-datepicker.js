@@ -470,9 +470,7 @@
             console.log("this.o.enableOnReadonly === false "+ this.o.enableOnReadonly === false);
 
             if (this.inputField.prop('disabled') || (this.inputField.prop('readonly') && this.o.enableOnReadonly === false)) {
-                // MRO Go, Bug Fix: Bei readonly sollte kein POPUP geoeffnet werden
-                console.log("Bedingung für readonly wurde erfüllt");
-
+                // msg, Bug Fix: Bei readonly darf kein Datepicker-POPUP geoeffnet werden
                 this.picker.hide().detach();
                 return;
             }
