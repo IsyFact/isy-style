@@ -64,9 +64,9 @@ build:docs_branch:
    - "src/main/asciidoc/styleguide/*.pdf"
    - "src/main/asciidoc/styleguide/*.html"
    expire_in: 1 week
- only:
+  only:
    - branches@IsyFact/isy-style
- except:
+  except:
    - master@IsyFact/isy-style
 
 
