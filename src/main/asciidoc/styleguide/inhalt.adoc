@@ -2541,7 +2541,6 @@ Sie entspricht immer dem gerade aktiven Hauptnavigationspunkt.
 
 * Klickt der Benutzer direkt auf einen Hauptnavigationspunkt wird standardmäßig die erste beziehungsweise die zuletzt geöffnete Applikationsseite aus der Subnavigation geöffnet.
 
-
 *Kein JavaScript*
 
 image::image131.png[image,width=54,height=54]
@@ -2550,13 +2549,10 @@ Ohne JavaScript lässt sich das Menü der Subnavigation nicht über die komplett
 Hierfür werden die Menüpunkte der Subnavigation vertikal unter dem Menüpunkt der Hauptnavigation angeordnet, Beispiel siehe <<image-hauptnavigationSubmenue>>.
 Die Beschreibung und das Icon entfallen.
 
-
-:desc-image-hauptnavigationSubmenue: Hauptnavigation mit Submenü als Flyout – Ohne JavaScrip
+:desc-image-hauptnavigationSubmenue: Hauptnavigation mit Submenü als Flyout – Ohne JavaScript
 [id="image-hauptnavigationSubmenue",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-hauptnavigationSubmenue}
 image::image199.png[align="center", width="627",height="213"]
-
-
 
 [[linksnavigation]]
 ==== Linksnavigation
