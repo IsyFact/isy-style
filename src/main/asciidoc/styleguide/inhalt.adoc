@@ -2495,7 +2495,7 @@ Die Hauptnavigation ist eine horizontale Navigation.
 :desc-image-hauptnavigationSubmenueflyout: Hauptnavigation mit Submenü als Flyout
 [id="image-hauptnavigationSubmenueflyout",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-hauptnavigationSubmenueflyout}
-image::image196.png[align="center", width="629",height="101"]
+image::image199.png[align="center", width="629",height="101"]
 
 
 *Ist dies das korrekte Pattern?*
@@ -2505,19 +2505,23 @@ image::image196.png[align="center", width="629",height="101"]
 
 *Position und Ausrichtung der horizontalen Navigation*
 
-:desc-image-ausrichtunghorizontalenavigation1: Navigationsleitsnbeispiel A
+:desc-image-ausrichtunghorizontalenavigation1: Navigationsleistenbeispiel A
 [id="image-ausrichtunghorizontalenavigation1",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-ausrichtunghorizontalenavigation1}
 image::image197.png[align="center", width="313",height="501"]
 
-:desc-image-ausrichtunghorizontalenavigation2: Navigationsleitsnbeispiel A
+:desc-image-ausrichtunghorizontalenavigation2: Navigationsleistenbeispiel B
 [id="image-ausrichtunghorizontalenavigation2",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-ausrichtunghorizontalenavigation2}
 image::image198.png[align="center", width="314",height="249"]
 
+:desc-image-ausrichtunghorizontalenavigation3: Navigationsleistenbeispiel C
+[id="image-ausrichtunghorizontalenavigation3",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-ausrichtunghorizontalenavigation3}
+image::image196.png[align="center", width="314",height="249"]
+
 
 * Hauptnavigation wird von links nach rechts befüllt.
-* Damit die Navigation nicht mit dem Logo kollidiert und weil die zugehörigen Applikationen erst in der zweiten Spalte stehen, beginnt die Hauptnavigation bündig mit der zweiten Spalte.
 * Ein Entfall der Linksnavigation ist möglich, hat aber keinen Einfluss auf das Layout.
 
 
