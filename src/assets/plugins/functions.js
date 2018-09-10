@@ -46,7 +46,6 @@ function multiClick($element, singleClick, doubleClick, delay, clicks, timer) {
  * JSF-AJAX Event Callback. Blockiert die GUI bei AJAX-Aufrufen.
  */
 function blockUi(callback) {
-
     if (callback.status === 'begin') {
     	$(".modal-loading").css("display","block");
     }
@@ -55,7 +54,11 @@ function blockUi(callback) {
     	$(".modal-loading").css("display","none");
     }
 
-};
+}
+
+function unblockUi(callback) {
+    $(".modal-loading").css("display","none");
+}
 
 /**
  * Pad-Funktion für Strings.
