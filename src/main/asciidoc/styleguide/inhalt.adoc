@@ -4210,241 +4210,240 @@ In der folgenden Tabelle sind mögliche Icons und deren Funktion dargestellt sow
 Eine Gesamtübersicht der zur Verfügung stehenden Icons finden Sie unter:
 http://fontawesome.io/icons/[ Font-Awesome-Icons]
 
-// Page break
-<<<
-*Übersicht verwendeter Icons*
-
 .Übersicht verwendeter Icons
+ifdef::backend-pdf[]
+[cols="^1a,2,5"]
+endif::[]
+ifdef::backend-html5[]
+[cols="^1,2,5"]
+endif::[]
 |===
 |Icon |CSS-Klasse |Funktionen
 
-|image::image294.png[image,width="24",height="24"]
+|icon:times[2x]
 |fa-times
 |Abbrechen, Ablehnen, Filterzelle leeren, Stornieren
 
-|image::image295.png[image,width="24",height="24"]
+|icon:car[2x]
 |fa-car
 |Abholen
 
-|image::image296.png[image,width="24",height="24"]
+|icon:sign-out[2x]
 |fa-sign-out
 |Abmelden
 
-|image::image297.png[image,width="24",height="24"]
+|icon:sign-in[2x]
 |fa-sign-in
 |Anmelden
 
-|image::image298.png[image,width="24",height="24"]
+|icon:unlock[2x]
 |fa-unlock
 |Aktivieren, Freischalten
 
-|image::image299.png[image,width="24",height="24"]
+|icon:refresh[2x]
 |fa-refresh
 |Aktualisieren
 
-|image::image300.png[image,width="24",height="24"]
+|icon:check[2x]
 |fa-check
 |Akzeptieren, Annehmen, Erledigen, Zustimmen
 
-|image::image301.png[image,width="24",height="24"]
+|icon:paperclip[2x]
 |fa-paperclip
 |Anhänge
 
-|image::image302.png[image,width="24",height="24"]
+|icon:reply[2x]
 |fa-reply
 |Antworten
 
-|image::image303.png[image,width="24",height="24"]
+|icon:eye[2x]
 |fa-eye
 |Anzeigen
 
-|image::image304.png[image,width="24",height="24"]
+|icon:file-archive-o[2x]
 |fa-file-archive-o
 |Archiv, aus Archiv zurück holen
 
-|image::image305.png[image,width="24",height="24"]
+|icon:pencil[2x]
 |fa-pencil
 |Bearbeiten, Bearbeitung fortsetzen, Editieren, Korrigieren
 
-|image::image306.png[image,width="24",height="24"]
+|icon:user[2x]
 |fa-user
 |Benutzer, User
 
-|image::image307.png[image,width="24",height="24"]
+|icon:file-image-o[2x]
 |fa-file-image-o
 |Bild, Bild anzeigen
 
-|image::image308.png[image,width="24",height="24"]
+|icon:font[2x]
 |fa-font
 |Buchstaben-Picker
 
-|image::image309.png[image,width="24",height="24"]
+|icon:download[2x]
 |fa-download
 |Datei laden, Download, Herunterladen, Laden von Daten
 
-|image::image310.png[image,width="24",height="24"]
+|icon:list-alt[2x]
 |fa-list-alt
 |Datensatz anzeigen, Detailauskunft
 
-|image::image311.png[image,width="24",height="24"]
+|icon:share-square-o[2x]
 |fa-share-square-o
 |Daten senden, Daten übermitteln, Senden, Versenden
 
-|image::image312.png[image,width="24",height="24"]
+|icon:file[2x]
 |fa-file
 |Dokument erstellen, Erstmeldung
 
-|image::image313.png[image,width="24",height="24"]
+|icon:file-text-o[2x]
 |fa-file-text-o
 |Druckansicht
 
-|image::image314.png[image,width="24",height="24"]
+|icon:print[2x]
 |fa-print
 |Drucken
 
-|image::image315.png[image,width="24",height="24"]
+|icon:cog[2x]
 |fa-cog
 |Einstellung, Einstellungen
 
-|image::image316.png[image,width="24",height="24"]
+|icon:mouse-pointer[2x]
 |fa-mouse-pointer
 |Eintrag auswählen
-|===
 
-
-
-<<<
-|===
-|Icon |CSS-Klasse |Funktionen
-
-|image::image317.png[image,width="24",height="24"]
-|fa-file-minus
+|icon:minus[2x]
+|fa-minus
 |Entfernen
 
-|image::image318.png[image,width="24",height="24"]
+|icon:check-square-o[2x]
 |fa-check-square-o
 |Entscheiden
 
-|image::image319.png[image,width="24",height="24"]
+|icon:plus[2x]
 |fa-plus
 |Ergänzen
 
-|image::image320.png[image,width="24",height="24"]
+|icon:bell[2x]
 |fa-bell
 |Erinnerung
 
-|image::image321.png[image,width="24",height="24"]
+|icon:upload[2x]
 |fa-upload
 |Exportieren
 
-|image::image322.png[image,width="24",height="24"]
+|icon:exclamation-triangle[2x]
 |fa-exclamation-triangle
 |Fehler, Fehlerhaft
 
-|image::image323.png[image,width="24",height="24"]
+|icon:eraser[2x]
 |fa-eraser
 |Felder leeren
 
-|image::image324.png[image,width="24",height="24"]
+|icon:check-circle[2x]
 |fa-check-circle
 |Fertig, Abgeschlossen
 
-|image::image325.png[image,width="24",height="24"]
+|icon:filter[2x]
 |fa-filter
 |Filter ausfüllen
 
-|image::image326.png[image,width="24",height="24"]
+|icon:history[2x]
 |fa-history
 |Historie
 
-|image::image327.png[image,width="24",height="24"]
+|icon:info-circle[2x]
 |fa-info-circle
 |Info
 
-|image::image328.png[image,width="24",height="24"]
+|icon:arrow-circle-down[2x]
 |fa-arrow-circle-down
 |Importieren
 
-|image::image329.png[image,width="24",height="24"]
+|icon:calendar[2x]
 |fa-calendar
 |Kalender
 
-|image::image330.png[image,width="24",height="24"]
+ifdef::backend-pdf[]
+// asciidoctor-pdf nutzt leider eine ältere Version von FontAwesome (4.6.x) (über prawn-icons 1.3.0) als asciidoctor (4.7.x).
+// fa-address-card ist erst ab FontAwesome 4.7.0 enthalten.
+|image::image330.png[align="left",width="24",height="24"]
 |fa-address-card
 |Kontakt
+endif::[]
 
-|image::image331.png[image,width="24",height="24"]
+ifdef::backend-html5[]
+|icon:address-card[2x]
+|fa-address-card
+|Kontakt
+endif::[]
+
+|icon:list[2x]
 |fa-list
 |List Picker (Objektauswahl)
 
-|image::image332.png[image,width="24",height="24"]
-|fa-trasch
+|icon:trash[2x]
+|fa-trash
 |Löschen
 
-|image::image333.png[image,width="24",height="24"]
+|icon:envelope[2x]
 |fa-envelope
 |Mail
 
-|image::image334.png[image,width="24",height="24"]
+|icon:envelope-o[2x]
 |fa-envelope-o
 |Nachrichten
 
-|image::image335.png[image,width="24",height="24"]
+|icon:thumb-tack[2x]
 |fa-thumb-tack
 |Notiz
 
-|image::image336.png[image,width="24",height="24"]
+|icon:folder-open-o[2x]
 |fa-folder-open-o
 |Seite öffnen
 
-|image::image337.png[image,width="24",height="24"]
+|icon:floppy-o[2x]
 |fa-floppy-o
 |Sichern, Speichern
 
-|image::image338.png[image,width="24",height="24"]
+|icon:search[2x]
 |fa-search
 |Suchen, Suche wiederholen, Neue Suche, Durchsuchen,
  letzte Suche
 
-|image::image339.png[image,width="24",height="24"]
+|icon:list-ul[2x]
 |fa-list-ul
 |Trefferliste
 
-|image::image340.png[image,width="24",height="24"]
+|icon:arrow-circle-left[2x]
 |fa-arrow-circle-left
 |Vorheriger
 
-|image::image341.png[image,width="24",height="24"]
+|icon:arrow-circle-right[2x]
 |fa-arrow-circle-right
 |Weiter, Nächster
 
-|image::image342.png[image,width="24",height="24"]
+|icon:repeat[2x]
 |fa-repeat
 |Wiederholen
 
-|===
-
-<<<
-|===
-|Icon |CSS-Klasse |Funktionen
-
-|image::image343.png[image,width="24",height="24"]
+|icon:star[2x]
 |fa-star
 |Wiedervorlage
 
-|image::image344.png[image,width="24",height="24"]
+|icon:clock-o[2x]
 |fa-clock-o
 |Zeit, Time Picker
 
-|image::image345.png[image,width="24",height="24"]
+|icon:arrow-circle-o-left[2x]
 |fa-arrow-circle-o-left
 |Zurück (Navigation)
 
-|image::image346.png[image,width="24",height="24"]
+|icon:share[2x]
 |fa-share
 |Zurückgeben (an Sender)
 
-|image::image347a.png[image,width="24",height="24"]
+|icon:user[2x]
 |fa-user
 |Zuständigkeit
 |===
@@ -4456,83 +4455,81 @@ http://fontawesome.io/icons/[ Font-Awesome-Icons]
 :desc-image-bsplogin: Login Screen
 [id="image-bsplogin",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bsplogin}
-image::01_Login_2017-08-25.png[align="center", width="432",height="410"]
+image::01_Login_2017-08-25.png[align="center"]
 
 :desc-image-bspdashboard: Dashboard
 [id="image-bspdashboard",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspdashboard}
-image::02_Dashboard_2017-08-25.png[align="center", width="432",height="410"]
+image::02_Dashboard_2017-08-25.png[align="center"]
 
 :desc-image-bspsubmenue: Submenü
 [id="image-bspsubmenue",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspsubmenue}
-image::02_Submenü_2017-08-25.png[align="center", width="432",height="410"]
+image::02_Submenü_2017-08-25.png[align="center"]
 
 :desc-image-bspdashboardunterseite: Dashboard Unterseite
 [id="image-bspdashboardunterseite",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspdashboardunterseite}
-image::03_Dashboard_Unterseite_2017-08-25.png[align="center", width="432",height="410"]
+image::03_Dashboard_Unterseite_2017-08-25.png[align="center"]
 
 :desc-image-bspapplikationsseite: Applikationsseite
 [id="image-bspapplikationsseite",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspapplikationsseite}
-image::04_Applikationsseite_2017-08-25.png[align="center", width="432",height="410"]
+image::04_Applikationsseite_2017-08-25.png[align="center"]
 
 :desc-image-bspapplikationsdetaila: Applikation Detailseite – Beispiel A
 [id="image-bspapplikationsdetaila",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspapplikationsdetaila}
-image::05_Applikations_Detailseite_1_2017-08-25.png[align="center", width="432",height="410"]
+image::05_Applikations_Detailseite_1_2017-08-25.png[align="center"]
 
 :desc-image-bspapplikationsdetailb: Applikation Detailseite – Beispiel B
 [id="image-bspapplikationsdetailb",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspapplikationsdetailb}
-image::05_Applikations_Detailseite_2_2017-08-25.png[align="center", width="432",height="410"]
+image::05_Applikations_Detailseite_2_2017-08-25.png[align="center"]
 
 :desc-image-bspapplikationsdetailc: Applikation Detailseite – Beispiel C
 [id="image-bspapplikationsdetailc",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspapplikationsdetailc}
-image::05_Applikations_Detailseite_3_2017-08-25.png[align="center", width="432",height="410"]
+image::05_Applikations_Detailseite_3_2017-08-25.png[align="center"]
 
 :desc-image-bspdialogobjektanlage: Dialog Objektanlage
 [id="image-bspdialogobjektanlage",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspdialogobjektanlage}
-image::06_Applikations_Dialog_Objektanlage_2017-08-25.png[align="center", width="432",height="410"]
+image::06_Applikations_Dialog_Objektanlage_2017-08-25.png[align="center"]
 
 :desc-image-bspwizardobjektanlage1a: Wizard Objekt Anlage - Schritt 1a
 [id="image-bspwizardobjektanlage1a",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspwizardobjektanlage1a}
-image::07_Applikations_Wizard_Objektanlage_1_2017-08-25.png[align="center", width="432",height="410"]
+image::07_Applikations_Wizard_Objektanlage_1_2017-08-25.png[align="center"]
 
 :desc-image-bspwizardobjektanlage1b: Wizard Objekt Anlage - Schritt 1b
 [id="image-bspwizardobjektanlage1b",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspwizardobjektanlage1b}
-image::08_Applikations_Wizard_Objektanlage_2_2017-08-25.png[align="center", width="432",height="410"]
+image::08_Applikations_Wizard_Objektanlage_2_2017-08-25.png[align="center"]
 
 :desc-image-bspwizardobjektanlage1c: Wizard Objekt Anlage - Schritt 2
 [id="image-bspwizardobjektanlage1c",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspwizardobjektanlage1c}
-image::09_Applikations_Wizard_Objektanlage_3_2017-08-25.png[align="center", width="432",height="410"]
+image::09_Applikations_Wizard_Objektanlage_3_2017-08-25.png[align="center"]
 
 :desc-image-bspwizardobjektanlage1d: Wizard Objekt Anlage - Schritt 3
 [id="image-bspwizardobjektanlage1d",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspwizardobjektanlage1d}
-image::10_Applikations_Wizard_Objektanlage_4_2017-08-25.png[align="center", width="432",height="410"]
+image::10_Applikations_Wizard_Objektanlage_4_2017-08-25.png[align="center"]
 
 :desc-image-bspwizardobjektanlage1e: Wizard Objekt Anlage - Schritt 4
 [id="image-bspwizardobjektanlage1e",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspwizardobjektanlage1e}
-image::11_Applikations_Wizard_Objektanlage_5_2017-08-25.png[align="center", width="432",height="410"]
+image::11_Applikations_Wizard_Objektanlage_5_2017-08-25.png[align="center"]
 
-
-
-[[kapital-plis-style]]
+[[kapitel-plis-style]]
 == Bibliothek isy-style
 
-In der Register-Factory-Framework Bibliothek isy-style werden die CSS-, JavaScript- und Bilddateien des Styleguides abgelegt und für die Nutzung komprimiert und kompiliert.
-Die Unterseiten dieser Seite enthalten die technische Dokumentation zur isy-style mit den Themen WEB-UI-Entwicklung, Styles & Templates.
+In der IsyFact-Erweiterung `isy-style` werden die CSS-, JavaScript- und Bilddateien des Styleguides abgelegt, für die Nutzung komprimiert und kompiliert.
+Dieses Kapitel enthält die technische Dokumentation zur Bibliothek `isy-style`.
 
-.Historie der PLIS-Style
-[cols="20%,20%,60%", width="90%", align="center"]
+.Historie der `isy-style`
+[cols="20,20,60"]
 |===
 |Version |Datum |Änderung
 
@@ -4579,12 +4576,9 @@ Die Unterseiten dieser Seite enthalten die technische Dokumentation zur isy-styl
  This release includes all features
 |===
 
+=== Technologien
 
-
-
-*Technologien*
-
-*Twitter Bootstrap*
+==== Twitter Bootstrap
 
 Dieses Projekt baut auf dem Bootstrap CSS Framework in Version 3.1.1 auf.
 Dieses stellt sowohl browserübergreifende, erweiterbare Styles für HTML-Elemente als auch wenige komplexere Steuerelemente mit zusätzlichem Javascript-Code zur Verfügung.
@@ -4599,12 +4593,12 @@ Bei der gesamten Entwicklung wurde darauf geachtet, dass die ursprünglichen Fun
 So können Entwickler bei aufkommenden Fragen die Bootstrap Dokumentation (http://getbootstrap.com) zu Rate ziehen.
 Sollte diese Dokumentation für eine neuere Bootstrap Versionen angepasst werden und somit nicht mehr kompatibel mit dem BVA-Paket sein, werden die älteren Bootstrap-Dokumentationen in einem Archiv von einem Drittanbieter(http://bootstrapdocs.com) zur Verfügung gestellt.
 
-*Erweiterung der Bootstrap-Basis*
+===== Erweiterung der Bootstrap-Basis
 
 Die Bootstrap-Quelldateien und die von Bootstrap bereitgestellten JavaScript-Dateien können unabhängig von den BVA-Styles und Templates aktualisiert werden.
 Sollte eine neue Bootstrap Version erscheinen und es notwendig sein, neue Features und/oder Bug-Fixes zu implementieren, sollte folgendermaßen vorgegangen werden:
 
-LESS
+====== LESS
 
 1.  Die neuen LESS-Quelldateien von folgender Seite herunterladen: https://github.com/twbs/bootstrap/tree/master/less.
 2.  Die Dateien in src/less/bootstrap/ mit den neu heruntergeladenen Dateien ersetzen.
@@ -4613,13 +4607,13 @@ LESS
 5.  Zum Abschluss müssen die Konformität mit dem Style Guide und die visuell fehlerfreie Darstellung der Applikation überprüft werden.
 Möglicherweise sind noch zusätzliche Styledefinitionen oder Korrekturen nötig, um neue Bootstrap-Styles zu überschreiben.
 
-JavaScript
+====== JavaScript
 
 1.  Die neue bootstrap.min.js-Datei von https://github.com/twbs/bootstrap/tree/master/js herunterladen.
 2.  Die alte Datei src/assets/lib/bootstrap.min.js durch die neue ersetzen.
 3.  Funktionalität überprüfen.
 
-*LESS Stylesheets*
+==== LESS Stylesheets
 
 Bootstrap basiert auf der LESS Stylesheet-Sprache (http://lesscss.org) . Diese fügt Variablen, Funktionen und Operationen zur ursprünglichen CSS Funktionalität hinzu.
 Dieses Projekt implementiert diese Funktionalitäten und baut darauf auf.
@@ -4627,11 +4621,8 @@ Dieses Projekt implementiert diese Funktionalitäten und baut darauf auf.
 LESS Stylesheets müssen in CSS-Dateien kompiliert werden, damit sie für Browser lesbar sind.
 Folgende Freeware-Lösungen können für diesen Schritt genutzt werden:
 
-
 * dotLess: http://www.dotlesscss.org (Windows)
-
 * Less.app: http://incident57.com/less (Mac OS)
-
 * GruntJS LESS task (Cross-platform) – siehe unten
 
 Als Ergebnis der Stylesheet-Entwicklung werden Quelldateien im LESS-Format zur Verfügung gestellt.
@@ -4652,7 +4643,7 @@ Diese Verschachtelung
 
 erlaubt eine einfachere Wartbarkeit des Projektes, da so in den Styles teilweise die DOM-Struktur der Zielelemente widergespielt wird.
 
-*GruntJS Build System*
+==== GruntJS Build System
 
 GruntJS (http://gruntjs.com) ist ein modulares Kommandozeilen-Build-Programm für Webapplikationen.
 Dieses Programm basiert auf JavaScript und baut auf NodeJS (http://nodejs.org) und auf der Node-eigenen Paketverwaltung NPM (Node Package Modules) auf.
@@ -4669,11 +4660,11 @@ Mit dem Befehl „grunt“ in einer Konsolenanwendung wird das Projekt neu erste
 
 Weitere Informationen finden sich in der GruntJS Dokumentation und in der von Ergosign gelieferten Gruntfile.js.
 
-*Benennung der Komponenten*
+==== Benennung der Komponenten
 
 Die Benennung von spezifischen Komponenten und Layout-Elementen im Code wurde der Dash-Case-Schreibweise von Bootstrap angepasst.
 
-*CSS Raster-System*
+==== CSS Raster-System
 
 Dieses Projekt benutzt das Bootstrap Raster-System, um das Layout und die Bedienelemente der Applikation zu strukturieren und zu positionieren.
 
@@ -4689,7 +4680,7 @@ Weitere Informationen können der Bootstrap Dokumentation über das „grid syst
 
 Die Einstellungen für das genutzte Raster (z. B. Spaltenbreite) können in der Datei src/less/es/customvariables.less nachgelesen werden.
 
-*Zusätzliche Bibliotheken, Plugins und Skripte*
+==== Zusätzliche Bibliotheken, Plugins und Skripte
 
 Um eine umfassendere Funktionalität zu gewährleisten, muss teilweise zusätzliches JavaScript eingesetzt werden.
 Diese Skripte dienen beispielsweise zum Styling applikationsspezifischer Bedienelemente.
@@ -4755,13 +4746,13 @@ Dieses Plugin ermöglicht die Verwendung einer Lightbox. 
 
 Dieses Skript enthält eine Sammlung von allgemeinen Funktionen.
 
-*Assets*
+=== Assets
 
 Alle benötigten Asstes wurden für die Benutzung in Browsern optimiert.
 Hierfür wurden alle Dateigrößen minimiert und die Anzahl der benötigten Dateien auf ein Minimum reduziert.
 Dieser Prozess beinhaltet auch die Entfernung von nicht benötigten Meta-Informationen aus dem Header von Bild-Dateien (smushit, svgmin).
 
-*Icons*
+==== Icons
 
 Die Icon-Funktionalität von Bootstrap basierend auf Glyphicon-Sprites wurde entfernt, um Namenskonflikte von Icons zu verhindern.
 Anstelle des Glyphicon-Sprites wurden vordefinierte Icons mittels einer Icon-Font-Technik integriert.
@@ -4790,44 +4781,39 @@ Damit die Chevron-Icons richtig dargestellt werden, müssen in den Dateien src/l
 8.  Um die neuen Icons im Interface zu sehen, muss mittels Grunt ein neuer Build erfolgen.
 
 
-*Grafiken*
+==== Grafiken
 
 Für einige Bedien- und Layout-Elemente werden zusätzliche Bitmap Grafiken benötigt, zum Beispiel src/assets/img/controls/cb_checked_default.png (Bedienelement) und src/assets/img/bgInfoTile.png (Layout). Diese Grafiken sollten möglichst nicht verändert werden, da sie dann möglicherweise nicht mehr den Richtlinien des Interface Style Guides entsprechen.
 In der Regel ist eine Bearbeitung aber auch nicht notwendig.
 
-*Konventionen*
+=== Konventionen
 
-*HTML5 Markup*
+==== HTML5 Markup
 
 Die Struktur des Markup der Applikationsbereich wurde mit Hilfe des W3C Validierers auf gültige Struktur überprüft („well-formed“).
 
-*JavaScript*
+==== JavaScript
 
 Der von Ergosign erstellte Quellcode für die prototypischen Interaktionen in der Datei es.js wurde mit JSHint(http://www.jslint.com) validiert.
 
-*Kommentare im Quellcode*
+==== Kommentare im Quellcode
 
 Ein Ausrufezeichen /*! innerhalb eines Kommentars zeigt an, dass dieser Kommentar auch nach der Minimierung erhalten bleibt.
 Solche Kommentare werden in den publizierten Dateien aus lizenzrechtlichen Gründen angezeigt.
 
-*Stylesheets*
+==== Stylesheets
 
 LESS Stylesheets sollten im Verzeichnis /less abgelegt werden.
 Um Styles besser lesen und verstehen zu können, sollten ein paar grundlegende Konventionen bei der Definition von neuen Styles und Stylesheets eingehalten werden:
 
-
 * Es sollten keine IDs für das Styling benutzt werden, sondern immer Klassen.
-
 * Klassen-und ID-Namen sollten die semantische Bedeutung des Elements im Markup beschreiben und keine Styling-Informationen enthalten (z. B. eService-area statt center-column).
 
-
 Unnötige Klassen und Verschachtelungen („wrapper“-Elemente) sollten vermieden werden.
-
 Es sollten keine Inline-Styles (style=”…”). im HTML-Dokument eingesetzt werden
-
 Die Styles einzelner Elemente werden logisch auf verschiedene Dateien aufgeteilt, einige davon nutzen die Namen der Bootstrap Original-Dateien.
 
-*Das LESS-Format*
+==== Das LESS-Format
 
 Öffnende Klammern stehen in der gleichen Zeile wie die Bezeichnung des Styles.
 Die schließende Klammer steht in einer neuen Zeile.
@@ -4843,9 +4829,9 @@ Hexadezimalfarbwerte sollten möglichst kurz geschrieben werden (z. B. #fff).
 
 Es werden nur Kleinbuchstaben verwendet
 
-*image::image355.png[image,width=500,height=241]
+image::image355.png[image,width=500,height=241]
 
-*Benutzungsrichtlinien*
+==== Benutzungsrichtlinien
 
 Die gelieferten Styles und Templates können folgendermaßen zur Weiterentwicklung verwendet werden:
 
@@ -4869,7 +4855,7 @@ So sind alle Anpassungen gut nachvollziehbar, falls externer Support zu einem sp
 
 Weitere Informationen mit Details zur Implementierung können in den entsprechenden Quelldateien nachgelesen werden.
 
-Die Bibliothek plis-style (https://risprepository/svns/factory-src/plis-style/) enthält alle Vorgaben und Ressourcen (CSS, JavaScript, Images, ...) des Styleguides.
+Die Bibliothek `isy-style` enthält alle Vorgaben und Ressourcen (CSS, JavaScript, Images, ...) des Styleguides.
 
 Zum Aktualisieren der plis-web mit der aktuellen plis-style müssen derzeit noch folgende, manuelle Schritte durchgeführt werden:
 
