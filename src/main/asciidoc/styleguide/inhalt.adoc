@@ -2508,17 +2508,17 @@ image::image199.png[align="center", width="629",height="101"]
 :desc-image-ausrichtunghorizontalenavigation1: Navigationsleistenbeispiel A
 [id="image-ausrichtunghorizontalenavigation1",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-ausrichtunghorizontalenavigation1}
-image::image197.png[align="center", width="313",height="501"]
+image::image197.png[align="center", width="628",height="501"]
 
 :desc-image-ausrichtunghorizontalenavigation2: Navigationsleistenbeispiel B
 [id="image-ausrichtunghorizontalenavigation2",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-ausrichtunghorizontalenavigation2}
-image::image198.png[align="center", width="314",height="249"]
+image::image198.png[align="center", width="628",height="249"]
 
 :desc-image-ausrichtunghorizontalenavigation3: Navigationsleistenbeispiel C
 [id="image-ausrichtunghorizontalenavigation3",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-ausrichtunghorizontalenavigation3}
-image::image196.png[align="center", width="314",height="249"]
+image::image196.png[align="center", width="628",height="249"]
 
 
 * Hauptnavigation wird von links nach rechts befüllt.
