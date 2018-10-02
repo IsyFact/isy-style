@@ -1,29 +1,9 @@
-[[style-guide]]
-= Style Guide
-*Register Factory*
-
-image::image1.png[image,width="669",height="84"]
-
-Der Register Factory Standard beinhaltet auch den Styleguide für die Erstellung von Informationssystemen, die eigenständig oder in einem Portal-Kontext betrieben werden.
-
-
-*Style Guide*
-
-Der vorliegende Style Guide definiert den Rahmen für die interaktive und visuelle Gestaltung eines universell einsetzbaren Bedienkonzeptes für das Bundesverwaltungsamt.
-
 [[einfuehrung-und-allgemeine-prinzipien]]
 == Einführung und Allgemeine Prinzipien
-
-
-Dies ist ein einführendes Kapitel und beinhaltet allgemeine Hinweise zur Benutzung des vorliegenden Style Guides. 
-
+Der Style Guide definiert den Rahmen für die interaktive und visuelle Gestaltung eines universell einsetzbaren Bedienkonzeptes für die IsyFact.
+Dieses einführende Kapitel beinhaltet allgemeine Hinweise zur Benutzung des Style Guides. 
 Des Weiteren werden allgemeingültige Prinzipien erläutert, die bei der Konzeption und Gestaltung von Software berücksichtigt werden sollten.
-
-Abschliessenden werden die Vorgaben für die zu unterstützenden Browser festgehalten.
-
-
-//image::image11.png[image,width=140,height=154]
-image:style-toc-einleitung.png[image, align="center", width="352",height="163"]
+Abschließend werden die Vorgaben für die zu unterstützenden Browser festgehalten.
 
 [[einfuehrung-in-den-style-guide]]
 === Einführung in den Style Guide
@@ -34,17 +14,6 @@ Da in einem Style Guide generische Regeln und nicht detaillierte GUI-Spezifikati
 Das vorliegende Dokument definiert einen Standard.
 Wann immer die Notwendigkeit zur Nichtbefolgung eines Standards auftauchen sollte, muss über Art und Umfang der Abweichung entschieden werden.
 Das heißt, der in diesem Dokument definierte Standard wird empfohlen, ist aber nicht in jedem Einzelfall als Restriktion zu verstehen.
-
-*_Gültigkeit und Versionierung_*
-
-Der Style Guide ist in dem hier vorzufindenen Stand gültig, der jedoch fortlaufend weiterentwickelt wird.
-Wenn für ein Projekt ein festgelegter Versionsstand erforderlich ist, kann dieser bei dem unten stehenden Ansprechpartner angefragt werden.
-Es wird dann ein PDF-Export zur Verfügung gestellt.
-
-Ansprechpartner: Lena Schend, lena.schend@bva.bund.de, Telefon: 022899-358-3573
-
-Stellv.
-Ansprechpartner: Ralf Leonhard, ralf.leonhard@bva.bund.de, Telefon: 022899-358-1534
 
 *_Begriff der Usability_*
 
@@ -114,9 +83,6 @@ Stattdessen werden die unterschiedlichen Parameter mit Hilfe von Tabs, Listen od
 .{desc-image-gliederungtabreiter}
 image::image12.png[align="center", width="299",height="174"]
 
-
-
-
 *Verwendung von visuell reichhaltigem und amodalem Feedback*
 
 Die Unterbrechung des Arbeitsflusses sollte vermieden werden.
@@ -129,8 +95,6 @@ Modale Meldungsdialoge sind nur dann zu verwenden, wenn eine Eingabe des Benutze
 .{desc-image-modalundamodal}
 image::image13.png[align="center", width="685",height="273"]
 
-
-
 *Nutzung von Aufgabenkohärenz*
 
 Die Aufgaben und die Objekte, mit denen ein Benutzer arbeitet, werden mit hoher Wahrscheinlichkeit wiederverwendet.
@@ -142,9 +106,6 @@ Ein Beispiel für die Berücksichtigung der Aufgabenkohärenz ist das Anbieten v
 [id="image-bereitstellungvorlagen",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bereitstellungvorlagen}
 image::image14.png[align="center", width="600",height="393"]
-
-
-
 
 *Ausgleich zwischen Mächtigkeit und Komplexität eines Interfaces*
 
@@ -168,8 +129,6 @@ Zusätzliche Interaktionsmöglichkeiten können in Bereiche gelegt werden, die e
 .{desc-image-progressivedisclosure}
 image::image15.png[align="center", width="299",height="240"]
 
-
-
 *Präferenz des Wiedererkennens gegenüber dem Erinnern*
 
 Es fällt Menschen leichter, ein Objekt oder eine Aktion wieder zu erkennen, als sich aktiv an diese zu erinnern.
@@ -191,10 +150,6 @@ Es sollten möglichst viele Informationseinheiten visualisiert werden, die der B
 .{desc-image-negativarbeitsgedaechtnis}
 image::image16.png[align="center", width="399",height="197"]
 
-
-
-
-
 *Thematische Gruppierung von Parametern*
 
 Thematisch Zusammengehöriges muss auch visuell als Gruppe erkennbar sein.
@@ -204,8 +159,6 @@ Zusammengehörige Parameter werden beispielsweise in visuell separierte Bereiche
 [id="image-gruppierungbereiche",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-gruppierungbereiche}
 image::image17.png[align="center", width="450",height="293"]
-
-
 
 *Verfassen von adäquaten Texten*
 
@@ -293,15 +246,12 @@ Es müssen mindestens folgende Browser und Konstellationen in SXGA- und UXGA-Auf
 * Firefox ESR, jeweils aktuelle Version (Stand Juli 2016 ESR 45 - s. https://www.mozilla.org/en-US/firefox/organizations/faq/[Firefox-ESR-Roadmap])
 * Chrome, jeweils aktuelle stabile Version
 
-
 Die Unterstützung dieser Browser in der jeweils aktuellen supporteten Version entspricht auch der Empfehlung des BSI (Stand August 2016).
 
 [[fenstertypen-layout]]
 == Fenstertypen & Layout
 
 Im Folgenden werden die Fenstertypen und das allgemeine Layoutverhalten der Applikation beschrieben.
-
-image:style-toc-fenstertypen.png[image,aliegn="center", width="265",height="164"]
 
 [[layout-resizing]]
 === Layout & Resizing
@@ -857,7 +807,7 @@ Das Dialogfenster kann sich gegebenenfalls um diese Höhe vergrößern (siehe <<
 [[dialoge-ohne-javascript]]
 ==== Dialoge ohne JavaScript
 
-image::image77.png[image,width=35,height=33]
+image::no-js.png
 
 Hat ein Benutzer kein JavaScript, werden Dialoge in das Hauptfenster integriert.
 
@@ -1130,9 +1080,6 @@ Im Folgenden werden häufig durchgeführte Aufgaben beschrieben.
 Der Fokus in diesem Kapitel liegt auf den Interaktionen, die während dieser Aufgaben ausgeführt werden müssen.
 
 In den Kapiteln Bedienelemente und Design Patterns können die jeweiligen Spezifikationen der benutzen Elemente nachgelesen werden.
-
-
-image:style-toc-haeufig.png[image, align="center", width="268",height="192"]
 
 [[objekt-suchen]]
 === Objekt suchen
@@ -1422,11 +1369,7 @@ Der Benutzer erhält immer im letzten Schritt des Wizards eine Erfolgsmeldung un
 [[bedienelemente-1]]
 == Bedienelemente
 
-In diesem Kapitel werden Hauptbedienelemente besprochen
-
-image::style-toc-bedienelemente.png[align="center", width="302",height="419"]
-
-und allgemeine Eigenschaften der Bedienelemente beschrieben.
+In diesem Kapitel werden Bedienelemente besprochen und allgemeine Eigenschaften der Bedienelemente beschrieben.
 
 * Kontextabhängige Darstellung
 * Status
@@ -1540,7 +1483,7 @@ Diese Ausnahmen werden an den entsprechenden Stellen erläutert.
 
 *Funktionalität ohne JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Viele heutzutage übliche Bedienelemente, Gestaltungslösungen und Komfortfunktionen für Webapplikationen setzen die Benutzung von JavaScript voraus.
 Ohne die Verwendung von JavaScript sind die Möglichkeiten der Benutzerinteraktion mit Webseiten demzufolge stark eingeschränkt.
@@ -1667,7 +1610,7 @@ Zum Beispiel kann man unter dem Button „Exportieren" die Funktionen „Exporti
 
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Ohne JavaScript können die Funktionen die im Menü Button zusammen gefasst sind nicht direkt ausgeführt werden.
 
@@ -1863,7 +1806,7 @@ Falls eine Vorbelegung jedoch potentiell risikobehaftet ist, sollte das Eingabef
 
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Es gelten die gleichen Regeln und Einschränkungen wie im Kapitel Validierung beschrieben.
 
@@ -2008,7 +1951,7 @@ Falls keine übergeordnete Logik angewendet wird, sollten die Elemente aufsteige
 
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Da durch das Dropdown Menü keine Funktionen unmittelbar ausgelöst werden, bleibt die Funktionalität auch ohne JavaScript vorhanden.
 Es kann allerdings zu optischen Abweichungen kommen.
@@ -2096,7 +2039,7 @@ Und der Tab wird rechts neben dem letzten Tab in der Tabbar dargestellt.
 
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Ohne JavaScript gibt es kein Taboverflow Menü. Die Tabs werden hintereinander dargestellt, notfalls in zwei Zeilen.
 Da die Darstellung von Tabs in mehreren Zeilen möglichst zu vermeiden ist, sollte eine Umstrukturierung der Inhalte geprüft werden.
@@ -2213,7 +2156,7 @@ image::image183.png[align="center", width="627",height="137"]
 
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=55]
+image::no-js.png[]
 
 Ohne JavaScript kann die Sortierung nur durch das Neu-Laden der Seite bewirkt werden.
 
@@ -2255,7 +2198,7 @@ Mittels der Umschalt-Taste und Klick auf das erste und letzte Element wird der d
 
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Ohne JavaScript ist die Selektion von Tabellenzeilen nur über Checkboxen möglich.
 
@@ -2372,7 +2315,7 @@ image::image192.png[image,width=517,height=210]
 
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Ohne JavaScript ist die Darstellung des Tristates nicht möglich.
 
@@ -2474,8 +2417,6 @@ Elemente die einer Validierung unterzogen werden (vor allem in Formularen) werde
 == Design Patterns
 
 Ein Design Pattern ist eine Kombination aus Standardelementen, welche in dieser Kombination für verschiedene Aufgaben oder Situationen benutzt werden können.
-
-image::style-toc-design-patterns.png[align="center", width="311",height="193"]
 
 
 [[navigation]]
@@ -2715,7 +2656,7 @@ Ebenso ist wichtig, dass man per Tooltip die komplette Information einsehen kann
 
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Ohne JavaScript ist das anzeigen der Wertehilfen in einem extra Menü nicht möglich.
 Zur Eingabe der Daten werden die normalen Eingabefelder genutzt.
@@ -2824,7 +2765,7 @@ Die Attribute müssen ohne zu scrollen auf einen Blick ersichtlich sein.
 
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Generell kann die Funktionalität auch ohne JavaScript beibehalten werden.
 Jedes Hinzufügen oder Entfernen einer Zeile bedingt allerdings ein Neu-Laden der Seite.
@@ -2948,7 +2889,7 @@ Hierfür wird eine Filteroption zur Verfügung gestellt z.B. „Alle".
 
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Generell kann die Funktionalität auch ohne JavaScript beibehalten werden.
 Jeder Wechsel des Filters bedingt allerdings ein Neu-Laden der Seite.
@@ -3040,7 +2981,7 @@ Zielliste und Quellliste sollten immer gleich breit sein.
 
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Ohne JavaScript kann zu optischen Abweichungen in der Darstellung kommen, die Funktionalität sollte allerdings beibehalten werden.
 
@@ -3121,7 +3062,7 @@ Das Layout sollte sich an den Regeln des Formular-Layouts orientieren (siehe Kap
 
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Ohne JavaScript ist die Vorschau innerhalb einer Tabelle nicht möglich.
 Die entsprechenden Buttons zum öffnen der Vorschau sollten nicht angezeigt werden.
@@ -3166,7 +3107,7 @@ Für sehr komplexe Daten kann es sinnvoll sein einen Expander (Progressive Discl
 
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Ohne JavaScript können die Detaildaten nur durch Klick auf einen Button oder Link angezeigt werden.
 Hierfür kann zum Beispiel der Kennzeichner in einer Tabellenzeile genutzt werden (ähnlich wie beim Aufruf der Detailseite aus einer Tabelle heraus, siehe Kapitel Selektionsver halten in einer Tabelle).
@@ -3210,7 +3151,7 @@ Die Inhalte des Containers passen sich nur bis zu einer gewissen Größe an, und
 
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Ohne JavaScript werden alle Daten direkt angezeigt.
 Elemente sind nicht ein- und ausklappbar.
@@ -3402,8 +3343,6 @@ Ein gleichmäßiges und konsistentes Layout von Screens und Formularen ist essen
 Klar strukturierte Inhalte erleichtern dem Benutzer das schnelles Scannen und Erfassen von Informationen.
 Schlecht gelayoutete Screens können die Produktivität und die Zufriedenheit des Benutzers erheblich verschlechtern.
 
-image::style-toc-formulare.png[align="center", width="365",height="130"]
-
 [[virtuelles-raster]]
 === Virtuelles Raster
 
@@ -3507,8 +3446,6 @@ So kann der Platz (horizontal) bei größeren Auflösungen optimal ausgenutzt we
 Das System sollte für den Benutzer möglichst intuitiv und einfach zu bedienen sein.
 Die hier beschriebenen Möglichkeiten können den Benutzer beim Umgang mit dem System unterstützen und die Bedienung vereinfachen.
 
-image::style-toc-benutzerhilfe.png[align="center", width="398",height="274"]
-
 [[autosuggestion]]
 === Autosuggestion
 
@@ -3528,11 +3465,9 @@ Gibt es mehr als 10 mögliche passende Werte, so werden die ersten 10 Werte ange
 
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Ohne JavaScript nicht vorhanden.
-
-
 
 [[platzhalter-ueberschrift]]
 === Platzhalter
@@ -3549,21 +3484,16 @@ image::image249.png[align="center", width="358",height="25"]
 
 Platzhalter werden eingesetzt, wenn Daten in einem bestimmten Format eingegeben werden müssen (z.B. Datum, ID, Kennzeichen). Platzhalter können bei Suchfeldern eingesetzt werden, wenn unterschiedliche Attribute gesucht werden können.
 
-
 *Richtlinien zur Anwendung*
-
 
 Sobald der Benutzer in das Eingabefeld klickt, wird der Platzhalter ausgeblendet.
 Gibt der Benutzer keine Daten ein und klickt auf ein anderes Element (Fokuswechsel), dann wird der Platzhalter wieder angezeigt.
 
-
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Ohne JavaScript kann es bei der Anzeige von Platzhaltern in einigen Browsern kommen, wie zum Beispiel in IE8/IE9.
-
-
 
 [[tooltips-ueberschrift]]
 === Tooltips
@@ -3602,10 +3532,9 @@ Stattdessen sollte der Tooltip kurz und prägnant beschreiben, was ein Objekt be
 
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Können ohne JavaScript nicht umgesetzt werden.
-
 
 [[fortschrifttsanzeige]]
 === Fortschrittsanzeige
@@ -3647,13 +3576,11 @@ Dabei füllt sich der Balken von links (0%) nach rechts (100%).
 ** Für die Dauer der Operation dreht sich der Fortschritts-Spinner und signalisiert dem Benutzer damit, dass sich ein Prozess im Vorgang befindet.
 Der Fortschritts-Spinner empfiehlt sich aufgrund seiner geringen Ausmaße insbesondere in Situationen, in denen Platzbedarf von großer Bedeutung ist.
 
-
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=54]
+image::no-js.png[]
 
 Ohne JavaScript nicht vorhanden.
-
 
 [[anzeige-optionale-Pflichtfelder]]
 === Anzeige von Pflichtfeldern und optionalen Pflichtfeldern
@@ -3739,10 +3666,9 @@ Dies geschieht in einem festgeschriebenen Meldungsbereich oberhalb des Formulars
 .{desc-image-meldungsarten}
 image::image264.png[align="center", width="685",height="145"]
 
-
 *Kein JavaScript*
 
-image::image131.png[image,width=54,height=55]
+image::no-js.png[]
 
 Ohne JavaScript können die Hinweise zu den Fehlermeldungen nicht über das Informationsicon dargestellt werden, da Tooltips nicht unterstützt werden.
 
@@ -3750,8 +3676,6 @@ Ohne JavaScript können die Hinweise zu den Fehlermeldungen nicht über das Info
 *  Das Informationsicon wird nicht angezeigt.
 *  Um die Zuordnung zu den fehlerhaften Eingaben zu vereinfachen, sollte im Text das entsprechende Label mit angezeigt werden.
 * Beispiel: „Geburtsdatum: Format nicht korrekt z.B. TT.MM.JJ"
-
-
 
 [[fehlerpraevention]]
 === Fehlerprävention
@@ -3776,11 +3700,7 @@ Beispiel: Bei der Eingabe eines Datums können sowohl Trennstriche als auch Punk
 *Tastatur*
 
 Alle Bedienelemente und Funktionen sollten auch ohne Maus bedienbar sein.
-Neben der Eingabe von Zeichen wird die Tastatur auch zur Navigation sowie zur Ausführung häufig genutzter Aktionen
-
-image::style-toc-benutzereingaben.png[align="center", width="319",height="70"]
-
-genutzt.
+Neben der Eingabe von Zeichen wird die Tastatur auch zur Navigation sowie zur Ausführung häufig genutzter Aktionen genutzt.
 
 *Richtlinien*
 
@@ -3946,8 +3866,6 @@ Bis zum Schließen des Buchstaben Pickers erlaubt dieser die Auswahl weiterer Ze
 == UI Text und Grafiken
 *Generelle Verwendung von Text*
 
-image::style-toc-UI-Text.png[align="center", width="379",height="163"]
-
 Die Bedeutung von Text und Bezeichnungen in Software darf nicht unterschätzt werden.
 Große Teile eines User-Interface beruhen auf textuellen Informationen, wie z.B. der Beschriftung von Bedienelementen.
 Die fehlerhafte Anwendung von Texten kann somit direkt zu einer Reduzierung der Usability des entsprechenden User-Interface führen.
@@ -4094,8 +4012,6 @@ Die folgende Liste zeigt einige negative Bezeichnungen und ihre neutralen Äquiv
 == Visuelles Design
 
 Im Folgenden werden Farben, Icons und Schriften definiert, die für das Visuelle Design genutzt werden sollten.
-
-image::style-toc-visuelles-design.png[align="center", width="344",height="135"]
 
 [[farben-ueberschrift]]
 === Farben
