@@ -2487,72 +2487,51 @@ image::style-toc-design-patterns.png[align="center", width="311",height="193"]
 * Innerhalb eines Applikationsportals oder einer einzelnen Anwendung sollte eine einheitliche Navigationsstruktur angewendet werden.
 Wird beispielsweise für die Navigation ein Submenü und eine Linksnavigation eingesetzt, so sollte dies konsistent für alle Applikationen des Anwendungsportals angewandt werden.
 
-[[horizontale-navigation]]
-==== Horizontale Navigation
+[[hauptnavigation]]
+==== Hauptnavigation
 
-Die Hauptnavigation ist eine horizontale Navigation.
-
-:desc-image-hauptnavigationSubmenueflyout: Hauptnavigation mit Submenü als Flyout
-[id="image-hauptnavigationSubmenueflyout",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-hauptnavigationSubmenueflyout}
-image::image199.png[align="center", width="629",height="101"]
-
+Die Hauptnavigation ist eine horizontale Navigation, die stets am unteren Rand des Header-Bereichs dargestellt wird und die gesamte Breite der Seite einnimmt.
 
 *Ist dies das korrekte Pattern?*
 
-* Die horizontale Navigation sollte nur für die Hauptnavigation verwendet werden.
 * Das Submenü (Flyout) kann als 2. Navigationsebene verwendet werden.
 
 *Position und Ausrichtung der horizontalen Navigation*
 
-:desc-image-ausrichtunghorizontalenavigation1: Navigationsleistenbeispiel A
+:desc-image-ausrichtunghorizontalenavigation1: Navigationsleistenbeispiel auf Applikationsseite
 [id="image-ausrichtunghorizontalenavigation1",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-ausrichtunghorizontalenavigation1}
-image::image197.png[align="center", width="628",height="501"]
+image::image197.png[align="center", width="80%", pdfwidth="80%"]
 
-:desc-image-ausrichtunghorizontalenavigation2: Navigationsleistenbeispiel B
+:desc-image-ausrichtunghorizontalenavigation2: Navigationsleistenbeispiel auf Applikation Detailseite
 [id="image-ausrichtunghorizontalenavigation2",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-ausrichtunghorizontalenavigation2}
-image::image198.png[align="center", width="628",height="249"]
+image::image198.png[align="center", width="80%", pdfwidth="80%"]
 
-:desc-image-ausrichtunghorizontalenavigation3: Navigationsleistenbeispiel C
+:desc-image-ausrichtunghorizontalenavigation3: Navigationsleistenbeispiel mit ausgeklapptem Submenü (Flyout)
 [id="image-ausrichtunghorizontalenavigation3",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-ausrichtunghorizontalenavigation3}
-image::image196.png[align="center", width="628",height="249"]
+image::image196.png[align="center", width="80%", pdfwidth="80%"]
 
-
-* Hauptnavigation wird von links nach rechts befüllt.
+* Die Hauptnavigation wird von links nach rechts befüllt.
 * Ein Entfall der Linksnavigation ist möglich, hat aber keinen Einfluss auf das Layout.
-
 
 *Richtlinien zur Anwendung*
 
 * In der Hauptnavigation werden Applikationsgruppen platziert.
 Kann eine Applikation keiner Gruppe zugeordnet werden, so kann sie einen eigenen Hauptnavigationspunkt darstellen.
-* Die Anzahl der Navigationspunkte sollte auf ein sinnvolles Minimum reduziert werden (max.
-8-10). Die Hauptnavigation ist nicht scrollbar und sollte kein Taboverflow Menü haben.
+* Die Anzahl der Navigationspunkte sollte auf ein sinnvolles Minimum reduziert werden (max. 8-10).
+Die Hauptnavigation ist nicht scrollbar und sollte kein Taboverflow Menü haben.
 * Ist ein Dashboard vorhanden, so stellt dieses immer den ersten Punkt (ganz links) in der Hauptnavigation dar und ist per Default aktiv.
 Es ist immer ein Punkt in der Hauptnavigation selektiert.
-* Unterhalb der Hauptnavigation wird ein Farbbalken angezeigt. Die Farbe repräsentiert eine Applikationsgruppe/Applikation.
-Sie entspricht immer dem gerade aktiven Hauptnavigationspunkt.
+* Unterhalb der Hauptnavigation wird ein Farbbalken angezeigt.
+Die Farbe repräsentiert eine Applikationsgruppe/Applikation.
+Sie entspricht immer dem gerade aktiven Hauptnavigationspunkt (s. <<image-ausrichtunghorizontalenavigation1>> und <<image-ausrichtunghorizontalenavigation2>>).
 * Wird die Maus über einen Hauptnavigationspunkt bewegt (Hover), wird eine Subnavigation als Flyout angezeigt.
 ** Die Subnavigation wird entsprechend der dazugehörigen Applikationsgruppe/Applikation mit einer Farbe gekennzeichnet.
 ** Der erste Navigationspunkt in der Subnavigation beziehungsweise der vom Benutzer zuletzt geöffnete Navigationspunkt ist per Default vorselektiert.
 
 * Klickt der Benutzer direkt auf einen Hauptnavigationspunkt wird standardmäßig die erste beziehungsweise die zuletzt geöffnete Applikationsseite aus der Subnavigation geöffnet.
-
-*Kein JavaScript*
-
-image::image131.png[image,width=54,height=54]
-
-Ohne JavaScript lässt sich das Menü der Subnavigation nicht über die komplette Breite des Screens darstellen.
-Hierfür werden die Menüpunkte der Subnavigation vertikal unter dem Menüpunkt der Hauptnavigation angeordnet, Beispiel siehe <<image-hauptnavigationSubmenue>>.
-Die Beschreibung und das Icon entfallen.
-
-:desc-image-hauptnavigationSubmenue: Hauptnavigation mit Submenü als Flyout – Ohne JavaScript
-[id="image-hauptnavigationSubmenue",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-hauptnavigationSubmenue}
-image::image199.png[align="center", width="627",height="213"]
 
 [[linksnavigation]]
 ==== Linksnavigation
