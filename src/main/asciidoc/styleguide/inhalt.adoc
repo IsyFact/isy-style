@@ -290,7 +290,7 @@ Es müssen mindestens folgende Browser und Konstellationen in SXGA- und UXGA-Auf
 
 * Internet Explorer 11
 * Microsoft Edge (für Windows 10 / Bundesclient)
-* Firefox ESR, jeweils aktuelle Version (Stand Juli 2016 ESR 45 - s. https://www.mozilla.org/en-US/firefox/organizations/faq/[Firefox-ESR-Roadmap])
+* Firefox ESR, jeweils aktuelle Version (Stand Oktober 2018 ESR 60 - s. https://www.mozilla.org/en-US/firefox/organizations/faq/[Firefox-ESR-Roadmap])
 * Chrome, jeweils aktuelle stabile Version
 
 
