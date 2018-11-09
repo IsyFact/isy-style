@@ -4,6 +4,7 @@
 - `IFS-182`: Datepicker um Übernahme des heutigen Datums erweitert
 - `IFS-187`: Umstellung der BVA-Styleguide Dokumentation auf AsciiDoc und Extraktion der WebGui spezifischen technischen Kapitel
 - `IFS-205`: Dokumentation zur Navigation aus IFS-99 hinzugefügt
+- `IFE-31`: Abstände zwischen Controls und Hover-Farbe Linksnavigation korrigiert
 
 # v4.0.0
 - `IFS-73`: Integration der Style-Änderungen von Ergosign. ACHTUNG: Diese Styles sind zum Teil inkompatibel zur isy-style-3.0.0
