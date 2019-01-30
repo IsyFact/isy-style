@@ -5,7 +5,7 @@
 
     <artifactId>isy-style</artifactId>
     <packaging>jar</packaging>
-    <version>4.1.0</version>
+    <version>5.0.0</version>
     <name>IsyFact Styles</name>
 
     <parent>
@@ -28,7 +28,7 @@
                             <goal>install-node-and-npm</goal>
                         </goals>
                         <configuration>
-                            <nodeVersion>v8.9.4</nodeVersion>
+                            <nodeVersion>v10.15.1</nodeVersion>
                         </configuration>
                     </execution>
 
@@ -48,7 +48,9 @@
                         <goals>
                             <goal>grunt</goal>
                         </goals>
-
+                        <configuration>
+                            <arguments>build --zielVersion=${project.version}</arguments>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
