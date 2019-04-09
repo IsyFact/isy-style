@@ -1,4 +1,7 @@
 # v4.1.0
+- `IFE-16`: Unterstützung für IE 8 eingestellt, row-df aus Definition entfernt
+
+# v4.1.0
 - `IFS-163`: Unterstützung für IE 8 eingestellt
 - `IFS-165`: UI-Block wird bei manchen Fehlermeldungen nicht deaktiviert 
 - `IFS-182`: Datepicker um Übernahme des heutigen Datums erweitert

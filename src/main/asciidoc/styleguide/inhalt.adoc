@@ -4428,6 +4428,10 @@ Dieses Kapitel enthält die technische Dokumentation zur Bibliothek `isy-style`.
 |===
 |Version |Datum |Änderung
 
+|v4.2.0
+|05.04.2019
+|Unterstützung von IE8 aufgehoben, row-df aus Definition entfernt
+
 |v1.4.0
 |19.10.2015
 |added/modified CSS for new and existent widgets
