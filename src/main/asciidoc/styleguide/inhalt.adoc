@@ -4423,14 +4423,11 @@ image::11_Applikations_Wizard_Objektanlage_5_2017-08-25.png[align="center"]
 In der IsyFact-Erweiterung `isy-style` werden die CSS-, JavaScript- und Bilddateien des Styleguides abgelegt, für die Nutzung komprimiert und kompiliert.
 Dieses Kapitel enthält die technische Dokumentation zur Bibliothek `isy-style`.
 
+////
 .Historie der `isy-style`
 [cols="20,20,60"]
 |===
 |Version |Datum |Änderung
-
-|v4.2.0
-|05.04.2019
-|Unterstützung von IE8 aufgehoben, row-df aus Definition entfernt
 
 |v1.4.0
 |19.10.2015
@@ -4474,6 +4471,7 @@ Dieses Kapitel enthält die technische Dokumentation zur Bibliothek `isy-style`.
 
  This release includes all features
 |===
+////
 
 === Technologien
 
