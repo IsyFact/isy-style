@@ -1,4 +1,9 @@
 # v4.2.0
+- `IFE-48`: Update auf jQuery 3.3.1 und Bootstrap 3.3.7
+
+# v4.1.0
+- `IFE-16`: Unterstützung für IE 8 eingestellt, row-df aus Definition entfernt und gridpatch CSS Library entfernt.
+# v4.2.0
 - `IFE-16`: Unterstützung für IE 8 eingestellt (Definition von `row-df` und gridpatch CSS Library entfernt).
 
 # v4.1.0
