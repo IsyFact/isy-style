@@ -1,3 +1,6 @@
+# v4.0.2
+- `IFS-316`: @screen-lg von 1600px auf 768px geändert 
+
 # v4.0.1
 - `IFS-192`: Checkboxes, Radiobuttons etc. nicht korrekt dargestellt
 
