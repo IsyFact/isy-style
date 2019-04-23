@@ -1,3 +1,6 @@
+# v4.1.2
+- `IFS-316`: @screen-lg von 1600px auf 768px geändert
+
 # v4.1.0
 - `IFS-163`: Unterstützung für IE 8 eingestellt
 - `IFS-165`: UI-Block wird bei manchen Fehlermeldungen nicht deaktiviert 
