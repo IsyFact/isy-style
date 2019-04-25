@@ -3,6 +3,7 @@
 - `IFE-16`: Unterstützung für IE 8 eingestellt (Definition von `row-df` und gridpatch CSS Library entfernt).
 - `IFE-65`: Upgrade auf Bootstrap 3.4.1 (vulnerability CVE-2019-8331)
 - `IFE-59`: Verwendung der Portalfarbe für Navigationsmenü und Breadcrumb, Icon-Buttons (Hover) und selektierte Kopfzeilen von Tabellen
+- `IFE-61`: Tabellen-Sortierpfeildarstellung auf "übereinander" geändert
 
 # v4.1.0
 - `IFS-163`: Unterstützung für IE 8 eingestellt
