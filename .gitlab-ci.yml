@@ -1,120 +1,116 @@
-# This file is a template, and might need editing before it works on your project.
----
-# Build JAVA applications using Apache Maven (http://maven.apache.org)
-# For docker image tags see https://hub.docker.com/_/maven/
-#
-# For general lifecycle information see https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
-#
-# This template will build and test your projects as well as create the documentation.
-#
-# * Caches downloaded dependencies and plugins between invocation.
-# * Does only verify merge requests but deploy built artifacts of the
-#   master branch.
-# * Shows how to use multiple jobs in test stage for verifying functionality
-#   with multiple JDKs.
-# * Uses site:stage to collect the documentation for multi-module projects.
-# * Publishes the documentation for `master` branch.
-
 variables:
-  # This will supress any download for dependencies and plugins or upload messages which would clutter the console log.
-  # `showDateTime` will show the passed time in milliseconds. You need to specify `--batch-mode` to make this work.
-  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN -Dorg.slf4j.simpleLogger.showDateTime=true -Djava.awt.headless=true -DskipTests"
-  # As of Maven 3.3.0 instead of this you may define these options in `.mvn/maven.config` so the same config is used
-  # when running from the command line.
-  # `installAtEnd` and `deployAtEnd`are only effective with recent version of the corresponding plugins.
-  MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version -DinstallAtEnd=true -DdeployAtEnd=true"
-# Cache downloaded dependencies and plugins between builds.
-# To keep cache across branches add 'key: "$CI_JOB_REF_NAME"'
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN -Dorg.slf4j.simpleLogger.showDateTime=true -Djava.awt.headless=true"
+  MAVEN_CLI_OPTS: "-s settings.xml --batch-mode --errors --fail-at-end"
 
-image: maven:3-jdk-8
+image: $BUILDIMAGE
 stages:
-  - build
-  - test
-  - package
-  - deploy
+  - buildstage
+  - teststage
+  - packagestage
+  - deploystage
+
 cache:
   paths:
    - .m2/repository
+  key: "ifecache"
 
-.doctemplate : &vorlage
-  image: ruby:2.3
-  stage: build
+.template: &vorlage
   tags:
-   - docker
+   - ZIII4
+  before_script:
+   - mvn -v
+   - echo "$SETTINGSSECURITY" > ~/.m2/settings-security.xml
+
+
+.doctemplate : &docvorlage
+  image: ruby:2.5
+  stage: buildstage
+  tags:
+   - ZIII4
   script:
    - cat /proc/version
    - gem install asciidoctor-pdf --pre
    - asciidoctor-pdf -v
    - cd src/main/asciidoc/styleguide
-   - 'asciidoctor -b html5 -a revnumber=1.5x -a revdate=09.07.2018 -a icons=font -a sectanchors -a idprefix -a docinfo1 -a data-uri -a stylesdir=../theme -a stylesheet=isyfact.css master.adoc -o styleguide.html'
-   - 'asciidoctor-pdf -a revnumber=1.5x -a revdate=09.07.2018 -a icons=font -a sectanchors -a idprefix -a docinfo1 -a pdf-stylesdir=../theme -a pdf-style=isyfact -a pdf-fontsdir=../theme/fonts/ master.adoc -o styleguide.pdf'
+   - asciidoctor -b html5 -a revnumber=$(ruby -r rexml/document -e 'puts REXML::Document.new(File.new(ARGV.shift)).elements["/project/parent/version"].text' ../../../../pom.xml) -a revdate=$(date +"%d.%m.%Y") -a icons=font -a sectanchors -a idprefix -a docinfo1 -a data-uri -a stylesdir=../theme -a stylesheet=isyfact.css master.adoc -o styleguide.html
+   - asciidoctor-pdf -a revnumber=$(ruby -r rexml/document -e 'puts REXML::Document.new(File.new(ARGV.shift)).elements["/project/parent/version"].text' ../../../../pom.xml) -a revdate=$(date +"%d.%m.%Y") -a icons=font -a sectanchors -a idprefix -a docinfo1 -a pdf-stylesdir=../theme -a pdf-style=isyfact -a pdf-fontsdir=../theme/fonts/ master.adoc -o styleguide.pdf
 
 
-build:docs_branch:
-  <<: *vorlage
+build:docs:
+  <<: *docvorlage
   artifacts:
-   name: "$CI_PROJECT_NAME-$CI_COMMIT_REF_SLUG-$CI_JOB_ID"
    paths:
-   - "src/main/asciidoc/styleguide/*.pdf"
-   - "src/main/asciidoc/styleguide/*.html"
+    - "src/main/asciidoc/styleguide/*.pdf"
+    - "src/main/asciidoc/styleguide/*.html"
    expire_in: 1 week
   only:
-   - branches@IsyFact/isy-style
-  except:
-   - master@IsyFact/isy-style
-
-
-build:docs_master:
-  <<: *vorlage
-  artifacts:
-   name: "$CI_PROJECT_NAME-$CI_COMMIT_REF_SLUG-$CI_JOB_ID"
-   paths:
-   - "src/main/asciidoc/styleguide/*.pdf"
-   - "src/main/asciidoc/styleguide/*.html"
-   expire_in: 1 day
-  only:
-   - master@IsyFact/isy-style
+   - branches
   except:
    - schedules
 
-build:docs_master_schedule:
-  <<: *vorlage
+build:docs_schedule:
+  <<: *docvorlage
   artifacts:
-   name: "$CI_PROJECT_NAME-$CI_COMMIT_REF_SLUG-$CI_JOB_ID"
    paths:
-   - "src/main/asciidoc/styleguide/*.pdf"
-   - "src/main/asciidoc/styleguide/*.html"
+    - "src/main/asciidoc/styleguide/*.pdf"
+    - "src/main/asciidoc/styleguide/*.html"
    expire_in: 2 days
   only:
-   - master@IsyFact/isy-style
    - schedules
 
-# Validate merge requests using JDK8
-build:jdk8:
-  stage: build
+build:
+  <<: *vorlage
+  stage: buildstage
+  artifacts:
+   paths:
+    - "target/*"
+   expire_in : 6 h
   script:
-   - 'mvn $MAVEN_CLI_OPTS compile'
+   - rm -rf .m2/repository/de
+   - mvn -U $MAVEN_CLI_OPTS compile
   except:
    - schedules
 
-# Verify merge requests using JDK8
-test:jdk8:
-  stage: test
+test:
+  <<: *vorlage
+  stage: teststage
+  artifacts:
+   paths:
+    - "target/surefire-reports/*"
+    - "target/site/*"
+   reports:
+    junit:
+     - "target/surefire-reports/TEST-*.xml"
+   when: always
+  dependencies:
+   - build
   script:
-   - 'mvn $MAVEN_CLI_OPTS test'
+   - mvn $MAVEN_CLI_OPTS org.jacoco:jacoco-maven-plugin:prepare-agent -Dmaven.surefire.argline='@{argLine} -Xmx1g -Dfile.encoding=${project.build.sourceEncoding}' test org.jacoco:jacoco-maven-plugin:report
+  after_script:
+   - mkdir -p src/site
+   - echo "<project name=\"IsyFact Erweiterungen\"></project>" > src/site/site.xml
+   - mvn $MAVEN_CLI_OPTS surefire-report:report-only
+   - mvn -DgenerateReports=false $MAVEN_CLI_OPTS site
+   - '[[ -f ./target/site/jacoco/index.html ]] && echo Code coverage:$(egrep "([0-9]{1,3}%)" ./target/site/jacoco/index.html -o -h |  head -1)'
   except:
    - schedules
 
-package:jdk8:
-  stage: package
+package:
+  <<: *vorlage
+  stage: packagestage
+  dependencies:
+   - build
   script:
-   - 'mvn $MAVEN_CLI_OPTS package'
+   - mvn $MAVEN_CLI_OPTS -Dmaven.test.skip=true package
   except:
    - schedules
 
-deploy:jdk8:
-  stage: deploy
+deploy:
+  <<: *vorlage
+  stage: deploystage
+  dependencies:
+   - build
   script:
-   - 'mvn $MAVEN_CLI_OPTS deploy'
+   - mvn $MAVEN_CLI_OPTS -Dmaven.test.skip=true -Dmaven.install.skip=true deploy
   except:
    - schedules
