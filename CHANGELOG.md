@@ -4,6 +4,7 @@
 - `IFE-65`: Upgrade auf Bootstrap 3.4.1 (vulnerability CVE-2019-8331)
 - `IFE-59`: Verwendung der Portalfarbe für Navigationsmenü und Breadcrumb, Icon-Buttons (Hover) und selektierte Kopfzeilen von Tabellen
 - `IFE-61`: Tabellen-Sortierpfeildarstellung auf "übereinander" geändert
+- `IFE-62`: Obsoletes Parent-POM durch Open Source Parent POM ersetzt
 
 # v4.1.0
 - `IFS-163`: Unterstützung für IE 8 eingestellt
