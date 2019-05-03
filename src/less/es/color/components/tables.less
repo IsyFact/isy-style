@@ -10,14 +10,18 @@
 .table {
 
     tr {
-
         &.active {
             background: @es-portal-color-20;
-
             td {
                 background: @es-portal-color-20;
             }
         }
     }
-}
 
+    &.table-selectable {
+        th.sorted {
+            background-color: @es-portal-color-20;
+        }
+    }
+
+}

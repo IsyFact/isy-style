@@ -23,27 +23,44 @@
     }
 }
 
-//with Icon and Label (Icon Button Navigation)
-.btn-icon-round-large {
-
+.btn-icon-round {
     &:hover {
-        color: @es-portal-color-100;
+        > span {
+            border-color: @es-portal-color-100;
+            color: @es-portal-color-100;
 
+            &.icon {
+                color: @es-portal-color-100;
+            }
+        }
     }
 }
 
+.btn-icon-round-large {
+    &:hover {
+        > span {
+            border-color: @es-portal-color-100;
+            color: @es-portal-color-100;
+
+            &.icon {
+                color: @es-portal-color-100;
+            }
+        }
+    }
+}
 
 .btn-icon-round-small {
-
     &:hover {
-        color: @es-portal-color-100;
+        > span {
+            border-color: @es-portal-color-100;
+            color: @es-portal-color-100;
+
+            &.icon {
+                color: @es-portal-color-100;
+            }
+        }
     }
-
 }
-
-
-
-
 
 .btn-file {
     &:hover,
