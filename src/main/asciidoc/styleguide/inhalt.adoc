@@ -365,7 +365,7 @@ Im Wesentlichen besteht das Hauptfenster aus zwei Bereichen: dem Header-Bereich 
 :desc-image-hauptfenster-aufbau: Allgemeiner Aufbau des Hauptfensters
 [id="image-hauptfenster-aufbau",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-hauptfenster-aufbau}
-image::hauptfenster-aufbau.png[align="center", width=80%, pdfwidth=80%]
+image::hauptfenster-aufbau.png[align="center", width="80%", pdfwidth="80%"]
 
 Das Layout des Header-Bereichs ist immer gleichartig.
 Der Inhalt ändert sich nur in einem vordefinierten Rahmen (z.B. Logo der Anwendungslandschaft, Inhalte der Hauptnavigation).
@@ -429,7 +429,7 @@ Der Header Bereich enthält allgemeine Informationen zur Anwendungslandschaft, d
 :desc-image-header-aufbau: Aufbau des Header-Bereiches
 [id="image-header-aufbau",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-header-aufbau}
-image::header-aufbau.png[align="center", width=80%, pdfwidth=80%]
+image::header-aufbau.png[align="center", width="80%", pdfwidth="80%"]
 
 <<image-header-aufbau>> verdeutlicht die Teile, aus denen er besteht:
 
@@ -2451,11 +2451,58 @@ Ein Design Pattern ist eine Kombination aus Standardelementen, welche in dieser 
 [[navigation]]
 === Navigation
 
-*Allgemeine Richtlinien*
+Die Navigation ist entscheidend für eine gute Bedienbarkeit von Fachanwendungen.
+Alle Anwendungsfälle einer Fachanwendung müssen, ggf. nach Anwendungskomponenten gruppiert, direkt über einen Eintrag in der Navigation ansprechbar sein.
 
-* Aktive Navigationspunkte sollten immer deutlich hervorgehoben werden.
-* Innerhalb eines Applikationsportals oder einer einzelnen Anwendung sollte eine einheitliche Navigationsstruktur angewendet werden.
-Wird beispielsweise für die Navigation ein Submenü und eine Linksnavigation eingesetzt, so sollte dies konsistent für alle Applikationen des Anwendungsportals angewandt werden.
+Die IsyFact sieht drei Navigationsebenen vor:
+
+. Hauptnavigation (auch horizontale Navigation genannt)
+. Subnavigation (Menüs der Hauptnavigation)
+. Linksnavigation (Liste von Einträgen am linken Rand einer Applikationsseite)
+
+Innerhalb einer Anwendungslandschaft oder einer einzelnen Fachanwendung muss die Navigation einheitlich strukturiert sein.
+Festlegungen auf höherer Ebene (z.B. der Anwendungslandschaft) gelten für alle Fachanwendungen.
+
+Die IsyFact sieht grundsätzlich zwei Strukturierungen vor.
+
+[STYLEGUIDE]
+====
+Bei der fachlichen Spezifikation einer neuen Fachanwendung oder Anwendungslandschaft muss eine der folgenden Strukturierungen für die Navigation ausgewählt und fest vorgegeben werden:
+
+* Anwendungsübergreifende Navigation
+* Anwendungsspezifische Navigation
+
+Insbesondere müssen sich in einer Anwendungslandschaft alle Fachanwendungen an die getroffene Entscheidung halten.
+Die Entscheidung muss an geeigneter Stelle dokumentiert werden.
+====
+
+==== Anwendungsübergreifende Navigation
+
+Diese Form der Navigation bietet über die gesamte Anwendungslandschaft eine einheitliche Navigation an.
+
+Hauptnavigation::
+Die Hauptnavigation bildet die Anwendungsgruppen ab.
+Diese sind meist fachlich motiviert und entsprechen oft den Anwendungsdomänen.
+
+Subnavigation::
+Die Subnavigation bildet einzelne Fachanwendungen innerhalb einer Anwendungsgruppe ab.
+
+Linksnavigation::
+Die Linksnavigation enthält eine Liste aller Anwendungsfälle der gewählten Fachanwendung.
+
+==== Anwendungsspezifische Navigation
+
+Diese Form der Navigation bietet die Möglichkeit, für jede Anwendung eine eigene Navigation zu definieren.
+Dies ist besonders bei sehr komplexen Fachanwendungen, die eine Vielzahl von Anwendungsfällen enthalten, sinnvoll.
+
+Hauptnavigation::
+Die Hauptnavigation bildet eine logische Gruppierung der Anwendungskomponenten ab.
+
+Subnavigation::
+Die Subnavigation bildet einzelne Anwendungskomponenten der Fachanwendung ab.
+
+Linksnavigation::
+Die Linksnavigation enthält eine Liste aller Anwendungsfälle der gewählten Anwendungskomponente.
 
 [[hauptnavigation]]
 ==== Hauptnavigation
