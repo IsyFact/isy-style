@@ -7,10 +7,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-json-generator');
 
     var portalColor = '#004179';
+    var pkgJson = require('./package.json');
     
     grunt.initConfig({
 
@@ -45,7 +45,7 @@ module.exports = function (grunt) {
                 files: {
                     "src/main/resources/META-INF/resources/css/print.css": "src/less/print-jsf.less",
                     "src/main/resources/META-INF/resources/css/styles.css": "src/less/styles-jsf.less",
-                    "src/main/resources/META-INF/resources/css/color.css" : "target/color.css",     
+                    "src/main/resources/META-INF/resources/css/color.css" : "target/color.css"
                 }
             }
         },
@@ -56,7 +56,7 @@ module.exports = function (grunt) {
                     { expand: true, cwd: 'src/assets/', src: ['img/**', 'lib/**', 'plugins/**'], dest: 'src/main/resources/META-INF/resources/' }
                 ],
                 options: {
-                    basePath: 'src/assets',
+                    basePath: 'src/assets'
                 }
             },
             fontawesome: {
@@ -72,32 +72,18 @@ module.exports = function (grunt) {
             target: {
                 dest: "src/main/resources/META-INF/resources/package.json",
                 options: {
-                    "name": "@isyfact/isy-style",
+                    "name": pkgJson.name,
                     "version": grunt.option('zielVersion'),
-                    "description": "ISY-Fact styles and templates",
-                    "author": "ISY-Fact",
-                    "license": "UNLICENSED",
-                    "dependencies": {}
+                    "description": pkgJson.description,
+                    "author": pkgJson.author,
+                    "license": pkgJson.license,
+                    "private": pkgJson.private,
+                    "dependencies": pkgJson.dependencies
                 }
             }
-        },
-
-
-        compress: {
-            tarGz: {
-                options: {
-                    archive: 'target/isy-style-5.0.0.tgz'
-                },
-                files: [{
-                    cwd: "src/main/resources/META-INF/resources/",
-                    expand: true,
-                    src: './**',
-                    dest: "package/",
-                }]
-            }
-        },
+        }
     });
 
-    grunt.registerTask('build', ['clean', 'less', 'copy', 'json_generator', 'compress']);
+    grunt.registerTask('build', ['clean', 'less', 'copy', 'json_generator']);
     grunt.registerTask('default', ['build']);
 };

@@ -1,5 +1,6 @@
 {
-  "name": "isy-style-js",
+  "name": "@isyfact/isy-style",
+  "description": "IsyFact Styles",
   "author": "Bundesverwaltungsamt",
   "license": "Apache-2.0",
   "private": true,
@@ -11,7 +12,6 @@
     "grunt": "^1.0.2",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.1.0",
-    "grunt-contrib-compress": "^1.4.3",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-less": "^1.4.1",
     "grunt-json-generator": "0.1.0",
