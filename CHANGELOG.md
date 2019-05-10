@@ -1,3 +1,17 @@
+# v5.0.0 (Meilenstein 1)
+- `IFS-308`: Fontawesome Version auf 5.7.0 angehoben
+ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben sich leicht verändert. Hardkodierte Verweise auf die Schrift `FontAwesome` müssen auf
+`Font Awesome 5 Free` mit dem korrekten Schriftgewicht (Regular, Bold, ...)  geändert werden. Einige Codepoints haben sich geändert.
+- Build erzeugt zusätzliches NPM-Package in `/target` für Javascript-Client-Entwicklung
+
+# v4.2.0
+- `IFE-48`: Update auf jQuery 3.3.1 und Bootstrap 3.3.7
+- `IFE-16`: Unterstützung für IE 8 eingestellt (Definition von `row-df` und gridpatch CSS Library entfernt).
+- `IFE-65`: Upgrade auf Bootstrap 3.4.1 (vulnerability CVE-2019-8331)
+- `IFE-59`: Verwendung der Portalfarbe für Navigationsmenü und Breadcrumb, Icon-Buttons (Hover) und selektierte Kopfzeilen von Tabellen
+- `IFE-61`: Tabellen-Sortierpfeildarstellung auf "übereinander" geändert
+- `IFE-62`: Obsoletes Parent-POM durch Open Source Parent POM ersetzt
+
 # v4.1.0
 - `IFS-163`: Unterstützung für IE 8 eingestellt
 - `IFS-165`: UI-Block wird bei manchen Fehlermeldungen nicht deaktiviert 

@@ -5,13 +5,13 @@
 
     <artifactId>isy-style</artifactId>
     <packaging>jar</packaging>
-    <version>4.1.0</version>
+    <version>5.0.0-M1</version>
     <name>IsyFact Styles</name>
 
     <parent>
         <groupId>de.bund.bva.isyfact</groupId>
-        <artifactId>isyfact-masterpom-lib</artifactId>
-        <version>1.6.0</version>
+        <artifactId>isyfact-standards</artifactId>
+        <version>1.7.0-RC1</version>
     </parent>
 
     <build>
@@ -21,14 +21,13 @@
                 <artifactId>frontend-maven-plugin</artifactId>
                 <version>1.6</version>
                 <executions>
-
                     <execution>
                         <id>install node and npm</id>
                         <goals>
                             <goal>install-node-and-npm</goal>
                         </goals>
                         <configuration>
-                            <nodeVersion>v8.9.4</nodeVersion>
+                            <nodeVersion>v10.15.1</nodeVersion>
                         </configuration>
                     </execution>
 
@@ -48,7 +47,27 @@
                         <goals>
                             <goal>grunt</goal>
                         </goals>
-
+                        <configuration>
+                            <arguments>build --zielVersion=${project.version}</arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.1.1</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/assembly/npm-package.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
