@@ -5,6 +5,7 @@
 - `IFE-59`: Verwendung der Portalfarbe für Navigationsmenü und Breadcrumb, Icon-Buttons (Hover) und selektierte Kopfzeilen von Tabellen
 - `IFE-61`: Tabellen-Sortierpfeildarstellung auf "übereinander" geändert
 - `IFE-62`: Obsoletes Parent-POM durch Open Source Parent POM ersetzt
+- `IFS-311`: Einbindung isy-dokumentvorlagen; Build Styleguide über Maven
 
 # v4.1.0
 - `IFS-163`: Unterstützung für IE 8 eingestellt
