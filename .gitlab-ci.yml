@@ -29,7 +29,7 @@ cache:
    - ZIII4
   script:
    - cat /proc/version
-   - gem install asciidoctor-pdf --pre
+   - gem install asciidoctor-pdf --pre -v 1.5.0.alpha.16
    - asciidoctor-pdf -v
    - cd src/main/asciidoc/styleguide
    - asciidoctor -b html5 -a revnumber=$(ruby -r rexml/document -e 'puts REXML::Document.new(File.new(ARGV.shift)).elements["/project/parent/version"].text' ../../../../pom.xml) -a revdate=$(date +"%d.%m.%Y") -a icons=font -a sectanchors -a idprefix -a docinfo1 -a data-uri -a stylesdir=../theme -a stylesheet=isyfact.css master.adoc -o styleguide.html
@@ -43,8 +43,6 @@ build:docs:
     - "src/main/asciidoc/styleguide/*.pdf"
     - "src/main/asciidoc/styleguide/*.html"
    expire_in: 1 week
-  only:
-   - branches
   except:
    - schedules
 
