@@ -24,7 +24,7 @@ cache:
   <<: *vorlage
   stage: buildstage
   script:
-   - mvn -Pbuild-style-guide -Dskip.npm -Dskip.grunt $MAVEN_CLI_OPTS generate-resources
+   - mvn -Pbuild-style-guide -Dskip.npm -Dskip.grunt -Dskip.installnodenpm $MAVEN_CLI_OPTS generate-resources
 
 
 build:docs:
