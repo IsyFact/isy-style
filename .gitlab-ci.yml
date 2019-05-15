@@ -31,7 +31,7 @@ build:docs:
   <<: *docvorlage
   artifacts:
    paths:
-    - "/target/styleguide/"
+    - "target/styleguide/"
    expire_in: 1 week
   only:
    - branches
