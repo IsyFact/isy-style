@@ -33,8 +33,6 @@ build:docs:
    paths:
     - "target/styleguide/"
    expire_in: 1 week
-  only:
-   - branches
   except:
    - schedules
 

@@ -26,7 +26,7 @@ toc::[]
 //include::thisdoc.adoc[leveloffset=2]
 
 // Inhalt
-include::inhalt.adoc[leveloffset=0]
+include::inhalt.adoc[tags=inhalt]
 
 :sectnums!:
 
