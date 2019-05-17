@@ -16,32 +16,22 @@ cache:
 
 .template: &vorlage
   tags:
-   - ZIII4
+   - zssi
   before_script:
    - mvn -v
-   - echo "$SETTINGSSECURITY" > ~/.m2/settings-security.xml
 
-
-.doctemplate : &docvorlage
-  image: ruby:2.5
+.templatedoc: &docvorlage
+  <<: *vorlage
   stage: buildstage
-  tags:
-   - ZIII4
   script:
-   - cat /proc/version
-   - gem install asciidoctor-pdf --pre
-   - asciidoctor-pdf -v
-   - cd src/main/asciidoc/styleguide
-   - asciidoctor -b html5 -a revnumber=$(ruby -r rexml/document -e 'puts REXML::Document.new(File.new(ARGV.shift)).elements["/project/parent/version"].text' ../../../../pom.xml) -a revdate=$(date +"%d.%m.%Y") -a icons=font -a sectanchors -a idprefix -a docinfo1 -a data-uri -a stylesdir=../theme -a stylesheet=isyfact.css master.adoc -o styleguide.html
-   - asciidoctor-pdf -a revnumber=$(ruby -r rexml/document -e 'puts REXML::Document.new(File.new(ARGV.shift)).elements["/project/parent/version"].text' ../../../../pom.xml) -a revdate=$(date +"%d.%m.%Y") -a icons=font -a sectanchors -a idprefix -a docinfo1 -a pdf-stylesdir=../theme -a pdf-style=isyfact -a pdf-fontsdir=../theme/fonts/ master.adoc -o styleguide.pdf
+   - mvn -Pbuild-style-guide -Dskip.npm -Dskip.grunt -Dskip.installnodenpm $MAVEN_CLI_OPTS generate-resources
 
 
 build:docs:
   <<: *docvorlage
   artifacts:
    paths:
-    - "src/main/asciidoc/styleguide/*.pdf"
-    - "src/main/asciidoc/styleguide/*.html"
+    - "target/styleguide/"
    expire_in: 1 week
   only:
    - branches
@@ -52,8 +42,7 @@ build:docs_schedule:
   <<: *docvorlage
   artifacts:
    paths:
-    - "src/main/asciidoc/styleguide/*.pdf"
-    - "src/main/asciidoc/styleguide/*.html"
+    - "target/styleguide"
    expire_in: 2 days
   only:
    - schedules
@@ -105,12 +94,38 @@ package:
   except:
    - schedules
 
-deploy:
+deploy_release:
   <<: *vorlage
   stage: deploystage
   dependencies:
    - build
   script:
-   - mvn $MAVEN_CLI_OPTS -Dmaven.test.skip=true -Dmaven.install.skip=true deploy
+   - mvn -Prelease -Dmaven.test.skip=true -Dmaven.install.skip=true $MAVEN_CLI_OPTS deploy
+  only:
+   - tags
   except:
    - schedules
+
+deploy_staging:
+  <<: *vorlage
+  stage: deploystage
+  dependencies:
+   - build
+  script:
+   - SNAPSHOT=true
+   - '[[ $(mvn --non-recursive -Dexpression=project.version $MAVEN_CLI_OPTS help:evaluate | grep -v "\[.*") == *-SNAPSHOT ]] || SNAPSHOT=false'
+   - '[[ $SNAPSHOT == true ]] && mvn -Dmaven.test.skip=true -Dmaven.install.skip=true $MAVEN_CLI_OPTS deploy || echo "Keine SNAPSHOT-Version - deploy wird nur bei Tags durchgefuehrt"'
+  except:
+   - tags
+   - schedules
+deploy_staging:
+   <<: *vorlage
+   stage: deploystage
+   dependencies:
+    - build
+   script:
+    - SNAPSHOT=true
+    - '[[ $(mvn --non-recursive -Dexpression=project.version $MAVEN_CLI_OPTS help:evaluate | grep -v "\[.*") == *-SNAPSHOT ]] || SNAPSHOT=false'
+    - '[[ $SNAPSHOT == true ]] && mvn -Dmaven.test.skip=true -Dmaven.install.skip=true $MAVEN_CLI_OPTS deploy || echo "Keine SNAPSHOT-Version - deploy wird nur bei Tags durchgefuehrt"'
+   except:
+    - tags
