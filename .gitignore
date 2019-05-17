@@ -27,3 +27,10 @@ dist/
 package-lock.json
 
 src/main/resources
+
+# Ignore generated Asciidoc files
+src/main/asciidoc/**/listoffigures.adoc
+src/main/asciidoc/**/listoflistings.adoc
+src/main/asciidoc/**/listoftables.adoc
+src/main/asciidoc/**/glossary.adoc
+src/main/asciidoc/**/bibliography.adoc
