@@ -1,10 +1,9 @@
-[[bvaportal-extrakt-aus-styleguide]]
-= BVA-Portal Extrakt aus dem BVA-Styleguide
-== Dummy Hierachiestufe
+= Styleguide (BVA-Portal): Inhalt
+include::{isy-dokumentvorlagen}/docs/common/isyfact-attributes.adoc[]
 
+// tag::inhalt[]
 [[farben-ueberschrift]]
-=== Farben
-
+== Farben
 
 *Richtlinien der Bundesregierung*
 
@@ -15,7 +14,7 @@ Bei der Auswahl neuer Farben kann auf diese zurückgegriffen werden.
 http://styleguide.bundesregierung.de/Webs/SG/DE/OnlineMedien/Webanwendung/Basiselemente/Farben/farben_node.html?__site=SG[xxx]
 
 [[allgemeine-farbwerte-interface]]
-==== Allgemeine Farbwerte zur Interface Gestaltung
+=== Allgemeine Farbwerte zur Interface Gestaltung
 
 Diese Farben werden für die generelle Gestaltung der Applikation verwendet.
 
@@ -90,7 +89,7 @@ Diese Farben werden für die generelle Gestaltung der Applikation verwendet.
 |===
 
 [[portalfarben]]
-==== Portalfarbe (BVA Farbwerte)
+=== Portalfarbe (BVA Farbwerte)
 
 |===
 |Farbe |RGB hexadezimal |RGB dezimal |Schriftfarbe
@@ -135,7 +134,7 @@ Wird das Applikationsportal für andere Behörden eingesetzt, kann dieser Farbwe
 *  An anderen Stellen oder für andere Zwecke sollte die Farbe des Applikationsportals nicht benutzt werden.
 
 [[applikationsfarben]]
-==== Applikationsfarben
+=== Applikationsfarben
 
 Pro Applikationsgruppe kann eine Farbe definiert werden, welche an verschiedenen Stellen der Applikationsportals eingesetzt wird und so einen Wiedererkennungswert schafft.
 Kann eine Applikation keiner Gruppe zugeordnet werden, so kann sie ihre eigene Farbe erhalten.
@@ -210,3 +209,4 @@ entnommen.
 |Schwarz
 
 |===
+// end::inhalt[]

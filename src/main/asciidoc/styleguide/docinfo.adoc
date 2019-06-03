@@ -9,7 +9,7 @@
 [cols="5,2,3",options="header"]
 |====
 |Name |Art |Version
-|isy-style |Bibliothek |4.1.x
+|isy-style |Bibliothek |{revnumber}
 |====
 
 // Page break
