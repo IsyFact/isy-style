@@ -3,6 +3,9 @@ include::{isy-dokumentvorlagen}/docs/common/isyfact-attributes.adoc[]
 //
 :doctitle: BVA Styleguide - BVA Portal Extrakt
 :title: {doctitle}
+// Dokument unter Closed Source Lizenz
+:license-oss!:
+:factory: IsyFact-Erweiterungen
 
 // Zwangsplatz des TOC
 
@@ -26,7 +29,7 @@ toc::[]
 //include::thisdoc.adoc[leveloffset=2]
 
 // Inhalt
-include::inhalt.adoc[leveloffset=0]
+include::inhalt.adoc[tags=inhalt]
 
 :sectnums!:
 
