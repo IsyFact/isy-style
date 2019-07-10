@@ -12,13 +12,15 @@ stages:
 cache:
   paths:
    - .m2/repository
-  key: "ifecache"
+  key: "ifscache"
 
 .template: &vorlage
   tags:
    - zssi
+  retry: 1
   before_script:
    - mvn -v
+   - echo -e "${NPMRC}" > .npmrc
 
 .templatedoc: &docvorlage
   <<: *vorlage
@@ -54,7 +56,7 @@ build:
    expire_in : 6 h
   script:
    - rm -rf .m2/repository/de
-   - mvn -U $MAVEN_CLI_OPTS compile
+   - mvn -U $MAVEN_CLI_OPTS -Dinternalnodenpm=true compile
   except:
    - schedules
 
@@ -72,7 +74,7 @@ test:
   dependencies:
    - build
   script:
-   - mvn $MAVEN_CLI_OPTS org.jacoco:jacoco-maven-plugin:prepare-agent -Dmaven.surefire.argline='@{argLine} -Xmx1g -Dfile.encoding=${project.build.sourceEncoding}' test org.jacoco:jacoco-maven-plugin:report
+   - mvn $MAVEN_CLI_OPTS org.jacoco:jacoco-maven-plugin:prepare-agent -Dmaven.surefire.argline='@{argLine} -Dinternalnodenpm=true -Xmx1g -Dfile.encoding=${project.build.sourceEncoding}' test org.jacoco:jacoco-maven-plugin:report
   after_script:
    - mkdir -p src/site
    - echo "<project name=\"IsyFact Erweiterungen\"></project>" > src/site/site.xml
@@ -88,7 +90,7 @@ package:
   dependencies:
    - build
   script:
-   - mvn $MAVEN_CLI_OPTS -Dmaven.test.skip=true package
+   - mvn -Dmaven.test.skip=true -Dinternalnodenpm=true $MAVEN_CLI_OPTS package
   except:
    - schedules
 
@@ -112,18 +114,8 @@ deploy_staging:
   script:
    - SNAPSHOT=true
    - '[[ $(mvn --non-recursive -Dexpression=project.version $MAVEN_CLI_OPTS help:evaluate | grep -v "\[.*") == *-SNAPSHOT ]] || SNAPSHOT=false'
-   - '[[ $SNAPSHOT == true ]] && mvn -Dmaven.test.skip=true -Dmaven.install.skip=true $MAVEN_CLI_OPTS deploy || echo "Keine SNAPSHOT-Version - deploy wird nur bei Tags durchgefuehrt"'
+   - '[[ $SNAPSHOT == true ]] && mvn -Dmaven.test.skip=true -Dmaven.install.skip=true -Dinternalnodenpm=true $MAVEN_CLI_OPTS deploy || echo "Keine SNAPSHOT-Version - deploy wird nur bei Tags durchgefuehrt"'
   except:
    - tags
    - schedules
-deploy_staging:
-   <<: *vorlage
-   stage: deploystage
-   dependencies:
-    - build
-   script:
-    - SNAPSHOT=true
-    - '[[ $(mvn --non-recursive -Dexpression=project.version $MAVEN_CLI_OPTS help:evaluate | grep -v "\[.*") == *-SNAPSHOT ]] || SNAPSHOT=false'
-    - '[[ $SNAPSHOT == true ]] && mvn -Dmaven.test.skip=true -Dmaven.install.skip=true $MAVEN_CLI_OPTS deploy || echo "Keine SNAPSHOT-Version - deploy wird nur bei Tags durchgefuehrt"'
-   except:
-    - tags
+
