@@ -1,7 +1,7 @@
 *Dokument-Informationen*
 
 |====
-|Dokumenten-ID:| BVA Styleguide
+|Dokumenten-ID:| Styleguide
 |====
 
 *Java Bibliothek / IT-System*

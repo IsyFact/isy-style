@@ -33,7 +33,7 @@ Mit dem Attribut zufriedenstellend wird schließlich die (positive) Einstellung 
 
 *_Prospektive Benutzergruppen und generelle Aufgabenbeschreibung_*
 
-Als Benutzerzielgruppe werden die bisherigen Anwender (Sachbearbeiter, Polizisten, interne Anwender des Bundesverwaltungsamtes) der Bundesverwaltungsamt-Produkte ins Auge gefasst.
+Als Benutzerzielgruppe werden die bisherigen Anwender der bestehenden Informations-Anwendung ins Auge gefasst.
 Bei dieser Gruppe werden elementare Kenntnisse im Bereich von Standard-Office-Applikationen vorausgesetzt.
 Bei der konkreten Ausgestaltung (Spezifikation) der einzelnen Anwendungen sind die Eigenschaften der jeweiligen Benutzergruppen in Bezug auf Vorkenntnisse, Fähigkeiten, IT-Affinität usw.
 zu berücksichtigen.
@@ -42,7 +42,7 @@ zu berücksichtigen.
 
 Der Style Guide richtet sich in erster Linie an Produktverantwortliche, Software-Entwickler und User Interface Designer.
 Einen Überblick über die gestalterischen Grundlagen des Systems liefert der Style Guide aber auch für Marketing-Experten und die Verantwortlichen des Corporate Design.
-Alle Teile des Style Guides sind erweiterbar und sollten über die Zeit hinweg fo rtgeschrieben und ergänzt werden.
+Alle Teile des Style Guides sind erweiterbar und sollten über die Zeit hinweg fortgeschrieben und ergänzt werden.
 
 *_Zielsetzung des Styleguides_*
 
@@ -50,7 +50,7 @@ Konsistenz, Einheitlichkeit und visuelle Attraktivität sind entscheidende Quali
 Style Guides gewährleisten ein einheitliches Look & Feel von Applikationen und schaffen so die Voraussetzungen dafür, dass Benutzern eine schnelle Einarbeitung in Logik, Ablauf und Funktionsweise einer Anwendung und eine befriedigende Arbeit ermöglicht wird.
 Neben der Vereinheitlichung und der damit verbundenen Erhöhung der Benutzerfreundlichkeit liegt ein wesentlicher wirtschaftlicher Vorteil eines Style Guide in der Steigerung der Effizienz, da er Lösungen für wiederkehrende Aufgabenstellungen innerhalb einer Applikation bzw.
 eines Applikationspakets bietet.
-Der vorliegende Style Guide definiert den Rahmen für die interaktive und visuelle Gestaltung eines universell einsetzbaren Bedienkonzeptes für das Bundesverwaltungsamt.
+Der vorliegende Style Guide definiert den Rahmen für die interaktive und visuelle Gestaltung eines universell einsetzbaren Bedienkonzeptes.
 Es gibt Richtlinien und Regeln für die detaillierte Ausgestaltung einzelner Screens.
 Um eine breite Generalisierbarkeit der in diesem Dokument vorgestellten Entwurfsgrundlagen zu ermöglichen, jedoch gleichzeitig eine konkrete Hilfestellung für die Gestaltung der Schnittstelle zu bieten, werden vorgestellte Designrichtlinien durch Musterlösungen in Form von Beispiel-Screens ergänzt.
 
@@ -176,10 +176,8 @@ Weiterhin ist bei der Erstellung von Texten darauf zu achten, die Benutzer nicht
 
 *Angemessener Einsatz von Farben, Fonts und Icons*
 
-Große Teile des Look & Feel eines User-Interface werden mit dem Einsatz von , , Grafiken und Icons definiert.
-Daher ist es äußerstFarben Fonts
-
-bedeutsam, diese Elemente angemessen und konsistent zu verwenden.
+Große Teile des Look & Feel eines User-Interface werden mit dem Einsatz von Farben, Fonts, Grafiken und Icons definiert.
+Daher ist es äußerst bedeutsam, diese Elemente angemessen und konsistent zu verwenden.
 So sollen nicht zu viele unterschiedliche Schriftarten innerhalb einer Applikation verwendet werden.
 In der Regel führen bereits mehr als zwei verschiedene Schriftarten zu einem unruhigen Erscheinungsbild.
 Auch der Einsatz von Farben soll systematisch und behutsam erfolgen.
@@ -233,7 +231,7 @@ navigierbar sein und kompatibel mit Tastatur oder Maus.
 
 In Deutschland gilt das Behindertengleichstellungsgesetz (BGG), welches eine Benachteiligung von behinderten Menschen verhindern soll.
 Als Teil dieses Gesetzes wurde die sogenannte Barrierefreie-Informationstechnik-Verordnung (BITV) verfasst.
-Diese gilt verbindlich für Bundesbehörden im Hinblick auf deren Internetauftritte und öffentlich zugängliche Terminals.
+Für bestimmte Anwendungsgruppen gilt dies verbindlich, z.B. für Bundesbehörden im Hinblick auf deren Internetauftritte und öffentlich zugängliche Terminals.
 Die BITV wendet als Grundlage die Prinzipien und Richtlinien der WCAG an.
 
 [[browser-unterstuetzung]]
@@ -246,7 +244,7 @@ Der Styleguide gibt nur ein minimales Set von zu unterstützenden Browserversion
 Es müssen mindestens folgende Browser und Konstellationen in SXGA- und UXGA-Auflösung (s. Layout & Resizing) getestet werden:
 
 * Internet Explorer 11
-* Microsoft Edge (für Windows 10 / Bundesclient)
+* Microsoft Edge (für Windows 10)
 * Firefox ESR, jeweils aktuelle Version (Stand Oktober 2018 ESR 60 - s. https://www.mozilla.org/en-US/firefox/organizations/faq/[Firefox-ESR-Roadmap])
 * Chrome, jeweils aktuelle stabile Version
 
@@ -274,16 +272,14 @@ Das genaue Verhalten der einzelnen Bereiche und Elemente wird in den entsprechen
 * Ab einer gewissen Fenstergröße werden die Mauswege zu lang und die Benutzung der Anwendung wird dadurch erschwert.
 Bei Auflösungen größer als *1600x1200 px* (UXGA) sollten deshalb die Inhalte nicht mehr größer skaliert werden.
 In solchen Fällen wird die Applikation links auf dem Bildschirm ausgerichtet und rechts entsteht Whitespace.
-* Da es sich bei den Inhalten der Anwendungen des Bundesverwaltungsamtes hauptsächlich um Formulare handelt, soll sich die Position der Inhalte nicht ändern.
+* Da es sich bei den Inhalten der Informations-Anwendungen meist um Formulare handelt, soll sich die Position der Inhalte nicht ändern.
 Die Spaltenanzahl bleibt bei Größenveränderung gleich und wird nicht dynamisch z.B. von 3 spaltig auf 4 spaltig angepasst.
 * Bei Größenveränderungen von Inhalten sollte immer darauf geachtet werden, dass der Lesefluss des Benutzers nicht negativ beeinflusst wird.
 
 *Screen Layout*
 
 Ein einfaches und klares Screen-Layout sowie die korrekte Gestaltung von Formularen sind von größter Bedeutung für ein einfaches, leicht zu bedienendes User Interface.
-Komplexe Layouts können die Bedieneffizienz nachhaltig negativ beeinflussen, und somit die Benutzerzufriedenheit
-
-sowie die Produktivität senken.
+Komplexe Layouts können die Bedieneffizienz nachhaltig negativ beeinflussen, und somit die Benutzerzufriedenheit sowie die Produktivität senken.
 Die nachfolgenden Richtlinien dienen der Erstellung effizienter, leichtgewichtiger Layouts.
 
 *Richtlinien zur Anwendung*
@@ -3698,7 +3694,7 @@ image::image260.png[align="center", width="685",height="250"]
 === Validierung
 
 Aufgetretene Fehler sollen den Benutzer nach Möglichkeit nicht in seinem Workflow stören.
-Amodales Feedback (siehe Kapitel https://wiki.accso.de/display/BVA/Allgemeine+Prinzipien#AllgemeinePrinzipien-VerwendungvonvisuellreichhaltigemundamodalemFeedback[Verwendung von visuell reichhaltigem und amodalem Feedback]) gibt ihm die Möglichkeit ein Formular trotz aufgetretener Fehleingaben in beliebiger Reihenfolge und ohne Unterbrechung weiter zu bearbeiten.
+Amodales Feedback gibt ihm die Möglichkeit ein Formular trotz aufgetretener Fehleingaben in beliebiger Reihenfolge und ohne Unterbrechung weiter zu bearbeiten.
 
 :desc-image-beispielvalidierungmeldung: Beispiel Validierung und Meldung in einem Formular
 [id="image-beispielvalidierungmeldung",reftext="{figure-caption} {counter:figures}"]
@@ -4564,11 +4560,11 @@ Diese Methode generiert zwar ein wenig Redundanz und Overhead, die Bootstrap Dat
 
 Bei der gesamten Entwicklung wurde darauf geachtet, dass die ursprünglichen Funktionalitäten von Bootstrap erhalten bleiben.
 So können Entwickler bei aufkommenden Fragen die Bootstrap Dokumentation (http://getbootstrap.com) zu Rate ziehen.
-Sollte diese Dokumentation für eine neuere Bootstrap Versionen angepasst werden und somit nicht mehr kompatibel mit dem BVA-Paket sein, werden die älteren Bootstrap-Dokumentationen in einem Archiv von einem Drittanbieter(http://bootstrapdocs.com) zur Verfügung gestellt.
+Sollte diese Dokumentation für eine neuere Bootstrap Versionen angepasst werden und somit nicht mehr mit der in der Anwendung verwendeten Version kompatibel sein, werden die älteren Bootstrap-Dokumentationen in einem Archiv von einem Drittanbieter(http://bootstrapdocs.com) zur Verfügung gestellt.
 
 ===== Erweiterung der Bootstrap-Basis
 
-Die Bootstrap-Quelldateien und die von Bootstrap bereitgestellten JavaScript-Dateien können unabhängig von den BVA-Styles und Templates aktualisiert werden.
+Die Bootstrap-Quelldateien und die von Bootstrap bereitgestellten JavaScript-Dateien können unabhängig von den angewandten Styles und Templates aktualisiert werden.
 Sollte eine neue Bootstrap Version erscheinen und es notwendig sein, neue Features und/oder Bug-Fixes zu implementieren, sollte folgendermaßen vorgegangen werden:
 
 ====== LESS
@@ -4626,7 +4622,7 @@ Diese sind für die Frontend-Entwicklung sehr komfortabel.
 Ergosign stellt die Datei package.json zur Verfügung.
 Diese beinhaltet alle notwendigen Bibliotheken-Abhängikeiten um Grunt Tasks zu installieren und das Projekt neu zu erstellen.
 
-Um GruntJS zur Kompilierung von BVA Stylesheets und Markup zu nutzen, muss als erstes NodeJS installiert werden.
+Um GruntJS zur Kompilierung von Stylesheets und Markup zu nutzen, muss als erstes NodeJS installiert werden.
 Des Weiteren müssen Grunt und die benötigten Tasks (Es werden die folgenden Grunt-Tasks benutzt: grunt-contrib-less, grunt-contrib-watch, grunt-contribconcat, grunt-contrib-copy, grunt-contrib-clean, grunt-contrib-jshin) via npm installiert werden.
 Dies kann über die Funktion „npm install“ direkt in das Hauptverzeichnis erfolgen.
 Mit dem Befehl „grunt“ in einer Konsolenanwendung wird das Projekt neu erstellt.
@@ -4641,7 +4637,6 @@ Die Benennung von spezifischen Komponenten und Layout-Elementen im Code wurde de
 
 Dieses Projekt benutzt das Bootstrap Raster-System, um das Layout und die Bedienelemente der Applikation zu strukturieren und zu positionieren.
 
-Das Seiten-Layout wurde so optimiert, dass die Anforderungen aus dem BVA Interface Style Guide erfüllt werden.
 Da keine Anpassungsfähigkeit (Responsivness) des Designs unterhalb der gängigen Desktop-Auflösung benötigt wird, wurden die „Mobile, „Small“, und „Medium“-Raster (in Bootstrap als „mobile grid“, „small grid“ und „medium grid“ gekennzeichnet) deaktiviert.
 
 Da das Bootstrap3-Rastersystem im Internet Explorer Version 8 nur mit einem zusätzlichen Javascript (respond.js) funktioniert (http://getbootstrap.com/getting-started/#support[http://getbootstrap]http://getbootstrap.com/getting-started/#support[.com/getting-started/#support]) , haben wir zusätzliche Styledeklaration eingebaut um auf einer IE8 Umgebung ohne Javascriptfähigkeiten das Raster nutzen zu können.
