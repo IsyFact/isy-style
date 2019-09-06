@@ -1,4 +1,7 @@
 # v4.2.0
+- `IFS-366`: Update von maven-asciidoctor-plugin
+
+# v4.2.0
 - `IFE-48`: Update auf jQuery 3.3.1 und Bootstrap 3.3.7
 - `IFE-16`: Unterstützung für IE 8 eingestellt (Definition von `row-df` und gridpatch CSS Library entfernt).
 - `IFE-65`: Upgrade auf Bootstrap 3.4.1 (vulnerability CVE-2019-8331)
