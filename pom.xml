@@ -118,7 +118,6 @@
         </profile>
         <profile>
             <id>build-style-guide</id>
-            
             <properties>
                 <maven.build.timestamp.format>dd.MM.yyyy</maven.build.timestamp.format>
             </properties>
@@ -312,41 +311,8 @@
                             </execution>
 
 
-                            <execution>
-                                <id>styleguide-04-bvaportal-part-html</id>
-                                <phase>generate-resources</phase>
-                                <goals>
-                                    <goal>process-asciidoc</goal>
-                                </goals>
-                                <configuration>
-                                    <backend>html</backend>
-                                    <sourceDirectory>
-                                        src/main/asciidoc/styleguide-04-bvaportal-part
-                                    </sourceDirectory>
-                                    <sourceDocumentName>master.adoc</sourceDocumentName>
-                                    <outputFile>
-                                        ${project.build.directory}/styleguide/styleguide-04-bvaportal-part.html
-                                    </outputFile>
-                                </configuration>
-                            </execution>
 
-                            <execution>
-                                <id>styleguide-04-bvaportal-part-pdf</id>
-                                <phase>generate-resources</phase>
-                                <goals>
-                                    <goal>process-asciidoc</goal>
-                                </goals>
-                                <configuration>
-                                    <backend>pdf</backend>
-                                    <sourceDirectory>
-                                        src/main/asciidoc/styleguide-04-bvaportal-part
-                                    </sourceDirectory>
-                                    <sourceDocumentName>master.adoc</sourceDocumentName>
-                                    <outputFile>
-                                        ${project.build.directory}/styleguide/styleguide-04-bvaportal-part.pdf
-                                    </outputFile>
-                                </configuration>
-                            </execution>
+
                         </executions>
                     </plugin>
                 </plugins>
