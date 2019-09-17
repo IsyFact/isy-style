@@ -1,5 +1,5 @@
 # v4.3.0
-- `IFE-48`: Größenvorgaben für Buttons angepasst
+- `IFE-412`: Größenvorgaben für Buttons angepasst
 
 # v4.2.0
 - `IFE-48`: Update auf jQuery 3.3.1 und Bootstrap 3.3.7
