@@ -810,8 +810,10 @@ image::image73.png[align="center", width="627",height="249"]
 * Ist die Überlagerung von Dialogen nicht zu vermeiden, müssen die Dialoge immer in der Reihenfolge geschlossen werden, in der sie geöffnet wurden.
 * Größe von Dialogen
 ** Dialoge passen ihre Größe dem gezeigten Inhalt an.
+** Maximalgröße soll sich an Browser-Fenster und Anwendung im Hintergrund orientieren.
+Ein schmales Padding zur Abhebung von der Seite im Hintergrund reicht aus.
 ** Die Dialogbuttons sollten einen festen Ort haben, der Inhalt kann bei Bedarf scrollbar werden.
-* Bei Dialogen in denen Formulardaten bearbeitet werden, sollte das Layout der Elemente im Dialog dem Layout im Read-Only Modus entsprechen (i.d.R. dreispaltig).
+* Bei Dialogen, in denen Formulardaten bearbeitet werden, sollte das Layout der Elemente im Dialog dem Layout im Read-Only Modus entsprechen (i.d.R. dreispaltig).
 * *Titelzeile (A)*
 ** Der Titel des Dialogs sollte aussagekräftig sein und dem Benutzer genau zeigen, welche Interaktionen er für welche Objekte in diesem Dialog durchführt.
 Der Dialogtitel kann aus einem Haupttitel und einem optionalen Subtitel bestehen.
