@@ -1554,6 +1554,12 @@ image::image133.png[align="center", scaledwidth="100%",width="566",height="50"]
 ** Das Label sollte kurz und selbsterklärend sein.
 ** Ruft ein Button einen Dialog auf, sollte der resultierende Dialog als Fenster-Titel die Beschriftung des Buttons wiederholen.
 ** Das Label sollte die auszuführende Aktion widerspiegeln __(Öffnen, Löschen, Speichern, Weiter__).
+
+* Größe
+
+** Die Breite eines Buttons soll sich generell am enthaltenen Label orientieren.
+** Es ist zulässig und gewollt, dass nebeneinanderstehende Buttons unterschiedliche Breite haben, wenn die Labels unterschiedlich groß sind.
+** Die Mindestbreite für Buttons beträgt jedoch 100 Pixel.
 * Ein Button sollte nach Möglichkeit so platziert werden, dass eventuelle Beziehungen zu anderen Elementen deutlich werden.
 * Falls nach einem Button-Klick die resultierende Aktion nur verzögert erkennbar ist, sollte dies durch eine System-Rückmeldung kenntlich gemacht werden (z. B. durch eine Fortschrittsanzeige).
 

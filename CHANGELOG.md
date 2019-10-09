@@ -1,4 +1,5 @@
 # v4.3.0
+- `IFE-412`: Größenvorgaben für Buttons angepasst
 - `IFE-47`: BVA-Kontext im Styleguide weiter reduzieren
 - `IFE-70`: BVA-Teil des Accso-Wikis aus isy-style entfernt
 
