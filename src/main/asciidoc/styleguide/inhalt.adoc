@@ -424,7 +424,7 @@ Der Header Bereich enthält allgemeine Informationen zur Anwendungslandschaft, d
 :desc-image-header-aufbau: Aufbau des Header-Bereiches
 [id="image-header-aufbau",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-header-aufbau}
-image::Header_Flyout_Bezeichnung.png[align="center", width="80%", pdfwidth="80%"]
+image::Header_Aufbau.png[align="center", width="80%", pdfwidth="80%"]
 
 <<image-header-aufbau>> verdeutlicht die Teile, aus denen er besteht:
 
@@ -548,8 +548,7 @@ In diesem Fall würden die Links direkt zu den Funktionen (Unterkategorien) der 
 ** Generell sollten die Verlinkungen im Widget mit den Verlinkungen der Navigationsebene 2 übereinstimmen.
 ** Es sollten nur Applikationen und Gruppen sichtbar sein die für den Benutzer und seine entsprechende Rolle relevant sind.
 ** Bei Klick auf eine Applikation oder eine Funktion wird diese im selben Fenster geöffnet.
-** Jede Applikationsgruppe bzw.
-alleinstehende Applikation wird durch eine farbliche Markierung (Richtlinien zur Farbwahl siehe Kapitel Applikationsfarben) und ein optionales Applikationsicon gekennzeichnet.
+** Jede Applikationsgruppe bzw. alleinstehende Applikation wird durch eine farbliche Markierung (Richtlinien zur Farbwahl siehe Kapitel Applikationsfarben) und ein optionales Applikationsicon gekennzeichnet.
 * Informationen \(C)
 ** In der dritten Spalte werden für den Benutzer relevante Informationen angezeigt, die nicht in direktem Zusammenhang mit den Applikationen stehen.
 ** Dies können zum Beispiel Benachrichtigungen, Details zum Benutzerkonto oder Kontaktinformationen sein.
@@ -674,8 +673,7 @@ image::Applikation_Farbmarkierung.png[align="center", width="629",height="557"]
 
 *Richtlinien zur Anwendung*
 
-* Jede Applikationsgruppe bzw.
-alleinstehende Applikation wird durch eine farbliche Markierung und ein optionales Applikationsicon gekennzeichnet.
+* Jede Applikationsgruppe bzw. alleinstehende Applikation wird durch eine farbliche Markierung und ein optionales Applikationsicon gekennzeichnet.
 * Farbcodierung (Farbdefinition siehe Kapitel Applikationsfarben)
 ** Hauptnavigation – Farbbalken unterhalb des Headers
 ** Submenü (Flyout) – Farbbalken am oberen Rand des Menüs
@@ -686,6 +684,10 @@ alleinstehende Applikation wird durch eine farbliche Markierung und ein optional
 ** Verwendung ist optional
 ** Wird ein Applikationsicon benutzt, sollte es konsistent an allen vorgesehenen Stellen eingebunden werden.
 ** Einsatz des Applikationsicons
+*** Dashboard Applikations-Widget (<<image-farbmarkierung>>)
+*** Subnavigation (Flyout) (<<image-applikationsicon>>)
+*** In Gruppenüberschriften auf Übersichten einer Applikationsseite (<<image-applikationsicon>>)
+
 
 :desc-image-applikationsicon: Applikationsicon auf Applikationsseite
 [id="image-applikationsicon",reftext="{figure-caption} {counter:figures}"]
@@ -837,7 +839,8 @@ Das Dialogfenster kann sich gegebenenfalls um diese Höhe vergrößern (siehe <<
 
 :desc-image-nojs: No JavaScript Icon
 [id="image-nojs",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-nojs}image::no-js.png[align="center", width="55",height="55"]
+.{desc-image-nojs}
+image::no-js.png[align="center", width="55",height="55"]
 
 Hat ein Benutzer kein JavaScript, werden Dialoge in das Hauptfenster integriert.
 
@@ -1812,7 +1815,7 @@ Ein Eingabefeld ist in der Regel einzeilig.
 :desc-image-eingabefelderbis: Eingabefelder
 [id="image-eingabefelderbis",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-eingabefelderbis}
-image:Eingabeelemente.png[align="center", width="685",height="31"]
+image::Eingabeelemente.png[align="center", width="685",height="31"]
 
 
 *Zustände*
@@ -1859,7 +1862,7 @@ Es gelten die gleichen Regeln und Einschränkungen wie im Kapitel Validierung be
 :desc-image-aktionseingabefeld: Aktionseingabefeld
 [id="image-aktionseingabefeld",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-aktionseingabefeld}
-image::eingabeelemente.png[align="center", width="685",height="25"]
+image::Eingabeelemente.png[align="center", width="685",height="25"]
 
 
 *Zustände*
@@ -1916,13 +1919,12 @@ Text Boxen sehen optisch aus wie Eingabefelder, es können jedoch mehrzeilige Da
 :desc-image-bildtextbox: Text Box
 [id="image-bildtextbox",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bildtextbox}
-image::Text_box.png[align="center", width="358",height="111"]
+image::Text_Box.png[align="center", width="358",height="111"]
 
 
 *Zustände*
 
 * Siehe Eingabefeld
-
 
 *Ist dies das korrekte Bedienelement?*
 
@@ -2310,7 +2312,7 @@ Der Benutzer kann beliebige Optionen auswählen.
 :desc-image-darstellungsbeispielie: Check Box – Darstellungsbeispiel IE 9
 [id="image-darstellungsbeispielie",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-darstellungsbeispielie}
-image::Checkboxes_IE.png[align="center", scalewidth= "60%"width="247",height="126"]
+image::Checkboxes_IE.png[align="center", scalewidth= "60%" ]
 
 *Zustände*
 
@@ -2352,7 +2354,9 @@ Man spricht in diesem Fall von einer so genannten „Tri State Check Box"__.__
 
 Sollte eine Gruppe von Checkboxen aus einer großen Anzahl von Optionen bestehen, kann die Gruppe auf mehrere Spalten platzsparend und übersichtlich angezeigt werden.
 
-
+:desc-image-checkbox-gruppe: Checkboxen auf mehreren Spalten
+[id="image-checkbox-gruppe",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-checkbox-gruppe}
 image::Checkboxen_Gruppe_Optionen.png[image,width=517,height=210]
 
 *Kein JavaScript*
@@ -2371,7 +2375,7 @@ Der Benutzer kann also nur eine der Optionen auswählen.
 :desc-image-ieradiobutton: Radio Button – Darstellungsbeispiel IE 9
 [id="image-ieradiobutton",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-ieradiobutton}
-image::Radiobuttons_IE.png[align="center", width="258",height="131"]
+image::RadioButtons_IE.png[align="center", scalewidth= "60%" ]
 
 
 *Zustände*
@@ -2411,7 +2415,8 @@ Je nach Kontext können manche Elemente, in der Regel Eingabeelemente, verschied
 :desc-image-statusbedienelemente: Status von Bedienelementen – Beispiel Eingabefeld
 [id="image-statusbedienelemente",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-statusbedienelemente}
-image::Eingabeelemente.png[align="center", width="258",height="131"]
+image::Eingabeelemente.png[align="center",  width="685",height="25"]
+
 
 *Regeln zur Anwendung*
 
@@ -2557,7 +2562,7 @@ Die Hauptnavigation ist nicht scrollbar und sollte kein Taboverflow Menü haben.
 Es ist immer ein Punkt in der Hauptnavigation selektiert.
 * Unterhalb der Hauptnavigation wird ein Farbbalken angezeigt.
 Die Farbe repräsentiert eine Applikationsgruppe/Applikation.
-Sie entspricht immer dem gerade aktiven Hauptnavigationspunkt (s. <<image-ausrichtunghorizontalenavigation1>> und <<image-ausrichtunghorizontalenavigation2>>).
+Sie entspricht immer dem gerade aktiven Hauptnavigationspunkt (s. <<image-ausrichtunghornav1>> und <<image-ausrichtunghorizontalenavigation2>>).
 * Wird die Maus über einen Hauptnavigationspunkt bewegt (Hover), wird eine Subnavigation als Flyout angezeigt.
 ** Die Subnavigation wird entsprechend der dazugehörigen Applikationsgruppe/Applikation mit einer Farbe gekennzeichnet.
 ** Der erste Navigationspunkt in der Subnavigation beziehungsweise der vom Benutzer zuletzt geöffnete Navigationspunkt ist per Default vorselektiert.
@@ -3390,47 +3395,6 @@ image::Gruppierung_Container_Toolbar.png[align="center", width="626",height="161
 * Die Funktionalitäten können sich je nach Gruppentyp (siehe Kapitel Gruppierungs-Container) unterscheiden, sollten aber innerhalb eines Gruppentyps identisch sein. So kann man beispielsweise über die Toolbar einer Hauptgruppe weitere Gruppenelemente hinzufügen, die Gruppenelemente lassen sich aber ausschließlich in der Toolbar ihrer eignen Überschrift bearbeiten (Löschen, Drucken etc.). Die Buttons werden rechts neben der Überschrift positioniert und sind immer so auszurichten, dass alle Toolbarbuttons auf einer Seite linksbündig angeordnet sind.
 * Weitere allgemeine Richtlinien zur Toolbar siehe oben.
 
-
-*Seiten-Toolbar*
-
-Die Seiten-Toolbar kommt auf Detailseiten von Dashboard oder Applikationen zum Einsatz.
-
-:desc-image-seitentoolbaraufdetailseite: Seiten-Toolbar auf Detailseite
-[id="image-seitentoolbaraufdetailseite",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-seitentoolbaraufdetailseite}
-image::Toolbar_Seiten_Toolbar.png[align="center", width="626",height="25"]
-
-*Richtlinien zur Anwendung*
-
-* Die Seiten-Toolbar beinhaltet Funktionen, welche für die gesamte Seite gelten z.B. „Zurück zur Liste", „Seite drucken" oder „Hilfe".
-* Ganz links beinhaltet die Seiten-Toolbar immer eine Verlinkung, die zurück zur dazugehörigen Hauptseite führt. Diese Verlinkung muss in jeder Seiten-Toolbar vorhanden sein.
-* Der Navigationslink ist eine Kombination aus Icon und Text, alle anderen Buttons sind Icon-Buttons.
-* Weitere Richtlinien sind bei der allgemeinen Beschreibung der Toolbar zu finden.
-
-
-
-
-*Tabellen-Toolbar*
-
-Die Toolbar oberhalb einer Tabelle beinhaltet Funktionen, welche die Tabelle oder Objekte der Tabelle beeinflussen.
-
-:desc-image-tabellentoolbar2: Tabellen Toolbar
-[id="image-tabellentoolbar2",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-tabellentoolbar2}
-image::Toolbar_Tabelle.png[align="center", width="626",height="26"]
-
-
-*Richtlinien zur Anwendung*
-
-* In dieser Toolbar werden möglichst immer Toolbar-Buttons eingesetzt.
-Diese stellen eine Kombination aus Icon und Text dar (siehe Kapitel Toolbar Button).
-* Diese Toolbar kann auch einen Toggle-Filter enthalten um die Ergebnisse in der Tabelle zu filtern.
-Er ist immer rechts in der Toolbar ausgerichtet.
-* Alle anderen Funktionen der Toolbar werden links ausgerichtet.
-* Weitere Richtlinien sind bei der allgemeinen Beschreibung der Toolbar zu finden.
-
-
-
 [[formulare-ueberschrift]]
 == Formulare
 
@@ -3869,6 +3833,9 @@ In Formularen wird initial das erste Element aus dem Inhaltsbereich (links oben)
 Der Ablauf der Tabulatoren erfolgt von links nach rechts und oben nach unten.
 In der folgenden Abbildung wird beispielhaft der Ablauf der Tabulatorreihenfolge dargestellt:
 
+:desc-image-tabulator-sprungabfolge: Tabulator Sprungabfolge
+[id="image-tabulator-sprungabfolge",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-tabulator-sprungabfolge}
 image::Tabulatorsteuerung.png[image,width=500,height=147]
 
 *_Seitenbereiche_*
