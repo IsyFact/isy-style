@@ -14,7 +14,6 @@
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-less": "^1.4.1",
-    "grunt-json-generator": "0.1.0",
     "less-plugin-clean-css": "^1.5.1"
   },
   "dependencies": {}
