@@ -60,7 +60,7 @@
                                     <goal>install-node-and-npm</goal>
                                 </goals>
                                 <configuration>
-                                    <nodeVersion>v10.15.1</nodeVersion>
+                                    <nodeVersion>v12.14.1</nodeVersion>
                                     <serverId>repository</serverId>
                                     <nodeDownloadRoot>${REPOSITORY_NODE}</nodeDownloadRoot>
                                 </configuration>
@@ -112,7 +112,7 @@
                                     <goal>install-node-and-npm</goal>
                                 </goals>
                                 <configuration>
-                                    <nodeVersion>v10.15.1</nodeVersion>
+                                    <nodeVersion>v12.14.1</nodeVersion>
                                 </configuration>
                             </execution>
 
