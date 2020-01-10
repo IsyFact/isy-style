@@ -1,15 +1,12 @@
-var helper = require('./helper/helper');
-
+let helper = require('./helper/helper');
 
 module.exports = function (grunt) {
-
 
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
 
-    var portalColor = '#004179';
-    var pkgJson = require('./package.json');
+    const portalColor = '#004179';
 
     grunt.initConfig({
 
@@ -21,7 +18,9 @@ module.exports = function (grunt) {
         less: {
             color: {
                 options: {
-                    cleancss: true,
+                    plugins: [
+                        new (require('less-plugin-clean-css'))()
+                    ],
                     modifyVars: {
                         'es-portal-color-100': portalColor,
                         'es-portal-color-80': helper.rgbaToHex(helper.hexToRgbA(portalColor, '0.8')),
