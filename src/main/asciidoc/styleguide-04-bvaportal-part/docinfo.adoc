@@ -1,0 +1,16 @@
+*Dokument-Informationen*
+
+|====
+|Dokumenten-ID:| BVA Styleguide
+|====
+
+*Java Bibliothek / IT-System*
+
+[cols="5,2,3",options="header"]
+|====
+|Name |Art |Version
+|isy-style |Bibliothek |5.0.x
+|====
+
+// Page break
+<<<
