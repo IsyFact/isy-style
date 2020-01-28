@@ -68,6 +68,12 @@ module.exports = function (grunt) {
                 src: "**",
                 dest: "src/main/resources/META-INF/resources/webfonts/",
                 flatten: true
+            },
+            jquery: {
+                expand: true,
+                cwd: 'node_modules/jquery/dist/',
+                src: "jquery.min.js",
+                dest: "src/main/resources/META-INF/resources/lib/"
             }
         }
     });
