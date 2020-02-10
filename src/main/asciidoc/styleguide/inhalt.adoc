@@ -805,18 +805,15 @@ image::image73.png[align="center", width="627",height="249"]
 *Richtlinien zur Anwendung*
 
 * Dialoge sind sekundäre Fenster, die über dem primären Fenster liegen.
-* Dialoge sind modal, d. h. das aufrufende Fenster kann nicht erreicht werden, so lange der Dialog geöffnet ist.
+* Dialoge sind modal, d. h. das aufrufende Fenster kann nicht erreicht werden, solange der Dialog geöffnet ist.
 * Die Überlagerung mehrerer Dialogfenster sollte vermieden werden.
 * Ist die Überlagerung von Dialogen nicht zu vermeiden, müssen die Dialoge immer in der Reihenfolge geschlossen werden, in der sie geöffnet wurden.
-* Dialoge passen ihre Größe dem gezeigten Inhalt an. (Ausnahme Wizard)
 * Größe von Dialogen
-** Die Dialoge sollten möglichst ein Seitenverhältnis von 4:3 haben.
-Dialoge in denen Formulardaten bearbeitet werden, können hier eine Ausnahme bilden.
-Hier sollte das Layout der Elemente im Dialog dem Layout im Read-Only Modus entsprechen (i.d.R. dreispaltig).
-** Das Layout der Inhalte sollte so gestaltet sein, dass die Dialogbuttons bei der Zielauflösung ohne zu scrollen sichtbar sind.
-** Dialoge sollten möglichst nicht mehr als 2/3 des Screens bedecken.
-* Vertikales und horizontales Scrollen sollte innerhalb von Dialogen vermieden werden.
-* Resizing: Dialoge behalten bei einer Größenveränderung des Browsers ihre Ursprungsgröße bei.
+** Dialoge passen ihre Größe dem gezeigten Inhalt an.
+** Maximalgröße soll sich an Browser-Fenster und Anwendung im Hintergrund orientieren.
+Ein schmales Padding zur Abhebung von der Seite im Hintergrund reicht aus.
+** Die Dialogbuttons sollten einen festen Ort haben, der Inhalt kann bei Bedarf scrollbar werden.
+* Bei Dialogen, in denen Formulardaten bearbeitet werden, sollte das Layout der Elemente im Dialog dem Layout im Read-Only Modus entsprechen (i.d.R. dreispaltig).
 * *Titelzeile (A)*
 ** Der Titel des Dialogs sollte aussagekräftig sein und dem Benutzer genau zeigen, welche Interaktionen er für welche Objekte in diesem Dialog durchführt.
 Der Dialogtitel kann aus einem Haupttitel und einem optionalen Subtitel bestehen.
