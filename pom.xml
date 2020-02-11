@@ -41,7 +41,7 @@
                                 <configuration>
                                     <nodeVersion>v8.9.4</nodeVersion>
                                     <serverId>repository</serverId>
-                                    <nodeDownloadRoot>${REPOSITORY_NODE}</nodeDownloadRoot>
+                                    <nodeDownloadRoot>${env.REPOSITORY_NODE}</nodeDownloadRoot>
                                 </configuration>
                             </execution>
 
@@ -309,10 +309,41 @@
                                     </outputFile>
                                 </configuration>
                             </execution>
+                            <execution>
+                                <id>nutzungskonzept-styleguide-html</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>process-asciidoc</goal>
+                                </goals>
+                                <configuration>
+                                    <backend>html</backend>
+                                    <sourceDirectory>
+                                        src/main/asciidoc/Nutzungskonzept_Styleguide
+                                    </sourceDirectory>
+                                    <sourceDocumentName>master.adoc</sourceDocumentName>
+                                    <outputFile>
+                                        ${project.build.directory}/styleguide/Nutzungskonzept_Styleguide.html
+                                    </outputFile>
+                                </configuration>
+                            </execution>
 
-
-
-
+                            <execution>
+                                <id>nutzungskonzept-styleguide-pdf</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>process-asciidoc</goal>
+                                </goals>
+                                <configuration>
+                                    <backend>pdf</backend>
+                                    <sourceDirectory>
+                                        src/main/asciidoc/Nutzungskonzept_Styleguide
+                                    </sourceDirectory>
+                                    <sourceDocumentName>master.adoc</sourceDocumentName>
+                                    <outputFile>
+                                        ${project.build.directory}/styleguide/Nutzungskonzept_Styleguide.pdf
+                                    </outputFile>
+                                </configuration>
+                            </execution>
                         </executions>
                     </plugin>
                 </plugins>
