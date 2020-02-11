@@ -13,7 +13,7 @@ Dieses Dokument enthält die technische Dokumentation zur Bibliothek `isy-style`
 
 === Twitter Bootstrap
 
-Dieses Projekt baut auf dem Bootstrap CSS Framework in Version 3.3.6 auf.
+Dieses Projekt baut auf dem Bootstrap CSS Framework in Version 3.4.1 auf.
 Dieses stellt sowohl browserübergreifende, erweiterbare Styles für HTML-Elemente als auch wenige komplexere Steuerelemente mit zusätzlichem Javascript-Code zur Verfügung.
 
 Die Bootstrap-Styles wurden entsprechend den Definitionen im Style Guide (Aussehen, Form, Farbe und Effekte) angepasst.
@@ -113,11 +113,11 @@ Diese Skripte dienen beispielsweise zum Styling applikationsspezifischer Bediene
 Zu diesem Zweck wurden diverse Plugins mit freier (permissive) Software Lizenz integriert.
 Diese können aktualisiert werden, wenn neue Versionen erscheinen.
 
-*jQuery 3.3.1*
+*jQuery 3.4.1*
 
 Bootstrap JS setzt jQuery voraus
 
-*Bootstrap JS 3.3.6*
+*Bootstrap JS 3.4.1*
 
 Zusätzliche JavaScript-Komponenten für erweiterte Bootstrap-Bedienelemente (affix, alert, button, carousel, collapse, dropdown, modal, popover, scrollspy,tab,tooltip,transition)
 
