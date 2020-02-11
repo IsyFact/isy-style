@@ -41,7 +41,7 @@
                                 <configuration>
                                     <nodeVersion>v8.9.4</nodeVersion>
                                     <serverId>repository</serverId>
-                                    <nodeDownloadRoot>${REPOSITORY_NODE}</nodeDownloadRoot>
+                                    <nodeDownloadRoot>${env.REPOSITORY_NODE}</nodeDownloadRoot>
                                 </configuration>
                             </execution>
 
