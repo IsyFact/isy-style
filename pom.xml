@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>isy-style</artifactId>
-    <packaging>jar</packaging>
-    <version>4.3.0-SNAPSHOT</version>
-    <name>IsyFact Styles</name>
 
     <parent>
         <groupId>de.bund.bva.isyfact</groupId>
@@ -14,7 +8,11 @@
         <version>1.8.0-SNAPSHOT</version>
     </parent>
 
+    <artifactId>isy-style</artifactId>
+    <version>4.3.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
+    <name>IsyFact Styles</name>
 
     <profiles>
         <profile>
@@ -41,7 +39,7 @@
                                 <configuration>
                                     <nodeVersion>v8.9.4</nodeVersion>
                                     <serverId>repository</serverId>
-                                    <nodeDownloadRoot>${REPOSITORY_NODE}</nodeDownloadRoot>
+                                    <nodeDownloadRoot>${env.REPOSITORY_NODE}</nodeDownloadRoot>
                                 </configuration>
                             </execution>
 
@@ -230,7 +228,6 @@
                         <groupId>org.asciidoctor</groupId>
                         <artifactId>asciidoctor-maven-plugin</artifactId>
                         <version>1.5.6</version>
-
                         <dependencies>
                             <dependency>
                                 <groupId>org.jruby</groupId>
@@ -309,10 +306,41 @@
                                     </outputFile>
                                 </configuration>
                             </execution>
+                            <execution>
+                                <id>nutzungskonzept-styleguide-html</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>process-asciidoc</goal>
+                                </goals>
+                                <configuration>
+                                    <backend>html</backend>
+                                    <sourceDirectory>
+                                        src/main/asciidoc/Nutzungskonzept_Styleguide
+                                    </sourceDirectory>
+                                    <sourceDocumentName>master.adoc</sourceDocumentName>
+                                    <outputFile>
+                                        ${project.build.directory}/styleguide/Nutzungskonzept_Styleguide.html
+                                    </outputFile>
+                                </configuration>
+                            </execution>
 
-
-
-
+                            <execution>
+                                <id>nutzungskonzept-styleguide-pdf</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>process-asciidoc</goal>
+                                </goals>
+                                <configuration>
+                                    <backend>pdf</backend>
+                                    <sourceDirectory>
+                                        src/main/asciidoc/Nutzungskonzept_Styleguide
+                                    </sourceDirectory>
+                                    <sourceDocumentName>master.adoc</sourceDocumentName>
+                                    <outputFile>
+                                        ${project.build.directory}/styleguide/Nutzungskonzept_Styleguide.pdf
+                                    </outputFile>
+                                </configuration>
+                            </execution>
                         </executions>
                     </plugin>
                 </plugins>

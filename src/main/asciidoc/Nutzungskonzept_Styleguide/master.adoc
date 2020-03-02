@@ -1,7 +1,7 @@
 // ASCIIDOC Attribute
 include::{isy-dokumentvorlagen}/docs/common/isyfact-attributes.adoc[]
 //
-:doctitle: Styleguide
+:doctitle: Nutzungskonzept Styleguide
 :title: {doctitle}
 // Dokument unter Closed Source Lizenz
 :license-oss!:
@@ -33,16 +33,18 @@ include::inhalt.adoc[tags=inhalt]
 
 :sectnums!:
 
-// Glossar
-include::glossary.adoc[]
 // Literaturverzeichnis
-include::bibliography.adoc[]
+//include::bibliography.adoc[]
 // ? Tabellenverzeichnis
-include::listoftables.adoc[]
+//include::listoftables.adoc[]
 // ? Abbildungsverzeichnis
-include::listoffigures.adoc[]
+//include::listoffigures.adoc[]
 // ? Listings-Verzeichnis
-include::listoflistings.adoc[]
+//include::listoflistings.adoc[]
+// Glossar
+//include::glossary.adoc[]
+// Index
+//include::../common/index.adoc[]
 
 // Anhänge
 //include::anhaenge.adoc[leveloffset=1]
