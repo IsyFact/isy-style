@@ -36,7 +36,7 @@
       background-color: @es-green-20;
       .box-shadow(none);
     }
-    
+
     &:focus {
         border:  1px solid @es-mid-blue;
     }
@@ -95,7 +95,7 @@
     padding: 6px 10px 5px;
     border:  0;
     margin-left: 1px;
-    
+
     &:first-child {
     	margin-left:  0;
     }
@@ -195,7 +195,7 @@
     min-height: 26px;
     padding-top:3px;
 
-    > span {
+    :first-child {
         font-size: 16px;
         width: 30px;
         height: 30px;
@@ -214,10 +214,14 @@
             color: @gray;
 
             &:before {
-              top: 5px;
-              position: relative;
+                top: 5px;
+                position: relative;
             }
         }
+    }
+
+    .icon-button-text {
+        margin-left: 5px;
     }
 
     &:last-child {
@@ -248,7 +252,6 @@
         }
     }
 }
-
 
 .btn-icon-round-small {
     min-width: 22px;
@@ -308,7 +311,7 @@
 //## Styling for Text Links
 .btn-link {
     padding: 5px 10px 5px 0;
-    
+
     &.icon {
         margin-right: 10px;
     }
@@ -344,7 +347,7 @@ p {
 		color: @es-dark-blue;
 		border-bottom: none;
         text-decoration: none;
-		
+
 		&:hover {
 			border-bottom: 1px solid @es-dark-blue;
             text-decoration: none;
@@ -369,7 +372,7 @@ p {
 }
 .form-group {
 	.btn-link {
-		margin:  0;	
+		margin:  0;
 	}
 }
 
