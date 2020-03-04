@@ -2094,7 +2094,7 @@ Listen werden benutzt, um eine überschaubare Anzahl an Daten oder Objekten eine
 :desc-image-listemitlistenkopf: Liste mit Listenkopf
 [id="image-listemitlistenkopf",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-listemitlistenkopf}
-image::image178.png[align="center", width="305",height="326"]
+image::Liste_Listenkopf.png[align="center", width="305",height="326"]
 
 
 *Zustände*
@@ -2834,7 +2834,7 @@ Editable Rows sind flexible Zeilen deren Inhalte separat bearbeitet werden könn
 :desc-image-editablerow: Editable Row
 [id="image-editablerow",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-editablerow}
-image::image214.png[align="center", width="629",height="97"]
+image::Editable_Row.png[align="center", width="629",height="97"]
 
 
 *Ist dies das korrekte Pattern?*
