@@ -1,8 +1,18 @@
-# v5.0.0 (Meilenstein 1)
+# v5.0.0
 - `IFS-308`: Fontawesome Version auf 5.7.0 angehoben
 ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben sich leicht verändert. Hardkodierte Verweise auf die Schrift `FontAwesome` müssen auf
 `Font Awesome 5 Free` mit dem korrekten Schriftgewicht (Regular, Bold, ...)  geändert werden. Einige Codepoints haben sich geändert.
 - Build erzeugt zusätzliches NPM-Package in `/target` für Javascript-Client-Entwicklung
+- `IFS-505`: Upgrade auf Isyfact 2
+- `IFS-381`: Fontawesome 5 in Isyfact 2 eingebunden
+- `IFE-96`: Update auf jQuery 3.4.1
+
+# v4.3.0
+- `IFS-413`: Dialogvorgaben angepasst, Größe passt sich dem Inhalt an, Buttons haben festen Ort
+- `IFE-412`: Größenvorgaben für Buttons angepasst
+- `IFE-47`: BVA-Kontext im Styleguide weiter reduzieren
+- `IFE-70`: BVA-Teil des Accso-Wikis aus isy-style entfernt
+- `IFE-80`: Datepicker: Verarbeitung unsicheres Datum
 
 # v4.2.0
 - `IFE-48`: Update auf jQuery 3.3.1 und Bootstrap 3.3.7
@@ -11,6 +21,7 @@ ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben 
 - `IFE-59`: Verwendung der Portalfarbe für Navigationsmenü und Breadcrumb, Icon-Buttons (Hover) und selektierte Kopfzeilen von Tabellen
 - `IFE-61`: Tabellen-Sortierpfeildarstellung auf "übereinander" geändert
 - `IFE-62`: Obsoletes Parent-POM durch Open Source Parent POM ersetzt
+- `IFS-311`: Einbindung isy-dokumentvorlagen; Build Styleguide über Maven
 
 # v4.1.0
 - `IFS-163`: Unterstützung für IE 8 eingestellt

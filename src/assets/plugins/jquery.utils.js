@@ -63,6 +63,7 @@ $.fn.extend({
         
         var options = {
             'mask' : $inputMask.attr('data-isymask-mask'),
+            'placeholder' : $inputMask.attr('data-isymask-placeholder'),
             'insertMode' : insertMode,
             'clearMaskOnLostFocus' : clearMaskOnLostFocus
         };

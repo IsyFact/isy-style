@@ -1,3 +1,7 @@
+= Styleguide: Inhalt
+include::{isy-dokumentvorlagen}/docs/common/isyfact-attributes.adoc[]
+
+// tag::inhalt[]
 [[einfuehrung-und-allgemeine-prinzipien]]
 == Einführung und Allgemeine Prinzipien
 Der Style Guide definiert den Rahmen für die interaktive und visuelle Gestaltung eines universell einsetzbaren Bedienkonzeptes für die IsyFact.
@@ -29,7 +33,7 @@ Mit dem Attribut zufriedenstellend wird schließlich die (positive) Einstellung 
 
 *_Prospektive Benutzergruppen und generelle Aufgabenbeschreibung_*
 
-Als Benutzerzielgruppe werden die bisherigen Anwender (Sachbearbeiter, Polizisten, interne Anwender des Bundesverwaltungsamtes) der Bundesverwaltungsamt-Produkte ins Auge gefasst.
+Als Benutzerzielgruppe werden die bisherigen Anwender der bestehenden Informations-Anwendung ins Auge gefasst.
 Bei dieser Gruppe werden elementare Kenntnisse im Bereich von Standard-Office-Applikationen vorausgesetzt.
 Bei der konkreten Ausgestaltung (Spezifikation) der einzelnen Anwendungen sind die Eigenschaften der jeweiligen Benutzergruppen in Bezug auf Vorkenntnisse, Fähigkeiten, IT-Affinität usw.
 zu berücksichtigen.
@@ -38,7 +42,7 @@ zu berücksichtigen.
 
 Der Style Guide richtet sich in erster Linie an Produktverantwortliche, Software-Entwickler und User Interface Designer.
 Einen Überblick über die gestalterischen Grundlagen des Systems liefert der Style Guide aber auch für Marketing-Experten und die Verantwortlichen des Corporate Design.
-Alle Teile des Style Guides sind erweiterbar und sollten über die Zeit hinweg fo rtgeschrieben und ergänzt werden.
+Alle Teile des Style Guides sind erweiterbar und sollten über die Zeit hinweg fortgeschrieben und ergänzt werden.
 
 *_Zielsetzung des Styleguides_*
 
@@ -46,7 +50,7 @@ Konsistenz, Einheitlichkeit und visuelle Attraktivität sind entscheidende Quali
 Style Guides gewährleisten ein einheitliches Look & Feel von Applikationen und schaffen so die Voraussetzungen dafür, dass Benutzern eine schnelle Einarbeitung in Logik, Ablauf und Funktionsweise einer Anwendung und eine befriedigende Arbeit ermöglicht wird.
 Neben der Vereinheitlichung und der damit verbundenen Erhöhung der Benutzerfreundlichkeit liegt ein wesentlicher wirtschaftlicher Vorteil eines Style Guide in der Steigerung der Effizienz, da er Lösungen für wiederkehrende Aufgabenstellungen innerhalb einer Applikation bzw.
 eines Applikationspakets bietet.
-Der vorliegende Style Guide definiert den Rahmen für die interaktive und visuelle Gestaltung eines universell einsetzbaren Bedienkonzeptes für das Bundesverwaltungsamt.
+Der vorliegende Style Guide definiert den Rahmen für die interaktive und visuelle Gestaltung eines universell einsetzbaren Bedienkonzeptes.
 Es gibt Richtlinien und Regeln für die detaillierte Ausgestaltung einzelner Screens.
 Um eine breite Generalisierbarkeit der in diesem Dokument vorgestellten Entwurfsgrundlagen zu ermöglichen, jedoch gleichzeitig eine konkrete Hilfestellung für die Gestaltung der Schnittstelle zu bieten, werden vorgestellte Designrichtlinien durch Musterlösungen in Form von Beispiel-Screens ergänzt.
 
@@ -172,10 +176,8 @@ Weiterhin ist bei der Erstellung von Texten darauf zu achten, die Benutzer nicht
 
 *Angemessener Einsatz von Farben, Fonts und Icons*
 
-Große Teile des Look & Feel eines User-Interface werden mit dem Einsatz von , , Grafiken und Icons definiert.
-Daher ist es äußerstFarben Fonts
-
-bedeutsam, diese Elemente angemessen und konsistent zu verwenden.
+Große Teile des Look & Feel eines User-Interface werden mit dem Einsatz von Farben, Fonts, Grafiken und Icons definiert.
+Daher ist es äußerst bedeutsam, diese Elemente angemessen und konsistent zu verwenden.
 So sollen nicht zu viele unterschiedliche Schriftarten innerhalb einer Applikation verwendet werden.
 In der Regel führen bereits mehr als zwei verschiedene Schriftarten zu einem unruhigen Erscheinungsbild.
 Auch der Einsatz von Farben soll systematisch und behutsam erfolgen.
@@ -229,7 +231,7 @@ navigierbar sein und kompatibel mit Tastatur oder Maus.
 
 In Deutschland gilt das Behindertengleichstellungsgesetz (BGG), welches eine Benachteiligung von behinderten Menschen verhindern soll.
 Als Teil dieses Gesetzes wurde die sogenannte Barrierefreie-Informationstechnik-Verordnung (BITV) verfasst.
-Diese gilt verbindlich für Bundesbehörden im Hinblick auf deren Internetauftritte und öffentlich zugängliche Terminals.
+Für bestimmte Anwendungsgruppen gilt dies verbindlich, z.B. für Bundesbehörden im Hinblick auf deren Internetauftritte und öffentlich zugängliche Terminals.
 Die BITV wendet als Grundlage die Prinzipien und Richtlinien der WCAG an.
 
 [[browser-unterstuetzung]]
@@ -242,7 +244,7 @@ Der Styleguide gibt nur ein minimales Set von zu unterstützenden Browserversion
 Es müssen mindestens folgende Browser und Konstellationen in SXGA- und UXGA-Auflösung (s. Layout & Resizing) getestet werden:
 
 * Internet Explorer 11
-* Microsoft Edge (für Windows 10 / Bundesclient)
+* Microsoft Edge (für Windows 10)
 * Firefox ESR, jeweils aktuelle Version (Stand Oktober 2018 ESR 60 - s. https://www.mozilla.org/en-US/firefox/organizations/faq/[Firefox-ESR-Roadmap])
 * Chrome, jeweils aktuelle stabile Version
 
@@ -270,16 +272,14 @@ Das genaue Verhalten der einzelnen Bereiche und Elemente wird in den entsprechen
 * Ab einer gewissen Fenstergröße werden die Mauswege zu lang und die Benutzung der Anwendung wird dadurch erschwert.
 Bei Auflösungen größer als *1600x1200 px* (UXGA) sollten deshalb die Inhalte nicht mehr größer skaliert werden.
 In solchen Fällen wird die Applikation links auf dem Bildschirm ausgerichtet und rechts entsteht Whitespace.
-* Da es sich bei den Inhalten der Anwendungen des Bundesverwaltungsamtes hauptsächlich um Formulare handelt, soll sich die Position der Inhalte nicht ändern.
+* Da es sich bei den Inhalten der Informations-Anwendungen meist um Formulare handelt, soll sich die Position der Inhalte nicht ändern.
 Die Spaltenanzahl bleibt bei Größenveränderung gleich und wird nicht dynamisch z.B. von 3 spaltig auf 4 spaltig angepasst.
 * Bei Größenveränderungen von Inhalten sollte immer darauf geachtet werden, dass der Lesefluss des Benutzers nicht negativ beeinflusst wird.
 
 *Screen Layout*
 
 Ein einfaches und klares Screen-Layout sowie die korrekte Gestaltung von Formularen sind von größter Bedeutung für ein einfaches, leicht zu bedienendes User Interface.
-Komplexe Layouts können die Bedieneffizienz nachhaltig negativ beeinflussen, und somit die Benutzerzufriedenheit
-
-sowie die Produktivität senken.
+Komplexe Layouts können die Bedieneffizienz nachhaltig negativ beeinflussen, und somit die Benutzerzufriedenheit sowie die Produktivität senken.
 Die nachfolgenden Richtlinien dienen der Erstellung effizienter, leichtgewichtiger Layouts.
 
 *Richtlinien zur Anwendung*
@@ -355,77 +355,101 @@ Bei Verwendung in Formularen ergibt sich so eine logische Struktur, welche für 
 [[hauptfenster]]
 === Hauptfenster
 
-Das im Folgenden beschriebene UI-Design gilt in erster Linie für browserbasierte Anwendungen des Bundesverwaltungsamtes.
-Da der Benutzer nicht durch die Verwaltung mehrerer geöffneter Browserfenster oder Browsertabs belastet werden soll, arbeitet er innerhalb der Applikation mit nur einem Hauptfenster.
-Im Wesentlichen besteht das Hauptfenster aus einem Header und einem Inhaltsbereich dessen Inhalt je nach Seitentyp und Applikation variieren kann.
+Im Wesentlichen besteht das Hauptfenster aus zwei Bereichen: dem Header-Bereich und dem Inhaltsbereich.
 
-:desc-image-aufbauhauptfenster: Allgemeiner Aufbau des Hauptfensters
-[id="image-aufbauhauptfenster",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-aufbauhauptfenster}
-image::image31.png[align="center", width="629",height="526"]
+:desc-image-hauptfenster-aufbau: Allgemeiner Aufbau des Hauptfensters
+[id="image-hauptfenster-aufbau",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-hauptfenster-aufbau}
+image::hauptfenster-aufbau.png[align="center", width="80%", pdfwidth="80%"]
 
+Das Layout des Header-Bereichs ist immer gleichartig.
+Der Inhalt ändert sich nur in einem vordefinierten Rahmen (z.B. Logo der Anwendungslandschaft, Inhalte der Hauptnavigation).
+Der Abschnitt <<header-bereich>> beschreibt die Möglichkeiten zur Gestaltung.
 
+Das Layout und der Inhalt des Inhaltsbereichs wechselt je nach Seitentyp:
 
-*Aufbau des Hauptfensters*
+* <<login>>
+* <<dashboard>>
+* <<dashboard-unterseite>>
+* <<applikationsseite>>
+* <<applikations-detailseite>>
 
-* Header Bereich
+==== Interaktion mit dem Hauptfenster
 
-** Der Aufbau des Headers ist immer konsistent und ändert sich nicht.
+Die IsyFact kennt zwei grundlegende Prinzipien zur Interaktion mit dem Hauptfenster: die Beschränkung auf einen Browser-Tab oder die Verwendung mehrerer Browser-Tabs.
 
-* Inhaltsbereich
+Beide Prinzipien schließen sich gegenseitig aus.
 
-** Inhalt und Layout wechselt je nach Seitentyp.
-** Seitentypen
-*** Login
-*** Dashboard (Applikationsportal)
-*** Dashboard Unterseite
-*** Applikation
-*** Applikation Detailseite
+[STYLEGUIDE]
+====
+Bei der fachlichen Spezifikation einer neuen Fachanwendung oder Anwendungslandschaft muss daher eines der Prinzipien ausgewählt und fest vorgegeben werden.
+Insbesondere müssen sich in einer Anwendungslandschaft alle Fachanwendungen an die getroffene Entscheidung halten.
+Die Entscheidung muss an geeigneter Stelle dokumentiert werden.
+====
 
+Folgende Richtlinien gelten unabhängig von der Art der gewählten Interaktion:
 
-*Richtlinien zur Anwendung*
+* In einem Hauptfenster kann jeweils nur ein Seitentyp angezeigt werden: entweder das Dashboard oder eine Applikation.
+* Da sich das Hauptfenster im Browser befindet, lässt es sich durch Größenänderung des Browsers in Breite und Höhe verändern.
+Die optimale Darstellung wird ab einer Bildschirmauflösung von 1280x1024 Pixeln (SXGA) erzielt.
+* Das Verhalten des Hauptfensters bei Größenänderungen ergibt sich aus dem Verhalten des Layouts der angezeigten Bereiche und Elemente innerhalb des Fensters.
+Genauere Informationen finden sich bei den jeweiligen Elementen.
+
+===== Beschränkung auf einen Browser-Tab
+
+Die Beschränkung auf einen Browser-Tab soll verhindern, dass sich Anwender in zu vielen offenen Tabs verzetteln oder mehrere Geschäftsprozesse gleichzeitig ausführen.
+Stattdessen steht der Fokus auf die Ausführung eines Geschäftsprozesses im Vordergrund.
+Er arbeitet deswegen innerhalb einer Fachanwendung - oder sogar innerhalb einer Anwendungslandschaft - immer mit nur einem Hauptfenster.
+
+Folgende Richtlinien gelten bei diesem Prinzip der Interaktion:
 
 * Es existiert nur ein Hauptfenster.
-* Im Hauptfenster kann jeweils nur ein Seitentyp angezeigt werden entweder das Dashboard oder eine Applikation.
-* Das Hauptfenster kann durch Schließen des Browserfensters oder Browsertabs geschlossen werden.
-* Da sich das Hauptfenster im Browser befindet lässt es sich durch Größenänderung des Browsers in Breite und Höhe verändern.
-* Die optimale Darstellung wird ab einer Bildschirmauflösung von *1280x1024 px* (SXGA) erzielt.
-* Das Verhalten des Hauptfensters bei Größenänderungen ergibt sich aus dem Layout Verhalten der angezeigten Bereiche und Elemente innerhalb des Fensters.
-Genauere Informationen finden sich bei den jeweiligen Elementen.
+* Das Schließen eines Tabs oder des Browsers schließt das Hauptfenster.
+
+===== Verwendung mehrerer Browser-Tabs
+
+Die Verwendung mehrerer Browser-Tabs ermöglicht es Anwendern, in mehreren Tabs Informationen vorzuhalten oder leichter mehrere, aufeinander wirkende Geschäftsprozesse auszuführen.
+
+Folgende Richtlinien gelten bei diesem Prinzip der Interaktion:
+
+* Es existieren beliebig viele Hauptfenster innerhalb eines Browsers, in verschiedenen Tabs.
+* Das Schließen eines Tabs schließt das darin angezeigte Hauptfenster.
+Das Schließen des Browsers schließt alle Hauptfenster.
 
 [[header-bereich]]
 ==== Header Bereich
 
-Der Header Bereich enthält allgemeine Informationen der Applikation.
+Der Header Bereich enthält allgemeine Informationen zur Anwendungslandschaft, den in ihr verfügbaren Fachanwendungen und zum angemeldeten Anwender.
 
-:desc-image-headersolo: Header
-[id="image-headersolo",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-headersolo}
-image::image36.png[align="center", width="629",height="104"]
+:desc-image-header-aufbau: Aufbau des Header-Bereiches
+[id="image-header-aufbau",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-header-aufbau}
+image::header-aufbau.png[align="center", width="80%", pdfwidth="80%"]
 
-:desc-image-aufbaudesheaderbereichs: Aufbau des Header-Bereiches
-[id="image-aufbaudesheaderbereichs",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-aufbaudesheaderbereichs}
-image::image37.png[align="center", width="629",height="149"]
+<<image-header-aufbau>> verdeutlicht die Teile, aus denen er besteht:
 
+* *A* Logo des Anbieters der Anwendungslandschaft
+* *B* Balken in der Standardfarbe der Anwendungslandschaft ("Portalfarbe")
+* *C* Logo des Anwendungslandschaft
+* *D* Informationen zum angemeldeten Anwender
+* *E + F* Hauptnavigation und Subnavigation als Flyout (zur Nutzung siehe <<hauptnavigation>>)
 
+Der Header ist von der Gestaltung her für alle Seiten innerhalb einer Anwendungslandschaft gleich.
+Beim Resizing bleiben links ausgerichtete Objekte links und rechts ausgerichtete Objekte rechts und der Raum dazwischen verändert seine Größe.
 
-*Aufbau*
+Der Header kann sich vom Inhalt her allerdings geringfügig anpassen.
+Die Informationen zum angemeldeten Anwender zeigen mindestens den Namen oder die Kennung des Anwenders.
 
-* *A* Logo des Portalanbieters
-* *B* Farbmarkierung des Applikationsportals
-* *C* Logo des Applikationsportals
-* *D* Login-Information
-* *E + F* Hauptnavigation und Subnavigation als Flyout (siehe Kapitel Horizontale Navigation)
+Der Inhalt und die Wirkungsweise des Logout-Buttons sind abhängig vom gewählten Prinzip der Interaktion mit dem Hauptfenster.
 
-*Richtlinien zur Anwendung*
+Beschränkung auf einen Browser-Tab::
+Die Betätigung des Logout-Buttons meldet den Anwender von der gesamten Anwendungslandschaft ab.
+Der Button trägt den Text "Abmelden".
 
-* Der Header ist für alle Seiten innerhalb eines Applikationsportals gleich.
-* Die aktuelle Position des Benutzers (aktueller Navigationspunkt) ist immer deutlich hervorgehoben.
-* Die Login-Informationen zeigen den Namen des eingeloggten Benutzers.
-Direkt daneben ist der Abmeldebutton positioniert.
-* Beim Resizing bleiben linksausgerichtete Objekte links und rechtsausgerichtete Objekte rechts und der Raum dazwischen verändert seine Größe.
-
+Verwendung mehrerer Browser-Tabs::
+Die Betätigung des Logout-Buttons schließt den aktuellen Tab, meldet den Anwender allerdings *nicht* von der gesamten Anwendungslandschaft ab.
+Der Button trägt den Text "Zurück zum Portal".
+Die Funktion zur Abmeldung muss an anderer Stelle verfügbar sein und entsprechend dokumentiert werden.
 
 [[login]]
 ==== Login
@@ -781,18 +805,15 @@ image::image73.png[align="center", width="627",height="249"]
 *Richtlinien zur Anwendung*
 
 * Dialoge sind sekundäre Fenster, die über dem primären Fenster liegen.
-* Dialoge sind modal, d. h. das aufrufende Fenster kann nicht erreicht werden, so lange der Dialog geöffnet ist.
+* Dialoge sind modal, d. h. das aufrufende Fenster kann nicht erreicht werden, solange der Dialog geöffnet ist.
 * Die Überlagerung mehrerer Dialogfenster sollte vermieden werden.
 * Ist die Überlagerung von Dialogen nicht zu vermeiden, müssen die Dialoge immer in der Reihenfolge geschlossen werden, in der sie geöffnet wurden.
-* Dialoge passen ihre Größe dem gezeigten Inhalt an. (Ausnahme Wizard)
 * Größe von Dialogen
-** Die Dialoge sollten möglichst ein Seitenverhältnis von 4:3 haben.
-Dialoge in denen Formulardaten bearbeitet werden, können hier eine Ausnahme bilden.
-Hier sollte das Layout der Elemente im Dialog dem Layout im Read-Only Modus entsprechen (i.d.R. dreispaltig).
-** Das Layout der Inhalte sollte so gestaltet sein, dass die Dialogbuttons bei der Zielauflösung ohne zu scrollen sichtbar sind.
-** Dialoge sollten möglichst nicht mehr als 2/3 des Screens bedecken.
-* Vertikales und horizontales Scrollen sollte innerhalb von Dialogen vermieden werden.
-* Resizing: Dialoge behalten bei einer Größenveränderung des Browsers ihre Ursprungsgröße bei.
+** Dialoge passen ihre Größe dem gezeigten Inhalt an.
+** Maximalgröße soll sich an Browser-Fenster und Anwendung im Hintergrund orientieren.
+Ein schmales Padding zur Abhebung von der Seite im Hintergrund reicht aus.
+** Die Dialogbuttons sollten einen festen Ort haben, der Inhalt kann bei Bedarf scrollbar werden.
+* Bei Dialogen, in denen Formulardaten bearbeitet werden, sollte das Layout der Elemente im Dialog dem Layout im Read-Only Modus entsprechen (i.d.R. dreispaltig).
 * *Titelzeile (A)*
 ** Der Titel des Dialogs sollte aussagekräftig sein und dem Benutzer genau zeigen, welche Interaktionen er für welche Objekte in diesem Dialog durchführt.
 Der Dialogtitel kann aus einem Haupttitel und einem optionalen Subtitel bestehen.
@@ -1530,6 +1551,12 @@ image::image133.png[align="center", scaledwidth="100%",width="566",height="50"]
 ** Das Label sollte kurz und selbsterklärend sein.
 ** Ruft ein Button einen Dialog auf, sollte der resultierende Dialog als Fenster-Titel die Beschriftung des Buttons wiederholen.
 ** Das Label sollte die auszuführende Aktion widerspiegeln __(Öffnen, Löschen, Speichern, Weiter__).
+
+* Größe
+
+** Die Breite eines Buttons soll sich generell am enthaltenen Label orientieren.
+** Es ist zulässig und gewollt, dass nebeneinanderstehende Buttons unterschiedliche Breite haben, wenn die Labels unterschiedlich groß sind.
+** Die Mindestbreite für Buttons beträgt jedoch 100 Pixel.
 * Ein Button sollte nach Möglichkeit so platziert werden, dass eventuelle Beziehungen zu anderen Elementen deutlich werden.
 * Falls nach einem Button-Klick die resultierende Aktion nur verzögert erkennbar ist, sollte dies durch eine System-Rückmeldung kenntlich gemacht werden (z. B. durch eine Fortschrittsanzeige).
 
@@ -2422,11 +2449,58 @@ Ein Design Pattern ist eine Kombination aus Standardelementen, welche in dieser 
 [[navigation]]
 === Navigation
 
-*Allgemeine Richtlinien*
+Die Navigation ist entscheidend für eine gute Bedienbarkeit von Fachanwendungen.
+Alle Anwendungsfälle einer Fachanwendung müssen, ggf. nach Anwendungskomponenten gruppiert, direkt über einen Eintrag in der Navigation ansprechbar sein.
 
-* Aktive Navigationspunkte sollten immer deutlich hervorgehoben werden.
-* Innerhalb eines Applikationsportals oder einer einzelnen Anwendung sollte eine einheitliche Navigationsstruktur angewendet werden.
-Wird beispielsweise für die Navigation ein Submenü und eine Linksnavigation eingesetzt, so sollte dies konsistent für alle Applikationen des Anwendungsportals angewandt werden.
+Die IsyFact sieht drei Navigationsebenen vor:
+
+. Hauptnavigation (auch horizontale Navigation genannt)
+. Subnavigation (Menüs der Hauptnavigation)
+. Linksnavigation (Liste von Einträgen am linken Rand einer Applikationsseite)
+
+Innerhalb einer Anwendungslandschaft oder einer einzelnen Fachanwendung muss die Navigation einheitlich strukturiert sein.
+Festlegungen auf höherer Ebene (z.B. der Anwendungslandschaft) gelten für alle Fachanwendungen.
+
+Die IsyFact sieht grundsätzlich zwei Strukturierungen vor.
+
+[STYLEGUIDE]
+====
+Bei der fachlichen Spezifikation einer neuen Fachanwendung oder Anwendungslandschaft muss eine der folgenden Strukturierungen für die Navigation ausgewählt und fest vorgegeben werden:
+
+* Anwendungsübergreifende Navigation
+* Anwendungsspezifische Navigation
+
+Insbesondere müssen sich in einer Anwendungslandschaft alle Fachanwendungen an die getroffene Entscheidung halten.
+Die Entscheidung muss an geeigneter Stelle dokumentiert werden.
+====
+
+==== Anwendungsübergreifende Navigation
+
+Diese Form der Navigation bietet über die gesamte Anwendungslandschaft eine einheitliche Navigation an.
+
+Hauptnavigation::
+Die Hauptnavigation bildet die Anwendungsgruppen ab.
+Diese sind meist fachlich motiviert und entsprechen oft den Anwendungsdomänen.
+
+Subnavigation::
+Die Subnavigation bildet einzelne Fachanwendungen innerhalb einer Anwendungsgruppe ab.
+
+Linksnavigation::
+Die Linksnavigation enthält eine Liste aller Anwendungsfälle der gewählten Fachanwendung.
+
+==== Anwendungsspezifische Navigation
+
+Diese Form der Navigation bietet die Möglichkeit, für jede Anwendung eine eigene Navigation zu definieren.
+Dies ist besonders bei sehr komplexen Fachanwendungen, die eine Vielzahl von Anwendungsfällen enthalten, sinnvoll.
+
+Hauptnavigation::
+Die Hauptnavigation bildet eine logische Gruppierung der Anwendungskomponenten ab.
+
+Subnavigation::
+Die Subnavigation bildet einzelne Anwendungskomponenten der Fachanwendung ab.
+
+Linksnavigation::
+Die Linksnavigation enthält eine Liste aller Anwendungsfälle der gewählten Anwendungskomponente.
 
 [[hauptnavigation]]
 ==== Hauptnavigation
@@ -2463,6 +2537,7 @@ image::image196.png[align="center", width="80%", pdfwidth="80%"]
 Kann eine Applikation keiner Gruppe zugeordnet werden, so kann sie einen eigenen Hauptnavigationspunkt darstellen.
 * Die Anzahl der Navigationspunkte sollte auf ein sinnvolles Minimum reduziert werden (max. 8-10).
 Die Hauptnavigation ist nicht scrollbar und sollte kein Taboverflow Menü haben.
+* Die aktuelle Position des Benutzers (aktueller Navigationspunkt) ist immer deutlich hervorgehoben.
 * Ist ein Dashboard vorhanden, so stellt dieses immer den ersten Punkt (ganz links) in der Hauptnavigation dar und ist per Default aktiv.
 Es ist immer ein Punkt in der Hauptnavigation selektiert.
 * Unterhalb der Hauptnavigation wird ein Farbbalken angezeigt.
@@ -3622,7 +3697,7 @@ image::image260.png[align="center", width="685",height="250"]
 === Validierung
 
 Aufgetretene Fehler sollen den Benutzer nach Möglichkeit nicht in seinem Workflow stören.
-Amodales Feedback (siehe Kapitel https://wiki.accso.de/display/BVA/Allgemeine+Prinzipien#AllgemeinePrinzipien-VerwendungvonvisuellreichhaltigemundamodalemFeedback[Verwendung von visuell reichhaltigem und amodalem Feedback]) gibt ihm die Möglichkeit ein Formular trotz aufgetretener Fehleingaben in beliebiger Reihenfolge und ohne Unterbrechung weiter zu bearbeiten.
+Amodales Feedback gibt ihm die Möglichkeit ein Formular trotz aufgetretener Fehleingaben in beliebiger Reihenfolge und ohne Unterbrechung weiter zu bearbeiten.
 
 :desc-image-beispielvalidierungmeldung: Beispiel Validierung und Meldung in einem Formular
 [id="image-beispielvalidierungmeldung",reftext="{figure-caption} {counter:figures}"]
@@ -4488,11 +4563,11 @@ Diese Methode generiert zwar ein wenig Redundanz und Overhead, die Bootstrap Dat
 
 Bei der gesamten Entwicklung wurde darauf geachtet, dass die ursprünglichen Funktionalitäten von Bootstrap erhalten bleiben.
 So können Entwickler bei aufkommenden Fragen die Bootstrap Dokumentation (http://getbootstrap.com) zu Rate ziehen.
-Sollte diese Dokumentation für eine neuere Bootstrap Versionen angepasst werden und somit nicht mehr kompatibel mit dem BVA-Paket sein, werden die älteren Bootstrap-Dokumentationen in einem Archiv von einem Drittanbieter(http://bootstrapdocs.com) zur Verfügung gestellt.
+Sollte diese Dokumentation für eine neuere Bootstrap Versionen angepasst werden und somit nicht mehr mit der in der Anwendung verwendeten Version kompatibel sein, werden die älteren Bootstrap-Dokumentationen in einem Archiv von einem Drittanbieter(http://bootstrapdocs.com) zur Verfügung gestellt.
 
 ===== Erweiterung der Bootstrap-Basis
 
-Die Bootstrap-Quelldateien und die von Bootstrap bereitgestellten JavaScript-Dateien können unabhängig von den BVA-Styles und Templates aktualisiert werden.
+Die Bootstrap-Quelldateien und die von Bootstrap bereitgestellten JavaScript-Dateien können unabhängig von den angewandten Styles und Templates aktualisiert werden.
 Sollte eine neue Bootstrap Version erscheinen und es notwendig sein, neue Features und/oder Bug-Fixes zu implementieren, sollte folgendermaßen vorgegangen werden:
 
 ====== LESS
@@ -4550,7 +4625,7 @@ Diese sind für die Frontend-Entwicklung sehr komfortabel.
 Ergosign stellt die Datei package.json zur Verfügung.
 Diese beinhaltet alle notwendigen Bibliotheken-Abhängikeiten um Grunt Tasks zu installieren und das Projekt neu zu erstellen.
 
-Um GruntJS zur Kompilierung von BVA Stylesheets und Markup zu nutzen, muss als erstes NodeJS installiert werden.
+Um GruntJS zur Kompilierung von Stylesheets und Markup zu nutzen, muss als erstes NodeJS installiert werden.
 Des Weiteren müssen Grunt und die benötigten Tasks (Es werden die folgenden Grunt-Tasks benutzt: grunt-contrib-less, grunt-contrib-watch, grunt-contribconcat, grunt-contrib-copy, grunt-contrib-clean, grunt-contrib-jshin) via npm installiert werden.
 Dies kann über die Funktion „npm install“ direkt in das Hauptverzeichnis erfolgen.
 Mit dem Befehl „grunt“ in einer Konsolenanwendung wird das Projekt neu erstellt.
@@ -4565,7 +4640,6 @@ Die Benennung von spezifischen Komponenten und Layout-Elementen im Code wurde de
 
 Dieses Projekt benutzt das Bootstrap Raster-System, um das Layout und die Bedienelemente der Applikation zu strukturieren und zu positionieren.
 
-Das Seiten-Layout wurde so optimiert, dass die Anforderungen aus dem BVA Interface Style Guide erfüllt werden.
 Da keine Anpassungsfähigkeit (Responsivness) des Designs unterhalb der gängigen Desktop-Auflösung benötigt wird, wurden die „Mobile, „Small“, und „Medium“-Raster (in Bootstrap als „mobile grid“, „small grid“ und „medium grid“ gekennzeichnet) deaktiviert.
 
 Da das Bootstrap3-Rastersystem im Internet Explorer Version 8 nur mit einem zusätzlichen Javascript (respond.js) funktioniert (http://getbootstrap.com/getting-started/#support[http://getbootstrap]http://getbootstrap.com/getting-started/#support[.com/getting-started/#support]) , haben wir zusätzliche Styledeklaration eingebaut um auf einer IE8 Umgebung ohne Javascriptfähigkeiten das Raster nutzen zu können.
@@ -4769,3 +4843,42 @@ Die anderen Dateien können für das Debugging der Anwendung verwendet werden.
 
 Anmerkungen: Der Buildprozess wurde aus Aufwandsgründen derzeit noch nicht automatisiert.
 Automatisierung ist z.B. über Grunt Artifactory Plug-In möglich.
+
+[[konfiguration-portalfarbe]]
+=== Konfiguration der Portalfarbe
+
+Für eine Anwendung kann eine Basisfarbe / Portalfarbe konfiguriert werden. Von dieser `portalColor` werden viele der weiteren Farbstyles für die Anwendung abgeleitet und in der generierten Datei `color.css` abgelegt, die in der Zielanwendung einzubinden ist.
+
+Zur Generierung der Datei `color.css` mit der eigenen Portalfarbe sind folgende Schritte erforderlich:
+
+*1.  Konfiguration der Portalfarbe*: In der Datei `Gruntfile.js` ist die Basisfarbe / Portalfarbe zu setzen:
+
+:desc-listing-gruntPortalfarbe: Portalfarbe in Gruntfile.js konfigurieren
+[id="listing-gruntPortalfarbe",reftext="{listing-caption} {counter:listings }"]
+.{desc-listing-gruntPortalfarbe}
+[source, xml]
+----
+var helper = require('./helper/helper');
+module.exports = function (grunt) {
+
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-less');
+
+    var portalColor = '#004179';
+
+    grunt.initConfig({
+        ...
+----
+[start=2]
+*2.   Maven Install*: In der Bibliothek `isy-style` ist ein "Maven install" durchzuführen.
+Dadurch wird ein "grunt build" ausgelöst und die Farbstyles befinden sich nach der Generierung in `target/color.css`.
+
+[start=3]
+*3.   Einbindung in Zielanwendung*: Die Datei `color.css` aus dem Target-Verzeichnis von `isy-style` ist in die Zielanwendung unterhalb des WEB-INF Verzeichnisses zu kopieren.
+
+:desc-image-colorCssPosition: Zielordner für color.css Datei
+[id="image-colorCssPosition",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-colorCssPosition}
+image::color-css-position.png[align="center"]
+// end::inhalt[]

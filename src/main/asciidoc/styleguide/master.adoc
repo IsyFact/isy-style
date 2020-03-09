@@ -1,13 +1,15 @@
 // ASCIIDOC Attribute
-include::../common/isyfact-attributes.adoc[]
-include::../common/attributes.adoc[]
+include::{isy-dokumentvorlagen}/docs/common/isyfact-attributes.adoc[]
 //
-:doctitle: BVA Styleguide
+:doctitle: Styleguide
 :title: {doctitle}
+// Dokument unter Closed Source Lizenz
+:license-oss!:
+:factory: IsyFact-Erweiterungen
 
 // Zwangsplatz des TOC
 
-include::../common/colophon.adoc[]
+include::{isy-dokumentvorlagen}/docs/common/colophon.adoc[]
 
 // Änderungsübersicht
 include::docinfo.adoc[]
@@ -27,22 +29,20 @@ toc::[]
 //include::thisdoc.adoc[leveloffset=2]
 
 // Inhalt
-include::inhalt.adoc[leveloffset=0]
+include::inhalt.adoc[tags=inhalt]
 
 :sectnums!:
 
-// Literaturverzeichnis
-//include::bibliography.adoc[]
-// ? Tabellenverzeichnis
-//include::listoftables.adoc[]
-// ? Abbildungsverzeichnis
-//include::listoffigures.adoc[]
-// ? Listings-Verzeichnis
-//include::listoflistings.adoc[]
 // Glossar
-//include::glossary.adoc[]
-// Index
-//include::../common/index.adoc[]
+include::glossary.adoc[]
+// Literaturverzeichnis
+include::bibliography.adoc[]
+// ? Tabellenverzeichnis
+include::listoftables.adoc[]
+// ? Abbildungsverzeichnis
+include::listoffigures.adoc[]
+// ? Listings-Verzeichnis
+include::listoflistings.adoc[]
 
 // Anhänge
 //include::anhaenge.adoc[leveloffset=1]
