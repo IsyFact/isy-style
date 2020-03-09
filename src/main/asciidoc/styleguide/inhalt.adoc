@@ -207,7 +207,6 @@ Modale Dialoge werden nur dann verwendet, wenn kritische Probleme auftreten oder
 *Barrierefreiheit*
 
 Die Barrierefreiheit einer Anwendung beschreibt das Ausmaß, inwieweit die Anwendung für möglichst viele Menschen zugänglich ist, unabhängig
-
 vom Alter und von möglichen Einschränkungen durch Behinderungen.
 Im englischsprachigen Raum wird hierfür der Begriff „Accessibility" (Zugänglichkeit) verwendet.
 
@@ -218,7 +217,7 @@ Darüber hinaus bewirkt eine erhöhte Barrierefreiheit allgemein für Benutzer a
 In vielen Ländern wird Barrierefreiheit (insbesondere für Webseiten) durch Gesetze bzw.
 Richtlinien geregelt, um einen allgemeinen Zugang zu öffentlichen Internetdiensten zu erreichen.
 
-*Richtlinien und Prinzipien*
+*Richtlinien und Prinzipien zur Barrierefreiheit*
 
 Im Rahmen des World Wide Web Consortium (W3C) wurden die sogenannten „Web Content Accessibility Guidelines" (WCAG) verfasst, um einen gemeinsamen Standard für die Barrierefreiheit von Webinhalten zu schaffen.
 Dabei handelt es sich um Richtlinien für die barrierefreie Gestaltung von Webinhalten im Hinblick auf drei Erfüllungsgrade (Conformance Levels A, AA und AAA). Diese Richtlinien basieren auf den folgenden vier Prinzipien für eine barrierefreie Anwendung:
@@ -233,6 +232,18 @@ In Deutschland gilt das Behindertengleichstellungsgesetz (BGG), welches eine Ben
 Als Teil dieses Gesetzes wurde die sogenannte Barrierefreie-Informationstechnik-Verordnung (BITV) verfasst.
 Für bestimmte Anwendungsgruppen gilt dies verbindlich, z.B. für Bundesbehörden im Hinblick auf deren Internetauftritte und öffentlich zugängliche Terminals.
 Die BITV wendet als Grundlage die Prinzipien und Richtlinien der WCAG an.
+
+[[Testbarkeit-von-Anwendungen]]
+*Testbarkeit von Web-basierenden Anwendungen*
+
+Eine ganze Reihe von Anwendungsfällen auf einzelnen Benutzermasken aber auch Prozessabläufe (Integrationstests) können mit Testframeworks (u.a. Selenium) maschinell testbar gemacht werden.
+
+Für den Zugriff auf ein Maskenelement (Eingabefeld, Dropdown-Liste, Schaltfläche, ...) müssen diese Testframeworks eindeutig einen Bezug zu einem Maskenobjekt herstellen können. Dies geschieht in der Regel
+über eine XPath-Anweisung, welche den Zugriffspfad auf ein Maskenobjekt zu beschreiben versucht oder über eine für ein Maskenobjekt eindeutig zu vergebene Objekt-ID.
+Der Zugriff über eine Objekt-ID ist robuster bei Maskenweiterentwicklungen, wohingegen sich XPath Zugriffspfade ändern können.
+
+Es wird daher empfohlen, jedem Maskenobjekt eine eindeutige ID mitzugeben, die ein Testframework aus dem HTML-Sourcecode auslesen kann.
+Genauere Implementierungshinweise zu den Maskenobjekt-ID's sind den Dokumenten Nutzungsvorgaben-JSF bzw. Nutzungsvorgaben-Angular zu entnehmen.
 
 [[browser-unterstuetzung]]
 === Browser-Unterstützung
@@ -1392,10 +1403,18 @@ Der Benutzer erhält immer im letzten Schritt des Wizards eine Erfolgsmeldung un
 
 In diesem Kapitel werden Bedienelemente besprochen und allgemeine Eigenschaften der Bedienelemente beschrieben.
 
+* Testbarkeit der Bedienelemente
 * Kontextabhängige Darstellung
 * Status
 * Resizing
 * Funktionalität ohne JavaScript
+
+[[testbarkeit-bedienelemente]]
+*Testbarkeit der Bedienelemente*
+
+Um die Grundlage für automatische Tests (Einsatz von Testframeworks) von Bedienelementen einer Web-basierenden Anwendung zu schaffen, sollten allen Maskenobjekten im HTML-Sourcecode eindeutige ID's zugeordnet sein (s.a. Abschnitt: xref:Testbarkeit-von-Anwendungen[Testbarkeit von Web-basierenden Anwendungen]).
+
+
 
 
 *Kontextabhängige Darstellung*
