@@ -4489,4 +4489,6 @@ image::10_Applikations_Wizard_Objektanlage_4.png[align="center"]
 :desc-image-bspwizardobjektanlage1e: Wizard Objekt Anlage - Schritt 4
 [id="image-bspwizardobjektanlage1e",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspwizardobjektanlage1e}
-image::11_Applikations_Wizard_Objektanlage_5_2017-08-25.png[align="center"]
+image::11_Applikations_Wizard_Objektanlage_5.png[align="center"]
+
+// end::inhalt[]

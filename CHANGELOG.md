@@ -13,6 +13,9 @@ ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben 
 - `IFE-47`: BVA-Kontext im Styleguide weiter reduzieren
 - `IFE-70`: BVA-Teil des Accso-Wikis aus isy-style entfernt
 - `IFE-80`: Datepicker: Verarbeitung unsicheres Datum
+- `IFS-247`: Styleguide Screenshots aktualisiert
+- `IFE-40`: Nutzungskonzept hinzugefügt
+
 
 # v4.2.0
 - `IFE-48`: Update auf jQuery 3.3.1 und Bootstrap 3.3.7
