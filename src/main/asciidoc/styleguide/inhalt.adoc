@@ -4175,10 +4175,14 @@ Innerhalb der Anwendung wird der Icon-Font Awesome benutzt.
 Dieser Font muss in die Webanwendung eingebunden werden.
 Die Icons sollten nur an Stellen verwendet werden, an denen der Styleguide den Einsatz von Icons vorsieht.
 
-In der folgenden Tabelle sind mögliche Icons und deren Funktion dargestellt sowie die dazgehörige CSS-Klasse.
+In der folgenden Tabelle sind mögliche Icons und deren Funktion dargestellt sowie die dazugehörige CSS-Klasse.
+Die CSS-Klasse bezieht sich auf Font Awesome Version 5.
 
 Eine Gesamtübersicht der zur Verfügung stehenden Icons finden Sie unter:
 http://fontawesome.io/icons/[ Font-Awesome-Icons]
+
+// Die CSS-Klassen beziehen sich auf Font Awesome 5, AsciiDoctor verwendet intern aber noch Font Awesome 4.
+// Die von AsciiDoctor gerenderten Icons entsprechen vom Aussehen daher nicht zu 100% den Font Awesome 5 Icons.
 
 .Übersicht verwendeter Icons
 ifdef::backend-pdf[]
@@ -4191,230 +4195,230 @@ endif::[]
 |Icon |CSS-Klasse |Funktionen
 
 |icon:times[2x]
-|fa-times
+|fas fa-times
 |Abbrechen, Ablehnen, Filterzelle leeren, Stornieren
 
 |icon:car[2x]
-|fa-car
+|fas fa-car
 |Abholen
 
 |icon:sign-out[2x]
-|fa-sign-out
+|fas fa-sign-out-alt
 |Abmelden
 
 |icon:sign-in[2x]
-|fa-sign-in
+|fas fa-sign-in-alt
 |Anmelden
 
 |icon:unlock[2x]
-|fa-unlock
+|fas fa-unlock
 |Aktivieren, Freischalten
 
 |icon:refresh[2x]
-|fa-refresh
+|fas fa-sync-alt
 |Aktualisieren
 
 |icon:check[2x]
-|fa-check
+|fas fa-check
 |Akzeptieren, Annehmen, Erledigen, Zustimmen
 
 |icon:paperclip[2x]
-|fa-paperclip
+|fas fa-paperclip
 |Anhänge
 
 |icon:reply[2x]
-|fa-reply
+|fas fa-reply
 |Antworten
 
 |icon:eye[2x]
-|fa-eye
+|far fa-eye
 |Anzeigen
 
 |icon:file-archive-o[2x]
-|fa-file-archive-o
+|far fa-file-archive
 |Archiv, aus Archiv zurück holen
 
 |icon:pencil[2x]
-|fa-pencil
+|fas fa-pencil-alt
 |Bearbeiten, Bearbeitung fortsetzen, Editieren, Korrigieren
 
 |icon:user[2x]
-|fa-user
+|fas fa-user
 |Benutzer, User
 
 |icon:file-image-o[2x]
-|fa-file-image-o
+|far fa-file-image
 |Bild, Bild anzeigen
 
 |icon:font[2x]
-|fa-font
+|fas fa-font
 |Buchstaben-Picker
 
 |icon:download[2x]
-|fa-download
+|fas fa-download
 |Datei laden, Download, Herunterladen, Laden von Daten
 
 |icon:list-alt[2x]
-|fa-list-alt
+|far fa-list-alt
 |Datensatz anzeigen, Detailauskunft
 
 |icon:share-square-o[2x]
-|fa-share-square-o
+|fas fa-share-square
 |Daten senden, Daten übermitteln, Senden, Versenden
 
 |icon:file[2x]
-|fa-file
+|fas fa-file
 |Dokument erstellen, Erstmeldung
 
 |icon:file-text-o[2x]
-|fa-file-text-o
+|far fa-file-alt
 |Druckansicht
 
 |icon:print[2x]
-|fa-print
+|fas fa-print
 |Drucken
 
 |icon:cog[2x]
-|fa-cog
+|fas fa-cog
 |Einstellung, Einstellungen
 
 |icon:mouse-pointer[2x]
-|fa-mouse-pointer
+|fas fa-mouse-pointer
 |Eintrag auswählen
 
 |icon:minus[2x]
-|fa-minus
+|fas fa-minus
 |Entfernen
 
 |icon:check-square-o[2x]
-|fa-check-square-o
+|far fa-check-square
 |Entscheiden
 
 |icon:plus[2x]
-|fa-plus
+|fas fa-plus
 |Ergänzen
 
 |icon:bell[2x]
-|fa-bell
+|fas fa-bell
 |Erinnerung
 
 |icon:upload[2x]
-|fa-upload
+|fas fa-upload
 |Exportieren
 
 |icon:exclamation-triangle[2x]
-|fa-exclamation-triangle
+|fas fa-exclamation-triangle
 |Fehler, Fehlerhaft
 
 |icon:eraser[2x]
-|fa-eraser
+|fas fa-eraser
 |Felder leeren
 
 |icon:check-circle[2x]
-|fa-check-circle
+|fas fa-check-circle
 |Fertig, Abgeschlossen
 
 |icon:filter[2x]
-|fa-filter
+|fas fa-filter
 |Filter ausfüllen
 
 |icon:history[2x]
-|fa-history
+|fas fa-history
 |Historie
 
 |icon:info-circle[2x]
-|fa-info-circle
+|fas fa-info-circle
 |Info
 
 |icon:arrow-circle-down[2x]
-|fa-arrow-circle-down
+|fas fa-arrow-circle-down
 |Importieren
 
 |icon:calendar[2x]
-|fa-calendar
+|far fa-calendar-alt
 |Kalender
 
 ifdef::backend-pdf[]
 // asciidoctor-pdf nutzt leider eine ältere Version von FontAwesome (4.6.x) (über prawn-icons 1.3.0) als asciidoctor (4.7.x).
 // fa-address-card ist erst ab FontAwesome 4.7.0 enthalten.
 |image::image330.png[align="left",width="24",height="24"]
-|fa-address-card
+|fas fa-address-card
 |Kontakt
 endif::[]
 
 ifdef::backend-html5[]
 |icon:address-card[2x]
-|fa-address-card
+|fas fa-address-card
 |Kontakt
 endif::[]
 
 |icon:list[2x]
-|fa-list
+|fas fa-list
 |List Picker (Objektauswahl)
 
 |icon:trash[2x]
-|fa-trash
+|fas fa-trash-alt
 |Löschen
 
 |icon:envelope[2x]
-|fa-envelope
+|fas fa-envelope
 |Mail
 
 |icon:envelope-o[2x]
-|fa-envelope-o
+|far fa-envelope
 |Nachrichten
 
 |icon:thumb-tack[2x]
-|fa-thumb-tack
+|fas fa-thumbtack
 |Notiz
 
 |icon:folder-open-o[2x]
-|fa-folder-open-o
+|far fa-folder-open
 |Seite öffnen
 
 |icon:floppy-o[2x]
-|fa-floppy-o
+|far fa-save
 |Sichern, Speichern
 
 |icon:search[2x]
-|fa-search
+|fas fa-search
 |Suchen, Suche wiederholen, Neue Suche, Durchsuchen,
  letzte Suche
 
 |icon:list-ul[2x]
-|fa-list-ul
+|fas fa-list-ul
 |Trefferliste
 
 |icon:arrow-circle-left[2x]
-|fa-arrow-circle-left
+|fas fa-arrow-circle-left
 |Vorheriger
 
 |icon:arrow-circle-right[2x]
-|fa-arrow-circle-right
+|fas fa-arrow-circle-right
 |Weiter, Nächster
 
 |icon:repeat[2x]
-|fa-repeat
+|fas fa-redo-alt
 |Wiederholen
 
 |icon:star[2x]
-|fa-star
+|fas fa-star
 |Wiedervorlage
 
 |icon:clock-o[2x]
-|fa-clock-o
+|far fa-clock
 |Zeit, Time Picker
 
 |icon:arrow-circle-o-left[2x]
-|fa-arrow-circle-o-left
+|far fa-arrow-alt-circle-left
 |Zurück (Navigation)
 
 |icon:share[2x]
-|fa-share
+|fas fa-share
 |Zurückgeben (an Sender)
 
 |icon:user[2x]
-|fa-user
+|fas fa-user
 |Zuständigkeit
 |===
 
