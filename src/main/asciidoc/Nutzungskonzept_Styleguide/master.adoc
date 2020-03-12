@@ -34,15 +34,15 @@ include::inhalt.adoc[tags=inhalt]
 :sectnums!:
 
 // Literaturverzeichnis
-//include::bibliography.adoc[]
+include::bibliography.adoc[]
 // ? Tabellenverzeichnis
-//include::listoftables.adoc[]
+include::listoftables.adoc[]
 // ? Abbildungsverzeichnis
-//include::listoffigures.adoc[]
+include::listoffigures.adoc[]
 // ? Listings-Verzeichnis
-//include::listoflistings.adoc[]
+include::listoflistings.adoc[]
 // Glossar
-//include::glossary.adoc[]
+include::glossary.adoc[]
 // Index
 //include::../common/index.adoc[]
 

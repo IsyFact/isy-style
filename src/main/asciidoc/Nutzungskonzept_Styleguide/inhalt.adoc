@@ -224,8 +224,11 @@ Hexadezimalfarbwerte sollten möglichst kurz geschrieben werden (z. B. #fff).
 
 Es werden nur Kleinbuchstaben verwendet
 
-image::image355.png[image,width=500,height=241]
 
+:desc-image-css-kleinbuchstaben: Beispiel für css-Styledeklaration
+[id="image-css-kleinbuchstaben",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-css-kleinbuchstaben}
+image::css-kleinbuchstaben.png[image,width=500,height=241]
 
 [[einbindung-isy-style]]
 == Einbindung der Bibliothek Isy-Style in eine Anwendung
