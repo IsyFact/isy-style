@@ -1,0 +1,131 @@
+= Changelog
+
+== Änderungen Release 5.0.0
+
+// Beginn Übergreifende Änderungen
+
+// Ende übergreifende Änderungen
+
+include::src/main/asciidoc/Nutzungskonzept_Styleguide/changelog.adoc[tag=release-5.0.0]
+include::src/main/asciidoc/styleguide/changelog.adoc[tag=release-5.0.0]
+include::src/main/changelog.adoc[tag=release-5.0.0]
+
+== Änderungen Release 4.3.0
+
+// Beginn Übergreifende Änderungen
+
+// Ende übergreifende Änderungen
+
+include::src/main/asciidoc/Nutzungskonzept_Styleguide/changelog.adoc[tag=release-4.3.0]
+include::src/main/asciidoc/styleguide/changelog.adoc[tag=release-4.3.0]
+include::src/main/changelog.adoc[tag=release-4.3.0]
+
+== Änderungen Release 4.2.0
+
+// Beginn Übergreifende Änderungen
+
+// Ende übergreifende Änderungen
+
+include::src/main/asciidoc/Nutzungskonzept_Styleguide/changelog.adoc[tag=release-4.2.0]
+include::src/main/asciidoc/styleguide/changelog.adoc[tag=release-4.2.0]
+include::src/main/changelog.adoc[tag=release-4.2.0]
+
+== Änderungen Release 4.1.0
+
+// Beginn Übergreifende Änderungen
+
+// Ende übergreifende Änderungen
+
+include::src/main/asciidoc/Nutzungskonzept_Styleguide/changelog.adoc[tag=release-4.1.0]
+include::src/main/asciidoc/styleguide/changelog.adoc[tag=release-4.1.0]
+include::src/main/changelog.adoc[tag=release-4.1.0]
+
+== Änderungen Release 4.0.0
+
+// Beginn Übergreifende Änderungen
+
+// Ende übergreifende Änderungen
+
+include::src/main/asciidoc/Nutzungskonzept_Styleguide/changelog.adoc[tag=release-4.0.0]
+include::src/main/asciidoc/styleguide/changelog.adoc[tag=release-4.0.0]
+include::src/main/changelog.adoc[tag=release-4.0.0]
+
+== Änderungen Release 3.0.0
+
+// Beginn Übergreifende Änderungen
+
+// Ende übergreifende Änderungen
+
+include::src/main/asciidoc/Nutzungskonzept_Styleguide/changelog.adoc[tag=release-3.0.0]
+include::src/main/asciidoc/styleguide/changelog.adoc[tag=release-3.0.0]
+include::src/main/changelog.adoc[tag=release-3.0.0]
+
+== Änderungen Release 2.3.0
+
+// Beginn Übergreifende Änderungen
+
+// Ende übergreifende Änderungen
+
+include::src/main/asciidoc/Nutzungskonzept_Styleguide/changelog.adoc[tag=release-2.3.0]
+include::src/main/asciidoc/styleguide/changelog.adoc[tag=release-2.3.0]
+include::src/main/changelog.adoc[tag=release-2.3.0]
+
+== Änderungen Release 2.2.3
+
+// Beginn Übergreifende Änderungen
+
+// Ende übergreifende Änderungen
+
+include::src/main/asciidoc/Nutzungskonzept_Styleguide/changelog.adoc[tag=release-2.2.3]
+include::src/main/asciidoc/styleguide/changelog.adoc[tag=release-2.2.3]
+include::src/main/changelog.adoc[tag=release-2.2.3]
+
+== Änderungen Release 2.2.2
+
+// Beginn Übergreifende Änderungen
+
+// Ende übergreifende Änderungen
+
+include::src/main/asciidoc/Nutzungskonzept_Styleguide/changelog.adoc[tag=release-2.2.2]
+include::src/main/asciidoc/styleguide/changelog.adoc[tag=release-2.2.2]
+include::src/main/changelog.adoc[tag=release-2.2.2]
+
+== Änderungen Release 2.2.1
+
+// Beginn Übergreifende Änderungen
+
+// Ende übergreifende Änderungen
+
+include::src/main/asciidoc/Nutzungskonzept_Styleguide/changelog.adoc[tag=release-2.2.1]
+include::src/main/asciidoc/styleguide/changelog.adoc[tag=release-2.2.1]
+include::src/main/changelog.adoc[tag=release-2.2.1]
+
+== Änderungen Release 2.2.0
+
+// Beginn Übergreifende Änderungen
+
+// Ende übergreifende Änderungen
+
+include::src/main/asciidoc/Nutzungskonzept_Styleguide/changelog.adoc[tag=release-2.2.0]
+include::src/main/asciidoc/styleguide/changelog.adoc[tag=release-2.2.0]
+include::src/main/changelog.adoc[tag=release-2.2.0]
+
+== Änderungen Release 2.1.0
+
+// Beginn Übergreifende Änderungen
+
+// Ende übergreifende Änderungen
+
+include::src/main/asciidoc/Nutzungskonzept_Styleguide/changelog.adoc[tag=release-2.1.0]
+include::src/main/asciidoc/styleguide/changelog.adoc[tag=release-2.1.0]
+include::src/main/changelog.adoc[tag=release-2.1.0]
+
+== Änderungen Release 2.0.4
+
+// Beginn Übergreifende Änderungen
+
+// Ende übergreifende Änderungen
+
+include::src/main/asciidoc/Nutzungskonzept_Styleguide/changelog.adoc[tag=release-2.0.4]
+include::src/main/asciidoc/styleguide/changelog.adoc[tag=release-2.0.4]
+include::src/main/changelog.adoc[tag=release-2.0.4]

@@ -1,0 +1,39 @@
+// tag::release-5.0.0[]
+// end::release-5.0.0[]
+
+// tag::release-4.3.0[]
+// end::release-4.3.0[]
+
+// tag::release-4.2.0[]
+// end::release-4.2.0[]
+
+// tag::release-4.1.0[]
+// end::release-4.1.0[]
+
+// tag::release-4.0.0[]
+// end::release-4.0.0[]
+
+// tag::release-3.0.0[]
+// end::release-3.0.0[]
+
+// tag::release-2.3.0[]
+// end::release-2.3.0[]
+
+// tag::release-2.2.3[]
+// end::release-2.2.3[]
+
+// tag::release-2.2.2[]
+// end::release-2.2.2[]
+
+// tag::release-2.2.1[]
+// end::release-2.2.1[]
+
+// tag::release-2.2.0[]
+// end::release-2.2.0[]
+
+// tag::release-2.1.0[]
+// end::release-2.1.0[]
+
+// tag::release-2.0.4[]
+// end::release-2.0.4[]
+
