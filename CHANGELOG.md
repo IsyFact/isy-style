@@ -4,9 +4,10 @@
 - `IFE-47`: BVA-Kontext im Styleguide weiter reduzieren
 - `IFE-70`: BVA-Teil des Accso-Wikis aus isy-style entfernt
 - `IFE-80`: Datepicker: Verarbeitung unsicheres Datum
-- `IFS-458`: Alle pom.xml Dateien mit tidy:pom fortmatiert und getestet.
+- `IFS-458`: Alle pom.xml Dateien mit tidy:pom formatiert und getestet.
 - `IFE-40`: Nutzungskonzept für den Styleguide hinzugefügt
 - `IFE-96`: JQuery auf 3.4.1 angehoben
+- `IFS-247`: Screenshots in Detailkonzept überarbeitet
 
 # v4.2.0
 - `IFE-48`: Update auf jQuery 3.3.1 und Bootstrap 3.3.7
