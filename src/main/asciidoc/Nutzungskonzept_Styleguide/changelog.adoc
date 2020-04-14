@@ -1,39 +1,54 @@
+= Changelog
+
+== Änderungen Release 5.0.0
 // tag::release-5.0.0[]
 // end::release-5.0.0[]
 
+== Änderungen Release 4.3.0
 // tag::release-4.3.0[]
 // end::release-4.3.0[]
 
+== Änderungen Release 4.2.0
 // tag::release-4.2.0[]
+- `IFE-59`: Verwendung der Portalfarbe für Navigationsmenü und Breadcrumb, Icon-Buttons (Hover) und selektierte Kopfzeilen von Tabellen
 // end::release-4.2.0[]
 
+== Änderungen Release 4.1.0
 // tag::release-4.1.0[]
 // end::release-4.1.0[]
 
+== Änderungen Release 4.0.0
 // tag::release-4.0.0[]
 // end::release-4.0.0[]
 
+== Änderungen Release 3.0.0
 // tag::release-3.0.0[]
 // end::release-3.0.0[]
 
+== Änderungen Release 2.3.0
 // tag::release-2.3.0[]
 // end::release-2.3.0[]
 
+== Änderungen Release 2.2.3
 // tag::release-2.2.3[]
 // end::release-2.2.3[]
 
+== Änderungen Release 2.2.2
 // tag::release-2.2.2[]
 // end::release-2.2.2[]
 
+== Änderungen Release 2.2.1
 // tag::release-2.2.1[]
 // end::release-2.2.1[]
 
+== Änderungen Release 2.2.0
 // tag::release-2.2.0[]
 // end::release-2.2.0[]
 
+== Änderungen Release 2.1.0
 // tag::release-2.1.0[]
 // end::release-2.1.0[]
 
+== Änderungen Release 2.0.4
 // tag::release-2.0.4[]
 // end::release-2.0.4[]
-
