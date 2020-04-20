@@ -47,13 +47,15 @@
 // tag::release-2.2.2[]
 - Header-Bereich: Linkes und rechtes Logo und der Text, der neben dem rechten Logo stehen soll, sind nun konfigurierbar.
 
-## Hinweise zum Upgrade
+Hinweise zum Upgrade
+
 - Anwendungen müssen nun die Konfigurationsparameter 'gui.header.logo.rechts.pfad', 'gui.header.logo.links.pfad' und 'gui.header.text.logo.rechts' setzen, damit die Logos bzw. der Text angezeigt werden.
 // end::release-2.2.2[]
 
 == Änderungen Release 2.2.1
 // tag::release-2.2.1[]
-## Neuerungen
+Neuerungen
+
 - `IFS-29`:
 * Deaktivierte Eingabefelder haben einen entsprechenden Cursur.
 * Einführung von h-Tags für Überschriften von Panels.
