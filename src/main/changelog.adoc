@@ -1,6 +1,7 @@
 = Changelog
 
-== Änderungen Release 5.0.0
+*Änderungen Release 5.0.0*
+
 // tag::release-5.0.0[]
 - `IFS-308`: Fontawesome Version auf 5.7.0 angehoben
 ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben sich leicht verändert. Hardkodierte Verweise auf die Schrift `FontAwesome` müssen auf
@@ -11,12 +12,14 @@ ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben 
 - `IFE-96`: Update auf jQuery 3.4.1
 // end::release-5.0.0[]
 
-== Änderungen Release 4.3.3
+*Änderungen Release 4.3.3*
+
 // tag::release-4.3.0[]
 - `IFE-80`: Datepicker: Verarbeitung unsicheres Datum
 // end::release-4.3.0[]
 
-== Änderungen Release 4.2.0
+*Änderungen Release 4.2.0*
+
 // tag::release-4.2.0[]
 - `IFE-48`: Update auf jQuery 3.3.1 und Bootstrap 3.3.7
 - `IFE-16`: Unterstützung für IE 8 eingestellt (Definition von `row-df` und gridpatch CSS Library entfernt).
@@ -27,7 +30,8 @@ ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben 
 - `IFE-46`: ReadOnly-Hinweis bei DropDownWidgets aufgenommen
 // end::release-4.2.0[]
 
-== Änderungen Release 4.1.0
+*Änderungen Release 4.1.0*
+
 // tag::release-4.1.0[]
 - `IFS-163`: Unterstützung für IE 8 eingestellt
 - `IFS-165`: UI-Block wird bei manchen Fehlermeldungen nicht deaktiviert
@@ -35,13 +39,15 @@ ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben 
 - `IFE-31`: Abstände zwischen Controls und Hover-Farbe Linksnavigation korrigiert
 // end::release-4.1.0[]
 
-== Änderungen Release 4.0.0
+*Änderungen Release 4.0.0*
+
 // tag::release-4.0.0[]
 - `IFS-73`: Integration der Style-Änderungen von Ergosign. ACHTUNG: Diese Styles sind zum Teil inkompatibel zur isy-style-3.0.0
 - `IFS-74`: isy-style aus Build der isy-web herausgelöst. Die isy-style ist als zusätzliche Maven-Depedency einzubinden.
 // end::release-4.0.0[]
 
-== Änderungen Release 3.0.0
+*Änderungen Release 3.0.0*
+
 // tag::release-3.0.0[]
 - Umstellung auf fontawesome Icons
 ACHTUNG: Die fonts liegen nun auf toplevel in `/fonts` statt `/css/fonts`.
@@ -51,12 +57,14 @@ Neue Icons können unter http://fontawesome.io/icons/ gesucht und ausgewählt we
 Ein Mapping der alten Iconfont auf fontawesome-Icons liegt unter `legacy-icon-styles.less` bereit, soll aber nur für eine Übergangszeit genutzt werden ("deprecated").
 // end::release-3.0.0[]
 
-== Änderungen Release 2.3.0
+*Änderungen Release 2.3.0*
+
 // tag::release-2.3.0[]
 - `IFS-61`: Darstellung sortierbarer Spalten überarbeitet.
 // end::release-2.3.0[]
 
-== Änderungen Release 2.2.3
+*Änderungen Release 2.2.3*
+
 // tag::release-2.2.3[]
 - Modernisierung des Builds
 - Support für Release als npm Paket
@@ -64,30 +72,37 @@ Ein Mapping der alten Iconfont auf fontawesome-Icons liegt unter `legacy-icon-st
 - Nicht verwendete Templates entfernt
 // end::release-2.2.3[]
 
-== Änderungen Release 2.2.2
+*Änderungen Release 2.2.2*
+
 // tag::release-2.2.2[]
 // end::release-2.2.2[]
 
-== Änderungen Release 2.2.1
+*Änderungen Release 2.2.1*
+
 // tag::release-2.2.1[]
 - Fix für das Four-Eyes-Icon
 // end::release-2.2.1[]
 
-== Änderungen Release 2.2.0
+*Änderungen Release 2.2.0*
+
 // tag::release-2.2.0[]
 - `IFS-17`: Umbenennung der Artifact-ID und Group-ID
 // end::release-2.2.0[]
 
-== Änderungen Release 2.1.0
+*Änderungen Release 2.1.0*
+
 // tag::release-2.1.0[]
-## Bugfixes
+Bugfixes
+
 - `IFS-24`: Toolbar im IE "überdeckt" Maskenelemente.
 - `RF-123`: Fix für fehlerhaftes Tabellen-Layout bei langen Texten in Tabellenspalte.
 // end::release-2.1.0[]
 
-== Änderungen Release 2.0.4
+*Änderungen Release 2.0.4*
+
 // tag::release-2.0.4[]
-## Bugfixes
+Bugfixes
+
 - Text lässt sich in "neuen" Browsern wieder markieren/kopieren (-webkit-user-select).
 // end::release-2.0.4[]
 
