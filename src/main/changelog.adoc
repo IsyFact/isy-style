@@ -1,3 +1,4 @@
+[[changelog]]
 = Changelog
 
 *Änderungen Release 5.0.0*
