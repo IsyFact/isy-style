@@ -72,7 +72,7 @@ Ein Mapping der alten Iconfont auf fontawesome-Icons liegt unter `legacy-icon-st
 - Nicht verwendete Templates entfernt
 // end::release-2.2.3[]
 
-*Änderungen Release 2.2.2*
+// *Änderungen Release 2.2.2*
 
 // tag::release-2.2.2[]
 // end::release-2.2.2[]

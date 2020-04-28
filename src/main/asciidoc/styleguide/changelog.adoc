@@ -1,6 +1,6 @@
 = Changelog
 
-*Änderungen Release 5.0.0*
+// *Änderungen Release 5.0.0*
 
 // tag::release-5.0.0[]
 // end::release-5.0.0[]
@@ -36,17 +36,17 @@
 - `IFS-107`: Anpassung von Farben über Konfiguration möglich (siehe README.md)
 // end::release-4.0.0[]
 
-*Änderungen Release 3.0.0*
+// *Änderungen Release 3.0.0*
 
 // tag::release-3.0.0[]
 // end::release-3.0.0[]
 
-*Änderungen Release 2.3.0*
+// *Änderungen Release 2.3.0*
 
 // tag::release-2.3.0[]
 // end::release-2.3.0[]
 
-*Änderungen Release 2.2.3*
+// *Änderungen Release 2.2.3*
 
 // tag::release-2.2.3[]
 // end::release-2.2.3[]
@@ -72,17 +72,17 @@ Neuerungen
 * formCurrencyInput hat neuen, optionalen Parameter zum Ausrichten des Texts.
 // end::release-2.2.1[]
 
-*Änderungen Release 2.2.0*
+// *Änderungen Release 2.2.0*
 
 // tag::release-2.2.0[]
 // end::release-2.2.0[]
 
-*Änderungen Release 2.1.0*
+// *Änderungen Release 2.1.0*
 
 // tag::release-2.1.0[]
 // end::release-2.1.0[]
 
-*Änderungen Release 2.0.4*
+// *Änderungen Release 2.0.4*
 
 // tag::release-2.0.4[]
 // end::release-2.0.4[]
