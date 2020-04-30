@@ -1,14 +1,11 @@
-// ASCIIDOC Attribute
 include::{isy-dokumentvorlagen}/docs/common/isyfact-attributes.adoc[]
-//
-:doctitle: Nutzungskonzept Styleguide
-:title: {doctitle}
-// Dokument unter Closed Source Lizenz
+
+:doctitle: Styleguide
+:document-type: Nutzungsvorgaben
 :license-oss!:
 :factory: IsyFact-Erweiterungen
 
-// Zwangsplatz des TOC
-
+include::{isy-dokumentvorlagen}/docs/common/title.adoc[]
 include::{isy-dokumentvorlagen}/docs/common/colophon.adoc[]
 
 // Änderungsübersicht
