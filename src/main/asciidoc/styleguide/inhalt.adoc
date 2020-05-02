@@ -1953,24 +1953,24 @@ Ein möglicher Ablauf eines Anwendungsfalls wäre folgender:
 * Ein Benutzer A hat Daten geändert, die gemäß des 4-Augen-Prinzips bestätigt werden müssen.
 * Der Benutzer A speichert die Daten. Dadurch speichert das System die Daten unter Vorbehalt. D.h. Benutzer A sieht die Daten in der Anwendung als aktuelle Daten aber entsprechend markiert.
 Die ursprünglichen Werte wurden nicht überschrieben, so dass sie im Falle einer Ablehnung der Änderung wiederhergestellt werden können.
+* Das System benachrichtigt Benutzer B, um ihn zu informieren, dass Datenänderungen zur Prüfung vorliegen.
 * Das System sperrt die Daten für Veränderung durch Dritte bis die Änderungen von einem Benutzer B bestätigt oder abgelehnt wurden.
-+
-Das System benachrichtigt Benutzer B, um ihn zu informieren, dass Datenänderungen zur Prüfung vorliegen.
-* Der Benutzer B reagiert auf die Benachrichtigung indem er den zu prüfenden Datensatz im System öffnet.
+* Der Benutzer B reagiert auf die Benachrichtigung, indem er den zu prüfenden Datensatz im System öffnet.
 * Im Falle einer Bestätigung der Änderungen durch Benutzer B übernimmt das System die Daten nun endgültig, hebt die Bearbeitungssperre auf und informiert Benutzer A.
 * Im Falle einer Ablehnung der Änderung durch Benutzer B verwirft das System die Änderungen, hebt die Bearbeitungssperre auf und informiert Benutzer A mit einem Ablehnungsgrund.
 
 *Styleguide konforme Darstellungsbeispiele für 4-Augen-Prinzip Eingabefelder*
 
-Beim Betreten der Maske, vor der Eingabe von Werten im oberen Abschnittsbereich, waren die Schloss-Icons der Feler `Gültig ab` und `Stundensatz` ,grau dargestellt.
-Nach der Eingabe eines Wertes änderte sich die jeweilige Schloss-Icon Farbe auf rot.
+Beim Betreten der Maske, vor der Eingabe von Werten im oberen Abschnittsbereich, waren die Schloss-Icons der Felder `Gültig ab` und `Stundensatz` grau dargestellt.
+
+Nach der Eingabe eines Wertes ändert sich die jeweilige Schloss-Icon Farbe auf rot.
 
 :desc-image-vier-augen-eintrag-hinzufuegen: Nach Werteeingabe rote Schloss-Icons
 [id="image-vier-augen-eintrag-hinzufuegen",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-vier-augen-eintrag-hinzufuegen}
 image::VierAugen-Tabellenfeld-Eintrag-hinzufuegen.png[align="center"]
 
-Nachdem Benutzer A zwei Stundensatzeinträge durch Drücken des `Hinzufügen` Buttons der Ergebnisliste hinzugefügt hat, kann er dann die somit modifizierte Ergebnisliste final abspeichern.
+Nachdem Benutzer A zwei Stundensatzeinträge durch Drücken der `Hinzufügen` Schaltfläche der Ergebnisliste hinzugefügt hat, kann er dann die somit modifizierte Ergebnisliste final abspeichern.
 
 Man beachte, dass auch bei Verwendung von 4-Augen-Prinzip Feldern innerhalb von Tabellenzeilen, das Schloss-Icon rechtsbündig angeordnet ist.
 
