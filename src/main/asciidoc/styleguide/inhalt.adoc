@@ -1895,7 +1895,7 @@ image::Eingabeelemente.png[align="center", width="685",height="25"]
 * Falls die Eingabe beigesteurt werden muss oder kann, z.B. in einem modalen Dialog.
 
 
-[[eingabefeld-vierAugen-Prinzip, ]]
+[[eingabefeld-vierAugen-Prinzip, 4-Augen-Prinzip Eingabefelder]]
 ==== 4-Augen-Prinzip Eingabefelder
 
 Teilweise besteht bei Eingabefeldern die Notwendigket, dass die durch einen ersten Benutzer eingegebenen Daten, zunächst noch von einem zweiten Benutzer bestätigt/freigegeben werden müssen, bevor diese von anderen Aktionen (z.B. Zahlungsläufen) berücksichtigt werden können.
