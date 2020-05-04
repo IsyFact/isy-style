@@ -5,7 +5,7 @@
 
     <artifactId>isy-style</artifactId>
     <packaging>jar</packaging>
-    <version>4.2.1</version>
+    <version>4.2.2</version>
     <name>IsyFact Styles</name>
 
     <parent>
