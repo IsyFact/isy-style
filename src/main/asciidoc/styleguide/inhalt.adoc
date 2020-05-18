@@ -1898,6 +1898,7 @@ Zur Umsetzung von Anwendungsfällen mit Eingabefeldern, die auf dem 4-Augen-Prin
 * 4-Augen-Prinzip Eingabefeld-Datum
 
 Neben diesen einzeiligen Eingabefeldtypen für das 4-Augen-Prinzip gibt es noch
+
 * 4-Augen-Prinzip Textbox
 * 4-Augen-Prinzip DropdownBox-Einzelauswahl
 * 4-Augen-Prinzip Checkbox
