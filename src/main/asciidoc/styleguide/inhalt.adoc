@@ -1825,8 +1825,12 @@ ellipsis) abgetrennt und ein Tooltip zeigt die ausgeschriebene Variante des Labe
 [[eingabefelder-ueberschrift]]
 === Eingabefelder
 
-Ein Eingabefeld dient der Eingabe von Text durch den Benutzer.
-Ein Eingabefeld ist in der Regel einzeilig.
+Ein Eingabefeld dient der Eingabe von Daten durch den Benutzer. Dies kann ein einzeiliger oder mehrzeiliger Text sein oder auch beispielsweise ein Datum, ein numerischer Wert oder eine Betragseingabe (Währungsbetrag, Fließkommazahl).
+
+
+[[standard-eingabefeld]]
+==== Standard Eingabefeld
+Das Standard Eingabefeld ist einzeilig.
 
 :desc-image-eingabefelderbis: Eingabefelder
 [id="image-eingabefelderbis",reftext="{figure-caption} {counter:figures}"]
@@ -1872,30 +1876,6 @@ image::no-js.png[]
 Es gelten die gleichen Regeln und Einschränkungen wie im Kapitel Validierung beschrieben.
 
 
-[[aktionseingabefeld]]
-==== Aktionseingabefeld
-
-:desc-image-aktionseingabefeld: Aktionseingabefeld
-[id="image-aktionseingabefeld",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-aktionseingabefeld}
-image::Eingabeelemente.png[align="center", width="685",height="25"]
-
-
-*Zustände*
-
-* Normal
-* Hover
-* Deaktiviert
-* Focus
-* Validierung
-
-*Ist dies das korrekte Bedienelement?*
-
-* Falls zusätzlich zum Eingabefeld einen dazugehörigen visuellen Hinweis dargestellt werden soll.
-* Falls die Eingabe beigesteurt werden muss oder kann, z.B. in einem modalen Dialog.
-
-
-
 [[eingabefeld-vierAugen-Prinzip, 4-Augen-Prinzip Eingabefelder]]
 ==== 4-Augen-Prinzip Eingabefelder
 
@@ -1909,23 +1889,26 @@ Die Felder mit dieser Eigenschaft werden bei der IsyFact als _"4-Augen-Prinzip E
 .{desc-image-vier-augen-grundstyles}
 image::VierAugen-Grundstyle-SchlossIcon.png[align="center"]
 
-Zur Umsetzung von Anwendungsfällen, die auf dem 4-Augen-Prinzip beruhen, sind folgende Eingabefeld-Typen erforderlich:
+Zur Umsetzung von Anwendungsfällen mit Eingabefeldern, die auf dem 4-Augen-Prinzip beruhen, sind folgende Eingabefeld-Typen verfügbar:
 
 *Ausprägungen*
 
 * 4-Augen-Prinzip Eingabefeld
-* 4-Augen-Prinzip Eingabefeld-Mehrzeilig
-* 4-Augen-Prinzip Eingabefeld-Nummerischer-Wert
+* 4-Augen-Prinzip Eingabefeld-Numerischer-Wert
 * 4-Augen-Prinzip Eingabefeld-Währung
 * 4-Augen-Prinzip Eingabefeld-Datum
-* 4-Augen-Prinzip Eingabefeld-Aktion
+
+Neben diesen einzeiligen Eingabefeldtypen für das 4-Augen-Prinzip gibt es noch
+
+* 4-Augen-Prinzip Textbox
 * 4-Augen-Prinzip DropdownBox-Einzelauswahl
 * 4-Augen-Prinzip Checkbox
-
+* 4-Augen-Prinzip Aktionseingabefelder
 
 *Zustände*
 
-* Die möglichen Zustände (Normal, Deaktiviert, Focus, ...) entsprechen denen der jeweiligen (Eltern) Eingabefeld-Typen
+* Die möglichen Grundzustände (Normal, Deaktiviert, Focus, ...) entsprechen denen der jeweiligen (Eltern) Eingabefeld-Typen
+* Ergänzend hierzu wird der Zustand eines 4-Augen-Prinzip Eingabefeldes durch die Farbe des geöffneten Schloss-Icons ausgedrückt (unlocked/grau: zur Zeit kein Eingabewert | locked/rot: Eingabewertfreigabe erforderlich)
 
 
 *Ist dies das korrekte Bedienelement?*
@@ -1936,7 +1919,6 @@ Zur Umsetzung von Anwendungsfällen, die auf dem 4-Augen-Prinzip beruhen, sind f
 *Richtlinien zur Anwendung*
 
 * Die 4-Augen-Prinzip Eingabefelder sind durch ein Schloss-Icon zu erkennen. Es wird nur die Grafik für ein geöffnetes Schloss verwendet.
-* Der Zustand eines 4-Augen-Prinzip Eingabefeldes wird durch die Farbe des Schloss-Icon ausgedrückt (grau: zur Zeit kein Eingabewert | rot: Eingabewertfreigabe erforderlich)
 * Das Schloss Icon als visuelle Kennzeichnung des 4-Augen-Prinzip Eingabefeldes steht rechtsseitig im Eingabefeld. Sollten auf Grund des Feldtyps noch weitere Icons im Eingabefeld angezeigt werden müssen (z.B. bei Datumsfeldern das Datumspicker-Icon), so steht das Schloss-Icon noch vor dem anderen Icon (s.a. <<image-vier-augen-grundstyles>>)
 * Die Breite des 4-Augen-Prinzip Eingabefeldes vergrößert sich durch das Schloss-Icon nicht.
 
@@ -1944,7 +1926,7 @@ Zur Umsetzung von Anwendungsfällen, die auf dem 4-Augen-Prinzip beruhen, sind f
 
 Außer beim reinen Eingabefeld wird bei allen anderen Eingabefeldtypen (Validierung des Numerischen Wertes, Datumspicker, Werte-Plausibilitätsprüfungen, ...) JavaScript benötigt.
 
-
+[[bsp-anwendungsfall-vier-augen, Ablauf eines Anwendungsfalls mit 4-Augen-Prinzip]]
 *Nutzungsvorgaben*
 
 Welche Anwendungslogik mit 4-Augen-Prinzip Eingabefeldern umgesetzt wird, bleibt der expliziten Fachanwendung vorbehalten.
@@ -1961,6 +1943,8 @@ Die ursprünglichen Werte wurden nicht überschrieben, so dass sie im Falle eine
 * Im Falle einer Ablehnung der Änderung durch Benutzer B verwirft das System die Änderungen, hebt die Bearbeitungssperre auf und informiert Benutzer A mit einem Ablehnungsgrund.
 
 *Styleguide konforme Darstellungsbeispiele für 4-Augen-Prinzip Eingabefelder*
+
+Beschreibung zum folgenden Screenshots:
 
 Beim Betreten der Maske, vor der Eingabe von Werten im oberen Abschnittsbereich, waren die Schloss-Icons der Felder `Gültig ab` und `Stundensatz` grau dargestellt.
 
@@ -1986,6 +1970,108 @@ In der folgenden Maskenansicht für den Benutzer B, sieht man, die durch Benutze
 [id="image-vier-augen-bestaetigen",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-vier-augen-bestaetigen}
 image::VierAugen-Tabellenfeld-Ergebnislisten.png[align="center"]
+
+[[text-box]]
+==== Text Box
+
+Text Boxen sehen optisch aus wie Eingabefelder, es können jedoch mehrzeilige Daten eingegeben werden.
+
+:desc-image-bildtextbox: Text Box
+[id="image-bildtextbox",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-bildtextbox}
+image::Text_Box.png[align="center", width="358",height="111"]
+
+
+*Zustände*
+
+* Normal
+* Hover
+* Deaktiviert
+* Focus
+* Read-Only
+* Validierung
+
+*Ist dies das korrekte Bedienelement?*
+
+* Text Boxen werden für die Eingabe von mehrzeiligem Freitext genutzt.
+* Für einzeilige Texte sollte ein Eingabefeld benutzt werden.
+* Falls die einzugebenden Daten Teil einer vordefinierten Menge sind, sollte die Verwendung eines Dropdown Menüs oder einer Wertehilfe in Erwägung gezogen werden.
+* Textboxen sind nicht mit einem Charpicker zum Einfügen von Sonderzeichen ausgestattet.
+
+*Richtlinien zur Anwendung*
+
+* Für die Verwendung von Text Boxen gelten die gleichen Richtlinien wie für Eingabefelder.
+* In manchen Fällen kann die Größe der Text Box nicht der Größe des möglichen Inhaltes entsprechen.
+Ist die Größe der Text Box kleiner als deren Inhalt, so muss der Benutzer innerhalb der Text Box scrollen können.
+Vertikales Scrollen ist horizontalem Scrollen vorzuziehen.
+
+
+[[TextvierAugen-Prinzip, 4-Augen-Prinzip Eingabefelder]]
+==== 4-Augen-Prinzip Textbox
+
+Eine 4-Augen-Prinzip Textbox kann wie eine normale Textbox einen mehrzeiligen Text aufnehmen. Ein Schloss-Icon im Eingabefeld weist auf die zusätzliche Funktionalität (4-Augen-Prinzip) hin.
+
+:desc-image-bildtextbox-locked: Text Box - 4-Augen-Prinzip
+[id="image-bildtextbox-locked",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-bildtextbox-locked}
+image::Text_Box_locked.png[align="center", width="358",height="111"]
+
+_"4-Augen-Prinzip Eingabefelder"_ erfordern, dass die durch einen ersten Benutzer eingegebenen Daten, zunächst noch von einem zweiten Benutzer bestätigt/freigegeben werden müssen.
+
+
+*Zustände*
+
+* Normal
+* Hover
+* Deaktiviert
+* Focus
+* Read-Only
+* Validierung
+* 4-Augen-Prinzip (locked | unlocked)
+
+
+*Ist dies das korrekte Bedienelement?*
+
+* 4-Augen-Prinzip Eingabefelder sind nur für die Eingabe von Daten zu verwenden, die von einem zweiten Anwendungsbenutzer entweder freizugeben oder zu verwerfen/löschen sind.
+* Textboxen sind nicht mit einem Charpicker zum Einfügen von Sonderzeichen ausgestattet.
+
+*Richtlinien zur Anwendung*
+
+* Die 4-Augen-Prinzip Eingabefelder sind durch ein Schloss-Icon zu erkennen. Es wird nur die Grafik für ein geöffnetes Schloss verwendet.
+* Das Schloss Icon als visuelle Kennzeichnung des 4-Augen-Prinzip Eingabefeldes steht rechtsseitig, oben im Eingabefeld.
+* Die Breite der 4-Augen-Prinzip Textbox vergrößert sich durch das Schloss-Icon nicht.
+
+*JavaScript*
+
+Es wird kein JavaScript benötigt.
+
+
+*Nutzungsvorgaben*
+
+Welche Anwendungslogik mit einer 4-Augen-Prinzip Textbox umgesetzt wird, bleibt der expliziten Fachanwendung vorbehalten.
+s.a. <<bsp-anwendungsfall-vier-augen>>
+
+[[aktionseingabefeld]]
+==== Aktionseingabefeld
+
+:desc-image-aktionseingabefeld: Aktionseingabefeld
+[id="image-aktionseingabefeld",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-aktionseingabefeld}
+image::Eingabeelemente.png[align="center", width="685",height="25"]
+
+
+*Zustände*
+
+* Normal
+* Hover
+* Deaktiviert
+* Focus
+* Validierung
+
+*Ist dies das korrekte Bedienelement?*
+
+* Falls zusätzlich zum Eingabefeld einen dazugehörigen visuellen Hinweis dargestellt werden soll.
+* Falls die Eingabe beigesteuert werden muss oder kann, z.B. in einem modalen Dialog.
 
 
 
@@ -2021,33 +2107,7 @@ image::Eingabefelder_Upload.png[align="center", width="685",height="25"]
 * Wenn das Upload-Feld keinen Inhalt hat, kann es einen Hinweistext dastellen (z.B. Wählen Sie eine Bild-Datei zum Hochladen aus.)
 * Das Upload-Feld und die zugehörige Visualisierung der Datei sollten erkennbar sein.
 
-[[text-box]]
-=== Text Box
 
-Text Boxen sehen optisch aus wie Eingabefelder, es können jedoch mehrzeilige Daten eingegeben werden.
-
-:desc-image-bildtextbox: Text Box
-[id="image-bildtextbox",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-bildtextbox}
-image::Text_Box.png[align="center", width="358",height="111"]
-
-
-*Zustände*
-
-* Siehe Eingabefeld
-
-*Ist dies das korrekte Bedienelement?*
-
-* Text Boxen werden für die Eingabe von mehrzeiligem Freitext genutzt.
-* Für einzeilige Texte sollte ein Eingabefeld benutzt werden.
-* Falls die einzugebenden Daten Teil einer vordefinierten Menge sind, sollte die Verwendung eines Dropdown Menüs oder einer Wertehilfe in Erwägung gezogen werden.
-
-*Richtlinien zur Anwendung*
-
-* Für die Verwendung von Text Boxen gelten die gleichen Richtlinien wie für Eingabefelder.
-* In manchen Fällen kann die Größe der Text Box nicht der Größe des möglichen Inhaltes entsprechen.
-Ist die Größe der Text Box kleiner als deren Inhalt, so muss der Benutzer innerhalb der Text Box scrollen können.
-Vertikales Scrollen ist horizontalem Scrollen vorzuziehen.
 
 
 [[dropdown-menue]]
