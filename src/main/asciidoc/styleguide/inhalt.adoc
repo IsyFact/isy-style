@@ -1943,7 +1943,8 @@ Die ursprünglichen Werte wurden nicht überschrieben, so dass sie im Falle eine
 
 *Styleguide konforme Darstellungsbeispiele für 4-Augen-Prinzip Eingabefelder*
 
-*Beschreibung zum folgenden Screenshots*
+Beschreibung zum folgenden Screenshots:
+
 Beim Betreten der Maske, vor der Eingabe von Werten im oberen Abschnittsbereich, waren die Schloss-Icons der Felder `Gültig ab` und `Stundensatz` grau dargestellt.
 
 Nach der Eingabe eines Wertes ändert sich die jeweilige Schloss-Icon Farbe auf rot.
