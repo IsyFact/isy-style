@@ -143,7 +143,7 @@
         </profile>
         <profile>
             <id>build-style-guide</id>
-            
+
             <properties>
                 <maven.build.timestamp.format>dd.MM.yyyy</maven.build.timestamp.format>
             </properties>
@@ -345,7 +345,6 @@
                                 </configuration>
                             </execution>
 
-
                             <execution>
                                 <id>nutzungskonzept-styleguide-html</id>
                                 <phase>generate-resources</phase>
@@ -378,6 +377,40 @@
                                     <sourceDocumentName>master.adoc</sourceDocumentName>
                                     <outputFile>
                                         ${project.build.directory}/styleguide/Nutzungskonzept_Styleguide.pdf
+                                    </outputFile>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>IsyFact-Changelog-html</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>process-asciidoc</goal>
+                                </goals>
+                                <configuration>
+                                    <backend>html</backend>
+                                    <sourceDirectory>
+                                        .
+                                    </sourceDirectory>
+                                    <sourceDocumentName>changelog.adoc</sourceDocumentName>
+                                    <outputFile>
+                                        ${project.build.directory}/styleguide/changelog.html
+                                    </outputFile>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>IsyFact-Changelog-pdf</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>process-asciidoc</goal>
+                                </goals>
+                                <configuration>
+                                    <backend>pdf</backend>
+                                    <sourceDirectory>
+                                        .
+                                    </sourceDirectory>
+                                    <sourceDocumentName>changelog.adoc</sourceDocumentName>
+                                    <outputFile>
+                                        ${project.build.directory}/styleguide/changelog.pdf
                                     </outputFile>
                                 </configuration>
                             </execution>
