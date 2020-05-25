@@ -8,6 +8,7 @@
 - `IFE-40`: Nutzungskonzept für den Styleguide hinzugefügt
 - `IFE-96`: JQuery auf 3.4.1 angehoben
 - `IFS-247`: Screenshots in Detailkonzept überarbeitet
+- `IFE-103`: Bootstrap-Select auf 1.13.9 angehoben. Fehlender Scrollbalken bei Dropdowns behoben.
 
 # v4.2.0
 - `IFE-48`: Update auf jQuery 3.3.1 und Bootstrap 3.3.7
