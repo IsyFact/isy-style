@@ -1,53 +1,12 @@
-
 :doctitle: Styleguide
-:document-type: Konzept
 
 toc::[]
 colophon::[factory="IsyFact-Erweiterungen", open-source="false"]
 
-//:license-oss!:
-//:factory: IsyFact-Erweiterungen
-
-//include::{isy-dokumentvorlagen}/docs/common/title.adoc[]
-//include::{isy-dokumentvorlagen}/docs/common/colophon.adoc[]
-
-// Änderungsübersicht
 include::docinfo.adoc[]
 
-// Executive Summary
-// include::preface.adoc[]
-
-// Inhaltsverzeichnis
-//ifdef::backend-html5[]
-
-//:toc-title!:
-
-//endif::[]
-
-//toc::[]
-
-// Einleitung
 include::thisdoc.adoc[tags=inhalt]
 
-// Inhalt
 include::inhalt.adoc[tags=inhalt]
 
-//:sectnums!:
-
-// Changelog
-include::changelog.adoc[]
-
-// Glossar
-//include::glossary.adoc[]
-// Literaturverzeichnis
-//include::bibliography.adoc[]
-// ? Tabellenverzeichnis
-//include::listoftables.adoc[]
-// ? Abbildungsverzeichnis
-//include::listoffigures.adoc[]
-// ? Listings-Verzeichnis
-//include::listoflistings.adoc[]
-
-
-// Anhänge
-//include::anhaenge.adoc[leveloffset=1]
+include::changelog.adoc[leveloffset=1]

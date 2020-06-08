@@ -1,3 +1,5 @@
+:doctitle: Changelog
+
 [[changelog]]
 = Changelog Isy-Style
 

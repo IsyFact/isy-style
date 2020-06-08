@@ -149,7 +149,6 @@
 
             <build>
                 <plugins>
-
                     <plugin>
                         <groupId>org.asciidoctor</groupId>
                         <artifactId>asciidoctor-maven-plugin</artifactId>
@@ -167,59 +166,32 @@
                             </dependency>
                         </dependencies>
 
-<!--                        <configuration>-->
-<!--                            <sourceDirectory>src/main/asciidoc</sourceDirectory>-->
-<!--                            <sourceDocumentName>master.adoc</sourceDocumentName>-->
-<!--                            <attributes>-->
-<!--                                <revnumber>IF-${project.version}</revnumber>-->
-<!--                                <revdate>${maven.build.timestamp}</revdate>-->
-<!--                                <version-ifs>2.0.x</version-ifs>-->
-<!--                            </attributes>-->
-<!--                        </configuration>-->
-
-                            <configuration>
-                                <outputDirectory>${project.build.directory}</outputDirectory>
-                                <attributes>
-                                    <revnumber>${project.version}</revnumber>
-                                    <revdate>${maven.build.timestamp}</revdate>
-<!--                                    <icons>font</icons>-->
-<!--                                    <sectanchors>true</sectanchors>-->
-                                    <!-- set the idprefix to blank -->
-<!--                                    <idprefix/>-->
-<!--                                    <data-uri/>-->
-<!--                                    <idseparator>-</idseparator>-->
-<!--                                    <docinfo1>true</docinfo1>-->
-<!--                                    <stylesdir>${project.build.directory}/isy-dokumentvorlagen/theme</stylesdir>-->
-<!--                                    <stylesheet>isyfact.css</stylesheet>-->
-<!--                                    <pdf-stylesdir>${project.build.directory}/isy-dokumentvorlagen/theme-->
-<!--                                    </pdf-stylesdir>-->
-<!--                                    <pdf-style>isyfact</pdf-style>-->
-<!--                                    <pdf-fontsdir>${project.build.directory}/isy-dokumentvorlagen/theme/fonts-->
-<!--                                    </pdf-fontsdir>-->
-<!--                                    <isy-dokumentvorlagen>${project.build.directory}/isy-dokumentvorlagen-->
-<!--                                    </isy-dokumentvorlagen>-->
-                                </attributes>
-                            </configuration>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <attributes>
+                                <revnumber>${project.version}</revnumber>
+                                <revdate>${maven.build.timestamp}</revdate>
+                            </attributes>
+                        </configuration>
 
                         <executions>
-<!--                            <execution>-->
-<!--                                <id>styleguide-html</id>-->
-<!--                                <phase>generate-resources</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>process-asciidoc</goal>-->
-<!--                                </goals>-->
-<!--                                <configuration>-->
-<!--                                    <backend>html</backend>-->
-<!--                                    <sourceDirectory>-->
-<!--                                        src/main/asciidoc/styleguide-->
-<!--                                    </sourceDirectory>-->
-<!--                                    <sourceDocumentName>master.adoc</sourceDocumentName>-->
-<!--                                    <outputFile>-->
-<!--                                        ${project.build.directory}/styleguide/styleguide.html-->
-<!--                                    </outputFile>-->
-<!--                                </configuration>-->
-<!--                            </execution>-->
-
+                            <execution>
+                                <id>styleguide-html</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>process-asciidoc</goal>
+                                </goals>
+                                <configuration>
+                                    <backend>html</backend>
+                                    <sourceDirectory>
+                                        src/main/asciidoc/styleguide
+                                    </sourceDirectory>
+                                    <sourceDocumentName>master.adoc</sourceDocumentName>
+                                    <outputFile>
+                                        ${project.build.directory}/styleguide/styleguide.html
+                                    </outputFile>
+                                </configuration>
+                            </execution>
                             <execution>
                                 <id>styleguide-pdf</id>
                                 <phase>generate-resources</phase>
@@ -238,346 +210,86 @@
                                 </configuration>
                             </execution>
 
-<!--                            <execution>-->
-<!--                                <id>nutzungskonzept-styleguide-html</id>-->
-<!--                                <phase>generate-resources</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>process-asciidoc</goal>-->
-<!--                                </goals>-->
-<!--                                <configuration>-->
-<!--                                    <backend>html</backend>-->
-<!--                                    <sourceDirectory>-->
-<!--                                        src/main/asciidoc/Nutzungskonzept_Styleguide-->
-<!--                                    </sourceDirectory>-->
-<!--                                    <sourceDocumentName>master.adoc</sourceDocumentName>-->
-<!--                                    <outputFile>-->
-<!--                                        ${project.build.directory}/styleguide/Nutzungskonzept_Styleguide.html-->
-<!--                                    </outputFile>-->
-<!--                                </configuration>-->
-<!--                            </execution>-->
-<!--                            <execution>-->
-<!--                                <id>nutzungskonzept-styleguide-pdf</id>-->
-<!--                                <phase>generate-resources</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>process-asciidoc</goal>-->
-<!--                                </goals>-->
-<!--                                <configuration>-->
-<!--                                    <backend>pdf</backend>-->
-<!--                                    <sourceDirectory>-->
-<!--                                        src/main/asciidoc/Nutzungskonzept_Styleguide-->
-<!--                                    </sourceDirectory>-->
-<!--                                    <sourceDocumentName>master.adoc</sourceDocumentName>-->
-<!--                                    <outputFile>-->
-<!--                                        ${project.build.directory}/styleguide/Nutzungskonzept_Styleguide.pdf-->
-<!--                                    </outputFile>-->
-<!--                                </configuration>-->
-<!--                            </execution>-->
+                            <execution>
+                                <id>nutzungskonzept-styleguide-html</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>process-asciidoc</goal>
+                                </goals>
+                                <configuration>
+                                    <backend>html</backend>
+                                    <sourceDirectory>
+                                        src/main/asciidoc/Nutzungskonzept_Styleguide
+                                    </sourceDirectory>
+                                    <sourceDocumentName>master.adoc</sourceDocumentName>
+                                    <outputFile>
+                                        ${project.build.directory}/styleguide/Nutzungskonzept_Styleguide.html
+                                    </outputFile>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>nutzungskonzept-styleguide-pdf</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>process-asciidoc</goal>
+                                </goals>
+                                <configuration>
+                                    <backend>pdf</backend>
+                                    <sourceDirectory>
+                                        src/main/asciidoc/Nutzungskonzept_Styleguide
+                                    </sourceDirectory>
+                                    <sourceDocumentName>master.adoc</sourceDocumentName>
+                                    <outputFile>
+                                        ${project.build.directory}/styleguide/Nutzungskonzept_Styleguide.pdf
+                                    </outputFile>
+                                </configuration>
+                            </execution>
 
-<!--                            <execution>-->
-<!--                                <id>IsyFact-Changelog-html</id>-->
-<!--                                <phase>generate-resources</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>process-asciidoc</goal>-->
-<!--                                </goals>-->
-<!--                                <configuration>-->
-<!--                                    <backend>html</backend>-->
-<!--                                    <sourceDirectory>-->
-<!--                                        .-->
-<!--                                    </sourceDirectory>-->
-<!--                                    <sourceDocumentName>changelog.adoc</sourceDocumentName>-->
-<!--                                    <outputFile>-->
-<!--                                        ${project.build.directory}/styleguide/changelog.html-->
-<!--                                    </outputFile>-->
-<!--                                </configuration>-->
-<!--                            </execution>-->
-<!--                            <execution>-->
-<!--                                <id>IsyFact-Changelog-pdf</id>-->
-<!--                                <phase>generate-resources</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>process-asciidoc</goal>-->
-<!--                                </goals>-->
-<!--                                <configuration>-->
-<!--                                    <backend>pdf</backend>-->
-<!--                                    <sourceDirectory>-->
-<!--                                        .-->
-<!--                                    </sourceDirectory>-->
-<!--                                    <sourceDocumentName>changelog.adoc</sourceDocumentName>-->
-<!--                                    <outputFile>-->
-<!--                                        ${project.build.directory}/styleguide/changelog.pdf-->
-<!--                                    </outputFile>-->
-<!--                                </configuration>-->
-<!--                            </execution>-->
+                            <execution>
+                                <id>IsyFact-Changelog-html</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>process-asciidoc</goal>
+                                </goals>
+                                <configuration>
+                                    <backend>html</backend>
+                                    <sourceDirectory>
+                                        .
+                                    </sourceDirectory>
+                                    <attributes>
+                                        <toc />
+                                        <toc2 />
+                                    </attributes>
+                                    <sourceDocumentName>changelog.adoc</sourceDocumentName>
+                                    <outputFile>
+                                        ${project.build.directory}/styleguide/changelog.html
+                                    </outputFile>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>IsyFact-Changelog-pdf</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>process-asciidoc</goal>
+                                </goals>
+                                <configuration>
+                                    <backend>pdf</backend>
+                                    <sourceDirectory>
+                                        .
+                                    </sourceDirectory>
+                                    <attributes>
+                                        <toc />
+                                        <toc2 />
+                                    </attributes>
+                                    <sourceDocumentName>changelog.adoc</sourceDocumentName>
+                                    <outputFile>
+                                        ${project.build.directory}/styleguide/changelog.pdf
+                                    </outputFile>
+                                </configuration>
+                            </execution>
 
                         </executions>
                     </plugin>
-
-
-
-<!--                    <plugin>-->
-<!--                        <groupId>org.apache.maven.plugins</groupId>-->
-<!--                        <artifactId>maven-dependency-plugin</artifactId>-->
-<!--                        <executions>-->
-<!--                            <execution>-->
-<!--                                <id>copy-assets</id>-->
-<!--                                <phase>generate-sources</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>unpack</goal>-->
-<!--                                </goals>-->
-<!--                                <configuration>-->
-<!--                                    <outputDirectory>${basedir}/target/isy-dokumentvorlagen</outputDirectory>-->
-<!--                                    <artifactItems>-->
-<!--                                        <artifactItem>-->
-<!--                                            <groupId>de.bund.bva.isyfact</groupId>-->
-<!--                                            <artifactId>isy-dokumentvorlagen</artifactId>-->
-<!--                                            <version>2.1.0-SNAPSHOT</version>-->
-<!--                                            <overWrite>true</overWrite>-->
-<!--                                        </artifactItem>-->
-<!--                                    </artifactItems>-->
-<!--                                </configuration>-->
-<!--                            </execution>-->
-<!--                        </executions>-->
-<!--                    </plugin>-->
-
-<!--                    <plugin>-->
-<!--                        <groupId>org.codehaus.mojo</groupId>-->
-<!--                        <artifactId>exec-maven-plugin</artifactId>-->
-<!--                        <version>1.6.0</version>-->
-<!--                        <executions>-->
-
-<!--                            &lt;!&ndash; Erzeugt das Literaturverzeichnis &ndash;&gt;-->
-<!--                            <execution>-->
-<!--                                <id>generate-bibliography</id>-->
-<!--                                <phase>generate-sources</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>exec</goal>-->
-<!--                                </goals>-->
-<!--                                <configuration>-->
-<!--                                    <executable>bash</executable>-->
-<!--                                    <workingDirectory>${basedir}/target/isy-dokumentvorlagen/docs-->
-<!--                                    </workingDirectory>-->
-<!--                                    <arguments>-->
-<!--                                        <argument>-->
-<!--                                            ${basedir}/target/isy-dokumentvorlagen/scripts/bibliography.sh-->
-<!--                                        </argument>-->
-<!--                                        <argument>${basedir}/src/main/asciidoc</argument>-->
-<!--                                    </arguments>-->
-<!--                                </configuration>-->
-<!--                            </execution>-->
-
-<!--                            &lt;!&ndash; Erzeugt das Glossar &ndash;&gt;-->
-<!--                            <execution>-->
-<!--                                <id>generate-glossary</id>-->
-<!--                                <phase>generate-sources</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>exec</goal>-->
-<!--                                </goals>-->
-<!--                                <configuration>-->
-<!--                                    <executable>bash</executable>-->
-<!--                                    <workingDirectory>${basedir}/target/isy-dokumentvorlagen/docs-->
-<!--                                    </workingDirectory>-->
-<!--                                    <arguments>-->
-<!--                                        <argument>${basedir}/target/isy-dokumentvorlagen/scripts/glossary.sh-->
-<!--                                        </argument>-->
-<!--                                        <argument>${basedir}/src/main/asciidoc</argument>-->
-<!--                                    </arguments>-->
-<!--                                </configuration>-->
-<!--                            </execution>-->
-
-<!--                            &lt;!&ndash; Erzeugt ... &ndash;&gt;-->
-<!--                            <execution>-->
-<!--                                <id>generate-lists</id>-->
-<!--                                <phase>generate-sources</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>exec</goal>-->
-<!--                                </goals>-->
-<!--                                <configuration>-->
-<!--                                    <executable>bash</executable>-->
-<!--                                    <workingDirectory>${basedir}/target/isy-dokumentvorlagen/docs-->
-<!--                                    </workingDirectory>-->
-<!--                                    <arguments>-->
-<!--                                        <argument>${basedir}/target/isy-dokumentvorlagen/scripts/listof.sh-->
-<!--                                        </argument>-->
-<!--                                        <argument>${basedir}/src/main/asciidoc</argument>-->
-<!--                                    </arguments>-->
-<!--                                </configuration>-->
-<!--                            </execution>-->
-<!--                        </executions>-->
-<!--                    </plugin>-->
-<!--                    <plugin>-->
-<!--                        <artifactId>maven-clean-plugin</artifactId>-->
-<!--                        <version>3.0.0</version>-->
-<!--                        <configuration>-->
-<!--                            <filesets>-->
-<!--                                <fileset>-->
-<!--                                    <directory>src/main/asciidoc</directory>-->
-<!--                                    <includes>-->
-<!--                                        <include>**/bibliography.adoc</include>-->
-<!--                                        <include>**/glossary.adoc</include>-->
-<!--                                        <include>**/listoftables.adoc</include>-->
-<!--                                        <include>**/listoffigures.adoc</include>-->
-<!--                                        <include>**/listoflistings.adoc</include>-->
-<!--                                    </includes>-->
-<!--                                </fileset>-->
-<!--                            </filesets>-->
-<!--                        </configuration>-->
-<!--                    </plugin>-->
-<!--                    <plugin>-->
-<!--                        <groupId>org.asciidoctor</groupId>-->
-<!--                        <artifactId>asciidoctor-maven-plugin</artifactId>-->
-<!--                        <version>2.0.0-RC.1</version>-->
-<!--                        <dependencies>-->
-<!--                            <dependency>-->
-<!--                                <groupId>org.jruby</groupId>-->
-<!--                                <artifactId>jruby-complete</artifactId>-->
-<!--                                <version>9.2.6.0</version>-->
-<!--                            </dependency>-->
-<!--                            <dependency>-->
-<!--                                <groupId>org.asciidoctor</groupId>-->
-<!--                                <artifactId>asciidoctorj-pdf</artifactId>-->
-<!--                                <version>1.5.3</version>-->
-<!--                            </dependency>-->
-<!--                        </dependencies>-->
-
-<!--                        <configuration>-->
-<!--                            <outputDirectory>${project.build.directory}</outputDirectory>-->
-
-<!--                            <requires>-->
-<!--                                <require>-->
-<!--                                    ${project.build.directory}/isy-dokumentvorlagen/docs/common/lib/isyfact-admonitions.rb-->
-<!--                                </require>-->
-<!--                            </requires>-->
-
-<!--                            <attributes>-->
-<!--                                <revnumber>${project.version}</revnumber>-->
-<!--                                <revdate>${maven.build.timestamp}</revdate>-->
-<!--                                <icons>font</icons>-->
-<!--                                <sectanchors>true</sectanchors>-->
-<!--                                &lt;!&ndash; set the idprefix to blank &ndash;&gt;-->
-<!--                                <idprefix/>-->
-<!--                                <data-uri/>-->
-<!--                                <idseparator>-</idseparator>-->
-<!--                                <docinfo1>true</docinfo1>-->
-<!--                                <stylesdir>${project.build.directory}/isy-dokumentvorlagen/theme</stylesdir>-->
-<!--                                <stylesheet>isyfact.css</stylesheet>-->
-<!--                                <pdf-stylesdir>${project.build.directory}/isy-dokumentvorlagen/theme-->
-<!--                                </pdf-stylesdir>-->
-<!--                                <pdf-style>isyfact</pdf-style>-->
-<!--                                <pdf-fontsdir>${project.build.directory}/isy-dokumentvorlagen/theme/fonts-->
-<!--                                </pdf-fontsdir>-->
-<!--                                <isy-dokumentvorlagen>${project.build.directory}/isy-dokumentvorlagen-->
-<!--                                </isy-dokumentvorlagen>-->
-<!--                            </attributes>-->
-<!--                        </configuration>-->
-
-<!--                        <executions>-->
-
-<!--                            <execution>-->
-<!--                                <id>styleguide-html</id>-->
-<!--                                <phase>generate-resources</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>process-asciidoc</goal>-->
-<!--                                </goals>-->
-<!--                                <configuration>-->
-<!--                                    <backend>html</backend>-->
-<!--                                    <sourceDirectory>-->
-<!--                                        src/main/asciidoc/styleguide-->
-<!--                                    </sourceDirectory>-->
-<!--                                    <sourceDocumentName>master.adoc</sourceDocumentName>-->
-<!--                                    <outputFile>-->
-<!--                                        ${project.build.directory}/styleguide/styleguide.html-->
-<!--                                    </outputFile>-->
-<!--                                </configuration>-->
-<!--                            </execution>-->
-
-<!--                            <execution>-->
-<!--                                <id>styleguide-pdf</id>-->
-<!--                                <phase>generate-resources</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>process-asciidoc</goal>-->
-<!--                                </goals>-->
-<!--                                <configuration>-->
-<!--                                    <backend>pdf</backend>-->
-<!--                                    <sourceDirectory>-->
-<!--                                        src/main/asciidoc/styleguide-->
-<!--                                    </sourceDirectory>-->
-<!--                                    <sourceDocumentName>master.adoc</sourceDocumentName>-->
-<!--                                    <outputFile>-->
-<!--                                        ${project.build.directory}/styleguide/styleguide.pdf-->
-<!--                                    </outputFile>-->
-<!--                                </configuration>-->
-<!--                            </execution>-->
-
-<!--                            <execution>-->
-<!--                                <id>nutzungskonzept-styleguide-html</id>-->
-<!--                                <phase>generate-resources</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>process-asciidoc</goal>-->
-<!--                                </goals>-->
-<!--                                <configuration>-->
-<!--                                    <backend>html</backend>-->
-<!--                                    <sourceDirectory>-->
-<!--                                        src/main/asciidoc/Nutzungskonzept_Styleguide-->
-<!--                                    </sourceDirectory>-->
-<!--                                    <sourceDocumentName>master.adoc</sourceDocumentName>-->
-<!--                                    <outputFile>-->
-<!--                                        ${project.build.directory}/styleguide/Nutzungskonzept_Styleguide.html-->
-<!--                                    </outputFile>-->
-<!--                                </configuration>-->
-<!--                            </execution>-->
-
-<!--                            <execution>-->
-<!--                                <id>nutzungskonzept-styleguide-pdf</id>-->
-<!--                                <phase>generate-resources</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>process-asciidoc</goal>-->
-<!--                                </goals>-->
-<!--                                <configuration>-->
-<!--                                    <backend>pdf</backend>-->
-<!--                                    <sourceDirectory>-->
-<!--                                        src/main/asciidoc/Nutzungskonzept_Styleguide-->
-<!--                                    </sourceDirectory>-->
-<!--                                    <sourceDocumentName>master.adoc</sourceDocumentName>-->
-<!--                                    <outputFile>-->
-<!--                                        ${project.build.directory}/styleguide/Nutzungskonzept_Styleguide.pdf-->
-<!--                                    </outputFile>-->
-<!--                                </configuration>-->
-<!--                            </execution>-->
-<!--                            <execution>-->
-<!--                                <id>IsyFact-Changelog-html</id>-->
-<!--                                <phase>generate-resources</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>process-asciidoc</goal>-->
-<!--                                </goals>-->
-<!--                                <configuration>-->
-<!--                                    <backend>html</backend>-->
-<!--                                    <sourceDirectory>-->
-<!--                                        .-->
-<!--                                    </sourceDirectory>-->
-<!--                                    <sourceDocumentName>changelog.adoc</sourceDocumentName>-->
-<!--                                    <outputFile>-->
-<!--                                        ${project.build.directory}/styleguide/changelog.html-->
-<!--                                    </outputFile>-->
-<!--                                </configuration>-->
-<!--                            </execution>-->
-<!--                            <execution>-->
-<!--                                <id>IsyFact-Changelog-pdf</id>-->
-<!--                                <phase>generate-resources</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>process-asciidoc</goal>-->
-<!--                                </goals>-->
-<!--                                <configuration>-->
-<!--                                    <backend>pdf</backend>-->
-<!--                                    <sourceDirectory>-->
-<!--                                        .-->
-<!--                                    </sourceDirectory>-->
-<!--                                    <sourceDocumentName>changelog.adoc</sourceDocumentName>-->
-<!--                                    <outputFile>-->
-<!--                                        ${project.build.directory}/styleguide/changelog.pdf-->
-<!--                                    </outputFile>-->
-<!--                                </configuration>-->
-<!--                            </execution>-->
-<!--                        </executions>-->
-<!--                    </plugin>-->
                 </plugins>
             </build>
         </profile>
