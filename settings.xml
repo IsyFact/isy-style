@@ -86,6 +86,14 @@
                         <enabled>false</enabled>
                     </snapshots>
                 </repository>
+                <pluginRepository>
+                    <id>repository-snapshot</id>
+                    <name>Projekt-snapshot-repository</name>
+                    <url>${env.REPOSITORY_PROJECT_SNAPSHOT}</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
             </repositories>
             <pluginRepositories>
                 <pluginRepository>
