@@ -109,7 +109,7 @@
                 <pluginRepository>
                     <id>repository-snapshot</id>
                     <name>Projekt-snapshot-repository</name>
-                    <url>${env.REPOSITORY_PROJECT_SNAPSHOT}</url>
+                    <url>${env.REPOSITORY_IFS_SNAPSHOT}</url>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>
