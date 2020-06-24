@@ -7,6 +7,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
 
     const portalColor = '#004179';
+    const focusColor = portalColor;
 
     grunt.initConfig({
 
@@ -26,7 +27,8 @@ module.exports = function (grunt) {
                         'es-portal-color-80': helper.rgbaToHex(helper.hexToRgbA(portalColor, '0.8')),
                         'es-portal-color-60': helper.rgbaToHex(helper.hexToRgbA(portalColor, '0.6')),
                         'es-portal-color-40': helper.rgbaToHex(helper.hexToRgbA(portalColor, '0.4')),
-                        'es-portal-color-20': helper.rgbaToHex(helper.hexToRgbA(portalColor, '0.2'))
+                        'es-portal-color-20': helper.rgbaToHex(helper.hexToRgbA(portalColor, '0.2')),
+                        'input-border-focus': focusColor
                     }
                 },
                 files: [{

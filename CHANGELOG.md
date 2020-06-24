@@ -2,10 +2,11 @@
 - `IFS-308`: Fontawesome Version auf 5.7.0 angehoben
 ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben sich leicht verändert. Hardkodierte Verweise auf die Schrift `FontAwesome` müssen auf
 `Font Awesome 5 Free` mit dem korrekten Schriftgewicht (Regular, Bold, ...)  geändert werden. Einige Codepoints haben sich geändert.
-- Build erzeugt zusätzliches NPM-Package in `/target` für Javascript-Client-Entwicklung
+  - Build erzeugt zusätzliches NPM-Package in `/target` für Javascript-Client-Entwicklung
 - `IFS-505`: Upgrade auf Isyfact 2
 - `IFS-381`: Fontawesome 5 in Isyfact 2 eingebunden
 - `IFE-96`: Update auf jQuery 3.4.1
+- `IFE-68`: Fokusfarbe für Bedienelemente ist über die Variable focusColor in der Gruntfile.js konfigurierbar (Standardwert ist die Portalfarbe)
 
 # v4.3.0
 - `IFS-413`: Dialogvorgaben angepasst, Größe passt sich dem Inhalt an, Buttons haben festen Ort
