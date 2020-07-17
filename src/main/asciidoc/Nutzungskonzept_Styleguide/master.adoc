@@ -1,14 +1,11 @@
-// ASCIIDOC Attribute
 include::{isy-dokumentvorlagen}/docs/common/isyfact-attributes.adoc[]
-//
-:doctitle: Nutzungskonzept Styleguide
-:title: {doctitle}
-// Dokument unter Closed Source Lizenz
+
+:doctitle: Styleguide
+:document-type: Nutzungsvorgaben
 :license-oss!:
 :factory: IsyFact-Erweiterungen
 
-// Zwangsplatz des TOC
-
+include::{isy-dokumentvorlagen}/docs/common/title.adoc[]
 include::{isy-dokumentvorlagen}/docs/common/colophon.adoc[]
 
 // Änderungsübersicht
@@ -33,6 +30,9 @@ include::inhalt.adoc[tags=inhalt]
 
 :sectnums!:
 
+// Changelog
+include::changelog.adoc[leveloffset=1]
+
 // Literaturverzeichnis
 include::bibliography.adoc[]
 // ? Tabellenverzeichnis
@@ -45,6 +45,7 @@ include::listoflistings.adoc[]
 include::glossary.adoc[]
 // Index
 //include::../common/index.adoc[]
+
 
 // Anhänge
 //include::anhaenge.adoc[leveloffset=1]
