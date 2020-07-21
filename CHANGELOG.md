@@ -1,3 +1,6 @@
+# v4.3.1
+- `IFE-103`: Bootstrap-Select auf 1.13.9 angehoben. Fehlender Scrollbalken bei Dropdowns behoben.
+
 # v4.3.0
 - `IFS-413`: Dialogvorgaben angepasst, Größe passt sich dem Inhalt an, Buttons haben festen Ort
 - `IFE-412`: Größenvorgaben für Buttons angepasst
