@@ -129,9 +129,9 @@ Ermöglicht es, herauszufinden, welche Features durch den Browser unterstützt w
 
 Implementiert einen interaktiven Standard Date Picker. https://github.com/eternicode/bootstrap-datepicker/
 
-*Bootstrap Select 1.6.2*
+*Bootstrap Select 1.13.9*
 
-Implementiert eine Auswahlbox. http://silviomoreto.github.io/bootstrap-select/
+Implementiert eine Auswahlbox. https://developer.snapappointments.com/bootstrap-select/
 
 *Bootstrap Timepicker*
 
