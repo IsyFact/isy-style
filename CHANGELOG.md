@@ -5,6 +5,7 @@ ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben 
 - Build erzeugt zusätzliches NPM-Package in `/target` für Javascript-Client-Entwicklung
 - `IFS-505`: Upgrade auf Isyfact 2
 - `IFS-381`: Fontawesome 5 in Isyfact 2 eingebunden
+- `IFE-79`: 4-Augen-Prinzip im Styleguide beschrieben
 - `IFE-96`: Update auf jQuery 3.4.1
 - `IFE-103`: Bootstrap-Select auf 1.13.9 angehoben. Fehlender Scrollbalken bei Dropdowns behoben.
 
