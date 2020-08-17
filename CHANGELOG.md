@@ -1,3 +1,9 @@
+# v4.3.2
+- `IFE-188`: Fehler bei der Dropdown-Darstellung behoben:
+    * Formular-Dropdown nutzt nicht die volle Breite
+    * Dropup wird von Header überdeckt
+    * Geöffnetes Dropdown geht über die ganze Seite auf kleinen Bildschirmen (-> Bootstrap-Select auf 1.13.18 angehoben)
+
 # v4.3.1
 - `IFE-103`: Bootstrap-Select auf 1.13.9 angehoben. Fehlender Scrollbalken bei Dropdowns behoben.
 - `IFE-79`: 4-Augen-Prinzip im Styleguide beschrieben
