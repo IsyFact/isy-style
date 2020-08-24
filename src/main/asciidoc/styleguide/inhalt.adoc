@@ -85,7 +85,7 @@ Stattdessen werden die unterschiedlichen Parameter mit Hilfe von Tabs, Listen od
 :desc-image-gliederungtabreiter: Gliederung mittels Tabreiter
 [id="image-gliederungtabreiter",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-gliederungtabreiter}
-image::image12.png[align="center", width="299",height="174"]
+image::gliederungstabreiter.png[align="center", width="299",height="174"]
 
 *Verwendung von visuell reichhaltigem und amodalem Feedback*
 
@@ -97,7 +97,7 @@ Modale Meldungsdialoge sind nur dann zu verwenden, wenn eine Eingabe des Benutze
 :desc-image-modalundamodal:  Modales und amodales Feedback im Vergleich
 [id="image-modalundamodal",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-modalundamodal}
-image::image13.png[align="center", width="685",height="273"]
+image::modalundamodal.png[align="center", width="685",height="273"]
 
 *Nutzung von Aufgabenkohärenz*
 
@@ -109,7 +109,7 @@ Ein Beispiel für die Berücksichtigung der Aufgabenkohärenz ist das Anbieten v
 :desc-image-bereitstellungvorlagen:  Bereitstellung von Vorlagen
 [id="image-bereitstellungvorlagen",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bereitstellungvorlagen}
-image::image14.png[align="center", width="600",height="393"]
+image::bereitstellungsvorlagen.png[align="center", width="600",height="393"]
 
 *Ausgleich zwischen Mächtigkeit und Komplexität eines Interfaces*
 
@@ -131,7 +131,7 @@ Zusätzliche Interaktionsmöglichkeiten können in Bereiche gelegt werden, die e
 :desc-image-progressivedisclosure:  Progressive Disclosure
 [id="image-progressivedisclosure",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-progressivedisclosure}
-image::image15.png[align="center", width="299",height="240"]
+image::progressivedisclosure.png[align="center", width="299",height="240"]
 
 *Präferenz des Wiedererkennens gegenüber dem Erinnern*
 
@@ -152,7 +152,7 @@ Es sollten möglichst viele Informationseinheiten visualisiert werden, die der B
 :desc-image-negativarbeitsgedaechtnis: Negativ-Beispiel - Arbeitsgedächtnis wird unnötig belastet
 [id="image-negativarbeitsgedaechtnis",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-negativarbeitsgedaechtnis}
-image::image16.png[align="center", width="399",height="197"]
+image::negativarbeitsgedaechtnis}.png[align="center", width="399",height="197"]
 
 *Thematische Gruppierung von Parametern*
 
@@ -162,7 +162,7 @@ Zusammengehörige Parameter werden beispielsweise in visuell separierte Bereiche
 :desc-image-gruppierungbereiche: Gruppierung zusammengehöriger Bereiche wird unnötig belastet
 [id="image-gruppierungbereiche",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-gruppierungbereiche}
-image::image17.png[align="center", width="450",height="293"]
+image::gruppierungbereiche.png[align="center", width="450",height="293"]
 
 *Verfassen von adäquaten Texten*
 
@@ -207,7 +207,6 @@ Modale Dialoge werden nur dann verwendet, wenn kritische Probleme auftreten oder
 *Barrierefreiheit*
 
 Die Barrierefreiheit einer Anwendung beschreibt das Ausmaß, inwieweit die Anwendung für möglichst viele Menschen zugänglich ist, unabhängig
-
 vom Alter und von möglichen Einschränkungen durch Behinderungen.
 Im englischsprachigen Raum wird hierfür der Begriff „Accessibility" (Zugänglichkeit) verwendet.
 
@@ -218,7 +217,7 @@ Darüber hinaus bewirkt eine erhöhte Barrierefreiheit allgemein für Benutzer a
 In vielen Ländern wird Barrierefreiheit (insbesondere für Webseiten) durch Gesetze bzw.
 Richtlinien geregelt, um einen allgemeinen Zugang zu öffentlichen Internetdiensten zu erreichen.
 
-*Richtlinien und Prinzipien*
+*Richtlinien und Prinzipien zur Barrierefreiheit*
 
 Im Rahmen des World Wide Web Consortium (W3C) wurden die sogenannten „Web Content Accessibility Guidelines" (WCAG) verfasst, um einen gemeinsamen Standard für die Barrierefreiheit von Webinhalten zu schaffen.
 Dabei handelt es sich um Richtlinien für die barrierefreie Gestaltung von Webinhalten im Hinblick auf drei Erfüllungsgrade (Conformance Levels A, AA und AAA). Diese Richtlinien basieren auf den folgenden vier Prinzipien für eine barrierefreie Anwendung:
@@ -233,6 +232,18 @@ In Deutschland gilt das Behindertengleichstellungsgesetz (BGG), welches eine Ben
 Als Teil dieses Gesetzes wurde die sogenannte Barrierefreie-Informationstechnik-Verordnung (BITV) verfasst.
 Für bestimmte Anwendungsgruppen gilt dies verbindlich, z.B. für Bundesbehörden im Hinblick auf deren Internetauftritte und öffentlich zugängliche Terminals.
 Die BITV wendet als Grundlage die Prinzipien und Richtlinien der WCAG an.
+
+[[Testbarkeit-von-Anwendungen]]
+*Testbarkeit von Web-basierenden Anwendungen*
+
+Eine ganze Reihe von Anwendungsfällen auf einzelnen Benutzermasken aber auch Prozessabläufe (Integrationstests) können mit Testframeworks (u.a. Selenium) maschinell testbar gemacht werden.
+
+Für den Zugriff auf ein Maskenelement (Eingabefeld, Dropdown-Liste, Schaltfläche, ...) müssen diese Testframeworks eindeutig einen Bezug zu einem Maskenobjekt herstellen können. Dies geschieht in der Regel
+über eine XPath-Anweisung, welche den Zugriffspfad auf ein Maskenobjekt zu beschreiben versucht oder über eine für ein Maskenobjekt eindeutig zu vergebene Objekt-ID.
+Der Zugriff über eine Objekt-ID ist robuster bei Maskenweiterentwicklungen, wohingegen sich XPath Zugriffspfade ändern können.
+
+Es wird daher empfohlen, jedem Maskenobjekt eine eindeutige ID mitzugeben, die ein Testframework aus dem HTML-Sourcecode auslesen kann.
+Genauere Implementierungshinweise zu den Maskenobjekt-ID's sind den Dokumenten Nutzungsvorgaben-JSF bzw. Nutzungsvorgaben-Angular zu entnehmen.
 
 [[browser-unterstuetzung]]
 === Browser-Unterstützung
@@ -307,7 +318,7 @@ Dadurch wird ein wesentlich schnelleres Erfassen und Verarbeiten der dargestellt
 :desc-image-virtuellesraster: Virtuelles Raster – Beispiel Dashboard unnötig belastet
 [id="image-virtuellesraster",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-virtuellesraster}
-image::image26.png[align="center", width="685",height="550"]
+image::Raster_Seite.png[align="center", width="685",height="550"]
 
 
 
@@ -327,17 +338,17 @@ solche Informationen ausblenden, die für ihn zur Bearbeitung einer Aufgabe nich
 :desc-image-grupphilfeueber: Gruppierungen mit Hilfe von Überschriften
 [id="image-grupphilfeueber",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-grupphilfeueber}
-image::image27.png[align="center", width="500",height="138"]
+image::Gruppierung_Gruppierungsueberschrift.png[align="center", width="500",height="138"]
 
 :desc-image-grupphilfhintergrund: Gruppierungen mit Hilfe von Hintergründe
 [id="image-grupphilfhintergrund",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-grupphilfhintergrund}
-image::image28.png[align="center", width="500",height="104"]
+image::Gruppierung_Hintergrundfarbe.png[align="center", width="500",height="104"]
 
 :desc-image-grupphilfabstand: Gruppierungen mit Hilfe von Abständen
 [id="image-grupphilfabstand",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-grupphilfabstand}
-image::image29.png[align="center", width="502",height="105"]
+image::Gruppierung_Whitespace.png[align="center", width="502",height="105"]
 
 
 
@@ -424,7 +435,7 @@ Der Header Bereich enthält allgemeine Informationen zur Anwendungslandschaft, d
 :desc-image-header-aufbau: Aufbau des Header-Bereiches
 [id="image-header-aufbau",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-header-aufbau}
-image::header-aufbau.png[align="center", width="80%", pdfwidth="80%"]
+image::Header_Aufbau.png[align="center", width="80%", pdfwidth="80%"]
 
 <<image-header-aufbau>> verdeutlicht die Teile, aus denen er besteht:
 
@@ -459,7 +470,7 @@ Auf dem Login Screen kann der Benutzer sich mit seinem Namen und Passwort einlog
 :desc-image-loginscreen: Login Screen
 [id="image-loginscreen",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-loginscreen}
-image::image38.png[align="center", width="629",height="528"]
+image::01_Login.png[align="center", width="629",height="528"]
 
 
 
@@ -490,12 +501,12 @@ Von hier aus kann der Benutzer in die einzelnen Applikationen abspringen.
 :desc-image-dashboard: Dashboard
 [id="image-dashboard",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-dashboard}
-image::image43.png[align="center", width="629",height="528"]
+image::02_Dashboard.png[align="center", width="629",height="528"]
 
 :desc-image-aufbaudashboard: Aufbau Dashboard
 [id="image-aufbaudashboard",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-aufbaudashboard}
-image::image44.png[align="center", width="629",height="526"]
+image::Aufbau-Dashboard.png[align="center", width="629",height="526"]
 
 
 *Aufbau*
@@ -548,8 +559,7 @@ In diesem Fall würden die Links direkt zu den Funktionen (Unterkategorien) der 
 ** Generell sollten die Verlinkungen im Widget mit den Verlinkungen der Navigationsebene 2 übereinstimmen.
 ** Es sollten nur Applikationen und Gruppen sichtbar sein die für den Benutzer und seine entsprechende Rolle relevant sind.
 ** Bei Klick auf eine Applikation oder eine Funktion wird diese im selben Fenster geöffnet.
-** Jede Applikationsgruppe bzw.
-alleinstehende Applikation wird durch eine farbliche Markierung (Richtlinien zur Farbwahl siehe Kapitel Applikationsfarben) und ein optionales Applikationsicon gekennzeichnet.
+** Jede Applikationsgruppe bzw. alleinstehende Applikation wird durch eine farbliche Markierung (Richtlinien zur Farbwahl siehe Kapitel Applikationsfarben) und ein optionales Applikationsicon gekennzeichnet.
 * Informationen \(C)
 ** In der dritten Spalte werden für den Benutzer relevante Informationen angezeigt, die nicht in direktem Zusammenhang mit den Applikationen stehen.
 ** Dies können zum Beispiel Benachrichtigungen, Details zum Benutzerkonto oder Kontaktinformationen sein.
@@ -563,7 +573,7 @@ Deshalb skalieren die Inhalte nur bis zu einer Auflösung von 1600x1200 px, ober
 :desc-image-dashboardelemente: Dashboard Elemente
 [id="image-dashboardelemente",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-dashboardelemente}
-image::image48.png[align="center", width="629",height="120"]
+image::Dashboard_Elemente.png[align="center", width="629",height="120"]
 
 
 
@@ -595,7 +605,7 @@ image::image48.png[align="center", width="629",height="120"]
 :desc-image-aufbaudashboardunterseite: Aufbau Dashboard Unterseite
 [id="image-aufbaudashboardunterseite",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-aufbaudashboardunterseite}
-image::image52.png[align="center", width="629",height="526"]
+image::Aufbau-Dashboard-Unterseite.png[align="center", width="629",height="526"]
 
 
 
@@ -624,12 +634,12 @@ image::image52.png[align="center", width="629",height="526"]
 :desc-image-applikationsseite: Applikationsseite
 [id="image-applikationsseite",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-applikationsseite}
-image::image56.png[align="center", width="629",height="526"]
+image::04_Applikationsseite.png[align="center", width="629",height="526"]
 
 :desc-image-aufbauapplikationsseite: Aufbau einer Applikationsseite
 [id="image-aufbauapplikationsseite",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-aufbauapplikationsseite}
-image::image57.png[align="center", width="629",height="526"]
+image::Aufbau-Applikationsseite.png[align="center", width="629",height="526"]
 
 
 *Aufbau*
@@ -661,23 +671,20 @@ Auf dem Dashboard erhält jede Applikationsgruppe oder alleinstehende Applikatio
 :desc-image-farbmarkierung: Dashboard Widget – Farbmarkierung und Applikationsicon
 [id="image-farbmarkierung",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-farbmarkierung}
-image::image58.png[align="center", width="343",height="145"]
+image::Applikation_Widget.png[align="center", width="343",height="145"]
 
 :desc-image-farbmarkierungdetail: Farbmarkierung Detailseite und Dialog
 [id="image-farbmarkierungdetail",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-farbmarkierungdetail}
-image::image59.png[align="center", width="629",height="557"]
+image::Applikation_Farbmarkierung.png[align="center", width="629",height="557"]
 
-:desc-image-applikationsicon: Applikationsicon auf Applikationsseite
-[id="image-applikationsicon",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-applikationsicon}
-image::image60.png[align="center", width="627",height="521"]
+{nbsp} +
 
+{empty} +
 
 *Richtlinien zur Anwendung*
 
-* Jede Applikationsgruppe bzw.
-alleinstehende Applikation wird durch eine farbliche Markierung und ein optionales Applikationsicon gekennzeichnet.
+* Jede Applikationsgruppe bzw. alleinstehende Applikation wird durch eine farbliche Markierung und ein optionales Applikationsicon gekennzeichnet.
 * Farbcodierung (Farbdefinition siehe Kapitel Applikationsfarben)
 ** Hauptnavigation – Farbbalken unterhalb des Headers
 ** Submenü (Flyout) – Farbbalken am oberen Rand des Menüs
@@ -693,6 +700,14 @@ alleinstehende Applikation wird durch eine farbliche Markierung und ein optional
 *** In Gruppenüberschriften auf Übersichten einer Applikationsseite (<<image-applikationsicon>>)
 
 
+:desc-image-applikationsicon: Applikationsicon auf Applikationsseite
+[id="image-applikationsicon",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-applikationsicon}
+image::Applikation_Hauptseite2a.png[align="center", width="627",height="521"]
+
+{nbsp} +
+
+{empty} +
 
 [[applikations-detailseite]]
 ==== Applikation Detailseite
@@ -700,12 +715,12 @@ alleinstehende Applikation wird durch eine farbliche Markierung und ein optional
 :desc-image-applikationdetailbeispiel: Applikation Detailseite – Beispiel
 [id="image-applikationdetailbeispiel",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-applikationdetailbeispiel}
-image::image63.png[align="center", width="629",height="640"]
+image::Detailseite_Beispiel2a.png[align="center", width="629",height="640"]
 
 :desc-image-aufbauapplikationdetail: Aufbau Applikation Detailseite
 [id="image-aufbauapplikationdetail",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-aufbauapplikationdetail}
-image::image64.png[align="center", width="629",height="526"]
+image::aufbauapplikationdetail.png[align="center", width="629",height="526"]
 
 
 
@@ -782,25 +797,26 @@ Beispiele für die Nutzung von sekundären Fenstern sind:
 :desc-image-dialogbeispiel1: Dialog
 [id="image-dialogbeispiel1",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-dialogbeispiel1}
-image::image72.png[align="center", width="629",height="769"]
+image::06_Applikations_Dialog_Objektanlage.png[align="center", width="629",height="769"]
 
 :desc-image-dialogwizardvalidierung: Dialog (Wizard) – Beispiel Validierung
 [id="image-dialogwizardvalidierung",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-dialogwizardvalidierung}
-image::image73.png[align="center", width="629",height="605"]
+image::Dialog-Wizard-Validierung.png[align="center", width="629",height="605"]
 
-:desc-image-aufbaudialog3: Aufbau Dialog
-[id="image-aufbaudialog3",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-aufbaudialog3}
-image::image73.png[align="center", width="627",height="249"]
-
-
+<<<<
 
 *Aufbau*
 
 * Titelzeile *(A)*
 * Inhaltsbereich *(B)*
 * Dialogbuttons *\(C)*
+
+:desc-image-aufbau-abc: Aufbau Dialog
+[id="image-aufbau-abc",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-aufbau-abc}
+image::Dialog_Aufbau_ABC.png[align="center", width="627",height="249"]
+
 
 *Richtlinien zur Anwendung*
 
@@ -825,27 +841,32 @@ Der Inhalt rutscht dann um die entsprechende Höhe nach unten.
 Das Dialogfenster kann sich gegebenenfalls um diese Höhe vergrößern (siehe <<image-dialogwizardvalidierung>>).
 * Der Bereich der *Dialogbuttons (D)* präsentiert je nach Kontext verschiedene Buttons.
 
+
 [[dialoge-ohne-javascript]]
 ==== Dialoge ohne JavaScript
 
-image::no-js.png
+:desc-image-nojs: No JavaScript Icon
+[id="image-nojs",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-nojs}
+image::no-js.png[align="center", width="55",height="55"]
 
 Hat ein Benutzer kein JavaScript, werden Dialoge in das Hauptfenster integriert.
 
 :desc-image-keinjavascriptdialog: Kein JavaScript – Dialog
 [id="image-keinjavascriptdialog",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-keinjavascriptdialog}
-image::image78.png[align="center", width="629",height="525"]
+image::Dialog_NOJS_ObjektBearbeiten.png[align="center", width="629",height="525"]
 
 :desc-image-keinjavascriptmeldung: Kein JavaScript – Meldungsdialog
 [id="image-keinjavascriptmeldung",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-keinjavascriptmeldung}
-image::image79.png[align="center", width="629",height="526"]
+image::Dialog_NOJS_Meldung.png[align="center", width="629",height="525"]
+
 
 :desc-image-keinjavascriptwizard: Kein JavaScript – Wizard
 [id="image-keinjavascriptwizard",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-keinjavascriptwizard}
-image::image80.png[align="center", width="629",height="525"]
+image::Dialog_NOJS_Wizard.png[align="center", width="629",height="525"]
 
 
 
@@ -881,13 +902,13 @@ Dies ist z. B. der Fall,
 :desc-image-meldungsdialogobjloeschen: Meldungsdialog – Objekt löschen
 [id="image-meldungsdialogobjloeschen",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-meldungsdialogobjloeschen}
-image::image82.png[align="center", width="329",height="163"]
+image::Dialog_Meldung_ObjektLoeschen.png[align="center", width="329",height="163"]
 
 
 :desc-image-aufbaumeldungsdialog: Aufbau Meldungsdialog
 [id="image-aufbaumeldungsdialog",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-aufbaumeldungsdialog}
-image::image83.png[align="center", width="325",height="162"]
+image::Aufbau_Meldungsdialog.png[align="center", width="325",height="162"]
 
 
 
@@ -947,12 +968,12 @@ Durch die Aufteilung der Interaktion auf separate Schritte und Inhaltsseiten ver
 :desc-image-dialogwizard1: Beispiel eines Dialog Wizards
 [id="image-dialogwizard1",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-dialogwizard1}
-image::image88.png[align="center", scaledwidth="96%"]
+image::Dialog_Wizard_Beispiel.png[align="center", scaledwidth="96%"]
 
 :desc-image-dialogwizard2: Aufbau eines Dialog Wizards
 [id="image-dialogwizard2",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-dialogwizard2}
-image::image89.png[align="center", scaledwidth="96%"]
+image::Dialog_Wizard_Aufbau.png[align="center", scaledwidth="96%"]
 
 
 *Aufbau*
@@ -1014,7 +1035,7 @@ Zum Beispiel sollten nicht benötigte Elemente ausgeblendet und Farben für den 
 :desc-image-seitendruck1: Seitendruck über Druck-Funktion des Browsers
 [id="image-seitendruck1",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-seitendruck1}
-image::image96.png[align="center", scaledwidth="96%"]
+image::Druck_GesamteSeite.png[align="center", scaledwidth="96%"]
 
 *Richtlinien zur Anwendung*
 
@@ -1044,22 +1065,27 @@ Neben der allgemeinen Druck-Funktion des Browsers kann der Benutzer über expliz
 :desc-image-darstellungapplication: Tabelle – Darstellung in Applikation
 [id="image-darstellungapplication",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-darstellungapplication}
-image::image97.png[align="center", scaledwidth="100%",width="627",height="272"]
+image::Druck_Ergebnisliste.png[align="center", scaledwidth="100%",width="627",height="272"]
 
 :desc-image-darstellungdruckoption: Tabelle – Darstellung in Druckvorschau
 [id="image-darstellungdruckoption",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-darstellungdruckoption}
-image::image98.png[align="center", scaledwidth="100%",width="629",height="385"]
+image::Druck_Darstellung_Druckoption.png[align="center", scaledwidth="100%",width="629",height="385"]
+
+{nbsp} +
+
+{empty} +
 
 :desc-image-detaildarstellungapplication: Detailseite – Darstellung in Applikation
 [id="image-detaildarstellungapplication",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-detaildarstellungapplication}
-image::image99.png[align="center", scaledwidth="100%",width="629",height="405"]
+image::Druck_Darstellung_Applikation.png[align="center", scaledwidth="100%",width="629",height="405"]
+
 
 :desc-image-darstellungdetaildruck: Detailseite – Darstellung in Druckvorschau
 [id="image-darstellungdetaildruck",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-darstellungdetaildruck}
-image::image100.png[align="center", scaledwidth="100%",width="500",height="773"]
+image::Darstellung_In_Druckvorschau.png[align="center", scaledwidth="100%",width="500",height="773"]
 
 
 
@@ -1116,7 +1142,7 @@ Die Suche erfolgt über ein Suchformular, welches je nach Applikation unterschie
 :desc-image-objektsuchen: Objekt suchen
 [id="image-objektsuchen",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-objektsuchen}
-image::image106.png[align="center", scaledwidth="100%",width="687",height="667"]
+image::Objekt_Suchen.png[align="center", scaledwidth="100%",width="687",height="667"]
 
 
 
@@ -1154,7 +1180,7 @@ In solchen Fällen wird auch von „filtern" gesprochen.
 :desc-image-datenfiltern: Daten filtern
 [id="image-datenfiltern",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-datenfiltern}
-image::image107.png[align="center", scaledwidth="100%",width="687",height="227"]
+image::Daten_Filtern.png[align="center", scaledwidth="100%",width="687",height="227"]
 
 
 
@@ -1181,7 +1207,7 @@ image::image107.png[align="center", scaledwidth="100%",width="687",height="227"]
 Die abschließenden Buttons am unteren rechten Rand sollten wie bei Dialogen durch eine horizontale Linie abgegrenzt werden.
 Wichtig ist dabei, dass die horizontale Linie nicht bis zum Rand gehen darf, sondern wie die Controls einen Abstand zu ihrem umgebenden Container einhält.
 
-image::image108.png[image,width=399,height=249]
+image::Button_Horizontale_Linie.png[image,width=399,height=249]
 
 [[objekt-anzeigen]]
 === Objekt anzeigen
@@ -1193,7 +1219,7 @@ In Tabellen kann der Benutzer sich eine Vorschau eines Objektes anzeigen lassen.
 :desc-image-objektvorschautabelle: Vorschau eines Objektes in einer Tabelle anzeigen
 [id="image-objektvorschautabelle",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-objektvorschautabelle}
-image::image109.png[align="center", scaledwidth="100%",width="687",height="269"]
+image::Vorschau_Objekt_Tabelle.png[align="center", scaledwidth="100%",width="687",height="269"]
 
 
 
@@ -1225,7 +1251,7 @@ Auf dieser werden dem Benutzer ausführliche Informationen zu dem Objekt angezei
 :desc-image-objektdetailseiteanzeigen: Detailseite eines Objektes anzeigen
 [id="image-objektdetailseiteanzeigen",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-objektdetailseiteanzeigen}
-image::image110.png[align="center", scaledwidth="100%",width="687",height="341"]
+image::Darstellung_Objekt_Anzeigen.png[align="center", scaledwidth="100%",width="687",height="341"]
 
 
 *Schnellnavigation*
@@ -1234,7 +1260,7 @@ Optional kann sich zur schnellen Navigation zwischen mehreren Ergebnissen ein Co
 Es besteht aus Zurück- und Vor-Buttons, die durch die Anzeige der aktuellen Position und der Gesamtmenge getrennt sind.
 Die Gesamtmenge entspricht der Anzahl der Objekte in der dahinterliegenden Übersichtsliste.
 
-image::image111.png[image,width=399,height=250]
+image::Schnellnavigation.png[image,width=399,height=250]
 
 *Richtlinien zur Interaktion*
 
@@ -1257,7 +1283,7 @@ image::image111.png[image,width=399,height=250]
 :desc-image-objekteditieren: Objekt editieren
 [id="image-objekteditieren",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-objekteditieren}
-image::image110.png[align="center", scaledwidth="100%",width="645",height="326"]
+image::Darstellung_Objekt_Anzeigen.png[align="center", scaledwidth="100%",width="645",height="326"]
 
 
 
@@ -1293,7 +1319,7 @@ In diesen Fällen lässt sich jedes Teilobjekt separat löschen.
 :desc-image-loeschenmeldungsdialog: Daten löschen über Meldungsdialog
 [id="image-loeschenmeldungsdialog",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-loeschenmeldungsdialog}
-image::image113.png[align="center", scaledwidth="100%",width="653",height="313"]
+image::Dialog_Daten_Loeschen.png[align="center", scaledwidth="100%",width="653",height="313"]
 
 
 
@@ -1328,7 +1354,7 @@ Anschließend wird der Dialog geschlossen.
 :desc-image-anlegenobjektedialog: Anlegen einfacher Objekte über Dialog
 [id="image-anlegenobjektedialog",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-anlegenobjektedialog}
-image::image114.png[align="center", scaledwidth="100%",width="687",height="357"]
+image::Dialog_Objekt_Anlegen.png[align="center", scaledwidth="100%",width="687",height="357"]
 
 
 
@@ -1356,7 +1382,7 @@ Das angelegte Objekt sollte dabei immer im Blickfeld des Benutzers liegen – z.
 :desc-image-anlegenkomplexerobjekte: Anlegen komplexer Objekte über Wizard
 [id="image-anlegenkomplexerobjekte",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-anlegenkomplexerobjekte}
-image::image115.png[align="center", scaledwidth="100%",width="687",height="737"]
+image::Dialog_Anlegen_Komplexer_Elemente.png[align="center", scaledwidth="100%",width="687",height="737"]
 
 
 *Richtlinien zur Interaktion*
@@ -1392,10 +1418,18 @@ Der Benutzer erhält immer im letzten Schritt des Wizards eine Erfolgsmeldung un
 
 In diesem Kapitel werden Bedienelemente besprochen und allgemeine Eigenschaften der Bedienelemente beschrieben.
 
+* Testbarkeit der Bedienelemente
 * Kontextabhängige Darstellung
 * Status
 * Resizing
 * Funktionalität ohne JavaScript
+
+[[testbarkeit-bedienelemente]]
+*Testbarkeit der Bedienelemente*
+
+Um die Grundlage für automatische Tests (Einsatz von Testframeworks) von Bedienelementen einer Web-basierenden Anwendung zu schaffen, sollten allen Maskenobjekten im HTML-Sourcecode eindeutige ID's zugeordnet sein (s.a. Abschnitt: xref:Testbarkeit-von-Anwendungen[Testbarkeit von Web-basierenden Anwendungen]).
+
+
 
 
 *Kontextabhängige Darstellung*
@@ -1418,13 +1452,13 @@ Im Folgenden ist zu sehen wie beispielsweise ein Objekt (hier eine Gruppierung) 
 :desc-image-benutzerrechteloeschen: Benutzerrechte zum Löschen und Bearbeiten von Objekten vorhanden
 [id="image-benutzerrechteloeschen",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-benutzerrechteloeschen}
-image::image119.png[align="center", scaledwidth="100%",width="468",height="303"]
+image::Benutzerrechte_Loeschen.png[align="center", scaledwidth="100%",width="468",height="303"]
 
 
 :desc-image-benutzerrechtenichtvorhanden: Benutzerrechte zum Löschen und Bearbeiten von Objekten nicht vorhanden
 [id="image-benutzerrechtenichtvorhanden",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-benutzerrechtenichtvorhanden}
-image::image120.png[align="center", scaledwidth="100%",width="471",height="283"]
+image::Benutzerrechte_Nicht_Vorhanden.png[align="center", scaledwidth="100%",width="471",height="283"]
 
 
 *Deaktivieren nicht relevanter Elemente* Elemente, die nur *temporär* nicht relevant sind, sollten hingegen deaktiviert werden.
@@ -1445,7 +1479,7 @@ Je nach Kontext können manche Elemente, in der Regel Eingabeelemente, verschied
 :desc-image-bedienelementestatus: Status von Bedienelementen – Beispiel Eingabefeld
 [id="image-bedienelementestatus",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bedienelementestatus}
-image::image122.png[align="center", scaledwidth="100%",width="468",height="20"]
+image::Eingabeelemente.png[align="center", width="629",height="29"]
 
 
 
@@ -1493,7 +1527,7 @@ Ein Element ist ausgewählt und bleibt in diesem Zustand.
 ** **Validierung**
 +
 Elemente die einer Validierung unterzogen werden (vor allem in Formularen) werden bei fehlerhaften Eingaben gesondert hervorgehoben.
-xxxxx
+
 
 *Resizing von Bedienelementen*
 
@@ -1527,7 +1561,7 @@ Buttons enthalten entweder ein Textlabel, ein Icon oder eine Kombination aus bei
 :desc-image-standardbutton: Standard Button
 [id="image-standardbutton",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-standardbutton}
-image::image133.png[align="center", scaledwidth="100%",width="566",height="50"]
+image::ButtonStates.png[align="center", scaledwidth="100%",width="566",height="50"]
 
 *Zustände*
 
@@ -1573,7 +1607,7 @@ Toolbar Buttons werden ausschließlich in Toolbars eingesetzt.
 :desc-image-toolbarbutton: Toolbar Button
 [id="image-toolbarbutton",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-toolbarbutton}
-image::image135.png[align="center", scaledwidth="100%",width="490",height="51"]
+image::Toolbar_Button.png[align="center", scaledwidth="100%",width="490",height="51"]
 
 
 *Zustände*
@@ -1605,14 +1639,14 @@ Menü Buttons können aus Platzgründen zusammengehörige Funktionen zusammenfas
 :desc-image-menuebutton: Menü Button
 [id="image-menuebutton",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-menuebutton}
-image::image138.png[align="center", scaledwidth="100%",width="490",height="44"]
+image::Toolbar_Menue_Button.png[align="center", scaledwidth="100%",width="490",height="44"]
 
 
 
 :desc-image-menuebuttonbeispiel: Menü Button - Beispiel
 [id="image-menuebuttonbeispiel",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-menuebuttonbeispiel}
-image::image139.png[align="center", width="193",height="177"]
+image::Button_Menue_Beispiel.png[align="center", width="193",height="177"]
 
 
 *Zustände*
@@ -1656,7 +1690,7 @@ Die häufigsten Szenarien für den Einsatz von Toggle Buttons sind das schnelle 
 :desc-image-togglebutton: Toggle Button
 [id="image-togglebutton",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-togglebutton}
-image::image140.png[align="center", width="298",height="25"]
+image::Button_Toggle.png[align="center", width="298",height="25"]
 
 
 *Zustände*
@@ -1685,12 +1719,12 @@ Icon Buttons sind Buttons die kein sichtbares Label haben, sondern nur aus einem
 :desc-image-iconbuttonquickaction: Icon Button Quickactions & Toolbar
 [id="image-iconbuttonquickaction",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-iconbuttonquickaction}
-image::image143.png[align="center", width="214",height="60"]
+image::Icon_Button_Quickaction.png[align="center", width="214",height="60"]
 
 :desc-image-iconbuttonpfeile: Icon Button Pfeile
 [id="image-iconbuttonpfeile",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-iconbuttonpfeile}
-image::image144.png[align="center", width="277",height="137"]
+image::Icon_Button_Pfeile.png[align="center", width="277",height="137"]
 
 *Zustände*
 
@@ -1721,17 +1755,17 @@ Ebenso können Hyperlinks dazu eingesetzt werden, Funktionen aufzurufen.
 :desc-image-dashboardtextlink: Dashboard – Textlink zu Applikation (mit Icon)
 [id="image-dashboardtextlink",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-dashboardtextlink}
-image::image146.png[align="center", width="265",height="44"]
+image::Text_Link_Applikation.png[align="center", width="265",height="44"]
 
 :desc-image-dashboardnormalertextlink: Dashboard – Normaler Textlink
 [id="image-dashboardnormalertextlink",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-dashboardnormalertextlink}
-image::image147.png[align="center", width="214",height="45"]
+image::Text_Link.png[align="center", width="214",height="45"]
 
 :desc-image-applTextlinkTabellen: Applikation – Textlink in Tabellen
 [id="image-applTextlinkTabellen",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-applTextlinkTabellen}
-image::image148.png[align="center", width="310",height="45"]
+image::Text_Link_Tabelle.png[align="center", width="310",height="45"]
 
 *Zustände*
 
@@ -1791,13 +1825,17 @@ ellipsis) abgetrennt und ein Tooltip zeigt die ausgeschriebene Variante des Labe
 [[eingabefelder-ueberschrift]]
 === Eingabefelder
 
-Ein Eingabefeld dient der Eingabe von Text durch den Benutzer.
-Ein Eingabefeld ist in der Regel einzeilig.
+Ein Eingabefeld dient der Eingabe von Daten durch den Benutzer. Dies kann ein einzeiliger oder mehrzeiliger Text sein oder auch beispielsweise ein Datum, ein numerischer Wert oder eine Betragseingabe (Währungsbetrag, Fließkommazahl).
+
+
+[[standard-eingabefeld]]
+==== Standard Eingabefeld
+Das Standard Eingabefeld ist einzeilig.
 
 :desc-image-eingabefelderbis: Eingabefelder
 [id="image-eingabefelderbis",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-eingabefelderbis}
-image::image149.png[align="center", width="685",height="31"]
+image::Eingabeelemente.png[align="center", width="685",height="31"]
 
 
 *Zustände*
@@ -1838,13 +1876,188 @@ image::no-js.png[]
 Es gelten die gleichen Regeln und Einschränkungen wie im Kapitel Validierung beschrieben.
 
 
+[[eingabefeld-vierAugen-Prinzip, 4-Augen-Prinzip Eingabefelder]]
+==== 4-Augen-Prinzip Eingabefelder
+
+Teilweise besteht bei Eingabefeldern die Notwendigkeit, dass die durch einen ersten Benutzer eingegebenen Daten, zunächst noch von einem zweiten Benutzer bestätigt/freigegeben werden müssen, bevor diese von anderen Aktionen (z.B. Zahlungsläufen) berücksichtigt werden können.
+
+Die Felder mit dieser Eigenschaft werden bei der IsyFact als _"4-Augen-Prinzip Eingabefelder"_ bezeichnet und sind visuell durch ein Schloss-Icon zu erkennen.
+
+
+:desc-image-vier-augen-grundstyles: Durch Schloss-Icon gekennzeichnete 4-Augen-Prinzip Eingabefelder
+[id="image-vier-augen-grundstyles",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-vier-augen-grundstyles}
+image::VierAugen-Grundstyle-SchlossIcon.png[align="center"]
+
+Zur Umsetzung von Anwendungsfällen mit Eingabefeldern, die auf dem 4-Augen-Prinzip beruhen, sind folgende Eingabefeld-Typen verfügbar:
+
+*Ausprägungen*
+
+* 4-Augen-Prinzip Eingabefeld
+* 4-Augen-Prinzip Eingabefeld-Numerischer-Wert
+* 4-Augen-Prinzip Eingabefeld-Währung
+* 4-Augen-Prinzip Eingabefeld-Datum
+
+Neben diesen einzeiligen Eingabefeldtypen für das 4-Augen-Prinzip gibt es noch
+
+* 4-Augen-Prinzip Textbox
+* 4-Augen-Prinzip DropdownBox-Einzelauswahl
+* 4-Augen-Prinzip Checkbox
+* 4-Augen-Prinzip Aktionseingabefelder
+
+*Zustände*
+
+* Die möglichen Grundzustände (Normal, Deaktiviert, Focus, ...) entsprechen denen der jeweiligen (Eltern) Eingabefeld-Typen
+* Ergänzend hierzu wird der Zustand eines 4-Augen-Prinzip Eingabefeldes durch die Farbe des geöffneten Schloss-Icons ausgedrückt (unlocked/grau: zur Zeit kein Eingabewert | locked/rot: Eingabewertfreigabe erforderlich)
+
+
+*Ist dies das korrekte Bedienelement?*
+
+* 4-Augen-Prinzip Eingabefelder sind nur für die Eingabe von Daten zu verwenden, die von einem zweiten Anwendungsbenutzer entweder freizugeben oder zu verwerfen/löschen sind.
+
+
+*Richtlinien zur Anwendung*
+
+* Die 4-Augen-Prinzip Eingabefelder sind durch ein Schloss-Icon zu erkennen. Es wird nur die Grafik für ein geöffnetes Schloss verwendet.
+* Das Schloss Icon als visuelle Kennzeichnung des 4-Augen-Prinzip Eingabefeldes steht rechtsseitig im Eingabefeld. Sollten auf Grund des Feldtyps noch weitere Icons im Eingabefeld angezeigt werden müssen (z.B. bei Datumsfeldern das Datumspicker-Icon), so steht das Schloss-Icon noch vor dem anderen Icon (s.a. <<image-vier-augen-grundstyles>>)
+* Die Breite des 4-Augen-Prinzip Eingabefeldes vergrößert sich durch das Schloss-Icon nicht.
+
+*JavaScript*
+
+Außer beim reinen Eingabefeld wird bei allen anderen Eingabefeldtypen (Validierung des Numerischen Wertes, Datumspicker, Werte-Plausibilitätsprüfungen, ...) JavaScript benötigt.
+
+[[bsp-anwendungsfall-vier-augen, Ablauf eines Anwendungsfalls mit 4-Augen-Prinzip]]
+*Nutzungsvorgaben*
+
+Welche Anwendungslogik mit 4-Augen-Prinzip Eingabefeldern umgesetzt wird, bleibt der expliziten Fachanwendung vorbehalten.
+
+Ein möglicher Ablauf eines Anwendungsfalls wäre folgender:
+
+* Ein Benutzer A hat Daten geändert, die gemäß des 4-Augen-Prinzips bestätigt werden müssen.
+* Der Benutzer A speichert die Daten. Dadurch speichert das System die Daten unter Vorbehalt. D.h. Benutzer A sieht die Daten in der Anwendung als aktuelle Daten aber entsprechend markiert.
+Die ursprünglichen Werte wurden nicht überschrieben, so dass sie im Falle einer Ablehnung der Änderung wiederhergestellt werden können.
+* Das System benachrichtigt Benutzer B, um ihn zu informieren, dass Datenänderungen zur Prüfung vorliegen.
+* Das System sperrt die Daten für Veränderung durch Dritte bis die Änderungen von einem Benutzer B bestätigt oder abgelehnt wurden.
+* Der Benutzer B reagiert auf die Benachrichtigung, indem er den zu prüfenden Datensatz im System öffnet.
+* Im Falle einer Bestätigung der Änderungen durch Benutzer B übernimmt das System die Daten nun endgültig, hebt die Bearbeitungssperre auf und informiert Benutzer A.
+* Im Falle einer Ablehnung der Änderung durch Benutzer B verwirft das System die Änderungen, hebt die Bearbeitungssperre auf und informiert Benutzer A mit einem Ablehnungsgrund.
+
+*Styleguide konforme Darstellungsbeispiele für 4-Augen-Prinzip Eingabefelder*
+
+Beschreibung zum folgenden Screenshots:
+
+Beim Betreten der Maske, vor der Eingabe von Werten im oberen Abschnittsbereich, waren die Schloss-Icons der Felder `Gültig ab` und `Stundensatz` grau dargestellt.
+
+Nach der Eingabe eines Wertes ändert sich die jeweilige Schloss-Icon Farbe auf rot.
+
+:desc-image-vier-augen-eintrag-hinzufuegen: Nach Werteeingabe rote Schloss-Icons
+[id="image-vier-augen-eintrag-hinzufuegen",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-vier-augen-eintrag-hinzufuegen}
+image::VierAugen-Tabellenfeld-Eintrag-hinzufuegen.png[align="center"]
+
+Nachdem Benutzer A zwei Stundensatzeinträge durch Drücken der `Hinzufügen` Schaltfläche der Ergebnisliste hinzugefügt hat, kann er dann die somit modifizierte Ergebnisliste final abspeichern.
+
+Man beachte, dass auch bei Verwendung von 4-Augen-Prinzip Feldern innerhalb von Tabellenzeilen, das Schloss-Icon rechtsbündig angeordnet ist.
+
+:desc-image-vier-augen-nach-hinzufuegung: Durchgängig rechtsseitige Darstellung des  Schloss-Icons
+[id="image-vier-augen-nach-hinzufuegung",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-vier-augen-nach-hinzufuegung}
+image::VierAugen-Tabellenfeld-rechtsbuendig.png[align="center"]
+
+In der folgenden Maskenansicht für den Benutzer B, sieht man, die durch Benutzer A eingegebenen Daten, die Benutzer B nunmehr durch zwei Schaltflächen `Bestätigen` oder `Ablehnen` kann.
+
+:desc-image-vier-augen-bestaetigen: Eingabefelder und 4-Augen-Prinzip Eingabefelder in der gleichen Ergebnisspalte
+[id="image-vier-augen-bestaetigen",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-vier-augen-bestaetigen}
+image::VierAugen-Tabellenfeld-Ergebnislisten.png[align="center"]
+
+[[text-box]]
+==== Text Box
+
+Text Boxen sehen optisch aus wie Eingabefelder, es können jedoch mehrzeilige Daten eingegeben werden.
+
+:desc-image-bildtextbox: Text Box
+[id="image-bildtextbox",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-bildtextbox}
+image::Text_Box.png[align="center", width="358",height="111"]
+
+
+*Zustände*
+
+* Normal
+* Hover
+* Deaktiviert
+* Focus
+* Read-Only
+* Validierung
+
+*Ist dies das korrekte Bedienelement?*
+
+* Text Boxen werden für die Eingabe von mehrzeiligem Freitext genutzt.
+* Für einzeilige Texte sollte ein Eingabefeld benutzt werden.
+* Falls die einzugebenden Daten Teil einer vordefinierten Menge sind, sollte die Verwendung eines Dropdown Menüs oder einer Wertehilfe in Erwägung gezogen werden.
+* Textboxen sind nicht mit einem Charpicker zum Einfügen von Sonderzeichen ausgestattet.
+
+*Richtlinien zur Anwendung*
+
+* Für die Verwendung von Text Boxen gelten die gleichen Richtlinien wie für Eingabefelder.
+* In manchen Fällen kann die Größe der Text Box nicht der Größe des möglichen Inhaltes entsprechen.
+Ist die Größe der Text Box kleiner als deren Inhalt, so muss der Benutzer innerhalb der Text Box scrollen können.
+Vertikales Scrollen ist horizontalem Scrollen vorzuziehen.
+
+
+[[TextvierAugen-Prinzip, 4-Augen-Prinzip Eingabefelder]]
+==== 4-Augen-Prinzip Textbox
+
+Eine 4-Augen-Prinzip Textbox kann wie eine normale Textbox einen mehrzeiligen Text aufnehmen. Ein Schloss-Icon im Eingabefeld weist auf die zusätzliche Funktionalität (4-Augen-Prinzip) hin.
+
+:desc-image-bildtextbox-locked: Text Box - 4-Augen-Prinzip
+[id="image-bildtextbox-locked",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-bildtextbox-locked}
+image::Text_Box_locked.png[align="center", width="358",height="111"]
+
+_"4-Augen-Prinzip Eingabefelder"_ erfordern, dass die durch einen ersten Benutzer eingegebenen Daten, zunächst noch von einem zweiten Benutzer bestätigt/freigegeben werden müssen.
+
+
+*Zustände*
+
+* Normal
+* Hover
+* Deaktiviert
+* Focus
+* Read-Only
+* Validierung
+* 4-Augen-Prinzip (locked | unlocked)
+
+
+*Ist dies das korrekte Bedienelement?*
+
+* 4-Augen-Prinzip Eingabefelder sind nur für die Eingabe von Daten zu verwenden, die von einem zweiten Anwendungsbenutzer entweder freizugeben oder zu verwerfen/löschen sind.
+* Textboxen sind nicht mit einem Charpicker zum Einfügen von Sonderzeichen ausgestattet.
+
+*Richtlinien zur Anwendung*
+
+* Die 4-Augen-Prinzip Eingabefelder sind durch ein Schloss-Icon zu erkennen. Es wird nur die Grafik für ein geöffnetes Schloss verwendet.
+* Das Schloss Icon als visuelle Kennzeichnung des 4-Augen-Prinzip Eingabefeldes steht rechtsseitig, oben im Eingabefeld.
+* Die Breite der 4-Augen-Prinzip Textbox vergrößert sich durch das Schloss-Icon nicht.
+
+*JavaScript*
+
+Es wird kein JavaScript benötigt.
+
+
+*Nutzungsvorgaben*
+
+Welche Anwendungslogik mit einer 4-Augen-Prinzip Textbox umgesetzt wird, bleibt der expliziten Fachanwendung vorbehalten.
+s.a. <<bsp-anwendungsfall-vier-augen>>
+
 [[aktionseingabefeld]]
 ==== Aktionseingabefeld
 
 :desc-image-aktionseingabefeld: Aktionseingabefeld
 [id="image-aktionseingabefeld",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-aktionseingabefeld}
-image::image155.png[align="center", width="685",height="25"]
+image::Eingabeelemente.png[align="center", width="685",height="25"]
 
 
 *Zustände*
@@ -1858,7 +2071,8 @@ image::image155.png[align="center", width="685",height="25"]
 *Ist dies das korrekte Bedienelement?*
 
 * Falls zusätzlich zum Eingabefeld einen dazugehörigen visuellen Hinweis dargestellt werden soll.
-* Falls die Eingabe beigesteurt werden muss oder kann, z.B. in einem modalen Dialog.
+* Falls die Eingabe beigesteuert werden muss oder kann, z.B. in einem modalen Dialog.
+
 
 
 [[upload]]
@@ -1869,7 +2083,7 @@ Das Upload-Element dient dem Hochladen von Dateien für verschiedene Medientypen
 :desc-image-uploadfelder: Upload-Felder
 [id="image-uploadfelder",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-uploadfelder}
-image::image162.png[align="center", width="685",height="25"]
+image::Eingabefelder_Upload.png[align="center", width="685",height="25"]
 
 
 *Zustände*
@@ -1893,34 +2107,7 @@ image::image162.png[align="center", width="685",height="25"]
 * Wenn das Upload-Feld keinen Inhalt hat, kann es einen Hinweistext dastellen (z.B. Wählen Sie eine Bild-Datei zum Hochladen aus.)
 * Das Upload-Feld und die zugehörige Visualisierung der Datei sollten erkennbar sein.
 
-[[text-box]]
-=== Text Box
 
-Text Boxen sehen optisch aus wie Eingabefelder, es können jedoch mehrzeilige Daten eingegeben werden.
-
-:desc-image-bildtextbox: Text Box
-[id="image-bildtextbox",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-bildtextbox}
-image::image163.png[align="center", width="358",height="111"]
-
-
-*Zustände*
-
-* Siehe Eingabefeld
-
-
-*Ist dies das korrekte Bedienelement?*
-
-* Text Boxen werden für die Eingabe von mehrzeiligem Freitext genutzt.
-* Für einzeilige Texte sollte ein Eingabefeld benutzt werden.
-* Falls die einzugebenden Daten Teil einer vordefinierten Menge sind, sollte die Verwendung eines Dropdown Menüs oder einer Wertehilfe in Erwägung gezogen werden.
-
-*Richtlinien zur Anwendung*
-
-* Für die Verwendung von Text Boxen gelten die gleichen Richtlinien wie für Eingabefelder.
-* In manchen Fällen kann die Größe der Text Box nicht der Größe des möglichen Inhaltes entsprechen.
-Ist die Größe der Text Box kleiner als deren Inhalt, so muss der Benutzer innerhalb der Text Box scrollen können.
-Vertikales Scrollen ist horizontalem Scrollen vorzuziehen.
 
 
 [[dropdown-menue]]
@@ -1931,7 +2118,7 @@ Mit einem Dropdown Menü kann der Benutzer per Mausklick oder Tastatur-Bedienung
 :desc-image-bildddropdownmenue: Dropdown Menü
 [id="image-bildddropdownmenue",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bildddropdownmenue}
-image::image166.png[align="center", width="627",height="156"]
+image::Dropdown_Menue.png[align="center", width="627",height="156"]
 
 
 *Zustände*
@@ -1994,7 +2181,7 @@ Tabs werden häufig dazu verwendet, um Eigenschaften eines Objekts in inhaltlich
 :desc-image-bildtabs: Tabs
 [id="image-bildtabs",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bildtabs}
-image::image173.png[align="center", width="626",height="35"]
+image::Tabs.png[align="center", width="626",height="35"]
 
 
 *Zustände*
@@ -2034,7 +2221,7 @@ Das Menü enthält alle Tabs, die nicht direkt auf dem Screen angezeigt werden k
 :desc-image-tabsoverflow: Tabs mit Overflow-Menü
 [id="image-tabsoverflow",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-tabsoverflow}
-image::image177.png[align="center", width="629",height="167"]
+image::Tab_Overflow_Menue.png[align="center", width="629",height="167"]
 
 
 *Zustände* (Auswahl-Menü)
@@ -2080,7 +2267,7 @@ Listen werden benutzt, um eine überschaubare Anzahl an Daten oder Objekten eine
 :desc-image-listemitlistenkopf: Liste mit Listenkopf
 [id="image-listemitlistenkopf",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-listemitlistenkopf}
-image::image178.png[align="center", width="305",height="326"]
+image::Liste_Listenkopf.png[align="center", width="305",height="326"]
 
 
 *Zustände*
@@ -2117,12 +2304,12 @@ Die Tabelle besteht aus mehreren Informationsspalten, die zur Sortie rung verwen
 :desc-image-einfuehrungeinertabelle: Tabelle
 [id="image-einfuehrungeinertabelle",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-einfuehrungeinertabelle}
-image::image180.png[align="center", width="687",height="243"]
+image::Tabelle_Beispiel.png[align="center", width="687",height="243"]
 
 :desc-image-interaktivezeilen: Tabelle – Zustände interaktiver Zeilen
 [id="image-interaktivezeilen",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-interaktivezeilen}
-image::image181.png[align="center", width="687",height="93"]
+image::Tabelle_Interaktive_Zeilen.png[align="center", width="687",height="93"]
 
 
 *Zustände* (nur für interaktive Tabellenzeilen)
@@ -2170,7 +2357,7 @@ Dies ist stark vom Inhalt der Tabelle abhängig.
 :desc-image-tabellesortierungimkopf: Tabelle – Sortierungs-Indikator in Tabellenkopf
 [id="image-tabellesortierungimkopf",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-tabellesortierungimkopf}
-image::image183.png[align="center", width="627",height="137"]
+image::Tabelle_Sortierung.png[align="center", width="627",height="137"]
 
 
 *Richtlinien zur Anwendung*
@@ -2192,17 +2379,17 @@ Ohne JavaScript kann die Sortierung nur durch das Neu-Laden der Seite bewirkt we
 :desc-image-tabellemehrfachselektion: Tabelle – Mehrfachselektion über STRG Taste & Maus
 [id="image-tabellemehrfachselektion",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-tabellemehrfachselektion}
-image::image185.png[align="center", width="629",height="200"]
+image::Tabelle_Mehrfachselektion_STRG.png[align="center", width="629",height="200"]
 
 :desc-image-tabellemehrfachselektioncheckbox: Tabelle – Mehrfachselektion über Checkboxen
 [id="image-tabellemehrfachselektioncheckbox",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-tabellemehrfachselektioncheckbox}
-image::image186.png[align="center", width="627",height="137"]
+image::Tabelle_Multiselektion_Checkbox.png[align="center", width="627",height="137"]
 
 :desc-image-textlinkkennzeichen: Textlink z.B. Kennzeichnung eines Objektes
 [id="image-textlinkkennzeichen",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-textlinkkennzeichen}
-image::image187.png[align="center", width="629",height="207"]
+image::Textlinkkennzeichen.png[align="center", width="629",height="207"]
 
 
 *Richtlinien zur Anwendung*
@@ -2236,7 +2423,7 @@ Ohne JavaScript ist die Selektion von Tabellenzeilen nur über Checkboxen mögli
 :desc-image-tabelleaktionen: Tabelle – Aktionen
 [id="image-tabelleaktionen",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-tabelleaktionen}
-image::image188.png[align="center", width="629",height="147"]
+image::Tabelle_Aktionen.png[align="center", width="629",height="147"]
 
 
 *Richtlinien zur Anwendung*
@@ -2259,12 +2446,12 @@ Um dem Benutzer den Umgang mit solchen Tabellen zu vereinfachen, werden zunächs
 :desc-image-tabelleohnepaginator: Tabelle ohne Paginator
 [id="image-tabelleohnepaginator",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-tabelleohnepaginator}
-image::image189.png[align="center", width="629",height="245"]
+image::Tabelle_ohne_Paginator.png[align="center", width="629",height="245"]
 
 :desc-image-tabellemitpaginator: Tabelle mit Paginator
 [id="image-tabellemitpaginator",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-tabellemitpaginator}
-image::image189.png[align="center", width="629",height="328"]
+image::Tabelle_mit_Paginator.png[align="center", width="629",height="328"]
 
 
 *Richtlinien zur Anwendung*
@@ -2295,7 +2482,7 @@ Der Benutzer kann beliebige Optionen auswählen.
 :desc-image-darstellungsbeispielie: Check Box – Darstellungsbeispiel IE 9
 [id="image-darstellungsbeispielie",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-darstellungsbeispielie}
-image::image191.png[align="center", width="247",height="126"]
+image::Checkboxes_IE.png[align="center", scalewidth= "60%" ]
 
 *Zustände*
 
@@ -2337,8 +2524,10 @@ Man spricht in diesem Fall von einer so genannten „Tri State Check Box"__.__
 
 Sollte eine Gruppe von Checkboxen aus einer großen Anzahl von Optionen bestehen, kann die Gruppe auf mehrere Spalten platzsparend und übersichtlich angezeigt werden.
 
-
-image::image192.png[image,width=517,height=210]
+:desc-image-checkbox-gruppe: Checkboxen auf mehreren Spalten
+[id="image-checkbox-gruppe",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-checkbox-gruppe}
+image::Checkboxen_Gruppe_Optionen.png[image,width=517,height=210]
 
 *Kein JavaScript*
 
@@ -2356,7 +2545,7 @@ Der Benutzer kann also nur eine der Optionen auswählen.
 :desc-image-ieradiobutton: Radio Button – Darstellungsbeispiel IE 9
 [id="image-ieradiobutton",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-ieradiobutton}
-image::image193.png[align="center", width="258",height="131"]
+image::RadioButtons_IE.png[align="center", scalewidth= "60%" ]
 
 
 *Zustände*
@@ -2396,7 +2585,8 @@ Je nach Kontext können manche Elemente, in der Regel Eingabeelemente, verschied
 :desc-image-statusbedienelemente: Status von Bedienelementen – Beispiel Eingabefeld
 [id="image-statusbedienelemente",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-statusbedienelemente}
-image::image194.png[align="center", width="258",height="131"]
+image::Eingabeelemente.png[align="center",  width="685",height="25"]
+
 
 *Regeln zur Anwendung*
 
@@ -2513,20 +2703,20 @@ Die Hauptnavigation ist eine horizontale Navigation, die stets am unteren Rand d
 
 *Position und Ausrichtung der horizontalen Navigation*
 
-:desc-image-ausrichtunghorizontalenavigation1: Navigationsleistenbeispiel auf Applikationsseite
-[id="image-ausrichtunghorizontalenavigation1",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-ausrichtunghorizontalenavigation1}
-image::image197.png[align="center", width="80%", pdfwidth="80%"]
+:desc-image-ausrichtunghornav1: Navigationsleistenbeispiel auf Applikationsseite
+[id="image-ausrichtunghornav1",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-ausrichtunghornav1}
+image::Navigation_Applikationsseite.png[align="center", width="80%", pdfwidth="80%"]
 
 :desc-image-ausrichtunghorizontalenavigation2: Navigationsleistenbeispiel auf Applikation Detailseite
 [id="image-ausrichtunghorizontalenavigation2",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-ausrichtunghorizontalenavigation2}
-image::image198.png[align="center", width="80%", pdfwidth="80%"]
+image::Navigation_App_Detailseite.png[align="center", width="80%", pdfwidth="80%"]
 
 :desc-image-ausrichtunghorizontalenavigation3: Navigationsleistenbeispiel mit ausgeklapptem Submenü (Flyout)
 [id="image-ausrichtunghorizontalenavigation3",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-ausrichtunghorizontalenavigation3}
-image::image196.png[align="center", width="80%", pdfwidth="80%"]
+image::Navigation_App_Aufgeklappt.png[align="center", width="80%", pdfwidth="80%"]
 
 * Die Hauptnavigation wird von links nach rechts befüllt.
 * Ein Entfall der Linksnavigation ist möglich, hat aber keinen Einfluss auf das Layout.
@@ -2542,7 +2732,7 @@ Die Hauptnavigation ist nicht scrollbar und sollte kein Taboverflow Menü haben.
 Es ist immer ein Punkt in der Hauptnavigation selektiert.
 * Unterhalb der Hauptnavigation wird ein Farbbalken angezeigt.
 Die Farbe repräsentiert eine Applikationsgruppe/Applikation.
-Sie entspricht immer dem gerade aktiven Hauptnavigationspunkt (s. <<image-ausrichtunghorizontalenavigation1>> und <<image-ausrichtunghorizontalenavigation2>>).
+Sie entspricht immer dem gerade aktiven Hauptnavigationspunkt (s. <<image-ausrichtunghornav1>> und <<image-ausrichtunghorizontalenavigation2>>).
 * Wird die Maus über einen Hauptnavigationspunkt bewegt (Hover), wird eine Subnavigation als Flyout angezeigt.
 ** Die Subnavigation wird entsprechend der dazugehörigen Applikationsgruppe/Applikation mit einer Farbe gekennzeichnet.
 ** Der erste Navigationspunkt in der Subnavigation beziehungsweise der vom Benutzer zuletzt geöffnete Navigationspunkt ist per Default vorselektiert.
@@ -2555,10 +2745,15 @@ Sie entspricht immer dem gerade aktiven Hauptnavigationspunkt (s. <<image-ausric
 Die Linksnavigation ist ein optionales Element und kann zur weiteren Strukturierung einer Applikation dienen.
 Sie kann über ein Icon ein- und ausgeblendet werden. 
 
-:desc-image-linksnavigation2: Linksnavigation mit Ein-/Ausklapp Icon
-[id="image-linksnavigation2",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-linksnavigation2}
-image::image201.png[align="center", width="399",height="266"]
+:desc-image-linksnavigation_off: Linksnavigation mit Ein-/Ausklapp Icon
+[id="image-linksnavigation_off",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-linksnavigation_off}
+image::Linksnavigation_Ausklappbar_Off.png[align="center", width="399",height="266"]
+
+:desc-image-linksnavigation_on: Linksnavigation mit Ein-/Ausklapp Icon
+[id="image-linksnavigation_on",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-linksnavigation_on}
+image::Linksnavigation_Ausklappbar_On.png[align="center", width="399",height="266"]
 
 
 *Ist dies das korrekte Pattern?*
@@ -2590,12 +2785,12 @@ Muss der Benutzer häufig auf bestimmte Funktionen oder Objekte in einer Anwendu
 :desc-image-quicklinksunterhalblinksnavigation: Quicklinks unterhalb der Linksnavigation
 [id="image-quicklinksunterhalblinksnavigation",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-quicklinksunterhalblinksnavigation}
-image::image202.png[align="center", width="240",height="400"]
+image::Quicklinks_LetzteObjekte.png[align="center", width="240",height="400"]
 
 :desc-image-quicklinksaufdashboard: Quicklinks auf Dashboard
 [id="image-quicklinksaufdashboard",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-quicklinksaufdashboard}
-image::image203.png[align="center", width="240",height="400"]
+image::Quicklinks_Dashboard.png[align="center", width="240",height="400"]
 
 
 *Ist dies das korrekte Pattern?*
@@ -2632,7 +2827,7 @@ Der Einsatz eines Paginators ist mit wesentlichen Nachteilen verbunden und sollt
 :desc-image-tabellemitpaginator2: Tabelle mit Paginator
 [id="image-tabellemitpaginator2",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-tabellemitpaginator2}
-image::image204.png[align="center", width="629",height="329"]
+image::Tabelle_mit_Paginator_Box.png[align="center", width="629",height="329"]
 
 *Ist dies das korrekte Pattern?*
 
@@ -2684,17 +2879,17 @@ Die Eingabe eines Datums ist z.B. ein typischer Anwendungsfall für eine Wertehi
 :desc-image-wertehilfetimepicker: Wertehilfe – Beispiel Bedienelement für Time Picker und Date Picker
 [id="image-wertehilfetimepicker",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-wertehilfetimepicker}
-image::image205.png[align="center", width="274",height="25"]
+image::Picker_Zeit_Datum.png[align="center", width="274",height="25"]
 
-:desc-image-monatszustaende: Wertehilfe – Zustände innerhalb des Menüs
+:desc-image-monatszustaende: Wertehilfe – Datumsfeld aufgeklappt
 [id="image-monatszustaende",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-monatszustaende}
-image::image206.png[align="center", width="230",height="157"]
+image::Picker_Datum.png[align="center"]
 
-:desc-image-beispieldatepickermenue: Wertehilfe – Beispiel Date Picker Menü
+:desc-image-beispieldatepickermenue: Wertehilfe – Beispiel für Datums-Zustände
 [id="image-beispieldatepickermenue",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-beispieldatepickermenue}
-image::image207.png[align="center", width="230",height="157"]
+image::Picker_Datum_Beispiel.png[align="center"]
 
 
 * *A* – Hover
@@ -2741,10 +2936,10 @@ Zur Eingabe der Daten werden die normalen Eingabefelder genutzt.
 Mit dem Date Picker kann der Benutzer per Klick auf das Kalender Icon ein Flyout öffnen, in dem der gewünschte Tag ausgewählt werden kann.
 Im oberen Bereich kann der Benutzer zwischen den Monaten und Jahren wechseln.
 
-:desc-image-datepickermenue: Date Picker Menü
+:desc-image-datepickermenue: Datum Widget
 [id="image-datepickermenue",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-datepickermenue}
-image::image208.png[align="center", width="194",height="223"]
+image::Picker_Datum.png[align="center", width="194",height="223"]
 
 *Richtlinien zur Anwendung*
 
@@ -2756,10 +2951,10 @@ image::image208.png[align="center", width="194",height="223"]
 
 Mit Hilfe des Time Pickers kann der Benutzer Uhrzeiten auswählen.
 
-:desc-image-timepickermeue: Time Picker Menü
+:desc-image-timepickermeue: Zeit Widget
 [id="image-timepickermeue",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-timepickermeue}
-image::image210.png[align="center", width="153",height="125"]
+image::Picker_Zeit.png[align="center", width="153",height="125"]
 
 *Richtlinien zur Anwendung*
 
@@ -2773,7 +2968,7 @@ Der Buchstaben Picker kann den Benutzer bei der Auswahl bestimmter Buchstaben un
 :desc-image-buchstabenpickermenue: Buchstaben Picker Menü
 [id="image-buchstabenpickermenue",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-buchstabenpickermenue}
-image::image211.png[align="center", width="187",height="147"]
+image::Picker_Buchstaben.png[align="center", width="187",height="147"]
 
 
 *Richtlinien zur Anwendung*
@@ -2789,12 +2984,12 @@ Der List Picker kann den Benutzer bei der Auswahl bestimmter Objekte unterstütz
 :desc-image-listpickermenueori: List Picker Menü
 [id="image-listpickermenueori",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-listpickermenueori}
-image::image212.png[align="center", width="374",height="294"]
+image::Listpicker_Menue.png[align="center", width="374",height="294"]
 
 :desc-image-listpickermitfilterleiste: List Picker Menü mit optionaler Filterzeile
 [id="image-listpickermitfilterleiste",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-listpickermitfilterleiste}
-image::image213.png[align="center", width="374",height="294"]
+image::Listpicker_Menue_Filterleiste.png[align="center", width="374",height="294"]
 
 
 *Richtlinien zur Anwendung*
@@ -2812,7 +3007,7 @@ Editable Rows sind flexible Zeilen deren Inhalte separat bearbeitet werden könn
 :desc-image-editablerow: Editable Row
 [id="image-editablerow",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-editablerow}
-image::image214.png[align="center", width="629",height="97"]
+image::Editable_Row.png[align="center", width="629",height="97"]
 
 
 *Ist dies das korrekte Pattern?*
@@ -2861,17 +3056,17 @@ Es gibt keine globale (applikationsübergreifende) Suche.
 :desc-image-standardsuchformular: Standard Suchformular
 [id="image-standardsuchformular",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-standardsuchformular}
-image::image215.png[align="center", width="627",height="149"]
+image::Suchformular_Standard.png[align="center", width="627",height="149"]
 
 :desc-image-suchformularbeispiel1: Suchformular Beispiel 1
 [id="image-suchformularbeispiel1",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-suchformularbeispiel1}
-image::image216.png[align="center", width="629",height="169"]
+image::Suchformular_Beispiel_1.png[align="center", width="629",height="169"]
 
 :desc-image-suchformularbeispiel2: Suchformular Beispiel 2
 [id="image-suchformularbeispiel2",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-suchformularbeispiel2}
-image::image217.png[align="center", width="629",height="252"]
+image::Suchformular_Beispiel_2.png[align="center", width="629",height="252"]
 
 *Ist dies das korrekte Pattern?*
 
@@ -2933,15 +3128,15 @@ Mit dem Toggle-Filter kann durch einen Klick auf einen Button eine Liste von Obj
 :desc-image-togglefilterbild: Toggle-Filter
 [id="image-togglefilterbild",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-togglefilterbild}
-image::image219.png[align="center", width="629",height="122"]
+image::Toggle_Filter.png[align="center", width="629",height="122"]
 
 
 Der Filter kann auch für die Filterung von beliebigen Inhalten im Detail-Bereich verwendet werden.
 
-:desc-image-togglefilterbild2: Toggle-Filter 2
+:desc-image-togglefilterbild2: Toggle-Filter im Detailbereich
 [id="image-togglefilterbild2",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-togglefilterbild2}
-image::image220.png[align="center", width="600",height="299"]
+image::Toggle_Filter_Detail.png[align="center", width="600",height="299"]
 
 
 *Ist dies das korrekte Pattern?*
@@ -2980,7 +3175,7 @@ jede Spalte kann eine Filteroption erhalten, sofern der Inhalt sinnvoll gefilter
 :desc-image-filterzeilebild: Filter-Zeile
 [id="image-filterzeilebild",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-filterzeilebild}
-image::image222.png[align="center", width="629",height="138"]
+image::Filter_Zeile.png[align="center", width="629",height="138"]
 
 
 *Ist dies das korrekte Pattern?*
@@ -3025,7 +3220,7 @@ Hierbei werden Objekte von einer Quellliste in eine Zielliste übertragen.
 :desc-image-browseundcollect: Browse & Collect
 [id="image-browseundcollect",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-browseundcollect}
-image::image223.png[align="center", width="629",height="328"]
+image::Browse_Collect.png[align="center", width="629",height="328"]
 
 
 *Ist dies das korrekte Pattern?*
@@ -3076,17 +3271,17 @@ Die allgemeinen Regeln zur Benutzung von Tabellen können im Kapitel Tabelle nac
 :desc-image-datentabelle: Datentabelle
 [id="image-datentabelle",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-datentabelle}
-image::image224.png[align="center", width="629",height="142"]
+image::Ergebnistabelle_MehrButton.png[align="center", width="629",height="142"]
 
 :desc-image-datentabellevorschaugeoeffnet: Datentabelle Vorschau geöffnet
 [id="image-datentabellevorschaugeoeffnet",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-datentabellevorschaugeoeffnet}
-image::image225.png[align="center", width="626",height="303"]
+image::Ergebnistabelle_Vorschau.png[align="center", width="626",height="303"]
 
 :desc-image-datentabelleleer: Datentabelle leer
 [id="image-datentabelleleer",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-datentabelleleer}
-image::image226.png[align="center", width="626",height="259"]
+image::Ergebnistabelle_Leer.png[align="center", width="626",height="259"]
 
 
 *Ist dies das korrekte Pattern?*
@@ -3111,7 +3306,7 @@ Die Datenvorschau kann zur Vorschau oder Zusammenfassung von komplexen Daten die
 :desc-image-tabellemitdatenvorschau: Tabelle mit Datenvorschau
 [id="image-tabellemitdatenvorschau",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-tabellemitdatenvorschau}
-image::image228.png[align="center", width="626",height="277"]
+image::Ergebnistabelle_DatenVorschau.png[align="center", width="626",height="277"]
 
 
 *Ist dies das korrekte Pattern?*
@@ -3153,7 +3348,7 @@ Die dazugehörigen Informationen (Detail) werden je nach Layout in einem Bereich
 :desc-image-detailgruppierungscontainer: Master (Tabelle) – Detail (Gruppierungs-Container)
 [id="image-detailgruppierungscontainer",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-detailgruppierungscontainer}
-image::image229.png[align="center", width="626",height="454"]
+image::MasterDetail_Gruppierung.png[align="center", width="626",height="454"]
 
 
 *Ist dies das korrekte Pattern?*
@@ -3201,7 +3396,7 @@ In einem Expander können sowohl Daten als auch Bedien-Elemente oder Optionen an
 :desc-image-expandergeschlossengeoeffnet: Expander geschlossen und geöffnet)
 [id="image-expandergeschlossengeoeffnet",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-expandergeschlossengeoeffnet}
-image::image230.png[align="center", width="626",height="243"]
+image::Expander.png[align="center", width="626",height="243"]
 
 
 *Ist dies das korrekte Pattern?*
@@ -3238,12 +3433,12 @@ Gruppierungs-Container helfen dem Benutzer bei der Strukturierung und Einordnung
 :desc-image-beispielegruppcontainer: Beispiele Gruppierungs-Container
 [id="image-beispielegruppcontainer",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-beispielegruppcontainer}
-image::image231.png[align="center", width="626",height="742"]
+image::Gruppierung_Container_Beispiel.png[align="center", width="626",height="742"]
 
 :desc-image-gruppierungsueberschriften: Beispiele Gruppierungsüberschriften
 [id="image-gruppierungsueberschriften",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-gruppierungsueberschriften}
-image::image232.png[align="center", width="626",height="742"]
+image::Gruppierungsueberschriften.png[align="center", width="626",height="742"]
 
 *Ist dies das korrekte Pattern?*
 
@@ -3281,7 +3476,7 @@ Die Funktionen werden typischerweise durch ein Icon und Text repräsentiert.
 :desc-image-toolbarbeispiele: Toolbar Beispiele
 [id="image-toolbarbeispiele",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-toolbarbeispiele}
-image::image234.png[align="center", width="626",height="641"]
+image::Toolbar_Beispiele.png[align="center", width="626",height="641"]
 
 *Ist dies das korrekte Pattern?*
 
@@ -3320,7 +3515,7 @@ Die Seiten-Toolbar kommt auf Detailseiten von Dashboard oder Applikationen zum E
 :desc-image-seitentoolbardetailseite: Seiten-Toolbar auf Detailseite
 [id="image-seitentoolbardetailseite",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-seitentoolbardetailseite}
-image::image235.png[align="center", width="626",height="25"]
+image::Toolbar_Seiten_Toolbar.png[align="center", width="626",height="25"]
 
 
 *Richtlinien zur Anwendung*
@@ -3338,7 +3533,7 @@ Die Toolbar oberhalb einer Tabelle beinhaltet Funktionen, welche die Tabelle ode
 :desc-image-tabellentoolbar: Tabellen Toolbar
 [id="image-tabellentoolbar",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-tabellentoolbar}
-image::image236.png[align="center", width="626",height="26"]
+image::Toolbar_Tabelle.png[align="center", width="626",height="26"]
 
 
 *Richtlinien zur Anwendung*
@@ -3359,7 +3554,7 @@ Diese Kombination findet sich ausschließlich auf Detailseiten wieder.
 :desc-image-gruppierungscontainertoolbar: Gruppierungs-Container mit Toolbar
 [id="image-gruppierungscontainertoolbar",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-gruppierungscontainertoolbar}
-image::image237.png[align="center", width="626",height="161"]
+image::Gruppierung_Container_Toolbar.png[align="center", width="626",height="161"]
 
 
 *Richtlinien zur Anwendung*
@@ -3369,47 +3564,6 @@ image::image237.png[align="center", width="626",height="161"]
 * Die Funktionen der Toolbar beziehen sich immer auf alle Objekte und Untergruppen einer Gruppe.
 * Die Funktionalitäten können sich je nach Gruppentyp (siehe Kapitel Gruppierungs-Container) unterscheiden, sollten aber innerhalb eines Gruppentyps identisch sein. So kann man beispielsweise über die Toolbar einer Hauptgruppe weitere Gruppenelemente hinzufügen, die Gruppenelemente lassen sich aber ausschließlich in der Toolbar ihrer eignen Überschrift bearbeiten (Löschen, Drucken etc.). Die Buttons werden rechts neben der Überschrift positioniert und sind immer so auszurichten, dass alle Toolbarbuttons auf einer Seite linksbündig angeordnet sind.
 * Weitere allgemeine Richtlinien zur Toolbar siehe oben.
-
-
-*Seiten-Toolbar*
-
-Die Seiten-Toolbar kommt auf Detailseiten von Dashboard oder Applikationen zum Einsatz.
-
-:desc-image-seitentoolbaraufdetailseite: Seiten-Toolbar auf Detailseite
-[id="image-seitentoolbaraufdetailseite",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-seitentoolbaraufdetailseite}
-image::image235.png[align="center", width="626",height="25"]
-
-*Richtlinien zur Anwendung*
-
-* Die Seiten-Toolbar beinhaltet Funktionen, welche für die gesamte Seite gelten z.B. „Zurück zur Liste", „Seite drucken" oder „Hilfe".
-* Ganz links beinhaltet die Seiten-Toolbar immer eine Verlinkung, die zurück zur dazugehörigen Hauptseite führt. Diese Verlinkung muss in jeder Seiten-Toolbar vorhanden sein.
-* Der Navigationslink ist eine Kombination aus Icon und Text, alle anderen Buttons sind Icon-Buttons.
-* Weitere Richtlinien sind bei der allgemeinen Beschreibung der Toolbar zu finden.
-
-
-
-
-*Tabellen-Toolbar*
-
-Die Toolbar oberhalb einer Tabelle beinhaltet Funktionen, welche die Tabelle oder Objekte der Tabelle beeinflussen.
-
-:desc-image-tabellentoolbar2: Tabellen Toolbar
-[id="image-tabellentoolbar2",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-tabellentoolbar2}
-image::image236.png[align="center", width="626",height="26"]
-
-
-*Richtlinien zur Anwendung*
-
-* In dieser Toolbar werden möglichst immer Toolbar-Buttons eingesetzt.
-Diese stellen eine Kombination aus Icon und Text dar (siehe Kapitel Toolbar Button).
-* Diese Toolbar kann auch einen Toggle-Filter enthalten um die Ergebnisse in der Tabelle zu filtern.
-Er ist immer rechts in der Toolbar ausgerichtet.
-* Alle anderen Funktionen der Toolbar werden links ausgerichtet.
-* Weitere Richtlinien sind bei der allgemeinen Beschreibung der Toolbar zu finden.
-
-
 
 [[formulare-ueberschrift]]
 == Formulare
@@ -3427,7 +3581,7 @@ Formulare können einem 1-spaltigen, 2-spaltigen oder 3-spaltigen Layout folgen.
 :desc-image-visuellesRaster: Visuelles Raster für ein 3-spaltiges Formular
 [id="image-visuellesRaster",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-visuellesRaster}
-image::image239.png[align="center", width="626",height="285"]
+image::Formulare_Raster.png[align="center", width="626",height="285"]
 
 *Richtlinien zur Anwendung*
 
@@ -3451,28 +3605,28 @@ Dadurch ergibt sich eine logische Struktur, welche für den Benutzer einfacher z
 :desc-image-beispielformulargestaltung: Allgemeines Beispiel Formulargestaltung
 [id="image-beispielformulargestaltung",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-beispielformulargestaltung}
-image::image240.png[align="center", width="626",height="366"]
+image::Formular_BeispielBAV.png[align="center", width="626",height="366"]
 
 :desc-image-gruppierungdreispalten: Gruppierung über 3 Spalten
 [id="image-gruppierungdreispalten",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-gruppierungdreispalten}
-image::image241.png[align="center", width="626",height="91"]
+image::Formular_Gruppierung3Spalten.png[align="center", width="626",height="91"]
 
 :desc-image-gruppierunguebereinszwei: Gruppierungen über 1 bzw. 2 Spalten
 [id="image-gruppierunguebereinszwei",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-gruppierunguebereinszwei}
-image::image242.png[align="center", width="626",height="91"]
+image::Formular_Gruppierung2Spalten.png[align="center", width="626",height="91"]
 
 
 :desc-image-gruppierunguebereinespalte: Gruppierungen über 1 Spalte
 [id="image-gruppierunguebereinespalte",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-gruppierunguebereinespalte}
-image::image243.png[align="center", width="626",height="91"]
+image::Formular_Gruppierung1Spalte.png[align="center", width="626",height="91"]
 
 :desc-image-gruppierungwhitespace: Gruppierung mittels Whitespace
 [id="image-gruppierungwhitespace",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-gruppierungwhitespace}
-image::image244.png[align="center", width="626",height="154"]
+image::Formulare_Gruppierung_Whitespace.png[align="center", width="626",height="154"]
 
 
 *Richtlinien zur Anwendung*
@@ -3499,7 +3653,7 @@ In solchen Fällen sollte geprüft werden, ob eine sinnvolle Gruppierung der Ele
 :desc-image-layoutverhaltenformulare: Layout Verhalten von Formularen
 [id="image-layoutverhaltenformulare",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-layoutverhaltenformulare}
-image::image245.png[align="center", width="626",height="321"]
+image::Formulare_FixeFlexibleSpalten.png[align="center", width="626",height="321"]
 
 
 *Richtlinien zur Anwendung*
@@ -3532,7 +3686,7 @@ Sie schließt sich, wenn der Benutzer außerhalb der Eingabehilfe klickt oder in
 :desc-image-autosuggestion: Autosuggestion
 [id="image-autosuggestion",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-autosuggestion}
-image::image248.png[align="center", width="158",height="146"]
+image::Autovervollstaendigung.png[align="center", width="158",height="146"]
 
 Sobald der Benutzer mit der Eingabe beginnt, werden mögliche Werte, die mit der vom Benutzer gemachten Eingabe beginnen, in einem Menü unterhalb des Textfelds angezeigt.
 Der Benutzer kann nun weitertippen oder direkt einen Wert aus dem Menü auswählen und somit seine Eingabe verkürzen.
@@ -3552,7 +3706,7 @@ Platzhalter Texte dienen dem Benutzer als Unterstützung zur Eingabe von Daten i
 :desc-image-platzhalterkennzeichen: Beispiel Platzhalter für ID oder Kennzeichen
 [id="image-platzhalterkennzeichen",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-platzhalterkennzeichen}
-image::image249.png[align="center", width="358",height="25"]
+image::Platzhalter.png[align="center", width="358",height="25"]
 
 
 *Ist dies die korrekte Benutzerhilfe?*
@@ -3580,12 +3734,12 @@ Tooltips erscheinen automatisch bei Hover über ein Objekt und dienen der Inform
 :desc-image-tooltipallgemeineraufbau: Tooltip - Allgemeiner Aufbau
 [id="image-tooltipallgemeineraufbau",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-tooltipallgemeineraufbau}
-image::image250.png[align="center", width="227",height="48"]
+image::Tooltip.png[align="center", width="227",height="48"]
 
 :desc-image-tooltipbeispiel: Tooltip - Beispiel
 [id="image-tooltipbeispiel",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-tooltipbeispiel}
-image::image251.png[align="center", width="458",height="60"]
+image::Tooltip_Beispiel_Info.png[align="center", width="458",height="60"]
 
 
 *Ist dies die korrekte Benutzerhilfe?*
@@ -3623,12 +3777,12 @@ Mit dem Toggle-Filter kann durch einen Klick auf einen Button eine Liste von Obj
 :desc-image-fortschrittsspinner: Fortschritts-Spinner & Fortschritts-Balken
 [id="image-fortschrittsspinner",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-fortschrittsspinner}
-image::image255.png[align="center", width="166",height="35"]
+image::Spinner_Fortschrittsanzeige.png[align="center", width="166",height="35"]
 
 :desc-image-fortschrittsspinnerobjektliste: Beispiel: Fortschritts-Spinner in einer Objektliste
 [id="image-fortschrittsspinnerobjektliste",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-fortschrittsspinnerobjektliste}
-image::image256.png[align="center", width="626",height="158"]
+image::Spinner_Objektliste.png[align="center", width="626",height="158"]
 
 *Ist dies die korrekte Benutzerhilfe?*
 
@@ -3665,12 +3819,12 @@ Bedienelemente, die Pflichteingaben darstellen, werden mit einem Stern (Asterisk
 :desc-image-kennzeichenroterstern: Beispiel: Kennzeichnung Pflichtfelder (roter Stern)
 [id="image-kennzeichenroterstern",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-kennzeichenroterstern}
-image::image258.png[align="center", width="394",height="22"]
+image::Pflichtfeld_mandatory.png[align="center", width="394",height="22"]
 
 :desc-image-kennzeichenrblauerstern: optionaler Pflichtfelder (blauer Stern)
 [id="image-kennzeichenrblauerstern",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-kennzeichenrblauerstern}
-image::image259.png[align="center", width="394",height="22"]
+image::Pflichtfeld_optional.png[align="center", width="394",height="22"]
 
 
 Sofern nicht alle Pflichteingaben ausgefüllt sind bzw.
@@ -3688,7 +3842,7 @@ Der Benutzer muss die fehlenden bzw. nicht validen Eingaben korrigieren, damit d
 :desc-image-optionalpflichtsuchformular: Beispiel – Optionale Pflichtfelder in einem Suchformular
 [id="image-optionalpflichtsuchformular",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-optionalpflichtsuchformular}
-image::image260.png[align="center", width="685",height="250"]
+image::Pflichtfelder_Suchformular.png[align="center", width="685",height="250"]
 
 
 
@@ -3702,7 +3856,7 @@ Amodales Feedback gibt ihm die Möglichkeit ein Formular trotz aufgetretener Feh
 :desc-image-beispielvalidierungmeldung: Beispiel Validierung und Meldung in einem Formular
 [id="image-beispielvalidierungmeldung",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-beispielvalidierungmeldung}
-image::image261.png[align="center", width="622",height="236"]
+image::Validierung_Formular.png[align="center", width="622",height="236"]
 
 
 Sobald durch das System ein Fehler in einem Formular erkannt wurde, wird das entsprechende Feld farblich markiert.
@@ -3711,7 +3865,7 @@ Zusätzlich zu der farblichen Markierung kann hinter dem Feld noch ein Informati
 :desc-image-validierungeineseingabefeldes: Validierung eines Eingabefeldes
 [id="image-validierungeineseingabefeldes",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-validierungeineseingabefeldes}
-image::image262.png[align="center", width="286",height="28"]
+image::Validierung_Eingabefeld.png[align="center", width="286",height="28"]
 
 
 *Informations-Icon*
@@ -3722,7 +3876,7 @@ image::image262.png[align="center", width="286",height="28"]
 :desc-image-informationsicontooltip: Tooltip für Informations-Icon
 [id="image-informationsicontooltip",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-informationsicontooltip}
-image::image263.png[align="center", width="685",height="91"]
+image::Tooltip_Beispiel_Info.png[align="center", width="685",height="91"]
 
 
 
@@ -3739,7 +3893,7 @@ Dies geschieht in einem festgeschriebenen Meldungsbereich oberhalb des Formulars
 :desc-image-meldungsarten: Meldungsarten
 [id="image-meldungsarten",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-meldungsarten}
-image::image264.png[align="center", width="685",height="145"]
+image::Meldungsarten.png[align="center", width="685",height="145"]
 
 *Kein JavaScript*
 
@@ -3849,7 +4003,10 @@ In Formularen wird initial das erste Element aus dem Inhaltsbereich (links oben)
 Der Ablauf der Tabulatoren erfolgt von links nach rechts und oben nach unten.
 In der folgenden Abbildung wird beispielhaft der Ablauf der Tabulatorreihenfolge dargestellt:
 
-image::image268.png[image,width=500,height=147]
+:desc-image-tabulator-sprungabfolge: Tabulator Sprungabfolge
+[id="image-tabulator-sprungabfolge",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-tabulator-sprungabfolge}
+image::Tabulatorsteuerung.png[image,width=500,height=147]
 
 *_Seitenbereiche_*
 
@@ -4338,13 +4495,13 @@ endif::[]
 |far fa-calendar-alt
 |Kalender
 
-ifdef::backend-pdf[]
+// ifdef::backend-pdf[]
 // asciidoctor-pdf nutzt leider eine ältere Version von FontAwesome (4.6.x) (über prawn-icons 1.3.0) als asciidoctor (4.7.x).
 // fa-address-card ist erst ab FontAwesome 4.7.0 enthalten.
-|image::image330.png[align="left",width="24",height="24"]
-|fas fa-address-card
-|Kontakt
-endif::[]
+// |image::image330.png[align="left",width="24",height="24"]
+// |fas fa-address-card
+// |Kontakt
+// endif::[]
 
 ifdef::backend-html5[]
 |icon:address-card[2x]
@@ -4429,460 +4586,73 @@ endif::[]
 :desc-image-bsplogin: Login Screen
 [id="image-bsplogin",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bsplogin}
-image::01_Login_2017-08-25.png[align="center"]
+image::01_Login.png[align="center"]
 
 :desc-image-bspdashboard: Dashboard
 [id="image-bspdashboard",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspdashboard}
-image::02_Dashboard_2017-08-25.png[align="center"]
+image::02_Dashboard.png[align="center"]
 
 :desc-image-bspsubmenue: Submenü
 [id="image-bspsubmenue",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspsubmenue}
-image::02_Submenü_2017-08-25.png[align="center"]
+image::03_Submenue.png[align="center"]
 
 :desc-image-bspdashboardunterseite: Dashboard Unterseite
 [id="image-bspdashboardunterseite",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspdashboardunterseite}
-image::03_Dashboard_Unterseite_2017-08-25.png[align="center"]
+image::03_Dashboard_Unterseite.png[align="center"]
 
 :desc-image-bspapplikationsseite: Applikationsseite
 [id="image-bspapplikationsseite",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspapplikationsseite}
-image::04_Applikationsseite_2017-08-25.png[align="center"]
+image::04_Applikationsseite.png[align="center"]
 
 :desc-image-bspapplikationsdetaila: Applikation Detailseite – Beispiel A
 [id="image-bspapplikationsdetaila",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspapplikationsdetaila}
-image::05_Applikations_Detailseite_1_2017-08-25.png[align="center"]
+image::Applikation_Hauptseite.png[align="center"]
 
 :desc-image-bspapplikationsdetailb: Applikation Detailseite – Beispiel B
 [id="image-bspapplikationsdetailb",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspapplikationsdetailb}
-image::05_Applikations_Detailseite_2_2017-08-25.png[align="center"]
+image::05_Applikations_Detailseite_1.png[align="center"]
+
 
 :desc-image-bspapplikationsdetailc: Applikation Detailseite – Beispiel C
 [id="image-bspapplikationsdetailc",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspapplikationsdetailc}
-image::05_Applikations_Detailseite_3_2017-08-25.png[align="center"]
+image::05_Applikations_Detailseite_2.png[align="center"]
 
 :desc-image-bspdialogobjektanlage: Dialog Objektanlage
 [id="image-bspdialogobjektanlage",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspdialogobjektanlage}
-image::06_Applikations_Dialog_Objektanlage_2017-08-25.png[align="center"]
+image::06_Applikations_Dialog_Objektanlage.png[align="center"]
 
 :desc-image-bspwizardobjektanlage1a: Wizard Objekt Anlage - Schritt 1a
 [id="image-bspwizardobjektanlage1a",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspwizardobjektanlage1a}
-image::07_Applikations_Wizard_Objektanlage_1_2017-08-25.png[align="center"]
+image::07_Applikations_Wizard_Objektanlage_1.png[align="center"]
 
 :desc-image-bspwizardobjektanlage1b: Wizard Objekt Anlage - Schritt 1b
 [id="image-bspwizardobjektanlage1b",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspwizardobjektanlage1b}
-image::08_Applikations_Wizard_Objektanlage_2_2017-08-25.png[align="center"]
+image::08_Applikations_Wizard_Objektanlage_2.png[align="center"]
 
 :desc-image-bspwizardobjektanlage1c: Wizard Objekt Anlage - Schritt 2
 [id="image-bspwizardobjektanlage1c",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspwizardobjektanlage1c}
-image::09_Applikations_Wizard_Objektanlage_3_2017-08-25.png[align="center"]
+image::09_Applikations_Wizard_Objektanlage_3.png[align="center"]
 
 :desc-image-bspwizardobjektanlage1d: Wizard Objekt Anlage - Schritt 3
 [id="image-bspwizardobjektanlage1d",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspwizardobjektanlage1d}
-image::10_Applikations_Wizard_Objektanlage_4_2017-08-25.png[align="center"]
+image::10_Applikations_Wizard_Objektanlage_4.png[align="center"]
 
 :desc-image-bspwizardobjektanlage1e: Wizard Objekt Anlage - Schritt 4
 [id="image-bspwizardobjektanlage1e",reftext="{figure-caption} {counter:figures}"]
 .{desc-image-bspwizardobjektanlage1e}
-image::11_Applikations_Wizard_Objektanlage_5_2017-08-25.png[align="center"]
+image::11_Applikations_Wizard_Objektanlage_5.png[align="center"]
 
-[[kapitel-plis-style]]
-== Bibliothek isy-style
-
-In der IsyFact-Erweiterung `isy-style` werden die CSS-, JavaScript- und Bilddateien des Styleguides abgelegt, für die Nutzung komprimiert und kompiliert.
-Dieses Kapitel enthält die technische Dokumentation zur Bibliothek `isy-style`.
-
-////
-.Historie der `isy-style`
-[cols="20,20,60"]
-|===
-|Version |Datum |Änderung
-
-|v1.4.0
-|19.10.2015
-|added/modified CSS for new and existent widgets
-
-|v1.3.0
-|11.02.2015
-|first release of styleguide with JSF integration
-
-- added CSS for integration with JSF
-
-|v1.2.0
-|
-|add support for IE8 without js
-
-- changed all html5 elements (<nav>,<main>,<article>) to divs, as html5shiv for ie8 is js dependent
-
-- patch bootstrap3 grid through stylesheets to circumvent missing media queries capability without respond.js
-
-- added .row-df class to every .row element
-
-- use only the large (lg) grid classes, converted all col-md,col-sm,col-xs to col-lg columns
-
-- added error-alert in red color
-
-- fixed no-js behaviour for disabled dropdowns on ie8, added .disabled class in markup
-
-- improved the input divider layout markup in page-search-result.html for proper alignment
-
-|v1.1.0
-|
-|final release
-
-- added filechooser button style
-
-- refactored a lot of code
-
-|v1.0.0
-|
-|feature complete release
-
- This release includes all features
-|===
-////
-
-=== Technologien
-
-==== Twitter Bootstrap
-
-Dieses Projekt baut auf dem Bootstrap CSS Framework in Version 3.1.1 auf.
-Dieses stellt sowohl browserübergreifende, erweiterbare Styles für HTML-Elemente als auch wenige komplexere Steuerelemente mit zusätzlichem Javascript-Code zur Verfügung.
-
-Die Bootstrap-Styles wurden entsprechend den Definitionen im Style Guide (Aussehen, Form, Farbe und Effekte) angepasst.
-Hierbei wurden die originalen Quelldateien von Bootstrap im Verzeichnis src/less/bootstrap nicht verändert.
-Stattdessen wurden für die applikationsspezifischen Anpassungen eigene Dateien im Verzeichnis src/less/es/ definiert, welche die vorhandenen Bootstrap Styledefinitionen überschreiben.
-Im Browser werden die originalen Bootstrap-Styles geladen und von den applikationsspezifischen Styles überschrieben.
-Diese Methode generiert zwar ein wenig Redundanz und Overhead, die Bootstrap Dateien bleiben aber für etwaige Versionsupdates von Bootstrap unverändert erhalten.
-
-Bei der gesamten Entwicklung wurde darauf geachtet, dass die ursprünglichen Funktionalitäten von Bootstrap erhalten bleiben.
-So können Entwickler bei aufkommenden Fragen die Bootstrap Dokumentation (http://getbootstrap.com) zu Rate ziehen.
-Sollte diese Dokumentation für eine neuere Bootstrap Versionen angepasst werden und somit nicht mehr mit der in der Anwendung verwendeten Version kompatibel sein, werden die älteren Bootstrap-Dokumentationen in einem Archiv von einem Drittanbieter(http://bootstrapdocs.com) zur Verfügung gestellt.
-
-===== Erweiterung der Bootstrap-Basis
-
-Die Bootstrap-Quelldateien und die von Bootstrap bereitgestellten JavaScript-Dateien können unabhängig von den angewandten Styles und Templates aktualisiert werden.
-Sollte eine neue Bootstrap Version erscheinen und es notwendig sein, neue Features und/oder Bug-Fixes zu implementieren, sollte folgendermaßen vorgegangen werden:
-
-====== LESS
-
-1.  Die neuen LESS-Quelldateien von folgender Seite herunterladen: https://github.com/twbs/bootstrap/tree/master/less.
-2.  Die Dateien in src/less/bootstrap/ mit den neu heruntergeladenen Dateien ersetzen.
-3.  Anpassungen und Aktualisierungen aus der neuen Less Datei less/bootstrap/variables.less per Kopieren und Einfügen in die less/es/custom-variables.less übertragen.
-4.  Kompilieren der styles.less nach www/css/styles.css mit Hilfe eines Less-Compilers oder dem zur Verfügung gestellten GruntJS Build-Prozesses.
-5.  Zum Abschluss müssen die Konformität mit dem Style Guide und die visuell fehlerfreie Darstellung der Applikation überprüft werden.
-Möglicherweise sind noch zusätzliche Styledefinitionen oder Korrekturen nötig, um neue Bootstrap-Styles zu überschreiben.
-
-====== JavaScript
-
-1.  Die neue bootstrap.min.js-Datei von https://github.com/twbs/bootstrap/tree/master/js herunterladen.
-2.  Die alte Datei src/assets/lib/bootstrap.min.js durch die neue ersetzen.
-3.  Funktionalität überprüfen.
-
-==== LESS Stylesheets
-
-Bootstrap basiert auf der LESS Stylesheet-Sprache (http://lesscss.org) . Diese fügt Variablen, Funktionen und Operationen zur ursprünglichen CSS Funktionalität hinzu.
-Dieses Projekt implementiert diese Funktionalitäten und baut darauf auf.
-
-LESS Stylesheets müssen in CSS-Dateien kompiliert werden, damit sie für Browser lesbar sind.
-Folgende Freeware-Lösungen können für diesen Schritt genutzt werden:
-
-* dotLess: http://www.dotlesscss.org (Windows)
-* Less.app: http://incident57.com/less (Mac OS)
-* GruntJS LESS task (Cross-platform) – siehe unten
-
-Als Ergebnis der Stylesheet-Entwicklung werden Quelldateien im LESS-Format zur Verfügung gestellt.
-Diese werden in die Datei www/css/styles.css kompiliert und enthält alle relevanten Styles.
-Die Datei styles.less im Verzeichnis less/ ist die wichtigste CSS-Datei und Startpunkt für den CSSKompilierungsprozess.
-Mit Hilfe eines LESS Compilers (dieser sollte möglichst die Importe berücksichtigen – „import aware“) wird die Datei styles.less in in die Datei styles.css kompiliert.
-Es wird empfohlen, in den Einstellungen des Compilers die Funktionen „Minimieren“ und „Kommentare entfernen“ einzuschalten.
-Dadurch kann die Dateigröße verkleinert werden.
-
-Bei der von Ergosign gelieferten Datei styles.css handelt es sich um eine erste Version.
-Sie kann bei Erweiterungen oder Änderungen im Projekt einfach durch Ergosign oder andere Entwickler aktualisiert werden.
-
-Hierbei sollte beachtet werden, dass Styling-Änderungen nie in der Datei styles.css selbst angepasst werden, sondern immer die ihr zugrunde liegenden Quelldateien anzupassen sind.
-Ansonsten gehen Änderungen bei einem neuen Kompilierungsprozess verloren, da die Datei styles.css wie oben beschrieben beim Kompilieren überschrieben wird.
-
-LESS ermöglicht es, verschachtelte Selektoren zu benutzen, diese sind in den gelieferten Styles sehr häufig zu finden.
-Diese Verschachtelung
-
-erlaubt eine einfachere Wartbarkeit des Projektes, da so in den Styles teilweise die DOM-Struktur der Zielelemente widergespielt wird.
-
-==== GruntJS Build System
-
-GruntJS (http://gruntjs.com) ist ein modulares Kommandozeilen-Build-Programm für Webapplikationen.
-Dieses Programm basiert auf JavaScript und baut auf NodeJS (http://nodejs.org) und auf der Node-eigenen Paketverwaltung NPM (Node Package Modules) auf.
-
-GruntJS beinhaltet einen Task zur LESS-Kompilierung und einen Watch-Task.
-Diese sind für die Frontend-Entwicklung sehr komfortabel.
-Ergosign stellt die Datei package.json zur Verfügung.
-Diese beinhaltet alle notwendigen Bibliotheken-Abhängikeiten um Grunt Tasks zu installieren und das Projekt neu zu erstellen.
-
-Um GruntJS zur Kompilierung von Stylesheets und Markup zu nutzen, muss als erstes NodeJS installiert werden.
-Des Weiteren müssen Grunt und die benötigten Tasks (Es werden die folgenden Grunt-Tasks benutzt: grunt-contrib-less, grunt-contrib-watch, grunt-contribconcat, grunt-contrib-copy, grunt-contrib-clean, grunt-contrib-jshin) via npm installiert werden.
-Dies kann über die Funktion „npm install“ direkt in das Hauptverzeichnis erfolgen.
-Mit dem Befehl „grunt“ in einer Konsolenanwendung wird das Projekt neu erstellt.
-
-Weitere Informationen finden sich in der GruntJS Dokumentation und in der von Ergosign gelieferten Gruntfile.js.
-
-==== Benennung der Komponenten
-
-Die Benennung von spezifischen Komponenten und Layout-Elementen im Code wurde der Dash-Case-Schreibweise von Bootstrap angepasst.
-
-==== CSS Raster-System
-
-Dieses Projekt benutzt das Bootstrap Raster-System, um das Layout und die Bedienelemente der Applikation zu strukturieren und zu positionieren.
-
-Da keine Anpassungsfähigkeit (Responsivness) des Designs unterhalb der gängigen Desktop-Auflösung benötigt wird, wurden die „Mobile, „Small“, und „Medium“-Raster (in Bootstrap als „mobile grid“, „small grid“ und „medium grid“ gekennzeichnet) deaktiviert.
-
-Da das Bootstrap3-Rastersystem im Internet Explorer Version 8 nur mit einem zusätzlichen Javascript (respond.js) funktioniert (http://getbootstrap.com/getting-started/#support[http://getbootstrap]http://getbootstrap.com/getting-started/#support[.com/getting-started/#support]) , haben wir zusätzliche Styledeklaration eingebaut um auf einer IE8 Umgebung ohne Javascriptfähigkeiten das Raster nutzen zu können.
-Dafür bot sich das „Desktop First Grid Patch“- Projekt (https://github.com/dizzyn/bootstrap-grid-desktop-first) an.
-
-Entwickler sollten ausschließlich die CSS-Klassen des Large (LG) Rasters benutzen (col-lg-x) um auch in diesem Fall das Spaltenraster nutzen zu können.
-
-Weitere Informationen können der Bootstrap Dokumentation über das „grid system“ (http://getbootstrap.com/css/#grid) entnommen werden.
-
-Die Einstellungen für das genutzte Raster (z. B. Spaltenbreite) können in der Datei src/less/es/customvariables.less nachgelesen werden.
-
-==== Zusätzliche Bibliotheken, Plugins und Skripte
-
-Um eine umfassendere Funktionalität zu gewährleisten, muss teilweise zusätzliches JavaScript eingesetzt werden.
-Diese Skripte dienen beispielsweise zum Styling applikationsspezifischer Bedienelemente.
-Optimieren der Browser-Kompatibilität oder Erweitung der Standardinteraktivität. Zu diesem Zweck wurden diverse Plugins mit freier (permissive) Software Lizenz integriert.
-Diese können aktualisiert werden, wenn neue Versionen erscheinen.
-
-*jQuery 1.11.0*
-
-Bootstrap JS setzt jQuery voraus
-
-*Bootstrap JS 3.1.1*
-
-Zusätzliche JavaScript-Komponenten für erweiterte Bootstrap-Bedienelemente (affix, alert, button, carousel, collapse, dropdown, modal, popover, scrollspy,tab,tooltip,transition)
-
-*html5shiv 3.7.0*
-
-Erlaubt die Benutzung semantischer HTML5-Tags im Internet Explorer 8
-
-*respond.js 1.4.2*
-
-Ermöglicht die Darstellung des responsiven Bootstrap 3 Rasters im Internet Explorer 8 https://github.com/scottjehl/Respond
-
-*Modernizr 2.7.1*
-
-Ermöglicht es, herauszufinden, welche Features durch den Browser unterstützt werden und setzt dementesprechende CSS-Klassen. (- Bisher ungenutzt -)
-
-*Bootstrap Datepicker*
-
-Implementiert einen interaktiven Standard Date Picker. https://github.com/eternicode/bootstrap-datepicker/
-
-*Bootstrap Select*
-
-Implementiert eine Auswahlbox. http://silviomoreto.github.io/bootstrap-select/
-
-*Bootstrap Timepicker*
-
-Implementiert einen interaktiven Standard Time Picker. https://github.com/jdewit/bootstrap-timepicker/
-
-*ExtendedBootstrapTab*
-
-Eine erweiterte Version der Bootstrap Tabs, die das Anzeigen der Inhalte aller Tabs innnerhalb eines Tabs ermöglicht.
-
-*harmonizePanelHeadlineWidth*
-
-Gruppierungs-Container (panel groups) können Toolbars enthalten.
-Diese wiederum können Funktionen in Form von Icon-Buttons enthalten.
-Dieses Skript ermöglicht eine vertikale Ausrichtung dieser Buttons innerhalb von verschachtelten Gruppierungs-Containern unabhängig von der Länge der Gruppierungsüberschrift (Label).
-
-*infoPanel*
-
-Dieses Skript ermöglicht das Ein- und Ausblenden des optionalen Informationsbereiches auf den Applikationsdetailseiten.
-
-*jquery.maskedinput.js*
-
-Dieses Plugin unterstützt die Eingabe formatierter Daten (z. B. TT/MM/JJ) in Standard-Eingabefelder.
-Zur besseren Orientierung werden Platzhalter in Form von Unterstrichen in dem entsprechenden Eingabefeld angezeigt.
-
-*Magnific Popup 0.9.9*
-
-Dieses Plugin ermöglicht die Verwendung einer Lightbox. 
-
-*Functions*
-
-Dieses Skript enthält eine Sammlung von allgemeinen Funktionen.
-
-=== Assets
-
-Alle benötigten Asstes wurden für die Benutzung in Browsern optimiert.
-Hierfür wurden alle Dateigrößen minimiert und die Anzahl der benötigten Dateien auf ein Minimum reduziert.
-Dieser Prozess beinhaltet auch die Entfernung von nicht benötigten Meta-Informationen aus dem Header von Bild-Dateien (smushit, svgmin).
-
-==== Icons
-
-Die Icon-Funktionalität von Bootstrap basierend auf Glyphicon-Sprites wurde entfernt, um Namenskonflikte von Icons zu verhindern.
-Anstelle des Glyphicon-Sprites wurden vordefinierte Icons mittels einer Icon-Font-Technik integriert.
-Ein eigens erstellter Webfont enthält die im Projekt benötigten Symbole. Über CSS-Klassen können die einzelnen Symbole referenziert werden.
-
-Mittels eines von Ergosign definierten Workflows können neue Icons in das Interface eingefügt werden.
-Das Icon-Font-Paket wird mit Hilfe der Icomoon10 Web-App aus SVG Dateien erzeugt.
-Dieses Paket beinhaltet die Webfont Dateien, ein Stylesheet und eine Demo-Webseite.
-Das komplette Paket wird direkt in die Struktur des Projektes eingebunden.
-
-Als Referenz werden alle ursprünglichen Quelldateien als SVG in dem Verzeichnis /iconlibrary abgelegt.
-
-**Neue Icons mittels **http://icomoon.io/[*Icomoon.io*]* hinzufügen*
-
-Um ein neues Icon-Font-Paket mit icomoon zu erzeugen, sind folgende Schritte durchzuführen:
-
-1.  http://www.icomoon.io/[www.icomoon.io] Web-App starten
-2.  Die aktuelle src/iconfont/selection.json Datei importieren.
-Diese enthält auch die Symbole als Vektoren im SVG Format.
-3.  Neue Icons als SVG Dateien hinzufügen (Die neuen Symbole sollten immer auch im Verzeichnis /iconlibrary als Referenz abgelegt werden.)
-4.  Um den neuen Web-Font zu generieren, müssen nun alle Icons in icomoon ausgewählt werden.
-5.  Anpassen/Überprüfen der Einstellungen für den Web-Font, siehe Screenshot:
-6.  Das neue Icon-Font-Paket herunterladen und das alte ersetzen src/iconfont.
-7.  Kommen neue Icons hinzu, kann es sein, dass sich ein paar Icons verschieben und neue Unicodes erhalten.
-Damit die Chevron-Icons richtig dargestellt werden, müssen in den Dateien src/less/es/expander.less und panels.less die LESS-Variablen entsprechend angepasst werden.
-8.  Um die neuen Icons im Interface zu sehen, muss mittels Grunt ein neuer Build erfolgen.
-
-
-==== Grafiken
-
-Für einige Bedien- und Layout-Elemente werden zusätzliche Bitmap Grafiken benötigt, zum Beispiel src/assets/img/controls/cb_checked_default.png (Bedienelement) und src/assets/img/bgInfoTile.png (Layout). Diese Grafiken sollten möglichst nicht verändert werden, da sie dann möglicherweise nicht mehr den Richtlinien des Interface Style Guides entsprechen.
-In der Regel ist eine Bearbeitung aber auch nicht notwendig.
-
-=== Konventionen
-
-==== HTML5 Markup
-
-Die Struktur des Markup der Applikationsbereich wurde mit Hilfe des W3C Validierers auf gültige Struktur überprüft („well-formed“).
-
-==== JavaScript
-
-Der von Ergosign erstellte Quellcode für die prototypischen Interaktionen in der Datei es.js wurde mit JSHint(http://www.jslint.com) validiert.
-
-==== Kommentare im Quellcode
-
-Ein Ausrufezeichen /*! innerhalb eines Kommentars zeigt an, dass dieser Kommentar auch nach der Minimierung erhalten bleibt.
-Solche Kommentare werden in den publizierten Dateien aus lizenzrechtlichen Gründen angezeigt.
-
-==== Stylesheets
-
-LESS Stylesheets sollten im Verzeichnis /less abgelegt werden.
-Um Styles besser lesen und verstehen zu können, sollten ein paar grundlegende Konventionen bei der Definition von neuen Styles und Stylesheets eingehalten werden:
-
-* Es sollten keine IDs für das Styling benutzt werden, sondern immer Klassen.
-* Klassen-und ID-Namen sollten die semantische Bedeutung des Elements im Markup beschreiben und keine Styling-Informationen enthalten (z. B. eService-area statt center-column).
-
-Unnötige Klassen und Verschachtelungen („wrapper“-Elemente) sollten vermieden werden.
-Es sollten keine Inline-Styles (style=”…”). im HTML-Dokument eingesetzt werden
-Die Styles einzelner Elemente werden logisch auf verschiedene Dateien aufgeteilt, einige davon nutzen die Namen der Bootstrap Original-Dateien.
-
-==== Das LESS-Format
-
-Öffnende Klammern stehen in der gleichen Zeile wie die Bezeichnung des Styles.
-Die schließende Klammer steht in einer neuen Zeile.
-
-Klassen dürfen nur Kleinbuchstaben enthalten und einzelne Wörter sollten durch einen Bindestrich voneinander getrennt sein (z. B. „my-style“, „my-more-specfic-style“).
-
-Bei Styles mit Definitionen von mehr als einer Eigenschaft steht jeder Bezeichner und Wertezuordnung in einer eigenen Zeile.
-Sie sind mit dem Tabulator eingerückt und hinter dem Doppelpunkt folgt ein Leerzeichen.
-
-Enthält ein Style nur eine Definition von einer Eigenschaft, kann alles in einer Zeile geschrieben werden.
-
-Hexadezimalfarbwerte sollten möglichst kurz geschrieben werden (z. B. #fff).
-
-Es werden nur Kleinbuchstaben verwendet
-
-image::image355.png[image,width=500,height=241]
-
-==== Benutzungsrichtlinien
-
-Die gelieferten Styles und Templates können folgendermaßen zur Weiterentwicklung verwendet werden:
-
-1.  Zunächst müssen die vorkompilierten Dateien aus dem Verzeichnis /www in die eigene Entwicklungsumgebung integriert werden.
-Die Datei styles.css ist das wichtigste Styling-Asset.
-Sie beinhaltet die Styles für alle Bedienelemente und das Layout.
-Es können keine dauerhaften Änderungen an dieser Datei vorgenommen werden.
-Wird die Datei verändert, so ist sie mit den LESS Quelldateien nicht mehr konform.
-Wird das Projekt erneut kompiliert, so gehen die Änderungen an der styles.css verloren.
-Oder
-2.  Der bereitgestellte Build-Prozess kann in die eigene Entwicklungsumgebung integrierte werden sofern diese Grunt-JS unterstützt.
-So können die Projekt-Assets basierend auf den Quelldateien direkt erstellt werden.
-Es ist somit möglich, die Änderungen direkt in den LESS-Dateien vorzunehmen.
-Die Gruntfile-Konfigurationen müssen evtl.
-angepasst werden.
-Es sollte darauf geachtet werden, dass die grundlegende Struktur im Verzeichnis src/ nicht verändert.
-Oder
-3.  Die gesamte Struktur des Prokjekts kann geändert und neue Quelldateien eingebunden werden.
-Solche Änderungen sollten für Außenstehende (wie z. B. Ergosign) dokumentiert werden.
-So sind alle Anpassungen gut nachvollziehbar, falls externer Support zu einem späteren Zeitpunkt notwendig sein sollte.
-
-Weitere Informationen mit Details zur Implementierung können in den entsprechenden Quelldateien nachgelesen werden.
-
-Die Bibliothek `isy-style` enthält alle Vorgaben und Ressourcen (CSS, JavaScript, Images, ...) des Styleguides.
-
-Zum Aktualisieren der plis-web mit der aktuellen plis-style müssen derzeit noch folgende, manuelle Schritte durchgeführt werden:
-
-1.  Bauen der aktuellen plis-style über grunt.
-2.  Im Ordner <plis-style>/www werden alle benötigten Ressourcen generiert.
-3.  Von Ordner <plis-style>/www/css die Dateien print.css, styles.css und ie8fixes.css nach <plis-web>/src/main/resources/META-INF/resources/css kopieren.
-4.  Bei Änderung der Icon Fonts alle Dateien von Ordner <plis-style>/www/css/fonts nach <plis-web>/src/main/resources/META-INF/resources/css/fonts kopieren.
-5.  Alle Dateien von Ordner <plis-style>/www/img nach <plis-web>/src/main/resources/META-INF/resources/img kopieren
-6.  Vom Ordner <plis-style>/www/js die Datei onload.js nach <plis-web>/src/main/resources/META-INF/resources/js kopieren.
-Die anderen Dateien können für das Debugging der Anwendung verwendet werden.
-7.  Alle Dateien von Ordner <plis-style>/www/lib nach <plis-web>/src/main/resources/META-INF/resources/lib kopieren
-8.  Alle Dateien von Ordner <plis-style>/www/plugins nach <plis-web>/src/main/resources/META-INF/resources/plugins kopieren
-9.  Im Commit Kommentar die eingebaute Version der plis-style angeben.
-
-Anmerkungen: Der Buildprozess wurde aus Aufwandsgründen derzeit noch nicht automatisiert.
-Automatisierung ist z.B. über Grunt Artifactory Plug-In möglich.
-
-[[konfiguration-portalfarbe]]
-=== Konfiguration der Portalfarbe
-
-Für eine Anwendung kann eine Basisfarbe / Portalfarbe konfiguriert werden. Von dieser `portalColor` werden viele der weiteren Farbstyles für die Anwendung abgeleitet und in der generierten Datei `color.css` abgelegt, die in der Zielanwendung einzubinden ist.
-
-Zur Generierung der Datei `color.css` mit der eigenen Portalfarbe sind folgende Schritte erforderlich:
-
-*1.  Konfiguration der Portalfarbe*: In der Datei `Gruntfile.js` ist die Basisfarbe / Portalfarbe zu setzen:
-
-:desc-listing-gruntPortalfarbe: Portalfarbe in Gruntfile.js konfigurieren
-[id="listing-gruntPortalfarbe",reftext="{listing-caption} {counter:listings }"]
-.{desc-listing-gruntPortalfarbe}
-[source, xml]
-----
-var helper = require('./helper/helper');
-module.exports = function (grunt) {
-
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-less');
-
-    var portalColor = '#004179';
-
-    grunt.initConfig({
-        ...
-----
-[start=2]
-*2.   Maven Install*: In der Bibliothek `isy-style` ist ein "Maven install" durchzuführen.
-Dadurch wird ein "grunt build" ausgelöst und die Farbstyles befinden sich nach der Generierung in `target/color.css`.
-
-[start=3]
-*3.   Einbindung in Zielanwendung*: Die Datei `color.css` aus dem Target-Verzeichnis von `isy-style` ist in die Zielanwendung unterhalb des WEB-INF Verzeichnisses zu kopieren.
-
-:desc-image-colorCssPosition: Zielordner für color.css Datei
-[id="image-colorCssPosition",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-colorCssPosition}
-image::color-css-position.png[align="center"]
 // end::inhalt[]
+

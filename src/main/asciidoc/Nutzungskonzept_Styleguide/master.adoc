@@ -1,0 +1,11 @@
+:doctitle: Styleguide
+:document-type: Nutzungsvorgaben
+
+toc::[]
+colophon::[factory="IsyFact-Erweiterungen", open-source="false"]
+
+include::docinfo.adoc[]
+
+include::inhalt.adoc[tags=inhalt]
+
+include::changelog.adoc[leveloffset=1]
