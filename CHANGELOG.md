@@ -8,6 +8,8 @@ ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben 
 - `IFE-79`: 4-Augen-Prinzip im Styleguide beschrieben
 - `IFE-96`: Update auf jQuery 3.4.1
 - `IFE-103`: Bootstrap-Select auf 1.13.9 angehoben. Fehlender Scrollbalken bei Dropdowns behoben.
+- `IFE-42`: Namensänderung bei Fontawesome Icons in Dokumentation berücksichtigt.
+- `IFE-102`: Einarbeitung der Fixes aus isy-web-angular
 - `IFE-188`: Fehler bei der Dropdown-Darstellung behoben:
     * Formular-Dropdown nutzt nicht die volle Breite
     * Dropup wird von Header überdeckt
