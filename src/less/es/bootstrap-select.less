@@ -1,10 +1,9 @@
-/*!
- * Bootstrap-select v1.13.9 (https://developer.snapappointments.com/bootstrap-select)
- *
- * Copyright 2012-2019 SnapAppointments, LLC
- * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
- */
 @import "bootstrap-select-variables";
+
+@keyframes bs-notify-fadeOut {
+  0% {opacity: 0.9;}
+  100% {opacity: 0;}
+}
 
 // Mixins
 .cursor-disabled() {
@@ -87,12 +86,12 @@ select.selectpicker {
   .has-error & .dropdown-toggle,
   .error & .dropdown-toggle,
   &.is-invalid .dropdown-toggle,
-  .was-validated & .selectpicker:invalid + .dropdown-toggle {
+  .was-validated & select:invalid + .dropdown-toggle {
     border-color: @color-red-error;
   }
 
   &.is-valid .dropdown-toggle,
-  .was-validated & .selectpicker:valid + .dropdown-toggle {
+  .was-validated & select:valid + .dropdown-toggle {
     border-color: @color-green-success;
   }
 
@@ -118,6 +117,7 @@ select.selectpicker {
     margin-bottom: 0;
     padding: 0;
     border: none;
+    height: auto;
 
     :not(.input-group) > &:not([class*="col-"]) {
       width: 100%;
@@ -335,6 +335,10 @@ select.selectpicker {
       pointer-events: none;
       opacity: 0.9;
       box-sizing: border-box;
+
+      &.fadeOut {
+        animation: 300ms linear 750ms forwards bs-notify-fadeOut;
+      }
     }
   }
 
@@ -350,7 +354,6 @@ select.selectpicker {
       position: static;
       display: inline;
       padding: 0;
-      width: auto;
     }
 
     .filter-option-inner,
@@ -390,6 +393,7 @@ select.selectpicker {
     height: 1em;
     border-style: solid;
     border-width: 0 0.26em 0.26em 0;
+    transform-style: preserve-3d;
     transform: rotate(45deg);
   }
 }
