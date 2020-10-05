@@ -39,6 +39,39 @@ input[type="color"]:focus,
 .uneditable-input:focus {
     @color-rgba: rgba(red(@input-border-focus), green(@input-border-focus), blue(@input-border-focus), 0.6);
     border-color: @input-border-focus;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px @color-rgba;
+    //box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px @color-rgba;
     outline: 0 none;
 }
+
+textarea.form-control {
+    &:focus {
+        border: 1px solid @input-border-focus;
+        //box-shadow: 0 0 0 1px @input-border-focus
+    }
+
+    &:focus:hover {
+        border: 1px solid @input-border-focus;
+        //box-shadow: 0 0 0 1px @input-border-focus;
+    }
+
+    &.required,
+    &.invalid {
+        &:focus {
+            border: 2px solid @input-border-focus;
+        }
+    }
+}
+
+.has-error {
+    .form-control {
+        border: 2px solid @es-orange-100;
+        background-color: @es-orange-20;
+        &:focus {
+            border: 2px solid @input-border-focus;
+        }
+        &:focus:hover {
+            border: 2px solid @input-border-focus;
+        }
+    }
+}
+

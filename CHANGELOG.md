@@ -1,5 +1,6 @@
 # v5.1.0
 - `IFE-68`: Fokusfarbe für Bedienelemente ist über die Variable focusColor in der Gruntfile.js konfigurierbar (Standardwert ist die Portalfarbe)
+- `IFE-183`: Aus isy-web-angular ausgelagerte Farben hinzugefügt
 
 # v5.0.1
 - `IFE-251`: CVE der Klasse High durch Upgrade der Bibliothek grunt behoben

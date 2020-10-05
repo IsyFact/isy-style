@@ -1,6 +1,11 @@
 [[changelog]]
 = Changelog
 
+*Änderungen Release 5.1.0*
+// tag::release-5.1.0[]
+- `IFE-183`: Aus isy-web-angular ausgelagerte Farben hinzugefügt
+// end::release-5.1.0[]
+
 *Änderungen Release 5.0.1*
 // tag::release-5.0.1[]
 * `IFE-251`: CVE der Klasse High durch Upgrade der Bibliothek grunt behoben
