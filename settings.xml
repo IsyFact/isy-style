@@ -107,12 +107,12 @@
                     </snapshots>
                 </pluginRepository>
                 <pluginRepository>
-                    <id>repository-snapshot</id>
-                    <name>Projekt-snapshot-repository</name>
-                    <url>${env.REPOSITORY_IFS_SNAPSHOT}</url>
-                    <snapshots>
+                    <id>repository</id>
+                    <name>Projekt-release-repository</name>
+                    <url>${env.REPOSITORY_IFS_RELEASE}</url>
+                    <releases>
                         <enabled>true</enabled>
-                    </snapshots>
+                    </releases>
                 </pluginRepository>
             </pluginRepositories>
         </profile>

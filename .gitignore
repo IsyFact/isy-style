@@ -24,7 +24,6 @@ build/
 node/
 node_modules/
 dist/
-package-lock.json
 
 src/main/resources
 
