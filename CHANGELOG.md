@@ -1,3 +1,5 @@
+# v4.4.0
+
 # v4.3.2
 - `IFE-188`: Fehler bei der Dropdown-Darstellung behoben:
     * Formular-Dropdown nutzt nicht die volle Breite
@@ -77,7 +79,7 @@ Ein Mapping der alten Iconfont auf fontawesome-Icons liegt unter `legacy-icon-st
 
 ## Neuerungen
 - `IFS-29`:
-	* Deaktivierte Eingabefelder haben einen entsprechenden Cursur.
+    * Deaktivierte Eingabefelder haben einen entsprechenden Cursur.
     * Einführung von h-Tags für Überschriften von Panels.
     * formCurrencyInput hat neuen, optionalen Parameter zum Ausrichten des Texts.
 
