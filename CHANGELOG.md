@@ -1,5 +1,9 @@
 # v5.1.0
 
+
+# v5.0.1
+- `IFE-251`: CVE der Klasse High durch Upgrade der Bibliothek grunt behoben
+
 # v5.0.0
 - `IFS-308`: Fontawesome Version auf 5.7.0 angehoben
 ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben sich leicht verändert. Hardkodierte Verweise auf die Schrift `FontAwesome` müssen auf
