@@ -1825,8 +1825,12 @@ ellipsis) abgetrennt und ein Tooltip zeigt die ausgeschriebene Variante des Labe
 [[eingabefelder-ueberschrift]]
 === Eingabefelder
 
-Ein Eingabefeld dient der Eingabe von Text durch den Benutzer.
-Ein Eingabefeld ist in der Regel einzeilig.
+Ein Eingabefeld dient der Eingabe von Daten durch den Benutzer. Dies kann ein einzeiliger oder mehrzeiliger Text sein oder auch beispielsweise ein Datum, ein numerischer Wert oder eine Betragseingabe (Währungsbetrag, Fließkommazahl).
+
+
+[[standard-eingabefeld]]
+==== Standard Eingabefeld
+Das Standard Eingabefeld ist einzeilig.
 
 :desc-image-eingabefelderbis: Eingabefelder
 [id="image-eingabefelderbis",reftext="{figure-caption} {counter:figures}"]
@@ -1872,6 +1876,181 @@ image::no-js.png[]
 Es gelten die gleichen Regeln und Einschränkungen wie im Kapitel Validierung beschrieben.
 
 
+[[eingabefeld-vierAugen-Prinzip, 4-Augen-Prinzip Eingabefelder]]
+==== 4-Augen-Prinzip Eingabefelder
+
+Teilweise besteht bei Eingabefeldern die Notwendigkeit, dass die durch einen ersten Benutzer eingegebenen Daten, zunächst noch von einem zweiten Benutzer bestätigt/freigegeben werden müssen, bevor diese von anderen Aktionen (z.B. Zahlungsläufen) berücksichtigt werden können.
+
+Die Felder mit dieser Eigenschaft werden bei der IsyFact als _"4-Augen-Prinzip Eingabefelder"_ bezeichnet und sind visuell durch ein Schloss-Icon zu erkennen.
+
+
+:desc-image-vier-augen-grundstyles: Durch Schloss-Icon gekennzeichnete 4-Augen-Prinzip Eingabefelder
+[id="image-vier-augen-grundstyles",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-vier-augen-grundstyles}
+image::VierAugen-Grundstyle-SchlossIcon.png[align="center"]
+
+Zur Umsetzung von Anwendungsfällen mit Eingabefeldern, die auf dem 4-Augen-Prinzip beruhen, sind folgende Eingabefeld-Typen verfügbar:
+
+*Ausprägungen*
+
+* 4-Augen-Prinzip Eingabefeld
+* 4-Augen-Prinzip Eingabefeld-Numerischer-Wert
+* 4-Augen-Prinzip Eingabefeld-Währung
+* 4-Augen-Prinzip Eingabefeld-Datum
+
+Neben diesen einzeiligen Eingabefeldtypen für das 4-Augen-Prinzip gibt es noch
+
+* 4-Augen-Prinzip Textbox
+* 4-Augen-Prinzip DropdownBox-Einzelauswahl
+* 4-Augen-Prinzip Checkbox
+* 4-Augen-Prinzip Aktionseingabefelder
+
+*Zustände*
+
+* Die möglichen Grundzustände (Normal, Deaktiviert, Focus, ...) entsprechen denen der jeweiligen (Eltern) Eingabefeld-Typen
+* Ergänzend hierzu wird der Zustand eines 4-Augen-Prinzip Eingabefeldes durch die Farbe des geöffneten Schloss-Icons ausgedrückt (unlocked/grau: zur Zeit kein Eingabewert | locked/rot: Eingabewertfreigabe erforderlich)
+
+
+*Ist dies das korrekte Bedienelement?*
+
+* 4-Augen-Prinzip Eingabefelder sind nur für die Eingabe von Daten zu verwenden, die von einem zweiten Anwendungsbenutzer entweder freizugeben oder zu verwerfen/löschen sind.
+
+
+*Richtlinien zur Anwendung*
+
+* Die 4-Augen-Prinzip Eingabefelder sind durch ein Schloss-Icon zu erkennen. Es wird nur die Grafik für ein geöffnetes Schloss verwendet.
+* Das Schloss Icon als visuelle Kennzeichnung des 4-Augen-Prinzip Eingabefeldes steht rechtsseitig im Eingabefeld. Sollten auf Grund des Feldtyps noch weitere Icons im Eingabefeld angezeigt werden müssen (z.B. bei Datumsfeldern das Datumspicker-Icon), so steht das Schloss-Icon noch vor dem anderen Icon (s.a. <<image-vier-augen-grundstyles>>)
+* Die Breite des 4-Augen-Prinzip Eingabefeldes vergrößert sich durch das Schloss-Icon nicht.
+
+*JavaScript*
+
+Außer beim reinen Eingabefeld wird bei allen anderen Eingabefeldtypen (Validierung des Numerischen Wertes, Datumspicker, Werte-Plausibilitätsprüfungen, ...) JavaScript benötigt.
+
+[[bsp-anwendungsfall-vier-augen, Ablauf eines Anwendungsfalls mit 4-Augen-Prinzip]]
+*Nutzungsvorgaben*
+
+Welche Anwendungslogik mit 4-Augen-Prinzip Eingabefeldern umgesetzt wird, bleibt der expliziten Fachanwendung vorbehalten.
+
+Ein möglicher Ablauf eines Anwendungsfalls wäre folgender:
+
+* Ein Benutzer A hat Daten geändert, die gemäß des 4-Augen-Prinzips bestätigt werden müssen.
+* Der Benutzer A speichert die Daten. Dadurch speichert das System die Daten unter Vorbehalt. D.h. Benutzer A sieht die Daten in der Anwendung als aktuelle Daten aber entsprechend markiert.
+Die ursprünglichen Werte wurden nicht überschrieben, so dass sie im Falle einer Ablehnung der Änderung wiederhergestellt werden können.
+* Das System benachrichtigt Benutzer B, um ihn zu informieren, dass Datenänderungen zur Prüfung vorliegen.
+* Das System sperrt die Daten für Veränderung durch Dritte bis die Änderungen von einem Benutzer B bestätigt oder abgelehnt wurden.
+* Der Benutzer B reagiert auf die Benachrichtigung, indem er den zu prüfenden Datensatz im System öffnet.
+* Im Falle einer Bestätigung der Änderungen durch Benutzer B übernimmt das System die Daten nun endgültig, hebt die Bearbeitungssperre auf und informiert Benutzer A.
+* Im Falle einer Ablehnung der Änderung durch Benutzer B verwirft das System die Änderungen, hebt die Bearbeitungssperre auf und informiert Benutzer A mit einem Ablehnungsgrund.
+
+*Styleguide konforme Darstellungsbeispiele für 4-Augen-Prinzip Eingabefelder*
+
+Beschreibung zum folgenden Screenshots:
+
+Beim Betreten der Maske, vor der Eingabe von Werten im oberen Abschnittsbereich, waren die Schloss-Icons der Felder `Gültig ab` und `Stundensatz` grau dargestellt.
+
+Nach der Eingabe eines Wertes ändert sich die jeweilige Schloss-Icon Farbe auf rot.
+
+:desc-image-vier-augen-eintrag-hinzufuegen: Nach Werteeingabe rote Schloss-Icons
+[id="image-vier-augen-eintrag-hinzufuegen",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-vier-augen-eintrag-hinzufuegen}
+image::VierAugen-Tabellenfeld-Eintrag-hinzufuegen.png[align="center"]
+
+Nachdem Benutzer A zwei Stundensatzeinträge durch Drücken der `Hinzufügen` Schaltfläche der Ergebnisliste hinzugefügt hat, kann er dann die somit modifizierte Ergebnisliste final abspeichern.
+
+Man beachte, dass auch bei Verwendung von 4-Augen-Prinzip Feldern innerhalb von Tabellenzeilen, das Schloss-Icon rechtsbündig angeordnet ist.
+
+:desc-image-vier-augen-nach-hinzufuegung: Durchgängig rechtsseitige Darstellung des  Schloss-Icons
+[id="image-vier-augen-nach-hinzufuegung",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-vier-augen-nach-hinzufuegung}
+image::VierAugen-Tabellenfeld-rechtsbuendig.png[align="center"]
+
+In der folgenden Maskenansicht für den Benutzer B, sieht man, die durch Benutzer A eingegebenen Daten, die Benutzer B nunmehr durch zwei Schaltflächen `Bestätigen` oder `Ablehnen` kann.
+
+:desc-image-vier-augen-bestaetigen: Eingabefelder und 4-Augen-Prinzip Eingabefelder in der gleichen Ergebnisspalte
+[id="image-vier-augen-bestaetigen",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-vier-augen-bestaetigen}
+image::VierAugen-Tabellenfeld-Ergebnislisten.png[align="center"]
+
+[[text-box]]
+==== Text Box
+
+Text Boxen sehen optisch aus wie Eingabefelder, es können jedoch mehrzeilige Daten eingegeben werden.
+
+:desc-image-bildtextbox: Text Box
+[id="image-bildtextbox",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-bildtextbox}
+image::Text_Box.png[align="center", width="358",height="111"]
+
+
+*Zustände*
+
+* Normal
+* Hover
+* Deaktiviert
+* Focus
+* Read-Only
+* Validierung
+
+*Ist dies das korrekte Bedienelement?*
+
+* Text Boxen werden für die Eingabe von mehrzeiligem Freitext genutzt.
+* Für einzeilige Texte sollte ein Eingabefeld benutzt werden.
+* Falls die einzugebenden Daten Teil einer vordefinierten Menge sind, sollte die Verwendung eines Dropdown Menüs oder einer Wertehilfe in Erwägung gezogen werden.
+* Textboxen sind nicht mit einem Charpicker zum Einfügen von Sonderzeichen ausgestattet.
+
+*Richtlinien zur Anwendung*
+
+* Für die Verwendung von Text Boxen gelten die gleichen Richtlinien wie für Eingabefelder.
+* In manchen Fällen kann die Größe der Text Box nicht der Größe des möglichen Inhaltes entsprechen.
+Ist die Größe der Text Box kleiner als deren Inhalt, so muss der Benutzer innerhalb der Text Box scrollen können.
+Vertikales Scrollen ist horizontalem Scrollen vorzuziehen.
+
+
+[[TextvierAugen-Prinzip, 4-Augen-Prinzip Eingabefelder]]
+==== 4-Augen-Prinzip Textbox
+
+Eine 4-Augen-Prinzip Textbox kann wie eine normale Textbox einen mehrzeiligen Text aufnehmen. Ein Schloss-Icon im Eingabefeld weist auf die zusätzliche Funktionalität (4-Augen-Prinzip) hin.
+
+:desc-image-bildtextbox-locked: Text Box - 4-Augen-Prinzip
+[id="image-bildtextbox-locked",reftext="{figure-caption} {counter:figures}"]
+.{desc-image-bildtextbox-locked}
+image::Text_Box_locked.png[align="center", width="358",height="111"]
+
+_"4-Augen-Prinzip Eingabefelder"_ erfordern, dass die durch einen ersten Benutzer eingegebenen Daten, zunächst noch von einem zweiten Benutzer bestätigt/freigegeben werden müssen.
+
+
+*Zustände*
+
+* Normal
+* Hover
+* Deaktiviert
+* Focus
+* Read-Only
+* Validierung
+* 4-Augen-Prinzip (locked | unlocked)
+
+
+*Ist dies das korrekte Bedienelement?*
+
+* 4-Augen-Prinzip Eingabefelder sind nur für die Eingabe von Daten zu verwenden, die von einem zweiten Anwendungsbenutzer entweder freizugeben oder zu verwerfen/löschen sind.
+* Textboxen sind nicht mit einem Charpicker zum Einfügen von Sonderzeichen ausgestattet.
+
+*Richtlinien zur Anwendung*
+
+* Die 4-Augen-Prinzip Eingabefelder sind durch ein Schloss-Icon zu erkennen. Es wird nur die Grafik für ein geöffnetes Schloss verwendet.
+* Das Schloss Icon als visuelle Kennzeichnung des 4-Augen-Prinzip Eingabefeldes steht rechtsseitig, oben im Eingabefeld.
+* Die Breite der 4-Augen-Prinzip Textbox vergrößert sich durch das Schloss-Icon nicht.
+
+*JavaScript*
+
+Es wird kein JavaScript benötigt.
+
+
+*Nutzungsvorgaben*
+
+Welche Anwendungslogik mit einer 4-Augen-Prinzip Textbox umgesetzt wird, bleibt der expliziten Fachanwendung vorbehalten.
+s.a. <<bsp-anwendungsfall-vier-augen>>
+
 [[aktionseingabefeld]]
 ==== Aktionseingabefeld
 
@@ -1892,7 +2071,8 @@ image::Eingabeelemente.png[align="center", width="685",height="25"]
 *Ist dies das korrekte Bedienelement?*
 
 * Falls zusätzlich zum Eingabefeld einen dazugehörigen visuellen Hinweis dargestellt werden soll.
-* Falls die Eingabe beigesteurt werden muss oder kann, z.B. in einem modalen Dialog.
+* Falls die Eingabe beigesteuert werden muss oder kann, z.B. in einem modalen Dialog.
+
 
 
 [[upload]]
@@ -1927,33 +2107,7 @@ image::Eingabefelder_Upload.png[align="center", width="685",height="25"]
 * Wenn das Upload-Feld keinen Inhalt hat, kann es einen Hinweistext dastellen (z.B. Wählen Sie eine Bild-Datei zum Hochladen aus.)
 * Das Upload-Feld und die zugehörige Visualisierung der Datei sollten erkennbar sein.
 
-[[text-box]]
-=== Text Box
 
-Text Boxen sehen optisch aus wie Eingabefelder, es können jedoch mehrzeilige Daten eingegeben werden.
-
-:desc-image-bildtextbox: Text Box
-[id="image-bildtextbox",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-bildtextbox}
-image::Text_Box.png[align="center", width="358",height="111"]
-
-
-*Zustände*
-
-* Siehe Eingabefeld
-
-*Ist dies das korrekte Bedienelement?*
-
-* Text Boxen werden für die Eingabe von mehrzeiligem Freitext genutzt.
-* Für einzeilige Texte sollte ein Eingabefeld benutzt werden.
-* Falls die einzugebenden Daten Teil einer vordefinierten Menge sind, sollte die Verwendung eines Dropdown Menüs oder einer Wertehilfe in Erwägung gezogen werden.
-
-*Richtlinien zur Anwendung*
-
-* Für die Verwendung von Text Boxen gelten die gleichen Richtlinien wie für Eingabefelder.
-* In manchen Fällen kann die Größe der Text Box nicht der Größe des möglichen Inhaltes entsprechen.
-Ist die Größe der Text Box kleiner als deren Inhalt, so muss der Benutzer innerhalb der Text Box scrollen können.
-Vertikales Scrollen ist horizontalem Scrollen vorzuziehen.
 
 
 [[dropdown-menue]]
@@ -4178,10 +4332,14 @@ Innerhalb der Anwendung wird der Icon-Font Awesome benutzt.
 Dieser Font muss in die Webanwendung eingebunden werden.
 Die Icons sollten nur an Stellen verwendet werden, an denen der Styleguide den Einsatz von Icons vorsieht.
 
-In der folgenden Tabelle sind mögliche Icons und deren Funktion dargestellt sowie die dazgehörige CSS-Klasse.
+In der folgenden Tabelle sind mögliche Icons und deren Funktion dargestellt sowie die dazugehörige CSS-Klasse.
+Die CSS-Klasse bezieht sich auf Font Awesome Version 5.
 
 Eine Gesamtübersicht der zur Verfügung stehenden Icons finden Sie unter:
 http://fontawesome.io/icons/[ Font-Awesome-Icons]
+
+// Die CSS-Klassen beziehen sich auf Font Awesome 5, AsciiDoctor verwendet intern aber noch Font Awesome 4.
+// Die von AsciiDoctor gerenderten Icons entsprechen vom Aussehen daher nicht zu 100% den Font Awesome 5 Icons.
 
 .Übersicht verwendeter Icons
 ifdef::backend-pdf[]
@@ -4194,225 +4352,230 @@ endif::[]
 |Icon |CSS-Klasse |Funktionen
 
 |icon:times[2x]
-|fa-times
+|fas fa-times
 |Abbrechen, Ablehnen, Filterzelle leeren, Stornieren
 
 |icon:car[2x]
-|fa-car
+|fas fa-car
 |Abholen
 
 |icon:sign-out[2x]
-|fa-sign-out
+|fas fa-sign-out-alt
 |Abmelden
 
 |icon:sign-in[2x]
-|fa-sign-in
+|fas fa-sign-in-alt
 |Anmelden
 
 |icon:unlock[2x]
-|fa-unlock
+|fas fa-unlock
 |Aktivieren, Freischalten
 
 |icon:refresh[2x]
-|fa-refresh
+|fas fa-sync-alt
 |Aktualisieren
 
 |icon:check[2x]
-|fa-check
+|fas fa-check
 |Akzeptieren, Annehmen, Erledigen, Zustimmen
 
 |icon:paperclip[2x]
-|fa-paperclip
+|fas fa-paperclip
 |Anhänge
 
 |icon:reply[2x]
-|fa-reply
+|fas fa-reply
 |Antworten
 
 |icon:eye[2x]
-|fa-eye
+|far fa-eye
 |Anzeigen
 
 |icon:file-archive-o[2x]
-|fa-file-archive-o
+|far fa-file-archive
 |Archiv, aus Archiv zurück holen
 
 |icon:pencil[2x]
-|fa-pencil
+|fas fa-pencil-alt
 |Bearbeiten, Bearbeitung fortsetzen, Editieren, Korrigieren
 
 |icon:user[2x]
-|fa-user
+|fas fa-user
 |Benutzer, User
 
 |icon:file-image-o[2x]
-|fa-file-image-o
+|far fa-file-image
 |Bild, Bild anzeigen
 
 |icon:font[2x]
-|fa-font
+|fas fa-font
 |Buchstaben-Picker
 
 |icon:download[2x]
-|fa-download
+|fas fa-download
 |Datei laden, Download, Herunterladen, Laden von Daten
 
 |icon:list-alt[2x]
-|fa-list-alt
+|far fa-list-alt
 |Datensatz anzeigen, Detailauskunft
 
 |icon:share-square-o[2x]
-|fa-share-square-o
+|fas fa-share-square
 |Daten senden, Daten übermitteln, Senden, Versenden
 
 |icon:file[2x]
-|fa-file
+|fas fa-file
 |Dokument erstellen, Erstmeldung
 
 |icon:file-text-o[2x]
-|fa-file-text-o
+|far fa-file-alt
 |Druckansicht
 
 |icon:print[2x]
-|fa-print
+|fas fa-print
 |Drucken
 
 |icon:cog[2x]
-|fa-cog
+|fas fa-cog
 |Einstellung, Einstellungen
 
 |icon:mouse-pointer[2x]
-|fa-mouse-pointer
+|fas fa-mouse-pointer
 |Eintrag auswählen
 
 |icon:minus[2x]
-|fa-minus
+|fas fa-minus
 |Entfernen
 
 |icon:check-square-o[2x]
-|fa-check-square-o
+|far fa-check-square
 |Entscheiden
 
 |icon:plus[2x]
-|fa-plus
+|fas fa-plus
 |Ergänzen
 
 |icon:bell[2x]
-|fa-bell
+|fas fa-bell
 |Erinnerung
 
 |icon:upload[2x]
-|fa-upload
+|fas fa-upload
 |Exportieren
 
 |icon:exclamation-triangle[2x]
-|fa-exclamation-triangle
+|fas fa-exclamation-triangle
 |Fehler, Fehlerhaft
 
 |icon:eraser[2x]
-|fa-eraser
+|fas fa-eraser
 |Felder leeren
 
 |icon:check-circle[2x]
-|fa-check-circle
+|fas fa-check-circle
 |Fertig, Abgeschlossen
 
 |icon:filter[2x]
-|fa-filter
+|fas fa-filter
 |Filter ausfüllen
 
 |icon:history[2x]
-|fa-history
+|fas fa-history
 |Historie
 
 |icon:info-circle[2x]
-|fa-info-circle
+|fas fa-info-circle
 |Info
 
 |icon:arrow-circle-down[2x]
-|fa-arrow-circle-down
+|fas fa-arrow-circle-down
 |Importieren
 
 |icon:calendar[2x]
-|fa-calendar
+|far fa-calendar-alt
 |Kalender
 
 // ifdef::backend-pdf[]
 // asciidoctor-pdf nutzt leider eine ältere Version von FontAwesome (4.6.x) (über prawn-icons 1.3.0) als asciidoctor (4.7.x).
 // fa-address-card ist erst ab FontAwesome 4.7.0 enthalten.
 // |image::image330.png[align="left",width="24",height="24"]
-// |fa-address-card
+// |fas fa-address-card
 // |Kontakt
 // endif::[]
 
+ifdef::backend-html5[]
+|icon:address-card[2x]
+|fas fa-address-card
+|Kontakt
+endif::[]
 
 |icon:list[2x]
-|fa-list
+|fas fa-list
 |List Picker (Objektauswahl)
 
 |icon:trash[2x]
-|fa-trash
+|fas fa-trash-alt
 |Löschen
 
 |icon:envelope[2x]
-|fa-envelope
+|fas fa-envelope
 |Mail
 
 |icon:envelope-o[2x]
-|fa-envelope-o
+|far fa-envelope
 |Nachrichten
 
 |icon:thumb-tack[2x]
-|fa-thumb-tack
+|fas fa-thumbtack
 |Notiz
 
 |icon:folder-open-o[2x]
-|fa-folder-open-o
+|far fa-folder-open
 |Seite öffnen
 
 |icon:floppy-o[2x]
-|fa-floppy-o
+|far fa-save
 |Sichern, Speichern
 
 |icon:search[2x]
-|fa-search
+|fas fa-search
 |Suchen, Suche wiederholen, Neue Suche, Durchsuchen,
  letzte Suche
 
 |icon:list-ul[2x]
-|fa-list-ul
+|fas fa-list-ul
 |Trefferliste
 
 |icon:arrow-circle-left[2x]
-|fa-arrow-circle-left
+|fas fa-arrow-circle-left
 |Vorheriger
 
 |icon:arrow-circle-right[2x]
-|fa-arrow-circle-right
+|fas fa-arrow-circle-right
 |Weiter, Nächster
 
 |icon:repeat[2x]
-|fa-repeat
+|fas fa-redo-alt
 |Wiederholen
 
 |icon:star[2x]
-|fa-star
+|fas fa-star
 |Wiedervorlage
 
 |icon:clock-o[2x]
-|fa-clock-o
+|far fa-clock
 |Zeit, Time Picker
 
 |icon:arrow-circle-o-left[2x]
-|fa-arrow-circle-o-left
+|far fa-arrow-alt-circle-left
 |Zurück (Navigation)
 
 |icon:share[2x]
-|fa-share
+|fas fa-share
 |Zurückgeben (an Sender)
 
 |icon:user[2x]
-|fa-user
+|fas fa-user
 |Zuständigkeit
 |===
 
@@ -4492,3 +4655,4 @@ image::10_Applikations_Wizard_Objektanlage_4.png[align="center"]
 image::11_Applikations_Wizard_Objektanlage_5.png[align="center"]
 
 // end::inhalt[]
+

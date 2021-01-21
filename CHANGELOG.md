@@ -1,3 +1,9 @@
+# v5.1.0
+- `IFE-68`: Fokusfarbe für Bedienelemente ist über die Variable focusColor in der Gruntfile.js konfigurierbar (Standardwert ist die Portalfarbe)
+
+# v5.0.1
+- `IFE-251`: CVE der Klasse High durch Upgrade der Bibliothek grunt behoben
+
 # v5.0.0
 - `IFS-308`: Fontawesome Version auf 5.7.0 angehoben
 ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben sich leicht verändert. Hardkodierte Verweise auf die Schrift `FontAwesome` müssen auf
@@ -5,8 +11,15 @@ ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben 
   - Build erzeugt zusätzliches NPM-Package in `/target` für Javascript-Client-Entwicklung
 - `IFS-505`: Upgrade auf Isyfact 2
 - `IFS-381`: Fontawesome 5 in Isyfact 2 eingebunden
+- `IFE-79`: 4-Augen-Prinzip im Styleguide beschrieben
 - `IFE-96`: Update auf jQuery 3.4.1
-- `IFE-68`: Fokusfarbe für Bedienelemente ist über die Variable focusColor in der Gruntfile.js konfigurierbar (Standardwert ist die Portalfarbe)
+- `IFE-103`: Bootstrap-Select auf 1.13.9 angehoben. Fehlender Scrollbalken bei Dropdowns behoben.
+- `IFE-42`: Namensänderung bei Fontawesome Icons in Dokumentation berücksichtigt.
+- `IFE-102`: Einarbeitung der Fixes aus isy-web-angular
+- `IFE-188`: Fehler bei der Dropdown-Darstellung behoben:
+    * Formular-Dropdown nutzt nicht die volle Breite
+    * Dropup wird von Header überdeckt
+    * Geöffnetes Dropdown geht über die ganze Seite auf kleinen Bildschirmen (-> Bootstrap-Select auf 1.13.18 angehoben)
 
 # v4.3.0
 - `IFS-413`: Dialogvorgaben angepasst, Größe passt sich dem Inhalt an, Buttons haben festen Ort
@@ -19,6 +32,9 @@ ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben 
 
 
 # v4.2.0
+- `IFS-366`: Update von maven-asciidoctor-plugin
+
+# v4.2.0
 - `IFE-48`: Update auf jQuery 3.3.1 und Bootstrap 3.3.7
 - `IFE-16`: Unterstützung für IE 8 eingestellt (Definition von `row-df` und gridpatch CSS Library entfernt).
 - `IFE-65`: Upgrade auf Bootstrap 3.4.1 (vulnerability CVE-2019-8331)
@@ -26,6 +42,9 @@ ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben 
 - `IFE-61`: Tabellen-Sortierpfeildarstellung auf "übereinander" geändert
 - `IFE-62`: Obsoletes Parent-POM durch Open Source Parent POM ersetzt
 - `IFS-311`: Einbindung isy-dokumentvorlagen; Build Styleguide über Maven
+- `IFE-46`: ReadOnly-Hinweis bei DropDownWidgets aufgenommen
+- `IFS-214`: Tabellensortierung - Screenshot ausgetauscht, Beschreibung konkretisiert
+- `IFS-215`: Vorgaben zur Interaktion mit dem Hauptfenster integriert
 
 # v4.1.0
 - `IFS-163`: Unterstützung für IE 8 eingestellt

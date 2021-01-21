@@ -106,6 +106,14 @@
                         <enabled>false</enabled>
                     </snapshots>
                 </pluginRepository>
+                <pluginRepository>
+                    <id>repository</id>
+                    <name>Projekt-release-repository</name>
+                    <url>${env.REPOSITORY_IFS_RELEASE}</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </pluginRepository>
             </pluginRepositories>
         </profile>
     </profiles>
