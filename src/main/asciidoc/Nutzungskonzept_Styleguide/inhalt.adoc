@@ -256,7 +256,10 @@ In der Anwendung implementierte Styling-Ressourcen sollten immer nach den Ressou
 [[konfiguration-portalfarbe]]
 == Konfiguration Portalfarbe
 
-Für eine Anwendung kann eine Basisfarbe / Portalfarbe konfiguriert werden. Von dieser `portalColor` werden viele der weiteren Farbstyles für die Anwendung abgeleitet und in der generierten Datei `color.css` abgelegt, die in der Zielanwendung einzubinden ist.
+Für eine Anwendung kann eine Basisfarbe / Portalfarbe konfiguriert werden.
+Von dieser `portalColor` werden viele der weiteren Farbstyles für die Anwendung abgeleitet und in der generierten Datei `color.css` abgelegt, die in der Zielanwendung einzubinden ist.
+Es kann zudem eine abweichende Fokusfarbe für Bedienelemente `focusColor` konfiguriert werden.
+Standardmäßig wird die `portalColor` auch als Fokusfarbe der Bedienelemente gesetzt.
 
 Zur Generierung der Datei `color.css` mit der eigenen Portalfarbe sind folgende Schritte erforderlich:
 
@@ -274,11 +277,14 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
 
-    var portalColor = '#004179';
+    const portalColor = '#004179';
+    const focusColor = portalColor;
 
     grunt.initConfig({
         ...
 ----
+Hier kann auch eine abweichende Fokusfarbe für Bedienelemente konfiguriert werden.
+
 [start=2]
 *2.   Maven Install*: In der Bibliothek `isy-style` ist ein "Maven install" durchzuführen.
 Dadurch wird ein "grunt build" ausgelöst und die Farbstyles befinden sich nach der Generierung in `target/color.css`.
