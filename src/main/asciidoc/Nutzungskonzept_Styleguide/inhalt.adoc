@@ -230,14 +230,18 @@ Es werden nur Kleinbuchstaben verwendet
 .{desc-image-css-kleinbuchstaben}
 image::css-kleinbuchstaben.png[image,width=500,height=241]
 
-[[einbindung-isy-style]]
-== Einbindung der Bibliothek Isy-Style in eine Anwendung
 
-Die Bibliothek Isy-Style wird wie jede andere Bibliothek der IsyFact in die `pom.xml` der Anwendung integriert.
+[[installation-isy-style]]
+== Installation der Bibliothek
+Die Bibliothek `isy-style` wird als Maven Dependency und als npm Paket bereitgestellt.
+Damit lässt sich `isy-style` in klassischen Webanwendungen mit JSF (Maven) oder in modernen Single Page Applications mit Angular (npm) verwenden.
 
-Dazu ist folgende Abhängigkeit in die `pom.xml` einzutragen:
+[[installation-klassisch]]
+=== Installation in klassischen Webanwendungen
 
-:desc-listing-einbindung_isy_style: Einbindung von Isy-Style
+Für klassische Webanwendungen wird `isy-style` als Maven Bibliothek installiert (siehe <<listing-einbindung_isy_style>>).
+
+:desc-listing-einbindung_isy_style: Einbindung von Isy-Style in der pom.xml
 [id="listing-einbindung_isy_style",reftext="{listing-caption} {counter:listings}"]
 .{desc-listing-einbindung_isy_style}
 [source,xml,subs="verbatim,attributes"]
@@ -248,10 +252,66 @@ Dazu ist folgende Abhängigkeit in die `pom.xml` einzutragen:
 </dependency>
 ----
 
-Während des Build-Prozesses der Anwendung werden die Style-Ressourcen (CSS, JavaScript, Bilder) automatisch aus `isy-style` geladen und in der Anwendung bereitgestellt.
+Während des Build-Prozesses der Anwendung werden die statische Ressourcen (CSS, JavaScript, Bilder) automatisch aus `isy-style` geladen und in der Webanwendung bereitgestellt.
 Im Projekt selbst sind diese Ressourcen nicht sichtbar und können somit auch nicht geändert werden.
-Änderungen an Styling-Ressourcen aus der `isy-style` sind somit nur durch ein Überschreiben der Ressourcen möglich.
-In der Anwendung implementierte Styling-Ressourcen sollten immer nach den Ressourcen aus der `isy-style` geladen werden, damit diese überschrieben werden.
+Änderungen an Stylesheets aus `isy-style` sind somit nur durch ein Überschreiben der Ressourcen möglich.
+In der Anwendung definierte Stylesheets sollten immer nach den Ressourcen aus `isy-style` geladen werden, damit diese überschrieben werden.
+
+[[einbindung-isy-style-nodejs]]
+=== Installation in Angular Projekten
+
+Für die Verwendung von `isy-style` in Angular Projekten muss zunächst die Bibliothek über installiert werden.
+
+    $ npm i -S @isyfact/isy-style
+
+IMPORTANT: Für die Installation der Bibliothek wird eine Verbindung zum internen npm Repository der IsyFact benötigt.
+
+Die statischen Ressourcen müssen anschließend an der passenden Stelle in der Angular Anwendung importiert werden.
+Stylesheets aus `isy-style` werden typischerweise immer am Anfang des projektspezifischen Templates deklariert und bei Bedarf modifiziert (siehe <<listing-isy-style-less>>)
+
+:desc-listing-isy-style-less: Einbinden der Stylesheets von isy-style in Angular Projekt
+[id="listing-isy-style-less",reftext="{listing-caption} {counter:listings}"]
+.{desc-listing-isy-style-less}
+[source,less]
+----
+@import '~@isyfact/isy-style/dist/css/styles.css';
+@import '~@isyfact/isy-style/dist/css/color.css';
+
+@import './variables.less';
+
+/* ggf. Anpassungen oder eigene Klassen */
+----
+
+Bilder, Schriftarten und andere statische Ressourcen werden über die `assets` Konfiguration in der `angular.json` bereitgestellt (siehe <<listing-isy-style-angular>>).
+
+:desc-listing-isy-style-angular: Bereitstellen von statischen Ressourcen aus isy-style in Angular Projekten
+[id="listing-isy-style-angular",reftext="{listing-caption} {counter:listings}"]
+.{desc-listing-isy-style-angular}
+[source,json]
+----
+{
+ "projects": {
+    "my-project": {
+      "architect": {
+        "build": {
+          "assets": [
+              {
+                "glob": "**/*",
+                "input": "node_modules/@isyfact/isy-style/img",
+                "output": "/img"
+              },
+              {
+                "glob": "*.svg",
+                "input": "node_modules/@isyfact/isy-style/webfonts",
+                "output": "/font-data"
+              }
+          ]
+        }
+      }
+    }
+ }
+}
+----
 
 [[konfiguration-portalfarbe]]
 == Konfiguration Portalfarbe

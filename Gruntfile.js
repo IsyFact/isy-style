@@ -10,12 +10,11 @@ module.exports = function (grunt) {
     const focusColor = portalColor;
 
     grunt.initConfig({
-
         pkg: grunt.file.readJSON('package.json'),
-
-
-        clean: ["src/main/resources/META-INF/resources"],
-
+        clean: [
+            "dist",
+            "src/main/resources/META-INF/resources"
+        ],
         less: {
             color: {
                 options: {
@@ -43,13 +42,12 @@ module.exports = function (grunt) {
                     })]
                 },
                 files: {
-                    "src/main/resources/META-INF/resources/css/print.css": "src/less/print-jsf.less",
-                    "src/main/resources/META-INF/resources/css/styles.css": "src/less/styles-jsf.less",
-                    "src/main/resources/META-INF/resources/css/color.css": "target/color.css"
+                    "dist/css/print.css": "src/less/print-jsf.less",
+                    "dist/css/styles.css": "src/less/styles-jsf.less",
+                    "dist/css/color.css": "target/color.css"
                 }
             }
         },
-
         copy: {
             assets: {
                 files: [
@@ -57,7 +55,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'src/assets/',
                         src: ['img/**', 'lib/**', 'plugins/**'],
-                        dest: 'src/main/resources/META-INF/resources/'
+                        dest: 'dist/'
                     }
                 ],
                 options: {
@@ -68,33 +66,34 @@ module.exports = function (grunt) {
                 expand: true,
                 cwd: 'node_modules/@fortawesome/fontawesome-free/webfonts',
                 src: "**",
-                dest: "src/main/resources/META-INF/resources/webfonts/",
+                dest: "dist/webfonts/",
                 flatten: true
             },
             jquery: {
                 expand: true,
                 cwd: 'node_modules/jquery/dist/',
                 src: "jquery.min.js",
-                dest: "src/main/resources/META-INF/resources/lib/"
+                dest: "dist/lib/"
             }
         }
     });
 
-    grunt.registerTask('generate_json', function () {
-        let buildPkgJson = grunt.file.readJSON('package.json');
-        let releasePkgJson = {
-            "name": buildPkgJson.name,
-            "version": grunt.option('zielVersion'),
-            "description": buildPkgJson.description,
-            "author": buildPkgJson.author,
-            "license": buildPkgJson.license,
-            "private": buildPkgJson.private,
-            "dependencies": buildPkgJson.dependencies
-        };
-        grunt.file.write("src/main/resources/META-INF/resources/package.json",
-            JSON.stringify(releasePkgJson, null, 2));
+    grunt.registerTask('copy_version_from_maven_to_package_json', function () {
+        const buildPkgJson = grunt.file.readJSON('package.json');
+        buildPkgJson.version = grunt.option('zielVersion')
+
+        grunt.file.write("package.json",
+            JSON.stringify(buildPkgJson, null, 2));
     });
 
-    grunt.registerTask('build', ['clean', 'less', 'copy', 'generate_json']);
+    grunt.registerTask('remove_version_from_package_json', function () {
+        const buildPkgJson = grunt.file.readJSON('package.json');
+        delete buildPkgJson.version
+
+        grunt.file.write("package.json",
+            JSON.stringify(buildPkgJson, null, 2));
+    });
+
+    grunt.registerTask('build', ['clean', 'less', 'copy', 'copy_version_from_maven_to_package_json']);
     grunt.registerTask('default', ['build']);
 };
