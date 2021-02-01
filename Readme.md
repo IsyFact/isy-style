@@ -1,18 +1,83 @@
 # isy-style
 
-Beinhaltet die Styles zur `isy-web`.
-Sie wird zusätzlich zur `isy-web` als Dependency im Maven-Projekt der Anwendung eingetragen. 
+<div align="center">
+    <img src="https://git.zssi.ivbb.bund.de/IsyFact/isy-style/badges/master/pipeline.svg" alt="build-badge"/>
+</div>
 
-## Konfiguration
+Der Baustein `isy-style` enthält den Styleguide der IsyFact als Dokument und in Form von Source Code (CSS Klassen).
+Die Stylesheets können sowohl in klassischen Webanwendungen über Maven, als auch in Angular Projekten über npm verwendet werden.
 
-In der Datei `Gruntfile.js` kann eine Basisfarbe / Portalfarbe konfiguriert werden:
+## Dokumentation
 
-`var portalColor = '#00417a';`
+Der Baustein enthält folgende Dokumente:
 
-Von dieser werden viele der weiteren Farbstyles abgeleitet.
-Nach der Generierung befinden sich die Farb-Styles in `target/color.css`.
+* **Styleguide** - Der aktuelle Styleguide der IsyFact. 
+* **Nutzungskonzept_Styleguide** - Dokumentation zum Erzeugen und Einbinden der Stylesheets in den eigenen Quellcode.
+
+Die Dokumentation kann bei Bedarf manuell erzeugt werden.
+
+> Für den Build wird der Zugriff auf die Maven Repositories in der ZSSI benötigt (Maven Profil `zssi`).
+
+```
+$ git checkout https://git.zssi.ivbb.bund.de/IsyFact/isy-style.git
+$ cd isy-style
+$ mvn -Pzssi compile
+```
+Die Dokumente befinden sich anschließend im Ordner `target/docs`.
+
+## Lokale Installation
+
+Das Paket `isy-style` kann auf für die lokale Entwicklung installiert werden.
+
+### Maven
+
+Zunächst wird `isy-style` mit folgendem Befehl installiert.
+
+```
+$ mvn clean install
+```
+
+Anschließend kann das Paket als Maven dependency eingebaut werden.
+
+```xml
+<dependency>
+    <groupId>de.bund.bva.isyfact</groupId>
+    <artifactId>isy-style</artifactId>
+    <version>${isy-style.version}</version>
+</dependency>
+```
+
+### npm
+
+Zunächst wird `isy-style` mit folgendem Befehl paketiert.
+
+```
+$ mvn clean package
+```
+
+Daraus entsteht ein `tgz`-Paket, welches anschließend in der `package.json` des gewünschten Projekts verlinkt werden kann.
+
+```json
+{
+  "dependencies": {
+    "@isyfact/isy-style": "<absolute_path>/isy-style/isyfact-isy-style-5.1.0-SNAPSHOT.tgz"
+  }
+}
+```
+
+## Hinweis zur Versionierung
+
+`isy-style` wird immer als Maven und als npm Paket zugleich ausgeliefert, JSF-basierte GUIs verwenden das Maven Paket und Angular Anwendungen das npm Paket.
+
+Die Version von `isy-style` steht in der `pom.xml` und wird für das npm Paket während des Builds von dort kopiert.
+Deshalb in der `package.json` des Source Code keine Versions Attribut zu finden, dafür aber in der `package.json` des npm Pakets. 
+
+## Changelog
+
+Details zu allen Änderungen in den Versionen befinden sich im [CHANGELOG](./CHANGELOG.adoc).
 
 ## Lizenzinformationen
 
-* Die `isy-style` unterliegt der Apache License 2.0
-* Alle mitgelieferten Abhängigkeiten unterliegen der im jeweiligen Datei-Header angegebenen Lizenz.
+[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+
+Copyright (c) 2013-present, Bundesverwaltungsamt

@@ -1,56 +1,83 @@
 [[changelog]]
 = Changelog
 
+*Änderungen Release 5.0.1*
+// tag::release-5.0.1[]
+* `IFE-251`: CVE der Klasse High durch Upgrade der Bibliothek grunt behoben
+// end::release-5.0.1[]
+
 *Änderungen Release 5.0.0*
 
 // tag::release-5.0.0[]
-- `IFS-308`: Fontawesome Version auf 5.7.0 angehoben
+* `IFS-308`: Fontawesome Version auf 5.7.0 angehoben
 ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben sich leicht verändert. Hardkodierte Verweise auf die Schrift `FontAwesome` müssen auf
 `Font Awesome 5 Free` mit dem korrekten Schriftgewicht (Regular, Bold, ...)  geändert werden. Einige Codepoints haben sich geändert.
-- Build erzeugt zusätzliches NPM-Package in `/target` für Javascript-Client-Entwicklung
-- `IFS-505`: Upgrade auf Isyfact 2
-- `IFS-381`: Fontawesome 5 in Isyfact 2 eingebunden
-- `IFE-96`: Update auf jQuery 3.4.1
+* Build erzeugt zusätzliches NPM-Package in `/target` für Javascript-Client-Entwicklung
+* `IFS-505`: Upgrade auf Isyfact 2
+* `IFS-381`: Fontawesome 5 in Isyfact 2 eingebunden
+* `IFE-79`: 4-Augen-Prinzip im Styleguide beschrieben
+* `IFE-96`: Update auf jQuery 3.4.1
+* `IFE-103`: Bootstrap-Select auf 1.13.9 angehoben. Fehlender Scrollbalken bei Dropdowns behoben.
+* `IFE-42`: Namensänderung bei Fontawesome Icons in Dokumentation berücksichtigt.
+* `IFE-102`: Einarbeitung der Fixes aus isy-web-angular
+* `IFE-188`: Fehler bei der Dropdown-Darstellung behoben:
+** Formular-Dropdown nutzt nicht die volle Breite
+** Dropup wird von Header überdeckt
+** Geöffnetes Dropdown geht über die ganze Seite auf kleinen Bildschirmen (-> Bootstrap-Select auf 1.13.18 angehoben)
+
 // end::release-5.0.0[]
 
-*Änderungen Release 4.3.3*
+*Änderungen Release 4.3.0*
 
 // tag::release-4.3.0[]
-- `IFE-80`: Datepicker: Verarbeitung unsicheres Datum
+* `IFS-413`: Dialogvorgaben angepasst, Größe passt sich dem Inhalt an, Buttons haben festen Ort
+* `IFE-412`: Größenvorgaben für Buttons angepasst
+* `IFE-47`: BVA-Kontext im Styleguide weiter reduzieren
+* `IFE-70`: BVA-Teil des Accso-Wikis aus isy-style entfernt
+* `IFE-80`: Datepicker: Verarbeitung unsicheres Datum
+* `IFS-247`: Styleguide Screenshots aktualisiert
+* `IFE-40`: Nutzungskonzept hinzugefügt
 // end::release-4.3.0[]
 
 *Änderungen Release 4.2.0*
 
 // tag::release-4.2.0[]
-- `IFE-48`: Update auf jQuery 3.3.1 und Bootstrap 3.3.7
-- `IFE-16`: Unterstützung für IE 8 eingestellt (Definition von `row-df` und gridpatch CSS Library entfernt).
-- `IFE-65`: Upgrade auf Bootstrap 3.4.1 (vulnerability CVE-2019-8331)
-- `IFE-61`: Tabellen-Sortierpfeildarstellung auf "übereinander" geändert
-- `IFE-62`: Obsoletes Parent-POM durch Open Source Parent POM ersetzt
-- `IFS-311`: Einbindung isy-dokumentvorlagen; Build Styleguide über Maven
-- `IFE-46`: ReadOnly-Hinweis bei DropDownWidgets aufgenommen
+* `IFE-48`: Update auf jQuery 3.3.1 und Bootstrap 3.3.7
+* `IFE-16`: Unterstützung für IE 8 eingestellt (Definition von `row-df` und gridpatch CSS Library entfernt).
+* `IFE-65`: Upgrade auf Bootstrap 3.4.1 (vulnerability CVE-2019-8331)
+* `IFE-59`: Verwendung der Portalfarbe für Navigationsmenü und Breadcrumb, Icon-Buttons (Hover) und selektierte Kopfzeilen von Tabellen
+* `IFE-61`: Tabellen-Sortierpfeildarstellung auf "übereinander" geändert
+* `IFE-62`: Obsoletes Parent-POM durch Open Source Parent POM ersetzt
+* `IFS-311`: Einbindung isy-dokumentvorlagen; Build Styleguide über Maven
+* `IFE-46`: ReadOnly-Hinweis bei DropDownWidgets aufgenommen
+* `IFS-214`: Tabellensortierung - Screenshot ausgetauscht, Beschreibung konkretisiert
+* `IFS-215`: Vorgaben zur Interaktion mit dem Hauptfenster integriert
+* `IFS-366`: Update von maven-asciidoctor-plugin
 // end::release-4.2.0[]
 
 *Änderungen Release 4.1.0*
 
 // tag::release-4.1.0[]
-- `IFS-163`: Unterstützung für IE 8 eingestellt
-- `IFS-165`: UI-Block wird bei manchen Fehlermeldungen nicht deaktiviert
-- `IFS-187`: Umstellung der BVA-Styleguide Dokumentation auf AsciiDoc und Extraktion der WebGui spezifischen technischen Kapitel
-- `IFE-31`: Abstände zwischen Controls und Hover-Farbe Linksnavigation korrigiert
+* `IFS-163`: Unterstützung für IE 8 eingestellt
+* `IFS-165`: UI-Block wird bei manchen Fehlermeldungen nicht deaktiviert
+* `IFS-182`: Datepicker um Übernahme des heutigen Datums erweitert
+* `IFS-187`: Umstellung der BVA-Styleguide Dokumentation auf AsciiDoc und Extraktion der WebGui spezifischen technischen Kapitel
+* `IFS-205`: Dokumentation zur Navigation aus IFS-99 hinzugefügt
+* `IFE-31`: Abstände zwischen Controls und Hover-Farbe Linksnavigation korrigiert
 // end::release-4.1.0[]
 
 *Änderungen Release 4.0.0*
 
 // tag::release-4.0.0[]
-- `IFS-73`: Integration der Style-Änderungen von Ergosign. ACHTUNG: Diese Styles sind zum Teil inkompatibel zur isy-style-3.0.0
-- `IFS-74`: isy-style aus Build der isy-web herausgelöst. Die isy-style ist als zusätzliche Maven-Depedency einzubinden.
+* `IFS-73`: Integration der Style-Änderungen von Ergosign.ACHTUNG: Diese Styles sind zum Teil inkompatibel zur isy-style-3.0.0
+* `IFS-74`: isy-style aus Build der isy-web herausgelöst.Die isy-style ist als zusätzliche Maven-Depedency einzubinden.
+* `IFS-107`: Anpassung von Farben über Konfiguration möglich (siehe README.md)
 // end::release-4.0.0[]
 
 *Änderungen Release 3.0.0*
 
 // tag::release-3.0.0[]
-- Umstellung auf fontawesome Icons
+* Umstellung auf fontawesome Icons
 ACHTUNG: Die fonts liegen nun auf toplevel in `/fonts` statt `/css/fonts`.
 Die Referenzen zeigen ebenfalls dorthin - z.B. `/css/styles.css` hat folgenden Eintrag `url(../fonts/font-awesome.min.css)`.
 Dies muss bei der Umstellung beachtet werden.
@@ -61,33 +88,39 @@ Ein Mapping der alten Iconfont auf fontawesome-Icons liegt unter `legacy-icon-st
 *Änderungen Release 2.3.0*
 
 // tag::release-2.3.0[]
-- `IFS-61`: Darstellung sortierbarer Spalten überarbeitet.
+* `IFS-61`: Darstellung sortierbarer Spalten überarbeitet.
 // end::release-2.3.0[]
 
 *Änderungen Release 2.2.3*
 
 // tag::release-2.2.3[]
-- Modernisierung des Builds
-- Support für Release als npm Paket
-- Referenzen auf nicht existierende Bilder entfernt
-- Nicht verwendete Templates entfernt
+* Modernisierung des Builds
+* Support für Release als npm Paket
+* Referenzen auf nicht existierende Bilder entfernt
+* Nicht verwendete Templates entfernt
 // end::release-2.2.3[]
 
-// *Änderungen Release 2.2.2*
+*Änderungen Release 2.2.2*
 
 // tag::release-2.2.2[]
+* Header-Bereich: Linkes und rechtes Logo und der Text, der neben dem rechten Logo stehen soll, sind nun konfigurierbar.
+
+Hinweise zum Upgrade
+
+* Anwendungen müssen nun die Konfigurationsparameter 'gui.header.logo.rechts.pfad', 'gui.header.logo.links.pfad' und 'gui.header.text.logo.rechts' setzen, damit die Logos bzw. der Text angezeigt werden.
+
 // end::release-2.2.2[]
 
 *Änderungen Release 2.2.1*
 
-// tag::release-2.2.1[]
-- Fix für das Four-Eyes-Icon
+// tag::release-2.ü2.1[]
+* Fix für das Four-Eyes-Icon
 // end::release-2.2.1[]
 
 *Änderungen Release 2.2.0*
 
 // tag::release-2.2.0[]
-- `IFS-17`: Umbenennung der Artifact-ID und Group-ID
+* `IFS-17`: Umbenennung der Artifact-ID und Group-ID
 // end::release-2.2.0[]
 
 *Änderungen Release 2.1.0*
@@ -95,8 +128,8 @@ Ein Mapping der alten Iconfont auf fontawesome-Icons liegt unter `legacy-icon-st
 // tag::release-2.1.0[]
 Bugfixes
 
-- `IFS-24`: Toolbar im IE "überdeckt" Maskenelemente.
-- `RF-123`: Fix für fehlerhaftes Tabellen-Layout bei langen Texten in Tabellenspalte.
+* `IFS-24`: Toolbar im IE "überdeckt" Maskenelemente.
+* `RF-123`: Fix für fehlerhaftes Tabellen-Layout bei langen Texten in Tabellenspalte.
 // end::release-2.1.0[]
 
 *Änderungen Release 2.0.4*
@@ -104,6 +137,6 @@ Bugfixes
 // tag::release-2.0.4[]
 Bugfixes
 
-- Text lässt sich in "neuen" Browsern wieder markieren/kopieren (-webkit-user-select).
+* Text lässt sich in "neuen" Browsern wieder markieren/kopieren (-webkit-user-select).
 // end::release-2.0.4[]
 
