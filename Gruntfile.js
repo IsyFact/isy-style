@@ -12,8 +12,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         clean: [
-            "dist",
-            "src/main/resources/META-INF/resources"
+            "dist"
         ],
         less: {
             color: {

@@ -58,6 +58,16 @@
                         </configuration>
                     </execution>
                     <execution>
+                        <id>npm-run-clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>grunt</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>clean</arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>npm-run-build</id>
                         <phase>compile</phase>
                         <goals>
@@ -101,10 +111,10 @@
                         </goals>
 
                         <configuration>
-                            <outputDirectory>${basedir}/src/main/resources/META-INF/resources</outputDirectory>
+                            <outputDirectory>${project.build.outputDirectory}/META-INF/resources</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>/dist</directory>
+                                    <directory>${project.basedir}/dist</directory>
                                     <includes>
                                         <include>**</include>
                                     </includes>
