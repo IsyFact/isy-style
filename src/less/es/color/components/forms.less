@@ -11,6 +11,11 @@
     input[type="checkbox"]:not([disabled]):hover + span {
         color: @es-portal-color-100;
     }
+    input[type="checkbox"]:focus + span {
+        &:before {
+            border-color: @input-border-focus;
+        }
+    }
 }
 
 .radio,
@@ -23,6 +28,7 @@
 
 textarea:focus,
 input[type="text"]:focus,
+input[type="text"]:read-only:focus,
 input[type="password"]:focus,
 input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
