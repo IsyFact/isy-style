@@ -33,14 +33,14 @@
     }
 
     .charpicker-content-container {
-        flex-grow: 1;
+        flex: 1 1 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
     }
 
     .charpicker-content {
-        flex-grow: 1;
+        flex: 1 1 100%;
         border: 1px lightgray solid;
         overflow-y: scroll;
         display: flex;
@@ -82,7 +82,7 @@
         margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 10px;
-        align-self: end;
+        align-self: flex-end;
         height: 6.75rem;
         width: 240px;
         max-width: 240px;
@@ -99,13 +99,14 @@
 
     .charpicker-preview-serif,
     .charpicker-preview-sansserif {
+        width: 90px;
         max-width: 90px;
-        flex-grow: 1;
+        flex: 1 1 100%;
         display: flex;
-        align-items: end;
+        align-items: flex-end;
         justify-content: center;
-        font-size: 7rem;
-        line-height: 0.7;
+        font-size: 5.5em;
+        line-height: 0.65em;
         height: 5.02rem;
         color: #555;
     }
@@ -113,8 +114,13 @@
     .charpicker-details-additional {
         display: flex;
         flex-direction: column;
-        flex-grow: 1;
-        justify-content: space-evenly;
+        flex: 1 1 100%;
+        justify-content: space-between;
+        /* space evenly trick */
+        &:before, &:after {
+            content: '';
+            display: block;
+        }
     }
 
     .charpicker-action-region {
