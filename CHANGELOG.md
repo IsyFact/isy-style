@@ -20,6 +20,7 @@ ACHTUNG: Die fonts liegen nun in `/webfonts` statt `/fonts`. Einige Icons haben 
     * Formular-Dropdown nutzt nicht die volle Breite
     * Dropup wird von Header überdeckt
     * Geöffnetes Dropdown geht über die ganze Seite auf kleinen Bildschirmen (-> Bootstrap-Select auf 1.13.18 angehoben)
+- `IFS-848`: Styling für den Din Spec Charpicker
 
 # v4.3.0
 - `IFS-413`: Dialogvorgaben angepasst, Größe passt sich dem Inhalt an, Buttons haben festen Ort
