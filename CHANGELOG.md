@@ -1,12 +1,12 @@
 # v4.4.0
+- `IFS-848`: Styling für den Din Spec Charpicker
+    * ACHTUNG: Die color.css muss einmal neu generiert werden, da Farben aus der Portal-Farbe abgeleitet werden
 
 # v4.3.2
 - `IFE-188`: Fehler bei der Dropdown-Darstellung behoben:
     * Formular-Dropdown nutzt nicht die volle Breite
     * Dropup wird von Header überdeckt
     * Geöffnetes Dropdown geht über die ganze Seite auf kleinen Bildschirmen (-> Bootstrap-Select auf 1.13.18 angehoben)
-- `IFS-848`: Styling für den Din Spec Charpicker
-    * ACHTUNG: Die color.css muss einmal neu generiert werden, da Farben aus der Portal-Farbe abgeleitet werden
 
 # v4.3.1
 - `IFE-103`: Bootstrap-Select auf 1.13.9 angehoben. Fehlender Scrollbalken bei Dropdowns behoben.
