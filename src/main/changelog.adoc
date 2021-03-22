@@ -2,8 +2,12 @@
 = Changelog
 
 *Änderungen Release 5.0.1*
+
 // tag::release-5.0.1[]
 * `IFE-251`: CVE der Klasse High durch Upgrade der Bibliothek grunt behoben
+* `IFS-932`: Portierung des Tickets IFS-848 auf IFS-2.2
+* `IFS-848`: Styling für den Din Spec Charpicker
+** ACHTUNG: Die color.css muss einmal neu generiert werden, da Farben aus der Portal-Farbe abgeleitet werden
 // end::release-5.0.1[]
 
 *Änderungen Release 5.0.0*
