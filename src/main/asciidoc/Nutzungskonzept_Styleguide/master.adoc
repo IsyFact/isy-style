@@ -1,5 +1,6 @@
 :doctitle: Styleguide
 :document-type: Nutzungsvorgaben
+:vs-einstufung: offen
 
 toc::[]
 colophon::[factory="IsyFact-Erweiterungen", open-source="false"]
