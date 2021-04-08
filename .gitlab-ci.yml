@@ -6,10 +6,6 @@ stages:
   - package
   - deploy
 
-default:
-  before_script:
-    - echo -e "${NPMRC}" > ./.npmrc
-
 package:
   extends: .maven-package
   dependencies:
