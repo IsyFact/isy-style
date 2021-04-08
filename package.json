@@ -5,8 +5,7 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "build": "grunt build",
-    "postpack": "grunt remove_version_from_package_json"
+    "build": "grunt build"
   },
   "files": [
     "dist/**"
@@ -20,5 +19,6 @@
     "grunt-contrib-less": "^2.0.0",
     "jquery": "^3.4.1",
     "less-plugin-clean-css": "^1.5.1"
-  }
+  },
+  "version": "5.1.0"
 }
