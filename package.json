@@ -5,8 +5,7 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "build": "grunt build",
-    "postpack": "grunt remove_version_from_package_json"
+    "build": "grunt build"
   },
   "files": [
     "dist/**"
