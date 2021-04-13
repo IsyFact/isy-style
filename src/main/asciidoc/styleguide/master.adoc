@@ -6,8 +6,6 @@ colophon::[factory="IsyFact-Erweiterungen", open-source="false"]
 
 include::docinfo.adoc[]
 
-include::thisdoc.adoc[tags=inhalt]
-
 include::inhalt.adoc[tags=inhalt]
 
 include::changelog.adoc[leveloffset=1]

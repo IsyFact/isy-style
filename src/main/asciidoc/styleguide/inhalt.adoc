@@ -1,5 +1,5 @@
 = Styleguide: Inhalt
-include::{isy-dokumentvorlagen}/docs/common/isyfact-attributes.adoc[]
+:imagesdir: images
 
 // tag::inhalt[]
 [[einfuehrung-und-allgemeine-prinzipien]]
