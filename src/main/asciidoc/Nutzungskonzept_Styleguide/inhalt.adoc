@@ -1,17 +1,17 @@
-= Nutzungskonzept: Inhalt
-include::{isy-dokumentvorlagen}/docs/common/isyfact-attributes.adoc[]
+= Nutzungskonzept Styleguide: Inhalt
+:imagesdir: images
 
 // tag::inhalt[]
 [[kapitel-plis-style]]
-= Bibliothek isy-style
+== Bibliothek isy-style
 
 In der IsyFact-Erweiterung `isy-style` werden die CSS-, JavaScript- und Bilddateien des Styleguides abgelegt, für die Nutzung komprimiert und kompiliert.
 Dieses Dokument enthält die technische Dokumentation zur Bibliothek `isy-style`.
 
 
-== Technologien
+=== Technologien
 
-=== Twitter Bootstrap
+==== Twitter Bootstrap
 
 Dieses Projekt baut auf dem Bootstrap CSS Framework in Version 3.4.1 auf.
 Dieses stellt sowohl browserübergreifende, erweiterbare Styles für HTML-Elemente als auch wenige komplexere Steuerelemente mit zusätzlichem Javascript-Code zur Verfügung.
@@ -26,12 +26,12 @@ Bei der gesamten Entwicklung wurde darauf geachtet, dass die ursprünglichen Fun
 So können Entwickler bei aufkommenden Fragen die Bootstrap Dokumentation (http://getbootstrap.com) zu Rate ziehen.
 Sollte diese Dokumentation für eine neuere Bootstrap Versionen angepasst werden und somit nicht mehr mit der in der Anwendung verwendeten Version kompatibel sein, werden die älteren Bootstrap-Dokumentationen in einem Archiv von einem Drittanbieter(http://bootstrapdocs.com) zur Verfügung gestellt.
 
-==== Erweiterung der Bootstrap-Basis
+===== Erweiterung der Bootstrap-Basis
 
 Die Bootstrap-Quelldateien und die von Bootstrap bereitgestellten JavaScript-Dateien können unabhängig von den angewandten Styles und Templates aktualisiert werden.
 Sollte eine neue Bootstrap Version erscheinen und es notwendig sein, neue Features und/oder Bug-Fixes zu implementieren, sollte folgendermaßen vorgegangen werden:
 
-==== LESS
+===== LESS
 
 1.  Die neuen LESS-Quelldateien von folgender Seite herunterladen: https://github.com/twbs/bootstrap/tree/master/less.
 2.  Die Dateien in src/less/bootstrap/ mit den neu heruntergeladenen Dateien ersetzen.
@@ -40,13 +40,13 @@ Sollte eine neue Bootstrap Version erscheinen und es notwendig sein, neue Featur
 5.  Zum Abschluss müssen die Konformität mit dem Style Guide und die visuell fehlerfreie Darstellung der Applikation überprüft werden.
 Möglicherweise sind noch zusätzliche Styledefinitionen oder Korrekturen nötig, um neue Bootstrap-Styles zu überschreiben.
 
-==== JavaScript
+===== JavaScript
 
 1.  Die neue bootstrap.min.js-Datei von https://github.com/twbs/bootstrap/tree/master/js herunterladen.
 2.  Die alte Datei src/assets/lib/bootstrap.min.js durch die neue ersetzen.
 3.  Funktionalität überprüfen.
 
-=== LESS Stylesheets
+==== LESS Stylesheets
 
 Bootstrap basiert auf der LESS Stylesheet-Sprache (http://lesscss.org) . Diese fügt Variablen, Funktionen und Operationen zur ursprünglichen CSS Funktionalität hinzu.
 Dieses Projekt implementiert diese Funktionalitäten und baut darauf auf.
@@ -74,7 +74,7 @@ Ansonsten gehen Änderungen bei einem neuen Kompilierungsprozess verloren, da di
 LESS ermöglicht es, verschachtelte Selektoren zu benutzen, diese sind in den gelieferten Styles sehr häufig zu finden.
 Diese Verschachtelung erlaubt eine einfachere Wartbarkeit des Projektes, da so in den Styles teilweise die DOM-Struktur der Zielelemente widergespielt wird.
 
-=== GruntJS Build System
+==== GruntJS Build System
 
 GruntJS (http://gruntjs.com) ist ein modulares Kommandozeilen-Build-Programm für Webapplikationen.
 Dieses Programm basiert auf JavaScript und baut auf NodeJS (http://nodejs.org) und auf der Node-eigenen Paketverwaltung NPM (Node Package Modules) auf.
@@ -90,11 +90,11 @@ Mit dem Befehl „grunt“ in einer Konsolenanwendung wird das Projekt neu erste
 
 Weitere Informationen finden sich in der GruntJS Dokumentation und in der mitgelieferten Gruntfile.js.
 
-=== Benennung der Komponenten
+==== Benennung der Komponenten
 
 Die Benennung von spezifischen Komponenten und Layout-Elementen im Code wurde der Dash-Case-Schreibweise von Bootstrap angepasst.
 
-=== CSS Raster-System
+==== CSS Raster-System
 
 Dieses Projekt benutzt das Bootstrap Raster-System, um das Layout und die Bedienelemente der Applikation zu strukturieren und zu positionieren.
 
@@ -106,7 +106,7 @@ Weitere Informationen können der Bootstrap Dokumentation über das „grid syst
 
 Die Einstellungen für das genutzte Raster (z. B. Spaltenbreite) können in der Datei src/less/es/customvariables.less nachgelesen werden.
 
-=== Zusätzliche Bibliotheken, Plugins und Skripte
+==== Zusätzliche Bibliotheken, Plugins und Skripte
 
 Um eine umfassendere Funktionalität zu gewährleisten, muss teilweise zusätzliches JavaScript eingesetzt werden.
 Diese Skripte dienen beispielsweise zum Styling applikationsspezifischer Bedienelemente, Optimieren der Browser-Kompatibilität oder Erweitung der Standardinteraktivität.
@@ -164,39 +164,39 @@ Dieses Plugin ermöglicht die Verwendung einer Lightbox. 
 
 Dieses Skript enthält eine Sammlung von allgemeinen Funktionen.
 
-== Assets
+=== Assets
 
 Alle benötigten Asstes wurden für die Benutzung in Browsern optimiert.
 Hierfür wurden alle Dateigrößen minimiert und die Anzahl der benötigten Dateien auf ein Minimum reduziert.
 Dieser Prozess beinhaltet auch die Entfernung von nicht benötigten Meta-Informationen aus dem Header von Bild-Dateien (smushit, svgmin).
 
-=== Icons
+==== Icons
 
 Für die Verwendung von Icons wird der Icon-Font FontAwesome (https://fontawesome.com/) genutzt.
 Über CSS-Klassen können die einzelnen Icons referenziert werden.
 Grundlegende Icons sind in Kapitel 10.3 im <<Styleguide>> erläutert.
 
-=== Grafiken
+==== Grafiken
 
 Für einige Bedien- und Layout-Elemente werden zusätzliche Bitmap Grafiken benötigt, zum Beispiel src/assets/img/controls/cb_checked_default.png (Bedienelement) und src/assets/img/bgInfoTile.png (Layout). Diese Grafiken sollten möglichst nicht verändert werden, da sie dann möglicherweise nicht mehr den Richtlinien des Interface Style Guides entsprechen.
 In der Regel ist eine Bearbeitung aber auch nicht notwendig.
 
-== Konventionen
+=== Konventionen
 
-=== HTML5 Markup
+==== HTML5 Markup
 
 Die Struktur des Markup der Applikationsbereich wurde mit Hilfe des W3C Validierers auf gültige Struktur überprüft („well-formed“).
 
-=== JavaScript
+==== JavaScript
 
 Der Quellcode für die prototypischen Interaktionen in der Datei es.js wurde mit JSHint(http://www.jslint.com) validiert.
 
-=== Kommentare im Quellcode
+==== Kommentare im Quellcode
 
 Ein Ausrufezeichen /*! innerhalb eines Kommentars zeigt an, dass dieser Kommentar auch nach der Minimierung erhalten bleibt.
 Solche Kommentare werden in den publizierten Dateien aus lizenzrechtlichen Gründen angezeigt.
 
-=== Stylesheets
+==== Stylesheets
 
 LESS Stylesheets sollten im Verzeichnis /less abgelegt werden.
 Um Styles besser lesen und verstehen zu können, sollten ein paar grundlegende Konventionen bei der Definition von neuen Styles und Stylesheets eingehalten werden:
@@ -208,7 +208,7 @@ Unnötige Klassen und Verschachtelungen („wrapper“-Elemente) sollten vermied
 Es sollten keine Inline-Styles (style=”…”). im HTML-Dokument eingesetzt werden
 Die Styles einzelner Elemente werden logisch auf verschiedene Dateien aufgeteilt, einige davon nutzen die Namen der Bootstrap Original-Dateien.
 
-=== Das LESS-Format
+==== Das LESS-Format
 
 Öffnende Klammern stehen in der gleichen Zeile wie die Bezeichnung des Styles.
 Die schließende Klammer steht in einer neuen Zeile.
@@ -232,12 +232,12 @@ image::css-kleinbuchstaben.png[image,width=500,height=241]
 
 
 [[installation-isy-style]]
-== Installation der Bibliothek
+=== Installation der Bibliothek
 Die Bibliothek `isy-style` wird als Maven Dependency und als npm Paket bereitgestellt.
 Damit lässt sich `isy-style` in klassischen Webanwendungen mit JSF (Maven) oder in modernen Single Page Applications mit Angular (npm) verwenden.
 
 [[installation-klassisch]]
-=== Installation in klassischen Webanwendungen
+==== Installation in klassischen Webanwendungen
 
 Für klassische Webanwendungen wird `isy-style` als Maven Bibliothek installiert (siehe <<listing-einbindung_isy_style>>).
 
@@ -258,7 +258,7 @@ Im Projekt selbst sind diese Ressourcen nicht sichtbar und können somit auch ni
 In der Anwendung definierte Stylesheets sollten immer nach den Ressourcen aus `isy-style` geladen werden, damit diese überschrieben werden.
 
 [[einbindung-isy-style-nodejs]]
-=== Installation in Angular Projekten
+==== Installation in Angular Projekten
 
 Für die Verwendung von `isy-style` in Angular Projekten muss zunächst die Bibliothek über installiert werden.
 
@@ -314,7 +314,7 @@ Bilder, Schriftarten und andere statische Ressourcen werden über die `assets` K
 ----
 
 [[konfiguration-portalfarbe]]
-== Konfiguration Portalfarbe
+=== Konfiguration Portalfarbe
 
 Für eine Anwendung kann eine Basisfarbe / Portalfarbe konfiguriert werden.
 Von dieser `portalColor` werden viele der weiteren Farbstyles für die Anwendung abgeleitet und in der generierten Datei `color.css` abgelegt, die in der Zielanwendung einzubinden ist.
