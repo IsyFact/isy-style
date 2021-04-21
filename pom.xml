@@ -5,23 +5,29 @@
     <parent>
         <groupId>de.bund.bva.isyfact</groupId>
         <artifactId>isyfact-standards</artifactId>
-        <version>1.8.1</version>
+        <version>1.8.3</version>
     </parent>
 
     <artifactId>isy-style</artifactId>
-    <version>4.3.2</version>
+    <version>4.3.3</version>
     <packaging>jar</packaging>
 
     <name>IsyFact Styles</name>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>tidy-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
     <profiles>
         <profile>
-            <id>internalnodenpminstall</id>
+            <id>build-isy-style</id>
             <activation>
-                <property>
-                    <name>internalnodenpm</name>
-                    <value>true</value>
-                </property>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <build>
                 <plugins>
@@ -30,7 +36,6 @@
                         <artifactId>frontend-maven-plugin</artifactId>
                         <version>1.6</version>
                         <executions>
-
                             <execution>
                                 <id>install node and npm</id>
                                 <goals>
@@ -42,72 +47,20 @@
                                     <nodeDownloadRoot>${env.REPOSITORY_NODE}</nodeDownloadRoot>
                                 </configuration>
                             </execution>
-
                             <execution>
                                 <id>npm install</id>
                                 <goals>
                                     <goal>npm</goal>
                                 </goals>
-
                                 <configuration>
                                     <arguments>install</arguments>
                                 </configuration>
                             </execution>
-
                             <execution>
                                 <id>grunt build</id>
                                 <goals>
                                     <goal>grunt</goal>
                                 </goals>
-
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>nodenpminstall</id>
-            <activation>
-                <property>
-                    <name>!internalnodenpm</name>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>com.github.eirslett</groupId>
-                        <artifactId>frontend-maven-plugin</artifactId>
-                        <version>1.6</version>
-                        <executions>
-
-                            <execution>
-                                <id>install node and npm</id>
-                                <goals>
-                                    <goal>install-node-and-npm</goal>
-                                </goals>
-                                <configuration>
-                                    <nodeVersion>v8.9.4</nodeVersion>
-                                </configuration>
-                            </execution>
-
-                            <execution>
-                                <id>npm install</id>
-                                <goals>
-                                    <goal>npm</goal>
-                                </goals>
-
-                                <configuration>
-                                    <arguments>install</arguments>
-                                </configuration>
-                            </execution>
-
-                            <execution>
-                                <id>grunt build</id>
-                                <goals>
-                                    <goal>grunt</goal>
-                                </goals>
-
                             </execution>
                         </executions>
                     </plugin>
@@ -119,7 +72,6 @@
             <properties>
                 <maven.build.timestamp.format>dd.MM.yyyy</maven.build.timestamp.format>
             </properties>
-
             <build>
                 <plugins>
                     <plugin>
@@ -146,7 +98,6 @@
                             </execution>
                         </executions>
                     </plugin>
-
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
@@ -265,7 +216,8 @@
                                 <pdf-stylesdir>${project.build.directory}/isy-dokumentvorlagen/theme</pdf-stylesdir>
                                 <pdf-style>isyfact</pdf-style>
                                 <pdf-fontsdir>${project.build.directory}/isy-dokumentvorlagen/theme/fonts</pdf-fontsdir>
-                                <isy-dokumentvorlagen>${project.build.directory}/isy-dokumentvorlagen</isy-dokumentvorlagen>
+                                <isy-dokumentvorlagen>${project.build.directory}/isy-dokumentvorlagen
+                                </isy-dokumentvorlagen>
                             </attributes>
                         </configuration>
 
