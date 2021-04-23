@@ -2,6 +2,9 @@
 - `IFS-848`: Styling für den Din Spec Charpicker
     * ACHTUNG: Die color.css muss einmal neu generiert werden, da Farben aus der Portal-Farbe abgeleitet werden
 
+# v4.3.3
+- `IFS-650`: Parent isyfact-standards Version auf 1.8.3 gesetzt
+
 # v4.3.2
 - `IFE-188`: Fehler bei der Dropdown-Darstellung behoben:
     * Formular-Dropdown nutzt nicht die volle Breite
