@@ -1,3 +1,7 @@
+# v4.4.0
+- `IFS-848`: Styling für den Din Spec Charpicker
+    * ACHTUNG: Die color.css muss einmal neu generiert werden, da Farben aus der Portal-Farbe abgeleitet werden
+
 # v4.3.3
 - `IFS-650`: Parent isyfact-standards Version auf 1.8.3 gesetzt
 
@@ -80,7 +84,7 @@ Ein Mapping der alten Iconfont auf fontawesome-Icons liegt unter `legacy-icon-st
 
 ## Neuerungen
 - `IFS-29`:
-	* Deaktivierte Eingabefelder haben einen entsprechenden Cursur.
+    * Deaktivierte Eingabefelder haben einen entsprechenden Cursur.
     * Einführung von h-Tags für Überschriften von Panels.
     * formCurrencyInput hat neuen, optionalen Parameter zum Ausrichten des Texts.
 
