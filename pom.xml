@@ -236,7 +236,7 @@
                                     </sourceDirectory>
                                     <sourceDocumentName>master.adoc</sourceDocumentName>
                                     <outputFile>
-                                        ${project.build.directory}/styleguide/styleguide.html
+                                        ${project.build.directory}/styleguide/Styleguide.html
                                     </outputFile>
                                 </configuration>
                             </execution>
@@ -254,7 +254,7 @@
                                     </sourceDirectory>
                                     <sourceDocumentName>master.adoc</sourceDocumentName>
                                     <outputFile>
-                                        ${project.build.directory}/styleguide/styleguide.pdf
+                                        ${project.build.directory}/styleguide/Styleguide.pdf
                                     </outputFile>
                                 </configuration>
                             </execution>
