@@ -5,11 +5,11 @@
     <parent>
         <groupId>de.bund.bva.isyfact</groupId>
         <artifactId>isyfact-standards</artifactId>
-        <version>1.9.0-SNAPSHOT</version>
+        <version>1.9.0</version>
     </parent>
 
     <artifactId>isy-style</artifactId>
-    <version>4.4.0-SNAPSHOT</version>
+    <version>4.4.0</version>
     <packaging>jar</packaging>
 
     <name>IsyFact Styles</name>
@@ -236,7 +236,7 @@
                                     </sourceDirectory>
                                     <sourceDocumentName>master.adoc</sourceDocumentName>
                                     <outputFile>
-                                        ${project.build.directory}/styleguide/styleguide.html
+                                        ${project.build.directory}/styleguide/Styleguide.html
                                     </outputFile>
                                 </configuration>
                             </execution>
@@ -254,7 +254,7 @@
                                     </sourceDirectory>
                                     <sourceDocumentName>master.adoc</sourceDocumentName>
                                     <outputFile>
-                                        ${project.build.directory}/styleguide/styleguide.pdf
+                                        ${project.build.directory}/styleguide/Styleguide.pdf
                                     </outputFile>
                                 </configuration>
                             </execution>
