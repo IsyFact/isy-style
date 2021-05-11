@@ -1,0 +1,140 @@
+.charpicker-dinspec-widget {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.charpicker-dinspec {
+    background: white;
+    width: 775px;
+    height: 460px;
+    display: flex;
+
+    .charpicker-sidebar {
+        width: 170px;
+        min-width: 170px;
+        padding: 10px;
+        overflow-y: scroll;
+    }
+
+    .charpicker-sidebar .panel-heading h1 {
+        line-height: inherit;
+    }
+
+    .charpicker-sidebar .panel-heading {
+        a, span {
+            padding: 0 !important;
+        }
+    }
+
+    .charpicker-content-container {
+        flex: 1 1 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .charpicker-content {
+        flex: 1 1 100%;
+        border: 1px lightgray solid;
+        overflow-y: scroll;
+        display: flex;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .charpicker-special-char-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        margin: 0;
+        border-style: dotted;
+        border-color: lightgray;
+        border-width: 0 1px 1px 0;
+    }
+
+    .charpicker-filter-base {
+        padding: 3px;
+        width: 24px;
+    }
+
+    .charpicker-filter-all {
+        font-size: 18px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .charpicker-details {
+        height: 105px;
+        min-height: 105px;
+        display: flex;
+    }
+
+    .charpicker-preview {
+        border-bottom: 2px #888 dotted;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        align-self: flex-end;
+        height: 6.75rem;
+        width: 240px;
+        max-width: 240px;
+        min-width: 240px;
+    }
+
+    .charpicker-preview-liner {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-top: 2px #888 dotted;
+        border-bottom: 2px #888 dotted;
+    }
+
+    .charpicker-preview-serif,
+    .charpicker-preview-sansserif {
+        width: 90px;
+        max-width: 90px;
+        flex: 1 1 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        font-size: 5.5em;
+        line-height: 0.65em;
+        height: 5.02rem;
+        color: #555;
+    }
+
+    .charpicker-details-additional {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 100%;
+        justify-content: space-between;
+        /* space evenly trick */
+        &:before, &:after {
+            content: '';
+            display: block;
+        }
+    }
+
+    .charpicker-action-region {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin: 0 10px;
+    }
+
+    .charpicker-preview-serif {
+        font-family: HiraMinProN-W6, "Hiragino Mincho ProN W6", "Hiragino Mincho ProN", serif;
+    }
+
+    .charpicker-special-char-button.illegal {
+        display: none;
+    }
+}
