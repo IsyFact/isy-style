@@ -85,14 +85,6 @@ module.exports = function (grunt) {
             JSON.stringify(buildPkgJson, null, 2));
     });
 
-    grunt.registerTask('remove_version_from_package_json', function () {
-        const buildPkgJson = grunt.file.readJSON('package.json');
-        delete buildPkgJson.version
-
-        grunt.file.write("package.json",
-            JSON.stringify(buildPkgJson, null, 2));
-    });
-
     grunt.registerTask('build', ['clean', 'less', 'copy', 'copy_version_from_maven_to_package_json']);
     grunt.registerTask('default', ['build']);
 };

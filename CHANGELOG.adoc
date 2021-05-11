@@ -3,6 +3,15 @@
 [[changelog]]
 = Changelog Isy-Style
 
+== Änderungen Release 5.2.0
+
+// Beginn übergreifende Änderungen
+
+// Ende übergreifende Änderungen
+
+include::src/main/asciidoc/Nutzungskonzept_Styleguide/changelog.adoc[tag=release-5.2.0]
+include::src/main/asciidoc/styleguide/changelog.adoc[tag=release-5.2.0]
+include::src/main/changelog.adoc[tag=release-5.2.0]
 
 == Änderungen Release 5.1.0
 
