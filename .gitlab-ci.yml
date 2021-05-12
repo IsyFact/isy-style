@@ -3,17 +3,24 @@ include:
     file: '/maven/.gitlab-ci-maven.yml'
 
 stages:
+  - build
   - package
   - deploy
 
+build:
+  extends: .maven-build
+
+build:docs:
+  extends: .maven-build
+  variables:
+    MAVEN_BUILD_OPTS: -P build-documentation
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - '**/target/docs/**'
+
 package:
   extends: .maven-package
-  dependencies:
-  artifacts:
-    paths:
-      - "target/docs/**"
-    expire_in: 2 days
 
 deploy:
   extends: .maven-deploy
-
