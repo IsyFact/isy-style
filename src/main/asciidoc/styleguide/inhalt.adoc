@@ -4311,7 +4311,7 @@ Die Applikationen innerhalb einer Gruppe erhalten keine unterschiedlichen Farben
 [[schriften-ueberschrift]]
 === Schriften
 
-Die Standard-Schriftart für Bedienelemente und Inhalte ist Helvetica 14 pt regular in Dunkelgrau.
+Die Standard-Schriftart für Bedienelemente und Inhalte ist Liberation 14 pt regular in Dunkelgrau. Liberation ist eine kostenfreie Schriftart und wird zur Nutzung empfohlen, wenn eine Web-Anwendung DIN SPEC 91379 unterstützt.
 Ausnahmen sind dem Stylesheet zu entnehmen.
 
 *Richtlinien zur Anwendung*
