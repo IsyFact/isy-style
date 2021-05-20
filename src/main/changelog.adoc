@@ -8,6 +8,9 @@
 * `IFS-848`: Styling für den Din Spec Charpicker
 ** ACHTUNG: Die color.css muss einmal neu generiert werden, da Farben aus der Portal-Farbe abgeleitet werden
 * `IFE-305`: Auslagerung der Farbendefinition von isy-web-angular zu isy-style
+* `IFS-1005`: Umstellung auf Liberation Font
+** Binde Liberation Font Version 2.1.4 mit Hilfe von font-face ein
+** Konfiguriere Liberation Font als Standard Font
 // end::release-5.2.0[]
 
 *Änderungen Release 5.1.0*
