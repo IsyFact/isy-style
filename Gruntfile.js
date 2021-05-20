@@ -1,4 +1,5 @@
-var helper = require('./helper/helper');
+let helper = require('./helper/helper');
+
 module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -46,7 +47,7 @@ module.exports = function (grunt) {
         copy: {
             assets: {
                 files: [
-                    { expand: true, cwd: 'src/assets/', src: ['img/**', 'lib/**', 'plugins/**'], dest: 'src/main/resources/META-INF/resources/' }
+                    { expand: true, cwd: 'src/assets/', src: ['img/**', 'lib/**', 'plugins/**', 'fonts/**'], dest: 'src/main/resources/META-INF/resources/' }
                 ],
                 options: {
                     basePath: 'src/assets'
