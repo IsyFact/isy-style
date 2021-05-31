@@ -170,6 +170,9 @@ Alle benötigten Asstes wurden für die Benutzung in Browsern optimiert.
 Hierfür wurden alle Dateigrößen minimiert und die Anzahl der benötigten Dateien auf ein Minimum reduziert.
 Dieser Prozess beinhaltet auch die Entfernung von nicht benötigten Meta-Informationen aus dem Header von Bild-Dateien (smushit, svgmin).
 
+==== Fonts
+Als Standard-Schriftart wird der Liberation Font (https://github.com/liberationfonts/liberation-fonts) verwendet. Über `font-face` wird die Liberation Font Familie eingebunden und zur Verfügung gestellt. Damit eine Web-Anwendung alle Zeichen der DIN SPEC 91379 korrekt darstellen kann, wird empfohlen die Schriftart Liberation zu verwenden.
+
 === Icons
 
 Für die Verwendung von Icons wird der Icon-Font FontAwesome (https://fontawesome.com/) genutzt.
