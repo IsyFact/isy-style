@@ -1,3 +1,8 @@
+# v4.5.0
+- `IFS-1005`: Umstellung auf Liberation Font
+    * Binde Liberation Font Version 2.1.4 mit Hilfe von font-face ein
+    * Konfiguriere Liberation Font als Standard Font
+
 # v4.4.0
 - `IFS-848`: Styling für den Din Spec Charpicker
     * ACHTUNG: Die color.css muss einmal neu generiert werden, da Farben aus der Portal-Farbe abgeleitet werden
@@ -11,9 +16,6 @@
     * Formular-Dropdown nutzt nicht die volle Breite
     * Dropup wird von Header überdeckt
     * Geöffnetes Dropdown geht über die ganze Seite auf kleinen Bildschirmen (-> Bootstrap-Select auf 1.13.18 angehoben)
-- `IFS-1005`: Umstellung auf Liberation Font
-    * Binde Liberation Font Version 2.1.4 mit Hilfe von font-face ein
-    * Konfiguriere Liberation Font als Standard Font
 
 # v4.3.1
 - `IFE-103`: Bootstrap-Select auf 1.13.9 angehoben. Fehlender Scrollbalken bei Dropdowns behoben.
