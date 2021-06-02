@@ -1,11 +1,13 @@
+# v5.3.0
+- `IFS-1005`: Umstellung auf Liberation Font
+    * Binde Liberation Font Version 2.1.4 mit Hilfe von font-face ein
+    * Konfiguriere Liberation Font als Standard Font
+
 # v5.2.0
 - `IFS-932`: Portierung des Tickets IFS-848 auf IFS-2.2
 - `IFS-848`: Styling für den Din Spec Charpicker
     * ACHTUNG: Die color.css muss einmal neu generiert werden, da Farben aus der Portal-Farbe abgeleitet werden
 - `IFE-305`: Auslagerung der Farbendefinition von isy-web-angular zu isy-style
-- `IFS-1005`: Umstellung auf Liberation Font
-    * Binde Liberation Font Version 2.1.4 mit Hilfe von font-face ein
-    * Konfiguriere Liberation Font als Standard Font
 
 # v5.1.0
 - `IFE-68`: Fokusfarbe für Bedienelemente ist über die Variable focusColor in der Gruntfile.js konfigurierbar (Standardwert ist die Portalfarbe)
