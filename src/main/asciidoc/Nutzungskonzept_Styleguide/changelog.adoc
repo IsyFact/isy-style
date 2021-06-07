@@ -1,6 +1,12 @@
 [[changelog]]
 = Changelog
 
+// *Änderungen Release 5.3.0*
+
+// tag::release-5.3.0[]
+- `IFS-1005`: Neues Kapitel Fonts mit einem Verweis auf die neue Schriftart Liberation hinzugefügt
+// end::release-5.3.0[]
+
 // *Änderungen Release 5.0.0*
 
 // tag::release-5.0.0[]
