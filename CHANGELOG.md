@@ -1,3 +1,6 @@
+# v5.3.0
+- `IFS-1024`: isy-style kann in npm Projekten über Less angepasst werden
+
 # v5.2.0
 - `IFS-932`: Portierung des Tickets IFS-848 auf IFS-2.2
 - `IFS-848`: Styling für den Din Spec Charpicker
