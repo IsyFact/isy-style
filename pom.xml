@@ -180,6 +180,9 @@
                                             <includes>
                                                 <include>**</include>
                                             </includes>
+                                            <excludes>
+                                                <exclude>less/**</exclude>
+                                            </excludes>
                                         </resource>
                                     </resources>
                                 </configuration>

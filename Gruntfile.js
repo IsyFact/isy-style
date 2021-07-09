@@ -61,6 +61,12 @@ module.exports = function (grunt) {
                     basePath: 'src/assets'
                 }
             },
+            less: {
+                expand: true,
+                cwd: 'src/less',
+                src: "**",
+                dest: "dist/less/",
+            },
             fontawesome: {
                 expand: true,
                 cwd: 'node_modules/@fortawesome/fontawesome-free/webfonts',
