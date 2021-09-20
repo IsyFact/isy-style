@@ -1,8 +1,12 @@
+# v5.4.0
+- `IFS-1024`: isy-style kann in npm Projekten über Less angepasst werden
+
 # v5.3.0
 - `IFS-1005`: Umstellung auf Liberation Font
     * Binde Liberation Font Version 2.1.4 mit Hilfe von font-face ein
     * Konfiguriere Liberation Font als Standard Font
-- `IFS-1024`: isy-style kann in npm Projekten über Less angepasst werden
+#### Bekannte Probleme
+- Die Darstellung des DIN SPEC Charpickers in Modalenfenstern ist falsch (betrifft auch 5.2.0)
 
 # v5.2.0
 - `IFS-932`: Portierung des Tickets IFS-848 auf IFS-2.2
