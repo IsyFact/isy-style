@@ -1,3 +1,6 @@
+# v4.5.1
+- `IFE-275`: Blendet Navigationsmenü in der Druckansicht aus
+
 # v4.5.0
 - `IFS-1005`: Umstellung auf Liberation Font
     * Binde Liberation Font Version 2.1.4 mit Hilfe von font-face ein
