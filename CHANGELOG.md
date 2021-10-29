@@ -1,5 +1,6 @@
 # v5.4.0
 - `IFS-1024`: isy-style kann in npm Projekten über Less angepasst werden
+- `IFS-275`: Blendet Navigationsmenü in der Druckansicht aus
 
 # v5.3.0
 - `IFS-1005`: Umstellung auf Liberation Font
