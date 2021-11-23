@@ -1,3 +1,6 @@
+# v4.5.1
+- `IFE-455`: fix security issues caused by dependency json-schema@0.2.3
+
 # v4.5.0
 - `IFS-1005`: Umstellung auf Liberation Font
     * Binde Liberation Font Version 2.1.4 mit Hilfe von font-face ein
