@@ -14,6 +14,11 @@
 
     <name>IsyFact Styles</name>
 
+    <properties>
+        <node.version>v12.20.0</node.version>
+        <frontend-maven-plugin.version>1.12.0</frontend-maven-plugin.version>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -34,7 +39,7 @@
                     <plugin>
                         <groupId>com.github.eirslett</groupId>
                         <artifactId>frontend-maven-plugin</artifactId>
-                        <version>1.6</version>
+                        <version>${frontend-maven-plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>install node and npm</id>
@@ -42,9 +47,19 @@
                                     <goal>install-node-and-npm</goal>
                                 </goals>
                                 <configuration>
-                                    <nodeVersion>v8.9.4</nodeVersion>
+                                    <nodeVersion>${node.version}</nodeVersion>
                                     <serverId>repository</serverId>
                                     <nodeDownloadRoot>${env.REPOSITORY_NODE}</nodeDownloadRoot>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>npm-force-resolutions</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>npx</goal>
+                                </goals>
+                                <configuration>
+                                    <arguments>npm-force-resolutions</arguments>
                                 </configuration>
                             </execution>
                             <execution>
