@@ -1,8 +1,5 @@
 # isy-style
 
-<div align="center">
-    <img src="https://git.zssi.ivbb.bund.de/IsyFact/isy-style/badges/master/pipeline.svg" alt="build-badge"/>
-</div>
 
 Der Baustein `isy-style` enthält den Styleguide der IsyFact als Dokument und in Form von Source Code (CSS Klassen).
 Die Stylesheets können sowohl in klassischen Webanwendungen über Maven, als auch in Angular Projekten über npm verwendet werden.
@@ -16,12 +13,10 @@ Der Baustein enthält folgende Dokumente:
 
 Die Dokumentation kann bei Bedarf manuell erzeugt werden.
 
-> Für den Build wird der Zugriff auf die Maven Repositories in der ZSSI benötigt (Maven Profil `zssi`).
-
 ```
-$ git checkout https://git.zssi.ivbb.bund.de/IsyFact/isy-style.git
+$ git checkout https://github.com/IsyFact/isy-style.git
 $ cd isy-style
-$ mvn -Pzssi compile
+$ mvn compile
 ```
 Die Dokumente befinden sich anschließend im Ordner `target/docs`.
 
