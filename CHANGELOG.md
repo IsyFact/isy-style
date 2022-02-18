@@ -2,6 +2,8 @@
 - `IFS-1024`: isy-style kann in npm Projekten über Less angepasst werden
 - `IFS-275`: Blendet Navigationsmenü in der Druckansicht aus
 - `IFE-455`: Dependencies aktualisiert, um Sicherheitslücken zu schließen
+- `IFE-484`: Fix Popovers und Dropdowns in modalen Fenstern
+    * Dokumentation hinsichtlich der Position der Dialogbuttons angepasst
 
 # v5.3.0
 - `IFS-1005`: Umstellung auf Liberation Font
