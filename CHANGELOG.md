@@ -1,3 +1,6 @@
+# v4.4.1
+- `IFE-484`: Fix Popovers und Dropdowns in modalen Fenstern
+
 # v4.4.0
 - `IFS-848`: Styling für den Din Spec Charpicker
     * ACHTUNG: Die color.css muss einmal neu generiert werden, da Farben aus der Portal-Farbe abgeleitet werden
