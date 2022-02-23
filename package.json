@@ -19,5 +19,5 @@
     "jquery": "^3.6.0",
     "less-plugin-clean-css": "^1.5.1"
   },
-  "version": "5.4.0"
+  "version": "5.4.1"
 }
