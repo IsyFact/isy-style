@@ -1,3 +1,6 @@
+# v5.3.1
+- `IFE-484`: Fix Popovers und Dropdowns in modalen Fenstern
+
 # v5.3.0
 - `IFS-1005`: Umstellung auf Liberation Font
     * Binde Liberation Font Version 2.1.4 mit Hilfe von font-face ein
