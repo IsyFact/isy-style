@@ -828,7 +828,7 @@ image::Dialog_Aufbau_ABC.png[align="center", width="627",height="249"]
 ** Dialoge passen ihre Größe dem gezeigten Inhalt an.
 ** Maximalgröße soll sich an Browser-Fenster und Anwendung im Hintergrund orientieren.
 Ein schmales Padding zur Abhebung von der Seite im Hintergrund reicht aus.
-** Die Dialogbuttons sollten einen festen Ort haben, der Inhalt kann bei Bedarf scrollbar werden.
+* Die Position der Dialogbuttons sollten einheitlich über die verschiedenen modalen Dialoge der Anwendung sein. Der modale Dialog in seiner Gesamtkeit darf bei Bedarf scrollbar sein. Eine permanent sichtbare Kopf- und Fußzeile ist nicht verpflichtend.
 * Bei Dialogen, in denen Formulardaten bearbeitet werden, sollte das Layout der Elemente im Dialog dem Layout im Read-Only Modus entsprechen (i.d.R. dreispaltig).
 * *Titelzeile (A)*
 ** Der Titel des Dialogs sollte aussagekräftig sein und dem Benutzer genau zeigen, welche Interaktionen er für welche Objekte in diesem Dialog durchführt.
@@ -839,7 +839,7 @@ Der Dialogtitel kann aus einem Haupttitel und einem optionalen Subtitel bestehen
 * Im *Inhaltsbereich (B)* kann an oberster Stelle ein Hinweis- oder Validierungstext angezeigt werden.
 Der Inhalt rutscht dann um die entsprechende Höhe nach unten.
 Das Dialogfenster kann sich gegebenenfalls um diese Höhe vergrößern (siehe <<image-dialogwizardvalidierung>>).
-* Der Bereich der *Dialogbuttons (D)* präsentiert je nach Kontext verschiedene Buttons.
+* Der Bereich der *Dialogbuttons \(C)* präsentiert je nach Kontext verschiedene Buttons.
 
 
 [[dialoge-ohne-javascript]]
@@ -930,7 +930,7 @@ Versucht der Benutzer z.B. ein Objekt zu löschen, so erscheint ein Meldungsdial
 Es wird links von der Beschreibung angezeigt.
 * Die *Beschreibung \(C)* hingegen sollte in einem Satz kurz und prägnant die Kernaussage des Dialoges präsentieren.
 Detail-Informationen wie z. B. Pfadangaben oder URLs sollten in der Beschreibung nicht angezeigt werden.
-* Sollten *zusätzliche Informationen (C)* notwendig sein, so können diese unterhalb der Beschreibung eingeblendet werden.
+* Sollten *zusätzliche Informationen \(C)* notwendig sein, so können diese unterhalb der Beschreibung eingeblendet werden.
 Zusätzliche Informationen können z. B. sein:
 ** Schritte zur Behebung eines Problems.
 ** Hinweise, wie ein Problem in Zukunft vermieden werden kann.
