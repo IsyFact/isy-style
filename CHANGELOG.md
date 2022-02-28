@@ -1,5 +1,6 @@
 # v4.4.1
 - `IFE-484`: Fix Popovers und Dropdowns in modalen Fenstern
+    * Dokumentation hinsichtlich der Position der Dialogbuttons angepasst
 
 # v4.4.0
 - `IFS-848`: Styling für den Din Spec Charpicker
