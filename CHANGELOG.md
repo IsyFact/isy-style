@@ -1,5 +1,6 @@
 # v4.3.4
 - `IFE-484`: Fix Popovers und Dropdowns in modalen Fenstern
+    * Dokumentation hinsichtlich der Position der Dialogbuttons angepasst
 
 # v4.3.3
 - `IFS-650`: Parent isyfact-standards Version auf 1.8.3 gesetzt
