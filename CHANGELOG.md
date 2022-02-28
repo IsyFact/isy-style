@@ -1,5 +1,7 @@
 # v5.2.1
 - `IFE-484`: Fix Popovers und Dropdowns in modalen Fenstern
+    * Dokumentation hinsichtlich der Position der Dialogbuttons angepasst
+
 
 # v5.2.0
 - `IFS-932`: Portierung des Tickets IFS-848 auf IFS-2.2
