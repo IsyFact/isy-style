@@ -1,5 +1,6 @@
 # v4.5.1
 - `IFE-484`: Fix Popovers und Dropdowns in modalen Fenstern
+    * Dokumentation hinsichtlich der Position der Dialogbuttons angepasst
 
 # v4.5.0
 - `IFS-1005`: Umstellung auf Liberation Font
