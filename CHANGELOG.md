@@ -1,5 +1,5 @@
 # v4.3.4
-- `IFE-484`: Fix Popovers und Dropdowns in modalen Fenstern
+- `IFE-483`: Fix Popovers und Dropdowns in modalen Fenstern
     * Dokumentation hinsichtlich der Position der Dialogbuttons angepasst
 
 # v4.3.3
@@ -84,7 +84,7 @@ Ein Mapping der alten Iconfont auf fontawesome-Icons liegt unter `legacy-icon-st
 
 ## Neuerungen
 - `IFS-29`:
-	* Deaktivierte Eingabefelder haben einen entsprechenden Cursur.
+    * Deaktivierte Eingabefelder haben einen entsprechenden Cursur.
     * Einführung von h-Tags für Überschriften von Panels.
     * formCurrencyInput hat neuen, optionalen Parameter zum Ausrichten des Texts.
 
