@@ -219,7 +219,7 @@
                         </configuration>
 
                         <executions>
-                            <!-- Styleguide -->
+                            <!-- generates document 'Styleguide' -->
                             <execution>
                                 <id>styleguide-html</id>
                                 <phase>generate-resources</phase>
@@ -255,7 +255,7 @@
                                 </configuration>
                             </execution>
 
-                            <!-- Nutzungsvorgaben Styleguide -->
+                            <!-- generates document 'Nutzungsvorgaben Styleguide' -->
                             <execution>
                                 <id>nutzungskonzept-styleguide-html</id>
                                 <phase>generate-resources</phase>
