@@ -1,5 +1,5 @@
 # v4.5.1
-- `IFE-484`: Fix Popovers und Dropdowns in modalen Fenstern
+- `IFE-483`: Fix Popovers und Dropdowns in modalen Fenstern
     * Dokumentation hinsichtlich der Position der Dialogbuttons angepasst
 
 # v4.5.0
