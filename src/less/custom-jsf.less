@@ -1,22 +1,22 @@
 // ##############################################################
-// ### Tag-bezogene Definitionen
+// ### Tag-related definitions
 // ##############################################################
 
-// Überschreiben der ursprünglichen Höhe (auto), da JSF-Elemente immer eine Size-Attribut rendern
+// Overrides the original height (auto), since JSF elements always render a size attribute
 select[size] {
 	height:@input-height-base
 }
 
-// Setzen des Form-Margins
+// Sets the form margin
 form {
 	margin-bottom: 0px;
 }
 
 // ##############################################################
-// ### Modale Dialoge
+// ### Modal dialogues
 // ##############################################################
 
-// CSS-Klassen für Footer von Nicht-JS Elementen ergänzt
+// CSS classes for footer of non-JS elements added
 .nojs-modal-footer {
     text-align: right;
 }
@@ -25,12 +25,12 @@ form {
     margin-left: 10px;
 }
 
-// CSS-Klassen für Footer von modalen Dialogen. Notwendig da Input-Tags anstatt Button-Tags für JSF-Buttons gerendert werden
+// CSS classes for footer of modal dialogs: necessary since input tags are rendered instead of button tags for JSF buttons
 .modal-footer input {
     margin-bottom: 0;
 }
 
-// Modale Dialoge werden in Chrome und Internet Explorer linksbündig dargestellt, daher die folgende Änderung
+// Modal dialogs are left-aligned in Chrome and Internet Explorer, hence the following fix
 .modal.in {
     display: block !important;
 }
@@ -44,9 +44,8 @@ form {
   width: auto;
 }
 
-// Lässt nur den Inhalt scrollen aber nicht den Header/Footer
 .modal-body {
-  //100% minus header+footer+ausreichend padding für alle browser
+  // 100% - (header + footer + sufficient padding for all browsers)
   max-height: calc(~"100vh - 190px");
 }
 
@@ -54,12 +53,12 @@ form {
 // ### Panels
 // ##############################################################
 
-// Fokussierte Panels sollen umranded sein
+// Focused panels should be bordered
 .panel .panel-title>a:focus {
   outline: 1px solid #33c6f5 !important;
 }
 
-// Styling für Überschriften der Panels
+// Styling for panel headings
 .panel-group .panel-title > a h1, .panel-group .panel-title > span h1 {
     		font-size: inherit;
     		display: inline;
@@ -67,33 +66,33 @@ form {
 
 
 // ##############################################################
-// ### Data Table
+// ### Datatable
 // ##############################################################
 
-// Trefferliste: Größenkorrektur vornehmen
+// Hit list: Make size correction
 .rf-data-table {
 	font-size: @font-size-base;
 }
 
-// Tabellenkopf soll nicht verschoben werden
+// Table header should not be moved
 .rf-data-table thead tr th {
 	position: static;
 }
 
-/*  So wachsen die Tabellen nicht über die DIVs heraus */
+// In order for tables to not grow bigger than the div
 .table-container table {
     table-layout: fixed;
 }
 
-/* So vergroessern sich die Zellen der Tabellen nicht mit dem Text */
+/* This way the cells of the tables do not enlarge with the text. */
 .table-container table th, td {
     overflow: hidden;
 }
 
-/* Wenn eine Tabellen Spalte sortierbar ist, aber aktuell nicht sortiert ist,
-dann sollen beide Sortier-Symbole (aufsteigend/absteigend) angezeigt werden. */
+/* If a table column can be sorted but is not currently sorted,
+then both sorting symbols (ascending/descending) should be displayed. */
 
-//Das "aufsteigend" Symbol.
+// The "ascending" symbol.
 .table thead tr th.sortable:not(.sorted) span::before {
   content: ' ';
   position: relative;
@@ -106,7 +105,7 @@ dann sollen beide Sortier-Symbole (aufsteigend/absteigend) angezeigt werden. */
   display: inline-block;
 }
 
-//Das "absteigend" Symbol.
+// The "descending" symbol.
 .table thead tr th.sortable:not(.sorted) span::after {
   content: ' ';
   position: relative;
@@ -120,14 +119,14 @@ dann sollen beide Sortier-Symbole (aufsteigend/absteigend) angezeigt werden. */
 }
 
 // ##############################################################
-// ### Validierung
+// ### Validation
 // ##############################################################
 .rf-validation-messages-table {
 	background-color: @alert-warning-bg;
 	font-size: 13px;
 }
 
-// Validerungsfehler am Label anzeigen
+// Shows validation errors on the label
 .form-group.has-error label {
 
 	color: @es-orange-100;
@@ -161,7 +160,7 @@ dann sollen beide Sortier-Symbole (aufsteigend/absteigend) angezeigt werden. */
     top: 0; //Fix for bootstrap update v3.1.1->v3.3.6
 }
 
-// Bei Validierungsfehlern
+// In case of validation errors
 .js .has-error {
 
 	.input-group-addon {
@@ -177,7 +176,7 @@ dann sollen beide Sortier-Symbole (aufsteigend/absteigend) angezeigt werden. */
 }
 
 .form-group {
-	// Top Abstand setzen
+	// Sets top position
 	top: 3px;
 }
 
@@ -226,23 +225,23 @@ dann sollen beide Sortier-Symbole (aufsteigend/absteigend) angezeigt werden. */
 }
 
 // ##############################################################
-// ### Allgemeine Definitionen des Header-Bereichs
+// ### General definitions of the header area
 // ##############################################################
-// Style zum No-Javascript-Bild
-// TODO: Mit Iconmoon Mechanismus einbauen
+// Style for the no-javascript-image
+// TODO: Installing a mechanism with Iconmoon
 .icon-nojs {
 	display: inline-block;
 	margin-bottom: 10px;
 }
 
 // ##############################################################
-// ### Allgemeine Definitionen des Links-Navigationsbereichs
+// ### General definitions of the left navigation area
 // ##############################################################
-// Zusaetzlicher Abstand des optionalen Links-Navigationsbereichts zum Content-Bereich
+// Additional distance of the optional left navigation area to the content area
 .linksNavigationAbstandRechts {
 	padding-right: 10px;
 }
-// Fokussierte Panels sollen umranded sein
+// Focused panels should be bordered
 .linksnavigation-option:focus {
   outline: 1px solid #33c6f5 !important;
   z-index: 5;
@@ -250,7 +249,7 @@ dann sollen beide Sortier-Symbole (aufsteigend/absteigend) angezeigt werden. */
 
 
 // ##############################################################
-// ### Allgemeine Definitionen
+// ### General definitions
 // ##############################################################
 .white-color {
 	color:#FFFFFF;
@@ -260,16 +259,15 @@ dann sollen beide Sortier-Symbole (aufsteigend/absteigend) angezeigt werden. */
 	position: relative;
 }
 
-// Überschreibe die Vorgabe (normal -8px) für das kleine Dreieck,
-// das in der Navigationsleiste bei dem aktiven Eintrag (ausgewählt bzw. hover)
-// angezeigt wird.
+// Overwrites the default (normal -8px) for the small triangle,
+// that appears in the navigation bar next to the active entry (selected or hovered).
 .navbar .nav.nav-tabs>li.active>a:after,
 .navbar .nav.nav-tabs>li:hover>a:after{
 	bottom: -7px;
 }
 
-// Überschreibe einen Teil der Vorgaben für das Submenü, das abgezeigt wird,
-// wenn man über einen Eintrag in der Navigationsleiste hovert.
+// Overwrites part of the defaults for the submenu that is displayed,
+// when hovering over an item in the navigation bar.
 .navbar .nav.nav-tabs>li>.navbar-submenu{
 	width:auto;
 	top:29px;
@@ -284,7 +282,7 @@ dann sollen beide Sortier-Symbole (aufsteigend/absteigend) angezeigt werden. */
 	padding: 0px 15px;
 }
 
-// Gefüllte Navbar soll höher sein
+// Filled navbar should be higher
 .navbar-color-content {
     min-height: 30px !important;
     padding-top: 5px !important;
@@ -310,7 +308,7 @@ dann sollen beide Sortier-Symbole (aufsteigend/absteigend) angezeigt werden. */
 // ### Listpicker
 // ##############################################################
 
-// Der Table-Container für Listpicker, um Scrollbars einzusetzen
+// The table container for Listpicker to use scrollbars
 .rf-listpicker-table-container {
     width: 100%;
     max-height: 150px;
@@ -318,18 +316,18 @@ dann sollen beide Sortier-Symbole (aufsteigend/absteigend) angezeigt werden. */
 	overflow-y: auto;
 }
 
-// Größenkorrektur vornehmen
+// size correction
 .rf-listpicker-table {
 	font-size: @font-size-base;
 }
-// Abstand in Filterbereich einfügen
+// Insert margin in filter area
 .listpicker-filter input.form-control{
 	margin-bottom: 10px;
 }
 
-// Das Eingabefeld muss bei Listpickern auf die Standard "form-control" Definition gesetzt werden,
-// da bei Validierungsfehlern die Klasse "has-error" die "form-control" Elemente überschreibt,
-// dies aber nicht für den Listpickerfilter geschehen soll.
+// The input field must be set to the standard "form-control" definition for list pickers,
+// because in case of validation errors the class "has-error" overwrites the "form-control" elements,
+// but this should not happen for the list picker filter.
 .listpicker-filter-input {
 
   display: block;
@@ -379,7 +377,7 @@ dann sollen beide Sortier-Symbole (aufsteigend/absteigend) angezeigt werden. */
   padding-right: 24px;
 }
 
-/* Der Pfeil im Specialzeichenpicker löschen. */
+/* Deletes the arrow in the special character picker. */
 .picker.picker-dropdown.picker-orient-top.special-char-picker-widget:before, .picker.picker-dropdown.picker-orient-top.special-char-picker-widget:after {
   border-bottom: none;
 }
@@ -388,7 +386,7 @@ dann sollen beide Sortier-Symbole (aufsteigend/absteigend) angezeigt werden. */
 // ### Select-Dropbox / Selectpicker
 // ##############################################################
 
-// Padding korrigieren
+// corrects padding
 select.form-control.selectpicker-native {
 	padding: 2px 2px;
 
@@ -403,17 +401,17 @@ select.form-control.selectpicker-native {
   }
 }
 
-// Mindestbreite in Formularen aufheben
+// Cancel minimum width in forms
 .form-selectonedropdown.dropdown {
 	min-width: 0px;
 }
 
 
 // ##############################################################
-// ### Druckansicht
+// ### Print preview
 // ##############################################################
-// Hiermit werden die Headline und die Metainformationen für die
-// Druckansicht angezeigt. In der normalen Ansicht werden sie ausgeblendet.
+// This displays the headline and meta information for the
+// print view. They are hidden in the normal view.
 
 .print-headline {
     display: none;
@@ -485,10 +483,10 @@ select.form-selectonedropdown {
 // ##############################################################
 // ### Tabs
 // ##############################################################
-//Tabheader bei nojs
+// Tabheader for nojs
 .tab-header-headline{font-size:18px}
 
-// Optik fokussierter und überfahrener Tabs verbessert
+// Improved optics of focused and overridden tabs
 #content .nav.nav-tabs li:not(.active) a {
   border: 1px solid transparent;
 
@@ -511,7 +509,7 @@ select.form-selectonedropdown {
 // ### Button
 // ##############################################################
 
-// Optik fokussierter Buttons angepasst
+// Optics of focused buttons adapted
 .btn-default {
   &:focus {
     border: 1px solid #33c6f5; background-color: #89909a;
@@ -559,7 +557,7 @@ select.form-selectonedropdown {
 		display:inline-block;
 	}
 
-	// Derzeit werden Links in den Tabs nicht verwendet
+    // Currently links are not used in the tabs
 	li a {
 		cursor:default;
 
@@ -573,20 +571,20 @@ select.form-selectonedropdown {
 // ### Navigation
 // ##############################################################
 
-// Aktiver Menüpunkt soll beim Überfahren das Handsymbol anzeigen
+// Active menu item should display the hand symbol when hovering over it.
 .nav li.active a {
   cursor: pointer !important;
   cursor: hand  !important;
 }
 
-// Umrandung für Tastatursteuerung
+// Border for keyboard control
 .main-nav-focus {
   outline: 1px solid #33c6f5 !important;
   z-index: 5;
 }
 
 // ##############################################################
-// ### Verwendung des Pointers / der Hand
+// ### Use of the pointer / hand
 // ##############################################################
 
 .cursorPointerHand {
@@ -603,46 +601,47 @@ select.form-selectonedropdown {
 }
 
 // ##############################################################
-// ### Form-Elemente
+// ### Form-Elements
 // ##############################################################
+// Deactivated checkboxes should not represent the actual input field,
+// as a transparent PNG image is rendered over the input field.
 
-// Deaktiverte Checkboxen sollen nicht das eigentliche Input Feld darstellen, da ein transparentes PNG Image über das Input-Feld gerendert wird.
-// ### Auskommentiert, da wenn die Checkbox nicht gerendert wird der Labeltext hinter das transparente PNG Image rutscht
+// ### Commented, because if the checkbox is not rendered the label text slips behind the transparent PNG image.
 // .checkbox label input[disabled] {
 //   display:none
 // }
 
 
 
-// optionale Pflichtfelder, blau einfärben des Sternchens (required)
+// optional mandatory fields, blue colouring of the asterisk (required)
 .control-label.mandatory.optional:after {
     color: #00B8F2;
 }
 
 
-// Vertikale Ausrichtung bei normalen Checkboxen (mit Label rechts) ist falsch (Text ist 4px zu weit unten)
+// Vertical alignment of normal checkboxes (with label on the right) is wrong (text is 4px too far down).
 .form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
     padding-top: 0px;
 }
 
-// Fix für: Vertikale Ausrichtung bei normalen Checkboxen (mit Label rechts) ist falsch (Text ist 4px zu weit unten)
+// Fix for: Vertical alignment for normal checkboxes (with label on the right) is wrong (text is 4px too far down)
 .checkbox {
   margin-top: 0px;
 }
 
-// Vertikale Ausrichtung von Radio zu Label links korrigiert.
+// Vertical alignment of radio to left label corrected.
 .form-horizontal .radio {
   margin-top: 4px !important;
 }
 
 // ##############################################################
-// ### Input Felder
+// ### Inputfields
 // ##############################################################
-// Aktiviere Padding bei Special Char Eingabefeldern, damit der Text nicht überschrieben wird.
+// Activate padding for Special Char input fields so that the text is not overwritten.
 .input-group input[type="text"].inputWithSpecialCharPicker {
   padding-right: 24px;
 }
-// Verhindere Anzeige der clear-Buttons im Internet-Explorer
+// Prevent display of clear buttons in Internet Explorer
 ::-ms-clear {
     display: none;
     width: 0;
@@ -653,12 +652,12 @@ input[type="text"]:disabled {
 	cursor: not-allowed;
 }
 
-//Geldbeträge: Text rechts ausrichten, falls explizit so gewünscht.
+// Monetary amounts: Align text to the right if explicitly requested.
 .currency-input-text-align-right {
     text-align: right;
 }
 
-/* Wenn ein Zeichenpicker geöffnet ist, wollen wir verbundenes Eingabefeld als fokusiert markieren. */
+/* When a character picker is open, we want to mark the connected input field as focused. */
 .charpicker-focused, .charpicker-focused:hover{
   box-shadow: none;
   border: 1px solid #00B8F2;
@@ -670,7 +669,7 @@ input[type="text"]:disabled {
     }
 
 // ##############################################################
-// ### Header Bereich
+// ### Headerarea
 // ##############################################################
 
 .header-content button {
@@ -692,7 +691,7 @@ img.lazy {
 // ### Body
 // ##############################################################
 body {
-    -webkit-user-select: text;                  /* Markieren erlauben */
+    -webkit-user-select: text;                  /* Allow marking. */
 	-ms-overflow-style: scrollbar;
 }
 
@@ -700,18 +699,19 @@ body {
 // ### Four Eyes
 // ##############################################################
 
-/* Die Regel befindet sich eigentlich im es-Ordner, aber dort steht der Wert fälschlicherweise auf 4. */
+/* The rule is actually in the es folder, but there the value is incorrectly set to 4. */
 .formdatevieraugenbutton {
     right: 24px;
 }
 
-/* überschreibt das Standard-Aussehen von deaktivierten Checkboxen. Ist notwendig, da diese sonst doppelt angezeigt werden. Einmal das größere
- Checkbox-Bild aus dem CSS und einmal darüber die original input-checkbox.*/
+/* Overwrites the standard appearance of deactivated checkboxes. This is necessary because otherwise they
+will be displayed twice. Once the larger checkbox image from the CSS and the original input checkbox on top
+of it. */
 .checkbox>label>.form-control[disabled] {
     opacity: 0;
 }
 
-/* Enabled und Disabled müssen gleich dargestellt werden*/
+/* Enabled and Disabled must be displayed in the same way. */
 .checkbox.vieraugen label input.form-control,
 .checkbox.vieraugen label input.form-control[disabled] {
     display: block;

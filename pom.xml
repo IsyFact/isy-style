@@ -105,6 +105,8 @@
                         <executions>
 
                             <!-- Erzeugt das Literaturverzeichnis -->
+                            <!-- ### -->
+                            <!-- Creates the bibliography -->
                             <execution>
                                 <id>generate-bibliography</id>
                                 <phase>generate-sources</phase>
@@ -123,6 +125,8 @@
                             </execution>
 
                             <!-- Erzeugt das Glossar -->
+                            <!-- ### -->
+                            <!-- Generates the glossary -->
                             <execution>
                                 <id>generate-glossary</id>
                                 <phase>generate-sources</phase>
@@ -140,6 +144,8 @@
                             </execution>
 
                             <!-- Erzeugt ... -->
+                            <!-- ### -->
+                            <!-- Generates... -->
                             <execution>
                                 <id>generate-lists</id>
                                 <phase>generate-sources</phase>
