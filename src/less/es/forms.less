@@ -504,3 +504,14 @@ select.form-control {
     padding-top: 5px;
   }
 }
+
+
+// Prevents jumping / to high checkboxes in modal dialogs
+.modal-dialog .checkbox {
+  span:before {
+    margin-top: 4px;
+  }
+  label {
+    min-height: 24px;
+  }
+}
