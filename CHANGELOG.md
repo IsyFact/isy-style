@@ -6,6 +6,7 @@
 - `IFE-310`: Unsichtbare Checkboxen in `formSelectOneList` und `formSelectManyList` behoben
 - `IFE-430`: Behebt Fehler mit unsichtbarem klickbarem div in formUpload (Firefox)
 - `IFS-1383`: Korrektur des icon-message-outline content
+- `IFS-728`: Fehlerhafte Darstellung von Checkboxen in modalen Dialogen behoben
 
 ## v5.4.1
 
