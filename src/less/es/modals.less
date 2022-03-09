@@ -21,6 +21,16 @@
         vertical-align:middle;
         margin: 0 auto;
 
+        // Prevents jumping / to high checkboxes in modal dialogs
+        .checkbox {
+            span:before {
+                margin-top: 4px;
+            }
+            label {
+                min-height: 24px;
+            }
+        }
+
         .modal-content {
             background-color: @es-light-gray-B;
             border-radius: 0 !important;
