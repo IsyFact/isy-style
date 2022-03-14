@@ -2,7 +2,7 @@
 - `IFS-1344`: Umstellung auf CI-Friendly builds
 - `IFE-484`: Fix Popovers und Dropdowns in modalen Fenstern
     * Dokumentation hinsichtlich der Position der Dialogbuttons angepasst
-- `IFS-728`: Fehlerhafte Darstellung von Checkboxen in modalen Dialogen behoben
+- `IFS-728`: Fehlerhafte Darstellung (Abgeschnittene Checkbox) in modalen Dialogen behoben
 
 # v5.4.0
 - `IFS-1024`: isy-style kann in npm Projekten über Less angepasst werden
