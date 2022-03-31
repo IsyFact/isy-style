@@ -1,3 +1,6 @@
+# v5.4.1
+- `IFS-1397`: Anhebung auf Isyfact-erweiterungen 2.4.1 mit Spring Boot 2.5.12 (Fix CVE-2022-22965)
+
 # v5.4.0
 - `IFS-1024`: isy-style kann in npm Projekten über Less angepasst werden
 - `IFS-275`: Blendet Navigationsmenü in der Druckansicht aus
