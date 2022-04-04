@@ -9,6 +9,8 @@
     * Konfiguriere Liberation Font als Standard Font
 #### Bekannte Probleme
 - Die Darstellung des DIN SPEC Charpickers in Modalenfenstern ist falsch (betrifft auch 5.2.0)
+- `IFE-455`: Dependencies aktualisiert, um Sicherheitslücken zu schließen
+- `IFS-1398`: Update auf IsyFact Standards 2.3.2 (CVE-2022-22965)
 
 # v5.2.0
 - `IFS-932`: Portierung des Tickets IFS-848 auf IFS-2.2
