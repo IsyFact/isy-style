@@ -20,5 +20,5 @@
     "less-plugin-clean-css": "^1.5.1",
     "minimatch": "^3.0.8"
   },
-  "version": "5.5.0-SNAPSHOT"
+  "version": "0.0.0-SNAPSHOT"
 }
