@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>isy-style</artifactId>
-    <version>5.5.0-SNAPSHOT</version>
+    <version>${revision}</version>
     <packaging>jar</packaging>
 
     <name>IsyFact Styles</name>
@@ -20,6 +20,7 @@
         <node.version>v12.16.0</node.version>
         <enforced.jdk.version>[1.8,1.9)</enforced.jdk.version>
         <enforced.maven.version>[3.1.1,4)</enforced.maven.version>
+        <revision>0.0.0-SNAPSHOT</revision>
     </properties>
 
     <profiles>
