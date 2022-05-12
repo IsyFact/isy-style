@@ -1,6 +1,8 @@
 # v4.6.0
 - `IFE-275`: Blendet Navigationsmenü in der Druckansicht aus
 - `IFE-455`: fix security issues caused by dependency json-schema@0.2.3
+- `IFS-1160`: Anpassung der min-width im body, um die Druckansicht korrekt darzustellen
+
 
 # v4.5.1
 - `IFE-483`: Fix Popovers und Dropdowns in modalen Fenstern
