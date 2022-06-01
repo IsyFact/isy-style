@@ -242,14 +242,6 @@ select.selectlist[size] {
     background-position: 2px 4px;
     background-repeat: no-repeat;
 }
-.checkboxed + .bootstrap-selectlist li.disabled a {
-    /*
-     * Die Datei existiert nicht...
-     * background-image: url("../img/controls/cb_unchecked_disabled.png");
-     */
-    background-position: 2px 4px;
-    background-repeat: no-repeat;
-}
 .checkboxed + .bootstrap-selectlist .selected a {
     background-image: url("../img/controls/cb_checked_default.png");
     background-position: 2px 4px;
@@ -260,19 +252,18 @@ select.selectlist[size] {
     background-position: 2px 4px;
     background-repeat: no-repeat;
 }
+.checkboxed + .bootstrap-selectlist li.disabled a {
+    background-image: url("../img/controls/cb_unchecked_disabled.png");
+    background-position: 2px 4px;
+    background-repeat: no-repeat;
+}
 .checkboxed + .bootstrap-selectlist a {
-    /*
-     * Die Datei existiert nicht...
-     * background-image: url("../img/controls/cb_unchecked_default.png");
-     */
+    background-image: url("../img/controls/cb_unchecked_default.png");
     background-position: 2px 4px;
     background-repeat: no-repeat;
 }
 .checkboxed + .bootstrap-selectlist a:hover {
-    /*
-     * Die Datei existiert nicht...
-     * background-image: url("../img/controls/cb_unchecked_focused.png");
-     */
+    background-image: url("../img/controls/cb_unchecked_focused.png");
     background-position: 2px 4px;
     background-repeat: no-repeat;
 }
