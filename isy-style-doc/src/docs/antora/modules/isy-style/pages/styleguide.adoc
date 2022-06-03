@@ -3123,7 +3123,8 @@ Sie dienen der Strukturierung umfangreicher Listen und vereinfachen das gezielte
 
 *Toggle-Filter*
 
-Mit dem Toggle-Filter kann durch einen Klick auf einen Button eine Liste von Objekten oder Formularen nach bestimmten vordefinierten Kriterien eingeschränkt werden.
+Der Toggle-Filter ist eine Tabellen-Toolbar mit der durch einen Klick auf einen Button eine Liste
+von Objekten oder Formularen nach bestimmten vordefinierten Kriterien eingeschränkt werden kann.
 
 :desc-image-togglefilterbild: Toggle-Filter
 [id="image-togglefilterbild",reftext="{figure-caption} {counter:figures}"]
@@ -3131,7 +3132,7 @@ Mit dem Toggle-Filter kann durch einen Klick auf einen Button eine Liste von Obj
 image::Toggle_Filter.png[align="center", width="629",height="122"]
 
 
-Der Filter kann auch für die Filterung von beliebigen Inhalten im Detail-Bereich verwendet werden.
+Der Toogle-Filter kann auch für die Filterung von beliebigen Inhalten im Detail-Bereich verwendet werden.
 
 :desc-image-togglefilterbild2: Toggle-Filter im Detailbereich
 [id="image-togglefilterbild2",reftext="{figure-caption} {counter:figures}"]
