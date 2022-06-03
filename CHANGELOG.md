@@ -2,6 +2,7 @@
 - `IFE-430`: Behebt Fehler mit unsichtbarem klickbarem div in formUpload (Firefox)
 - `IFE-275`: Blendet Navigationsmenü in der Druckansicht aus
 - `IFE-455`: fix security issues caused by dependency json-schema@0.2.3
+- `IFS-728`: Fehlerhafte Darstellung von Checkboxen in modalen Dialogen behoben
 
 # v4.5.1
 - `IFE-483`: Fix Popovers und Dropdowns in modalen Fenstern
