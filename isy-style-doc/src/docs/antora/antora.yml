@@ -1,6 +1,6 @@
 name: isyfact-style-doku
 title: Styleguide
-version: '2.5-SNAPSHOT'
-start_page: styleguide.adoc
+version: '5.4.0'
+start_page: isy-style:styleguide.adoc
 nav:
   - modules/isy-style/nav.adoc
