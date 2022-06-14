@@ -1,3 +1,6 @@
+# v4.5.2
+- `IFS-1160`: Anpassung der min-width im body, um die Druckansicht korrekt darzustellen
+
 # v4.5.1
 - `IFE-483`: Fix Popovers und Dropdowns in modalen Fenstern
     * Dokumentation hinsichtlich der Position der Dialogbuttons angepasst
