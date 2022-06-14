@@ -3,7 +3,10 @@
 - `IFS-1344`: Umstellung auf CI-Friendly builds
 - `IFE-484`: Fix Popovers und Dropdowns in modalen Fenstern
     * Dokumentation hinsichtlich der Position der Dialogbuttons angepasst
-    
+- `IFS-728`: Fehlerhafte Darstellung (Abgeschnittene Checkbox) in modalen Dialogen behoben
+- `IFS-1511`: Behebung von CVE-Warnungen durch Anheben von Dependency-Versionen
+- `IFS-1160`: Anpassung der min-width im body, um die Druckansicht korrekt darzustellen
+ 
 # v5.4.0
 - `IFS-1024`: isy-style kann in npm Projekten über Less angepasst werden
 - `IFS-275`: Blendet Navigationsmenü in der Druckansicht aus
