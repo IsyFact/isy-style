@@ -2,6 +2,7 @@
 - `IFS-1344`: Umstellung auf CI-Friendly builds
 - `IFE-484`: Fix Popovers und Dropdowns in modalen Fenstern
     * Dokumentation hinsichtlich der Position der Dialogbuttons angepasst
+- `IFS-728`: Fehlerhafte Darstellung (Abgeschnittene Checkbox) in modalen Dialogen behoben
 - `IFS-1511`: Behebung von CVE-Warnungen durch Anheben von Dependency-Versionen
     
 # v5.4.0
