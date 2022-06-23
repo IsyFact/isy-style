@@ -1,4 +1,5 @@
 # v5.5.0
+- `IFE-310`: Unsichtbare Checkboxen in `formSelectOneList` und `formSelectManyList` behoben
 - `IFE-430`: Behebt Fehler mit unsichtbarem klickbarem div in formUpload (Firefox)
 - `IFS-1344`: Umstellung auf CI-Friendly builds
 - `IFE-484`: Fix Popovers und Dropdowns in modalen Fenstern
