@@ -1,4 +1,5 @@
 # v4.6.0
+- `IFE-310`: Unsichtbare Checkboxen in `formSelectOneList` und `formSelectManyList` behoben
 - `IFE-430`: Behebt Fehler mit unsichtbarem klickbarem div in formUpload (Firefox)
 - `IFE-275`: Blendet Navigationsmenü in der Druckansicht aus
 - `IFE-455`: fix security issues caused by dependency json-schema@0.2.3
