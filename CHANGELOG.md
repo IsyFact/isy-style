@@ -5,6 +5,7 @@
 - `IFS-1160`: Anpassung der min-width im body, um die Druckansicht korrekt darzustellen
 - `IFE-310`: Unsichtbare Checkboxen in `formSelectOneList` und `formSelectManyList` behoben
 - `IFE-430`: Behebt Fehler mit unsichtbarem klickbarem div in formUpload (Firefox)
+- `IFS-1383`: Korrektur des icon-message-outline content
 
 ## v5.4.1
 
