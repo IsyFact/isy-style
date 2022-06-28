@@ -38,7 +38,7 @@ Anschließend kann das Paket als Maven dependency eingebaut werden.
 <dependency>
     <groupId>de.bund.bva.isyfact</groupId>
     <artifactId>isy-style</artifactId>
-    <version>5.1.0</version>
+    <version>5.4.0</version>
 </dependency>
 ```
 
@@ -55,7 +55,7 @@ Daraus entsteht ein `tgz`-Paket, welches anschließend in der `package.json` des
 ```json
 {
   "dependencies": {
-    "@isyfact/isy-style": "<absolute_path>/isy-style/isyfact-isy-style-5.1.0.tgz"
+    "@isyfact/isy-style": "<absolute_path>/isy-style/isyfact-isy-style-5.4.0.tgz"
   }
 }
 ```

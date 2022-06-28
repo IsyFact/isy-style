@@ -1,5 +1,14 @@
-= Nutzungskonzept Styleguide: Inhalt
-:imagesdir: images
+= Baustein Styleguide (JSF): Nutzungsvorgaben
+
+include::glossary:licence:partial$licence.adoc[]
+
+*Java Bibliothek / IT-System*
+
+[cols="5,2,3",options="header"]
+|====
+|Name |Art |Version
+m|isy-style |Bibliothek |v{page-component-version}
+|====
 
 // tag::inhalt[]
 [[kapitel-plis-style]]
@@ -9,53 +18,59 @@ In der IsyFact-Erweiterung `isy-style` werden die CSS-, JavaScript- und Bilddate
 Dieses Dokument enthält die technische Dokumentation zur Bibliothek `isy-style`.
 
 
+[[technologien-nutzungsvorgaben]]
 === Technologien
 
+[[twitter-bootstrap]]
 ==== Twitter Bootstrap
 
 Dieses Projekt baut auf dem Bootstrap CSS Framework in Version 3.4.1 auf.
 Dieses stellt sowohl browserübergreifende, erweiterbare Styles für HTML-Elemente als auch wenige komplexere Steuerelemente mit zusätzlichem Javascript-Code zur Verfügung.
 
-Die Bootstrap-Styles wurden entsprechend den Definitionen im Style Guide (Aussehen, Form, Farbe und Effekte) angepasst.
+Die Bootstrap-Styles wurden entsprechend den Definitionen im Styleguide (Aussehen, Form, Farbe und Effekte) angepasst.
 Hierbei wurden die originalen Quelldateien von Bootstrap im Verzeichnis src/less/bootstrap nicht verändert.
 Stattdessen wurden für die applikationsspezifischen Anpassungen eigene Dateien im Verzeichnis src/less/es/ definiert, welche die vorhandenen Bootstrap Styledefinitionen überschreiben.
 Im Browser werden die originalen Bootstrap-Styles geladen und von den applikationsspezifischen Styles überschrieben.
 Diese Methode generiert zwar ein wenig Redundanz und Overhead, die Bootstrap Dateien bleiben aber für etwaige Versionsupdates von Bootstrap unverändert erhalten.
 
 Bei der gesamten Entwicklung wurde darauf geachtet, dass die ursprünglichen Funktionalitäten von Bootstrap erhalten bleiben.
-So können Entwickler bei aufkommenden Fragen die Bootstrap Dokumentation (http://getbootstrap.com) zu Rate ziehen.
-Sollte diese Dokumentation für eine neuere Bootstrap Versionen angepasst werden und somit nicht mehr mit der in der Anwendung verwendeten Version kompatibel sein, werden die älteren Bootstrap-Dokumentationen in einem Archiv von einem Drittanbieter(http://bootstrapdocs.com) zur Verfügung gestellt.
+So können Entwickler bei aufkommenden Fragen die xref:glossary:literaturextern:inhalt.adoc#litextern-get-bootstrap[Bootstrap Dokumentation] zu Rate ziehen.
+Sollte diese Dokumentation für eine neuere Bootstrap Versionen angepasst werden und somit nicht mehr mit der in der Anwendung verwendeten Version kompatibel sein, werden die älteren Bootstrap-Dokumentationen in einem Archiv von einem xref:glossary:literaturextern:inhalt.adoc#litextern-bootstrap-docs[Drittanbieter] zur Verfügung gestellt.
 
+[[erweiterung-der-bootstrap-basis]]
 ===== Erweiterung der Bootstrap-Basis
 
 Die Bootstrap-Quelldateien und die von Bootstrap bereitgestellten JavaScript-Dateien können unabhängig von den angewandten Styles und Templates aktualisiert werden.
 Sollte eine neue Bootstrap Version erscheinen und es notwendig sein, neue Features und/oder Bug-Fixes zu implementieren, sollte folgendermaßen vorgegangen werden:
 
+[[nutzungsvorgaben-less]]
 ===== LESS
 
-1.  Die neuen LESS-Quelldateien von folgender Seite herunterladen: https://github.com/twbs/bootstrap/tree/master/less.
+1.  Die neuen xref:glossary:literaturextern:inhalt.adoc#litextern-github-bootstrap-less[LESS-Quelldateien] herunterladen
 2.  Die Dateien in src/less/bootstrap/ mit den neu heruntergeladenen Dateien ersetzen.
 3.  Anpassungen und Aktualisierungen aus der neuen Less Datei less/bootstrap/variables.less per Kopieren und Einfügen in die less/es/custom-variables.less übertragen.
 4.  Kompilieren der styles.less nach www/css/styles.css mit Hilfe eines Less-Compilers oder dem zur Verfügung gestellten GruntJS Build-Prozesses.
-5.  Zum Abschluss müssen die Konformität mit dem Style Guide und die visuell fehlerfreie Darstellung der Applikation überprüft werden.
+5.  Zum Abschluss müssen die Konformität mit dem Styleguide und die visuell fehlerfreie Darstellung der Applikation überprüft werden.
 Möglicherweise sind noch zusätzliche Styledefinitionen oder Korrekturen nötig, um neue Bootstrap-Styles zu überschreiben.
 
+[[nutzungsvorgaben-java-script-1]]
 ===== JavaScript
 
-1.  Die neue bootstrap.min.js-Datei von https://github.com/twbs/bootstrap/tree/master/js herunterladen.
+1.  Die neue xref:glossary:literaturextern:inhalt.adoc#litextern-github-bootstrap-mini-js[bootstrap.min.js-Datei] herunterladen.
 2.  Die alte Datei src/assets/lib/bootstrap.min.js durch die neue ersetzen.
 3.  Funktionalität überprüfen.
 
+[[nutzungsvorgaben-less-stylesheet]]
 ==== LESS Stylesheets
 
-Bootstrap basiert auf der LESS Stylesheet-Sprache (http://lesscss.org) . Diese fügt Variablen, Funktionen und Operationen zur ursprünglichen CSS Funktionalität hinzu.
+Bootstrap basiert auf der xref:glossary:literaturextern:inhalt.adoc#litextern-less-stylesheet[LESS Stylesheet-Sprache]. Diese fügt Variablen, Funktionen und Operationen zur ursprünglichen CSS Funktionalität hinzu.
 Dieses Projekt implementiert diese Funktionalitäten und baut darauf auf.
 
 LESS Stylesheets müssen in CSS-Dateien kompiliert werden, damit sie für Browser lesbar sind.
 Folgende Freeware-Lösungen können für diesen Schritt genutzt werden:
 
-* dotLess: http://www.dotlesscss.org (Windows)
-* Less.app: http://incident57.com/less (Mac OS)
+* xref:glossary:literaturextern:inhalt.adoc#litextern-dot-less[dotless] (Windows)
+* xref:glossary:literaturextern:inhalt.adoc#litextern-less-app[Less.app] (Mac OS)
 * GruntJS LESS task (Cross-platform) – siehe unten
 
 Als Ergebnis der Stylesheet-Entwicklung werden Quelldateien im LESS-Format zur Verfügung gestellt.
@@ -74,10 +89,11 @@ Ansonsten gehen Änderungen bei einem neuen Kompilierungsprozess verloren, da di
 LESS ermöglicht es, verschachtelte Selektoren zu benutzen, diese sind in den gelieferten Styles sehr häufig zu finden.
 Diese Verschachtelung erlaubt eine einfachere Wartbarkeit des Projektes, da so in den Styles teilweise die DOM-Struktur der Zielelemente widergespielt wird.
 
+[[nutzungsvorgaben-grunt-js]]
 ==== GruntJS Build System
 
-GruntJS (http://gruntjs.com) ist ein modulares Kommandozeilen-Build-Programm für Webapplikationen.
-Dieses Programm basiert auf JavaScript und baut auf NodeJS (http://nodejs.org) und auf der Node-eigenen Paketverwaltung NPM (Node Package Modules) auf.
+xref:glossary:literaturextern:inhalt.adoc#litextern-grunt-js[GruntJS] ist ein modulares Kommandozeilen-Build-Programm für Webapplikationen.
+Dieses Programm basiert auf JavaScript und baut auf xref:glossary:literaturextern:inhalt.adoc#litextern-node-js[NodeJS] und auf der Node-eigenen Paketverwaltung NPM (Node Package Modules) auf.
 
 GruntJS beinhaltet einen Task zur LESS-Kompilierung und einen Watch-Task.
 Diese sind für die Frontend-Entwicklung sehr komfortabel.
@@ -90,10 +106,12 @@ Mit dem Befehl „grunt“ in einer Konsolenanwendung wird das Projekt neu erste
 
 Weitere Informationen finden sich in der GruntJS Dokumentation und in der mitgelieferten Gruntfile.js.
 
+[[bennenung-der-komponenten]]
 ==== Benennung der Komponenten
 
 Die Benennung von spezifischen Komponenten und Layout-Elementen im Code wurde der Dash-Case-Schreibweise von Bootstrap angepasst.
 
+[[css-raster-system]]
 ==== CSS Raster-System
 
 Dieses Projekt benutzt das Bootstrap Raster-System, um das Layout und die Bedienelemente der Applikation zu strukturieren und zu positionieren.
@@ -102,10 +120,11 @@ Da keine Anpassungsfähigkeit (Responsivness) des Designs unterhalb der gängige
 
 Entwickler sollten ausschließlich die CSS-Klassen des Large (LG) Rasters benutzen (col-lg-x) um auch in diesem Fall das Spaltenraster nutzen zu können.
 
-Weitere Informationen können der Bootstrap Dokumentation über das „grid system“ (http://getbootstrap.com/css/#grid) entnommen werden.
+Weitere Informationen können der Bootstrap Dokumentation über das xref:glossary:literaturextern:inhalt.adoc#litextern-get-bootstrap-grid[Grid System] entnommen werden.
 
 Die Einstellungen für das genutzte Raster (z. B. Spaltenbreite) können in der Datei src/less/es/customvariables.less nachgelesen werden.
 
+[[zusaetzliche-bibliotheken-plugins-skripte]]
 ==== Zusätzliche Bibliotheken, Plugins und Skripte
 
 Um eine umfassendere Funktionalität zu gewährleisten, muss teilweise zusätzliches JavaScript eingesetzt werden.
@@ -127,15 +146,15 @@ Ermöglicht es, herauszufinden, welche Features durch den Browser unterstützt w
 
 *Bootstrap Datepicker 1.8.0*
 
-Implementiert einen interaktiven Standard Date Picker. https://github.com/eternicode/bootstrap-datepicker/
+Implementiert einen interaktiven xref:glossary:literaturextern:inhalt.adoc#litextern-eternicode-boostrap-date-picker[Standard Date Picker]
 
 *Bootstrap Select 1.13.9*
 
-Implementiert eine Auswahlbox. https://developer.snapappointments.com/bootstrap-select/
+Implementiert eine xref:glossary:literaturextern:inhalt.adoc#litextern-snapappointments-bootstrap-auswahlbox[Auswahlbox]
 
 *Bootstrap Timepicker*
 
-Implementiert einen interaktiven Standard Time Picker. https://github.com/jdewit/bootstrap-timepicker/
+Implementiert einen interaktiven xref:glossary:literaturextern:inhalt.adoc#litextern-jdewit-boostrap-time-picker[Standard Time Picker]
 
 *ExtendedBootstrapTab 0.1*
 
@@ -164,41 +183,50 @@ Dieses Plugin ermöglicht die Verwendung einer Lightbox. 
 
 Dieses Skript enthält eine Sammlung von allgemeinen Funktionen.
 
+[[nutzungsvorgaben-assets]]
 === Assets
 
 Alle benötigten Asstes wurden für die Benutzung in Browsern optimiert.
 Hierfür wurden alle Dateigrößen minimiert und die Anzahl der benötigten Dateien auf ein Minimum reduziert.
 Dieser Prozess beinhaltet auch die Entfernung von nicht benötigten Meta-Informationen aus dem Header von Bild-Dateien (smushit, svgmin).
 
+[[nutzungsvorgaben-fonts]]
 ==== Fonts
-Als Standard-Schriftart wird der Liberation Font (https://github.com/liberationfonts/liberation-fonts) verwendet. Über `font-face` wird die Liberation Font Familie eingebunden und zur Verfügung gestellt. Damit eine Web-Anwendung alle Zeichen der DIN SPEC 91379 korrekt darstellen kann, wird empfohlen die Schriftart Liberation zu verwenden.
+Als Standard-Schriftart wird der xref:glossary:literaturextern:inhalt.adoc#litextern-liberation-font[Liberation Font] verwendet. Über `font-face` wird die Liberation Font Familie eingebunden und zur Verfügung gestellt. Damit eine Web-Anwendung alle Zeichen der DIN SPEC 91379 korrekt darstellen kann, wird empfohlen die Schriftart Liberation zu verwenden.
 
+[[nutzungsvorgaben-icons]]
 ==== Icons
 
-Für die Verwendung von Icons wird der Icon-Font FontAwesome (https://fontawesome.com/) genutzt.
+Für die Verwendung von Icons wird der Icon-Font xref:glossary:literaturextern:inhalt.adoc#litextern-font-awesome[Font Awesome]  genutzt.
 Über CSS-Klassen können die einzelnen Icons referenziert werden.
-Grundlegende Icons sind in Kapitel 10.3 im <<Styleguide>> erläutert.
+Grundlegende Icons sind im xref:styleguide.adoc#icons-ueberscrift[Styleguide]  erläutert.
 
+[[nutzungsvorgaben-grafiken]]
 ==== Grafiken
 
-Für einige Bedien- und Layout-Elemente werden zusätzliche Bitmap Grafiken benötigt, zum Beispiel src/assets/img/controls/cb_checked_default.png (Bedienelement) und src/assets/img/bgInfoTile.png (Layout). Diese Grafiken sollten möglichst nicht verändert werden, da sie dann möglicherweise nicht mehr den Richtlinien des Interface Style Guides entsprechen.
+Für einige Bedien- und Layout-Elemente werden zusätzliche Bitmap Grafiken benötigt, zum Beispiel src/assets/img/controls/cb_checked_default.png (Bedienelement) und src/assets/img/bgInfoTile.png (Layout). Diese Grafiken sollten möglichst nicht verändert werden, da sie dann möglicherweise nicht mehr den Richtlinien des Interface Styleguides entsprechen.
 In der Regel ist eine Bearbeitung aber auch nicht notwendig.
 
+[[nutzungsvorgaben-konvention]]
 === Konventionen
 
+[[nutzungsvorgaben-html-five-markup]]
 ==== HTML5 Markup
 
 Die Struktur des Markup der Applikationsbereich wurde mit Hilfe des W3C Validierers auf gültige Struktur überprüft („well-formed“).
 
+[[nutzungsvorgaben--java-script-2]]
 ==== JavaScript
 
-Der Quellcode für die prototypischen Interaktionen in der Datei es.js wurde mit JSHint(http://www.jslint.com) validiert.
+Der Quellcode für die prototypischen Interaktionen in der Datei es.js wurde mit xref:glossary:literaturextern:inhalt.adoc#litextern-js-lint[JSLint] validiert.
 
+[[kommentare-im-quellcode]]
 ==== Kommentare im Quellcode
 
 Ein Ausrufezeichen /*! innerhalb eines Kommentars zeigt an, dass dieser Kommentar auch nach der Minimierung erhalten bleibt.
 Solche Kommentare werden in den publizierten Dateien aus lizenzrechtlichen Gründen angezeigt.
 
+[[nutzungsvorgaben-stylesheets]]
 ==== Stylesheets
 
 LESS Stylesheets sollten im Verzeichnis /less abgelegt werden.
@@ -211,6 +239,7 @@ Unnötige Klassen und Verschachtelungen („wrapper“-Elemente) sollten vermied
 Es sollten keine Inline-Styles (style=”…”). im HTML-Dokument eingesetzt werden
 Die Styles einzelner Elemente werden logisch auf verschiedene Dateien aufgeteilt, einige davon nutzen die Namen der Bootstrap Original-Dateien.
 
+[[nutzungsvorgaben-less-format]]
 ==== Das LESS-Format
 
 Öffnende Klammern stehen in der gleichen Zeile wie die Bezeichnung des Styles.
@@ -228,10 +257,9 @@ Hexadezimalfarbwerte sollten möglichst kurz geschrieben werden (z. B. #fff).
 Es werden nur Kleinbuchstaben verwendet
 
 
-:desc-image-css-kleinbuchstaben: Beispiel für css-Styledeklaration
-[id="image-css-kleinbuchstaben",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-css-kleinbuchstaben}
-image::css-kleinbuchstaben.png[image,width=500,height=241]
+[[image-css-kleinbuchstaben]]
+.Beispiel für css-Styledeklaration
+image::nutzungsvorgaben/css-kleinbuchstaben.png[image,width=500,height=241]
 
 
 [[installation-isy-style]]
@@ -244,9 +272,8 @@ Damit lässt sich `isy-style` in klassischen Webanwendungen mit JSF (Maven) oder
 
 Für klassische Webanwendungen wird `isy-style` als Maven Bibliothek installiert (siehe <<listing-einbindung_isy_style>>).
 
-:desc-listing-einbindung_isy_style: Einbindung von Isy-Style in der pom.xml
-[id="listing-einbindung_isy_style",reftext="{listing-caption} {counter:listings}"]
-.{desc-listing-einbindung_isy_style}
+[[listing-einbindung_isy_style]]
+.Einbindung von Isy-Style in der pom.xml
 [source,xml,subs="verbatim,attributes"]
 ----
 <dependency>
@@ -272,9 +299,8 @@ IMPORTANT: Für die Installation der Bibliothek wird eine Verbindung zum interne
 Die statischen Ressourcen müssen anschließend an der passenden Stelle in der Angular Anwendung importiert werden.
 Stylesheets aus `isy-style` werden typischerweise immer am Anfang des projektspezifischen Templates deklariert und bei Bedarf modifiziert (siehe <<listing-isy-style-less>>)
 
-:desc-listing-isy-style-less: Einbinden der Stylesheets von isy-style in Angular Projekt
-[id="listing-isy-style-less",reftext="{listing-caption} {counter:listings}"]
-.{desc-listing-isy-style-less}
+[[listing-isy-style-less]]
+.Einbinden der Stylesheets von isy-style in Angular Projekt
 [source,less]
 ----
 @import '~@isyfact/isy-style/dist/css/styles.css';
@@ -287,9 +313,8 @@ Stylesheets aus `isy-style` werden typischerweise immer am Anfang des projektspe
 
 Bilder, Schriftarten und andere statische Ressourcen werden über die `assets` Konfiguration in der `angular.json` bereitgestellt (siehe <<listing-isy-style-angular>>).
 
-:desc-listing-isy-style-angular: Bereitstellen von statischen Ressourcen aus isy-style in Angular Projekten
-[id="listing-isy-style-angular",reftext="{listing-caption} {counter:listings}"]
-.{desc-listing-isy-style-angular}
+[[listing-isy-style-angular]]
+.Bereitstellen von statischen Ressourcen aus isy-style in Angular Projekten
 [source,json]
 ----
 {
@@ -328,10 +353,9 @@ Zur Generierung der Datei `color.css` mit der eigenen Portalfarbe sind folgende 
 
 *1.  Konfiguration der Portalfarbe*: In der Datei `Gruntfile.js` ist die Basisfarbe / Portalfarbe zu setzen:
 
-:desc-listing-gruntPortalfarbe: Portalfarbe in Gruntfile.js konfigurieren
-[id="listing-gruntPortalfarbe",reftext="{listing-caption} {counter:listings }"]
-.{desc-listing-gruntPortalfarbe}
-[source, xml]
+[[listing-gruntPortalfarbe]]
+.Portalfarbe in Gruntfile.js konfigurieren
+[source, javascript]
 ----
 var helper = require('./helper/helper');
 module.exports = function (grunt) {
@@ -355,9 +379,8 @@ Dadurch wird ein "grunt build" ausgelöst und die Farbstyles befinden sich nach 
 [start=3]
 *3.   Einbindung in Zielanwendung*: Die Datei `color.css` aus dem Target-Verzeichnis von `isy-style` ist in die Zielanwendung unterhalb des WEB-INF Verzeichnisses zu kopieren.
 
-:desc-image-colorCssPosition: Zielordner für color.css Datei
-[id="image-colorCssPosition",reftext="{figure-caption} {counter:figures}"]
-.{desc-image-colorCssPosition}
-image::color-css-position.png[align="center"]
+[[image-colorCssPosition]]
+.Zielordner für color.css Datei
+image::nutzungsvorgaben/color-css-position.png[align="center"]
 
 // end::inhalt[]

@@ -147,7 +147,22 @@ from bootstrap/responsive-utilities.less:
 
 */
 
+@media print {
+
+    // changes the width of the printable page
+    body,html {
+        box-sizing: border-box;
+        min-width: 1024px;
+    }
+
+}
+
 .print { //in browser view of a printable page
+
+    //removes the display of the logout button in the printable page
+    .btn.btn-default {
+        display:none;
+    }
 
     > .outer-container:before {
         background-color: @es-white;
