@@ -1027,7 +1027,7 @@ Es sei denn sie enthalten wichtige Informationen wie Farbcodierungen für bestim
 ** Die Metainformationen werden oben auf jeder gedruckten Seite platziert.
 ** Der Metabereich kann Informationen wie Datum, Seitenzahl und Benutzername enthalten.
 * Der Benutzer hat zwei Möglichkeiten einen Druckvorgang zu starten.
-** Nutzt der Benutzer die *Druck-Funktion des Browsers* (Datei > Drucken), dann werden die oben beschriebenen Regeln angewendet, es findet keine weitere Optimierung des Layouts statt (siehe<<fig-35>>).
+** Nutzt der Benutzer die *Druck-Funktion des Browsers* (Datei > Drucken), dann werden die oben beschriebenen Regeln angewendet, es findet keine weitere Optimierung des Layouts statt.
 ** Einige Inhalte der Anwendung haben eine **explizite Druck-Funktion**. Diese Inhalte werden noch individuell für den Druck optimiert (Beispiel siehe <<image-darstellungdetaildruck>>). Richtlinien hierfür sind im Kapitel Drucken bestimmter Inhaltsbereiche beschrieben.
 
 

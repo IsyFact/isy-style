@@ -146,7 +146,7 @@ Ermöglicht es, herauszufinden, welche Features durch den Browser unterstützt w
 
 *Bootstrap Datepicker 1.8.0*
 
-Implementiert einen interaktiven xref:glossary:literaturextern:inhalt.adoc#litextern-eternicode-boostrap-date-picker[Standard Date Picker]
+Implementiert einen interaktiven xref:glossary:literaturextern:inhalt.adoc#litextern-eternicode-boostsrap-date-picker[Standard Date Picker]
 
 *Bootstrap Select 1.13.9*
 
@@ -154,7 +154,7 @@ Implementiert eine xref:glossary:literaturextern:inhalt.adoc#litextern-snapappoi
 
 *Bootstrap Timepicker*
 
-Implementiert einen interaktiven xref:glossary:literaturextern:inhalt.adoc#litextern-jdewit-boostrap-time-picker[Standard Time Picker]
+Implementiert einen interaktiven xref:glossary:literaturextern:inhalt.adoc#litextern-jdewit-boostsrap-time-picker[Standard Time Picker]
 
 *ExtendedBootstrapTab 0.1*
 
