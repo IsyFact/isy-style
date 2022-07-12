@@ -120,7 +120,7 @@ Da keine Anpassungsfähigkeit (Responsivness) des Designs unterhalb der gängige
 
 Entwickler sollten ausschließlich die CSS-Klassen des Large (LG) Rasters benutzen (col-lg-x) um auch in diesem Fall das Spaltenraster nutzen zu können.
 
-Weitere Informationen können der Bootstrap Dokumentation über das xref:glossary:literaturextern:inhalt.adoc#litextern-get-bootstrap-grid[Grid System] entnommen werden.
+Weitere Informationen können der Bootstrap Dokumentation über das xref:glossary:literaturextern:inhalt.adoc#litextern-bootstrap-grid-doc[Grid System] entnommen werden.
 
 Die Einstellungen für das genutzte Raster (z. B. Spaltenbreite) können in der Datei src/less/es/customvariables.less nachgelesen werden.
 

@@ -258,7 +258,7 @@ Es müssen mindestens folgende Browser und Konstellationen in SXGA- und UXGA-Auf
 
 * Internet Explorer 11
 * Microsoft Edge (für Windows 10)
-* Firefox ESR, jeweils aktuelle Version (Stand Oktober 2018 ESR 60 - s. xref:glossary:literaturextern:inhalt.adoc#litextern-firefox-esr-roadmap[Firefox ESR Roadmap])
+* Firefox ESR, jeweils aktuelle Version (xref:glossary:literaturextern:inhalt.adoc#litextern-firefox-esr[Firefox Extended Support Release [ESR]])
 * Chrome, jeweils aktuelle stabile Version
 
 Die Unterstützung dieser Browser in der jeweils aktuellen supporteten Version entspricht auch der Empfehlung des BSI (Stand August 2016).
@@ -4182,7 +4182,7 @@ Generell sollten nicht zu viele verschiedene Grundfarben für die Gestaltung ein
 
 *** Online-Werkzeug zur Kontrast-Analyse: xref:glossary:literaturextern:inhalt.adoc#litextern-juicystudio-kontrast-analyse[JuicyStudio Kontrast Analyse]
 ***  Colour Contrast Analyser: Freeware für Windows und Mac OS X:
-xref:glossary:literaturextern:inhalt.adoc#litextern-paciellogroup-kontrast-analyse[Paciello Group Kontrast Analyse]
+xref:glossary:literaturextern:inhalt.adoc#litextern-color-kontrast-analyse[Color Kontrast Analyse]
 
 *  *Berücksichtigung von Farbenfehlsichtigkeit*
 **  Bei der Auswahl der Farben sollte auch eine mögliche Farbenfehlsichtigkeit der Benutzer berücksichtigt werden.
