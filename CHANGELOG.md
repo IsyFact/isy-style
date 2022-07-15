@@ -7,6 +7,7 @@
 - `IFS-728`: Fehlerhafte Darstellung (Abgeschnittene Checkbox) in modalen Dialogen behoben
 - `IFS-1511`: Behebung von CVE-Warnungen durch Anheben von Dependency-Versionen
 - `IFS-1160`: Anpassung der min-width im body, um die Druckansicht korrekt darzustellen
+- `IFS-1383`: Korrektur des icon-message-outline content
  
 # v5.4.0
 - `IFS-1024`: isy-style kann in npm Projekten über Less angepasst werden
