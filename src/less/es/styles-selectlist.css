@@ -1,6 +1,6 @@
 /*!
- * Kopiert aus plis-web:styles.css.
- * Hinzugefügte Styles, siehe Unten.
+ * copied from plis-web:styles.css.
+ * added styles below.
  */
 .bootstrap-selectlist {
   max-width: 100%;
@@ -210,7 +210,7 @@ select.form-control.selectlist-native .invalid {
     padding: 2px
 }
 
-/** moossenm: zusätzliche Styles für selectList */
+/** moossenm: added styles for selectList */
 ul.selectlist > .disabled.selected > a, ul.selectlist > .selected > a {
     background-color: #E0E5CF;
     color: #FFFFFF;
