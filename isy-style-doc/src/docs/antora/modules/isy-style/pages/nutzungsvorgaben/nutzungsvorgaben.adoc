@@ -61,7 +61,7 @@ Möglicherweise sind noch zusätzliche Styledefinitionen oder Korrekturen nötig
 3.  Funktionalität überprüfen.
 
 // TODO: Kapitel_ueberarbeiten
-// Begründung: Less wird nicht mehr nativ von bootstrap unterstüzt; Links sind falsch.
+// Begründung: Less wird nicht mehr nativ von bootstrap unterstützt; Links sind falsch.
 [[nutzungsvorgaben-less-stylesheet]]
 ==== LESS Stylesheets
 
