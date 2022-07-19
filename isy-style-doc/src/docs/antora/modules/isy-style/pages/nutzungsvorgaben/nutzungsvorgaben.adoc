@@ -60,6 +60,8 @@ Möglicherweise sind noch zusätzliche Styledefinitionen oder Korrekturen nötig
 2.  Die alte Datei src/assets/lib/bootstrap.min.js durch die neue ersetzen.
 3.  Funktionalität überprüfen.
 
+// TODO: Kapitel_ueberarbeiten
+// Begründung: Less wird nicht mehr nativ von bootstrap unterstüzt; Links sind falsch.
 [[nutzungsvorgaben-less-stylesheet]]
 ==== LESS Stylesheets
 
