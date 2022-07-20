@@ -11,9 +11,9 @@ m|isy-style |Bibliothek |v{page-component-version}
 |====
 
 [[einfuehrung-und-allgemeine-prinzipien]]
-== Einführung und Allgemeine Prinzipien
+== Einführung und allgemeine Prinzipien
 Der Styleguide definiert den Rahmen für die interaktive und visuelle Gestaltung eines universell einsetzbaren Bedienkonzeptes für die IsyFact.
-Dieses einführende Kapitel beinhaltet allgemeine Hinweise zur Benutzung des Styleguides. 
+Dieses einführende Kapitel beinhaltet allgemeine Hinweise zur Benutzung des Styleguides.
 Des Weiteren werden allgemeingültige Prinzipien erläutert, die bei der Konzeption und Gestaltung von Software berücksichtigt werden sollten.
 Abschließend werden die Vorgaben für die zu unterstützenden Browser festgehalten.
 
@@ -210,7 +210,7 @@ Modale Dialoge werden nur dann verwendet, wenn kritische Probleme auftreten oder
 
 Die Barrierefreiheit einer Anwendung beschreibt das Ausmaß, inwieweit die Anwendung für möglichst viele Menschen zugänglich ist, unabhängig
 vom Alter und von möglichen Einschränkungen durch Behinderungen.
-Im englischsprachigen Raum wird hierfür der Begriff „Accessibility" (Zugänglichkeit) verwendet.
+Im englischsprachigen Raum wird hierfür der Begriff „Accessibility“ (Zugänglichkeit) verwendet.
 
 Das Ziel der barrierefreien Gestaltung liegt vor allem darin, eine verbesserte Zugänglichkeit für Menschen mit Behinderung und ältere Menschen zu erreichen.
 Hiervon ist ein großer Anteil der Bevölkerung betroffen, zumal es neben Menschen mit permanenter Behinderung auch viele Menschen gibt, die nur zeitweise hinsichtlich der Bedienung eingeschränkt sind.
@@ -221,7 +221,7 @@ Richtlinien geregelt, um einen allgemeinen Zugang zu öffentlichen Internetdiens
 
 *Richtlinien und Prinzipien zur Barrierefreiheit*
 
-Im Rahmen des World Wide Web Consortium (W3C) wurden die sogenannten „Web Content Accessibility Guidelines" (WCAG) verfasst, um einen gemeinsamen Standard für die Barrierefreiheit von Webinhalten zu schaffen.
+Im Rahmen des World Wide Web Consortium (W3C) wurden die sogenannten „Web Content Accessibility Guidelines“ (WCAG) verfasst, um einen gemeinsamen Standard für die Barrierefreiheit von Webinhalten zu schaffen.
 Dabei handelt es sich um Richtlinien für die barrierefreie Gestaltung von Webinhalten im Hinblick auf drei Erfüllungsgrade (Conformance Levels A, AA und AAA). Diese Richtlinien basieren auf den folgenden vier Prinzipien für eine barrierefreie Anwendung:
 
 * *Wahrnehmbar* – Präsentation der Benutzerschnittstelle, so dass diese für Benutzer wahrnehmbar ist (mittels Sehkraft, Gehör oder Berührung).
@@ -258,7 +258,7 @@ Es müssen mindestens folgende Browser und Konstellationen in SXGA- und UXGA-Auf
 
 * Internet Explorer 11
 * Microsoft Edge (für Windows 10)
-* Firefox ESR, jeweils aktuelle Version (Stand Oktober 2018 ESR 60 - s. xref:glossary:literaturextern:inhalt.adoc#litextern-firefox-esr-roadmap[Firefox ESR Roadmap])
+* Firefox ESR, jeweils aktuelle Version (xref:glossary:literaturextern:inhalt.adoc#litextern-firefox-esr[Firefox Extended Support Release [ESR]])
 * Chrome, jeweils aktuelle stabile Version
 
 Die Unterstützung dieser Browser in der jeweils aktuellen supporteten Version entspricht auch der Empfehlung des BSI (Stand August 2016).
@@ -440,7 +440,7 @@ image::Header_Aufbau.png[align="center", width="700"]
 
 * *A* Logo des Anbieters der Anwendungslandschaft
 * *B* Balken in der Standardfarbe der Anwendungslandschaft ("Portalfarbe")
-* *C* Logo des Anwendungslandschaft
+* *C* Logo der Anwendungslandschaft
 * *D* Informationen zum angemeldeten Anwender
 * *E + F* Hauptnavigation und Subnavigation als Flyout (zur Nutzung siehe <<hauptnavigation>>)
 
@@ -510,7 +510,7 @@ image::Aufbau-Dashboard.png[align="center", width="629",height="526"]
 * Header Bereich
 
 * Inhaltsbereich = dreispaltiges Layout
-** Quicklinks (Wichtige Objekte) (A)
+** Quicklinks (wichtige Objekte) (A)
 ** Widgets Applikationen (B)
 ** Informationen \(C)
 
@@ -548,7 +548,7 @@ Die Beschreibung der Inhaltsbereiche erfolgt direkt im Anschluss.
 *** Die Spalten können immer von links nach rechts befüllt werden.
 *** Existiert nur ein Applikations-Widget, so wird dieses in der linken Spalte platziert die rechte Spalte bleibt leer.
 *** Ein Applikationsportal sollte immer über mindestens ein Applikations-Widget verfügen.
-** Sofern möglich und sinnvoll, besteht ein Applikations-Widget aus einer Gruppe von Applikationen.
+** Sofern möglich und sinnvoll besteht ein Applikations-Widget aus einer Gruppe von Applikationen.
 Die Verlinkungen im Widget führen zu den einzelnen Applikationen.
 ** Lässt sich eine Applikation keiner Gruppe zuordnen, so kann sie ein eigenes Widget erhalten.
 In diesem Fall würden die Links direkt zu den Funktionen (Unterkategorien) der jeweiligen Applikation führen.
@@ -559,7 +559,7 @@ In diesem Fall würden die Links direkt zu den Funktionen (Unterkategorien) der 
 * Informationen \(C)
 ** In der dritten Spalte werden für den Benutzer relevante Informationen angezeigt, die nicht in direktem Zusammenhang mit den Applikationen stehen.
 ** Dies können zum Beispiel Benachrichtigungen, Details zum Benutzerkonto oder Kontaktinformationen sein.
-** Existieren weiterführende Inhalte zu einem Bereich, die nicht initial auf dem Dashboard angezeigt werden, werden diese auf eine Dashboard Unterseite ausgelagert (siehe Kapitel Dashboard Unterseite). Die Unterseiten können über einen entsprechenden Link (z.B. „Mehr anzeigen") oder durch Klick auf ein entsprechendes Subobjekt aufgerufen werden.
+** Existieren weiterführende Inhalte zu einem Bereich, die nicht initial auf dem Dashboard angezeigt werden, werden diese auf eine Dashboard Unterseite ausgelagert (siehe Kapitel Dashboard Unterseite). Die Unterseiten können über einen entsprechenden Link (z.B. „Mehr anzeigen“) oder durch Klick auf ein entsprechendes Subobjekt aufgerufen werden.
 * Resizing
 ** Wird das Browserfenster vergrößert, so wird der zusätzliche Platz gleichmäßig auf alle Spalten aufgeteilt.
 Ab einer bestimmten Größe werden die Mauswege zu lang und die Benutzung wird dadurch negativ beeinflusst.
@@ -761,7 +761,7 @@ Sie können dem Benutzer helfen wichtige Daten von komplexen Objekten auf einen 
 *** Es kann sinnvoll sein die Kopfdaten mit einem Expander zu kombinieren. So hat der Benutzer die Möglichkeit, diese Daten auszublenden, wenn er sie nicht benötigt.
 ** Zur Strukturierung umfangreicher Informationen werden Gruppierungs-Container und Expander (Progressive Disclosure) eingesetzt.
 Hierbei werden Informationen sinnvoll gruppiert.
-** Zur weiteren Strukturierung und um langes vertikales Scrollen auf einer Seite zu vermeiden können Tabs zum Einsatz kommen.
+** Zur weiteren Strukturierung, und um langes vertikales Scrollen auf einer Seite zu vermeiden, können Tabs zum Einsatz kommen.
 
 
 
@@ -812,13 +812,13 @@ image::Dialog_Aufbau_ABC.png[align="center", width="627",height="249"]
 ** Dialoge passen ihre Größe dem gezeigten Inhalt an.
 ** Maximalgröße soll sich an Browser-Fenster und Anwendung im Hintergrund orientieren.
 Ein schmales Padding zur Abhebung von der Seite im Hintergrund reicht aus.
-* Die Position der Dialogbuttons sollten einheitlich über die verschiedenen modalen Dialoge der Anwendung sein. Der modale Dialog in seiner Gesamtkeit darf bei Bedarf scrollbar sein. Eine permanent sichtbare Kopf- und Fußzeile ist nicht verpflichtend.
+* Die Position der Dialogbuttons sollten einheitlich über die verschiedenen modalen Dialoge der Anwendung sein. Der modale Dialog in seiner Gesamtheit darf bei Bedarf scrollbar sein. Eine permanent sichtbare Kopf- und Fußzeile ist nicht verpflichtend.
 * Bei Dialogen, in denen Formulardaten bearbeitet werden, sollte das Layout der Elemente im Dialog dem Layout im Read-Only Modus entsprechen (i.d.R. dreispaltig).
 * *Titelzeile (A)*
 ** Der Titel des Dialogs sollte aussagekräftig sein und dem Benutzer genau zeigen, welche Interaktionen er für welche Objekte in diesem Dialog durchführt.
 Der Dialogtitel kann aus einem Haupttitel und einem optionalen Subtitel bestehen.
-** Der Haupttitel sollte die Art der Interaktion und den Objektnamen enthalten, z.B. „Personalie XY löschen".
-** Der Subtitel ist optional und kann zur genaueren Spezifizierung genutzt werden, z.B. „Personalie hinzufügen - Registerdatensatz XY" wobei „Personalie hinzufügen" ein Hauptitel wäre und „Registerdatensatz XY" ein Subtitel.
+** Der Haupttitel sollte die Art der Interaktion und den Objektnamen enthalten, z.B. „Personalie XY löschen“.
+** Der Subtitel ist optional und kann zur genaueren Spezifizierung genutzt werden, z.B. „Personalie hinzufügen - Registerdatensatz XY“ wobei „Personalie hinzufügen" ein Haupttitel wäre und „Registerdatensatz XY“ ein Subtitel.
 ** Der Titel enthält die Farbmarkierung der entsprechenden Applikationsgruppe.
 * Im *Inhaltsbereich (B)* kann an oberster Stelle ein Hinweis- oder Validierungstext angezeigt werden.
 Der Inhalt rutscht dann um die entsprechende Höhe nach unten.
@@ -864,7 +864,7 @@ Ist dies aus technischen Gründen nicht möglich, gehen die eingegebenen Daten v
 * *Besonderheiten in der Darstellung*
 ** Werden Dialoge und Meldungsdialoge direkt von einer Detailseite aufgerufen, so wird der Dialog unterhalb der Titelzeile der Detailseite dargestellt (vgl. <<image-keinjavascriptdialog>>)
 
-** Die Höhe des Wizards richtet sich (wie auch bei der JavaScript-Variante) nach dem Größten Inhalt.
+** Die Höhe des Wizards richtet sich (wie auch bei der JavaScript-Variante) nach dem größten Inhalt.
 Die Höhe eines Wizards sollte während der einzelnen Schritte nicht verändert werden, so wird ein Positionswechsel der Dialog-Buttons verhindert.
 ** Resizing: Generell sollte das Layout Verhalten dem der JavaScript-Variante (siehe Dialoge) entsprechen.
 
@@ -896,14 +896,14 @@ image::Aufbau_Meldungsdialog.png[align="center", width="325",height="162"]
 * Meldungsart-Icon *(B)*
 * Beschreibung und zusätzliche Informationen *\(C)*
 * Dialogbuttons *(D)*
-* Es sollte geprüft werden, ob der Benutzer den Dialog bei repetitiven Vorgängen ausstellen kann – dies geschieht mit Hilfe einer Check Box „Diesen Dialog in Zukunft nicht mehr anzeigen".
+* Es sollte geprüft werden, ob der Benutzer den Dialog bei repetitiven Vorgängen ausstellen kann – dies geschieht mit Hilfe einer Check Box „Diesen Dialog in Zukunft nicht mehr anzeigen“.
 
 *Richtlinien zur Anwendung*
 
 * Meldungsdialoge werden als Modaler Dialog aus einem primären Fenster geöffnet.
 * Ein Meldungsdialog kann nicht aus einem anderen Meldungsdialog geöffnet werden.
 * Die *Titelzeile (A)* des Meldungsdialogs dient in der Regel dazu, die Funktion zu identifizieren, die den Dialog getriggert hat.
-Versucht der Benutzer z.B. ein Objekt zu löschen, so erscheint ein Meldungsdialog mit der Überschrift „Objekt löschen". Die Überschrift dient nicht dazu, eine Beschreibung des Problems oder konkrete Anweisungen zu liefern.
+Versucht der Benutzer z.B. ein Objekt zu löschen, so erscheint ein Meldungsdialog mit der Überschrift „Objekt löschen“. Die Überschrift dient nicht dazu, eine Beschreibung des Problems oder konkrete Anweisungen zu liefern.
 * Das *Icon (B)* dient der Identifizierung der Meldungsart und muss daher der jeweiligen Meldungsart angepasst werden.
 Es wird links von der Beschreibung angezeigt.
 * Die *Beschreibung \(C)* hingegen sollte in einem Satz kurz und prägnant die Kernaussage des Dialoges präsentieren.
@@ -913,7 +913,7 @@ Zusätzliche Informationen können z. B. sein:
 ** Schritte zur Behebung eines Problems.
 ** Hinweise, wie ein Problem in Zukunft vermieden werden kann.
 ** Fehlercodes.
-** Pfad-oder URL-Angaben.
+** Pfad- oder URL-Angaben.
 ** Sollten ausführliche zusätzliche Informationen notwendig sein, wie z. B. ein Exception Text, der für Support-Anfragen benötigt wird, so können diese mit Hilfe eines Expanders (Progressive Disclosure) zunächst ausgeblendet und bei Bedarf vom Benutzer eingeblendet werden.
 * Der Bereich der *Dialogbuttons (D)* präsentiert je nach Meldungsart und Kontext verschiedene Buttons.
 Folgende Richtlinien für die Handhabung der Buttons sollten befolgt werden:
@@ -937,7 +937,7 @@ Die Anzeige einer solchen Kombination *muss* ausgeschlossen werden.
 [[wizard]]
 ==== Wizard
 
-Mit „Wizard", auch Assistent genannt, wird eine geführte Abfolge von Interaktionsschritten bezeichnet.
+Mit „Wizard“, auch Assistent genannt, wird eine geführte Abfolge von Interaktionsschritten bezeichnet.
 Das Konzept eignet sich für Anwendungsfälle, bei denen eine starke Führung des Benutzers erforderlich ist oder um z. B. sehr komplexe Objekte anzulegen.
 Die Einzelschritte stellen hier jeweils einzelne Teilaufgaben dar.
 Durch die Aufteilung der Interaktion auf separate Schritte und Inhaltsseiten verringert sich die Gesamtkomplexität für den Benutzer.
@@ -973,7 +973,7 @@ image::Dialog_Wizard_Aufbau.png[align="center", scaledwidth="96%"]
 ** Der Dialog sollte möglichst nicht mehr als 2/3 des Screens bedecken.
 ** Die Dialoggröße sollte möglichst so gewählt werden, dass die Dialogbuttons ohne zu scrollen zu sehen sind.
 ** Das Dialogfenster behält innerhalb einer Schrittfolge immer die gleiche Größe. So wird ein Positionswechsel der Dialog-Buttons verhindert.
-* Die *Titelzeile (A)* dient dazu die Funktion die Funktion des Wizards zu identifizieren.
+* Die *Titelzeile (A)* dient dazu die Funktion des Wizards zu identifizieren.
 Es gelten die gleichen Regeln wie für Titelzeilen von Dialogen.
 
 * *Schrittanzeige (B)* dargestellt.
@@ -991,14 +991,14 @@ Es gelten die gleichen Regeln wie für Titelzeilen von Dialogen.
 * *Dialogbuttons (D)*
 
 ** Per Klick auf die Dialog-Buttons kann der Benutzer vor und zurück navigieren sowie den Vorgang im Dialog abbrechen.
-** Im ersten Schritt ist der „Zurück"-Button deaktiviert.
-** Im letzten Schritt ändert sich das Text-Label des „Weiter"-Buttons (z.B. „Abschließen").
-** Optional kann links unten ein „Ablegen"-Button angezeigt werden.
+** Im ersten Schritt ist der „Zurück“-Button deaktiviert.
+** Im letzten Schritt ändert sich das Text-Label des „Weiter“-Buttons (z.B. „Abschließen“).
+** Optional kann links unten ein „Ablegen“-Button angezeigt werden.
 Diese Funktion kann beim Neu-Anlegen von komplexen Objekten nützlich sein.
-Die „Ablegen"-Funktion ermöglicht es dem Benutzer den aktuellen Vorgang zu unterbrechen und zwischen zu speichern.
+Die „Ablegen“-Funktion ermöglicht es dem Benutzer den aktuellen Vorgang zu unterbrechen und zwischen zu speichern.
 Die abgelegten Vorgänge werden auf dem Dashboard angezeigt.
-** Beim „Abbrechen" wird der Dialog geschlossen und die eingegebenen Daten gehen verloren.
-** Beim „Speichern" wird der Dialog geschlossen und die eingegebenen Daten werden gespeichert.
+** Beim „Abbrechen“ wird der Dialog geschlossen und die eingegebenen Daten gehen verloren.
+** Beim „Speichern“ wird der Dialog geschlossen und die eingegebenen Daten werden gespeichert.
 
 
 [[drucklayout]]
@@ -1027,7 +1027,7 @@ Es sei denn sie enthalten wichtige Informationen wie Farbcodierungen für bestim
 ** Die Metainformationen werden oben auf jeder gedruckten Seite platziert.
 ** Der Metabereich kann Informationen wie Datum, Seitenzahl und Benutzername enthalten.
 * Der Benutzer hat zwei Möglichkeiten einen Druckvorgang zu starten.
-** Nutzt der Benutzer die *Druck-Funktion des Browsers* (Datei > Drucken), dann werden die oben beschriebenen Regeln angewendet, es findet keine weitere Optimierung des Layouts statt (siehe<<fig-35>>).
+** Nutzt der Benutzer die *Druck-Funktion des Browsers* (Datei > Drucken), dann werden die oben beschriebenen Regeln angewendet, es findet keine weitere Optimierung des Layouts statt (siehe <<image-seitendruck1>>).
 ** Einige Inhalte der Anwendung haben eine **explizite Druck-Funktion**. Diese Inhalte werden noch individuell für den Druck optimiert (Beispiel siehe <<image-darstellungdetaildruck>>). Richtlinien hierfür sind im Kapitel Drucken bestimmter Inhaltsbereiche beschrieben.
 
 
@@ -1119,7 +1119,7 @@ image::Objekt_Suchen.png[align="center", scaledwidth="100%",width="687",height="
 *Richtlinien zur Interaktion*
 
 * Die Suche eines Objektes erfolgt über das Ausfüllen und Abschicken eines Formulars *(A)* (siehe <<image-objektsuchen>>).
-* Alle Suchfelder können durch Klicken auf „Suche leeren" zurückgesetzt werden.
+* Alle Suchfelder können durch Klicken auf „Suche leeren“ zurückgesetzt werden.
 * Mit Klick auf Suchen wird die Suche mit den eingegebenen Daten durchgeführt.
 * Die vom System gefundenen Objekte werden in der Ergebnistabelle *(B)* unterhalb des Suchformulars angezeigt.
 * Kann die Suche aufgrund von fehlerhaften Eingaben nicht durchgeführt werden, so wird im Hinweisfeld und an den entsprechenden Eingabefeldern amodales Feedback *\(C)* angezeigt (siehe <<image-objektsuchen>>).
@@ -1145,7 +1145,7 @@ image::Objekt_Suchen.png[align="center", scaledwidth="100%",width="687",height="
 *Liste von Objekten filtern*
 
 Benutzer können auch innerhalb einer vorhandenen Liste aus Objekten (z.B. Tabelle) nach einem bestimmten Objekt suchen.
-In solchen Fällen wird auch von „filtern" gesprochen.
+In solchen Fällen wird auch von „filtern“ gesprochen.
 
 [[image-datenfiltern]]
 .Daten filtern
@@ -1201,7 +1201,7 @@ image::Vorschau_Objekt_Tabelle.png[align="center", scaledwidth="100%",width="687
 |====
 |Fenstertyp / Pattern | Bedienelemente
 
-|Datentabell
+|Datentabelle
 |-
 
 |Datenvorschau
@@ -1293,7 +1293,7 @@ image::Dialog_Daten_Loeschen.png[align="center", scaledwidth="100%",width="653",
 * Das Löschen erfolgt über einen Löschen-Button, der z.B. in der Toolbar eines entsprechenden Objektes positioniert sein kann.
 * Bei kritischen Daten ist es sinnvoll eine Sicherheitsabfrage dazwischen zu schalten, ehe das Objekt gelöscht wird.
 Dies geschieht über einen Meldungsdialog.
-* Wird der Löschvorgang im Meldungsdialog bestätigt, so wird das Objekt gelöscht und somit auch auf der Detailseite entfernt.
+* Wird der Löschvorgang im Meldungsdialog bestätigt, so wird das Objekt gelöscht und somit auch aus der Detailseite entfernt.
 Anschließend wird der Dialog geschlossen.
 * Wird der Löschvorgang abgebrochen, bleibt das Objekt unverändert.
 
@@ -1357,7 +1357,7 @@ image::Dialog_Anlegen_Komplexer_Elemente.png[align="center", scaledwidth="100%",
 * Über die Buttons _Weiter_ und _Zurück_ als auch über die Wizard Schrittanzeige kann der Benutzer zwischen den Schritten navigieren.
 * Über einen optionalen _Ablage_ Button kann der Benutzer bestimmte Vorgänge für eine bestimmte Zeit ablegen (zwischenspeichern). Die Bearbeitung kann so zu einem späteren Zeitpunkt fortgeführt werden.
 Die abgelegten Objekte können an einem zentralen Punkt gesammelt werden.
-Beispielsweise auf dem Dashboard in der Spalte „Wichtige Objekte".
+Beispielsweise auf dem Dashboard in der Spalte „Wichtige Objekte“.
 * Der Benutzer hat zu jedem Zeitpunkt die Möglichkeit den Wizard über einen Button abzubrechen.
 Der Wizard wird geschlossen und die Daten gehen verloren.
 * Schließt der Benutzer den Vorgang erfolgreich ab, wird das neue Objekt gespeichert.
@@ -1390,7 +1390,7 @@ In diesem Kapitel werden Bedienelemente besprochen und allgemeine Eigenschaften 
 [[testbarkeit-bedienelemente]]
 *Testbarkeit der Bedienelemente*
 
-Um die Grundlage für automatische Tests (Einsatz von Testframeworks) von Bedienelementen einer Web-basierenden Anwendung zu schaffen, sollten allen Maskenobjekten im HTML-Sourcecode eindeutige ID's zugeordnet sein (s.a. Abschnitt: xref:Testbarkeit-von-Anwendungen[Testbarkeit von Web-basierenden Anwendungen]).
+Um die Grundlage für automatische Tests (Einsatz von Testframeworks) von Bedienelementen einer Web-basierenden Anwendung zu schaffen, sollten allen Maskenobjekten im HTML-Sourcecode eindeutige IDs zugeordnet sein (s.a. Abschnitt: xref:Testbarkeit-von-Anwendungen[Testbarkeit von Web-basierenden Anwendungen]).
 
 
 
@@ -1398,7 +1398,7 @@ Um die Grundlage für automatische Tests (Einsatz von Testframeworks) von Bedien
 *Kontextabhängige Darstellung*
 
 Falls bestimmte Elemente im Kontext nicht relevant sind, muss dies im User Interface berücksichtigt werden.
-Nicht relevante Komponenten können deaktiviert werden, so dass der Benutzer sie zwar sehen, jedoch nicht bedienen kann.
+Nicht relevante Komponenten können deaktiviert werden, so dass der Benutzer sie zwar sehen, jedoch nicht bedienen kann.
 Alternativ können nicht relevante Informationen und Komponenten ausgeblendet werden, so dass der Benutzer sie nicht sehen kann.
 
 *Ausblenden nicht relevanter Elemente*
@@ -1407,9 +1407,9 @@ Hierzu zählen insbesondere Elemente, deren Relevanz auf Benutzer-Rollen basiert
 Benutzer, die aufgrund ihrer Rolle z.B. keinen Zugriff auf bestimmte Funktionen haben, sollten diese auch nicht sehen.
 Im Folgenden ist zu sehen wie beispielsweise ein Objekt (hier eine Gruppierung) für Benutzer mit unterschiedlichen Rechten aussehen könnte.
 
-* <<image-benutzerrechteloeschen>> zeigt ein Objekt für das der Benutzer die Rechte zur Bearbeitung besitzt.
+* <<image-benutzerrechteloeschen>> zeigt ein Objekt, für das der Benutzer die Rechte zur Bearbeitung besitzt.
 
-* <<image-benutzerrechtenichtvorhanden>> zeigt ein Objekt für das der Benutzer keine Rechte zur Bearbeitung besitzt.
+* <<image-benutzerrechtenichtvorhanden>> zeigt ein Objekt, für das der Benutzer keine Rechte zur Bearbeitung besitzt.
 
 
 [[image-benutzerrechteloeschen]]
@@ -1426,7 +1426,7 @@ image::Benutzerrechte_Nicht_Vorhanden.png[align="center", scaledwidth="100%",wid
 Hierzu zählen u. a.:
 
 * Tool Bar-Funktionen, die z. B. von einer entsprechenden Selektion abhängig sind.
-* Bedienelemente mit Abhängigkeiten, die zunächst von anderen Elementen wie z. B einer Check Box freigeschaltet werden müssen.
+* Bedienelemente mit Abhängigkeiten, die zunächst von anderen Elementen wie z. B. einer Check Box freigeschaltet werden müssen.
 * Komponenten, die nur in einem bestimmten Modus bedienbar sind.
 
 
@@ -1457,7 +1457,7 @@ Das Element kann vom Benutzer bedient werden.
 Das Element kann nicht bedient werden.
 Es ist z.B. aufgrund der Auswahl einer anderen Option deaktiviert.
 Eventuell zuvor eingegebene Werte werden nicht berücksichtigt.
-Das Element selbst, dessen Beschriftung sowie eventuell existierende Eingaben, werden „ausgegraut" dargestellt.
+Das Element selbst, dessen Beschriftung sowie eventuell existierende Eingaben, werden „ausgegraut“ dargestellt.
 
 ** *Read-Only (nur lesbar)*
 +
@@ -1618,7 +1618,7 @@ image::Button_Menue_Beispiel.png[align="center", width="193",height="177"]
 * Menü Buttons werden hauptsächlich in Toolbars eingesetzt.
 * Menü Buttons müssen mehrere Funktionen beinhalten.
 Die Funktionen sollten immer in einem logischen Zusammenhang stehen.
-Zum Beispiel kann man unter dem Button „Exportieren" die Funktionen „Exportieren als XLS", „Exportieren als PDF", „Exportieren als PNG" zusammenfassen.
+Zum Beispiel kann man unter dem Button „Exportieren“ die Funktionen „Exportieren als XLS“, „Exportieren als PDF“, „Exportieren als PNG“ zusammenfassen.
 
 *Richtlinien zur Anwendung*
 
@@ -1735,7 +1735,7 @@ image::Text_Link_Tabelle.png[align="center", width="310",height="45"]
 * Wird die Maus über einen Hyperlink bewegt, ändert der Mauscursor sich vom Pfeil- zum Hand-Symbol.
 * Werden Hyperlinks auf gesättigten Hintergrundfarben verwendet, sollte die Textfarbe entsprechend angepasst werden, um eine ausreichende Lesbarkeit zu gewährleisten.
 * Hyperlinks sollten einen aussagekräftigen Text zur Verfügung stellen.
-Generische Phrasen wie „Hier klicken" sind nicht hilfreich und sollten vermieden werden.
+Generische Phrasen wie „Hier klicken“ sind nicht hilfreich und sollten vermieden werden.
 * Hyperlinks (Textlinks) innerhalb von Applikationen werden blau dargestellt und bei Hover unterstrichen, z.B. Bezeichner (Name/ID) in Tabellen.
 * Hyperlinks auf dem Dashboard
 ** Verlinkungen (Textlinks) auf dem Dashboard unterscheiden sich zu Textlinks in Applikationen.
@@ -1764,10 +1764,10 @@ Elemente wie Eingabefelder, Radiobuttons oder Checkboxen werden typischerweise m
 * Labels sind möglichst kurz und prägnant formuliert.
 * Labels für alle Bedienelemente außer Radiobuttons und Checkboxen sollen nach Möglichkeit nicht aus mehr als drei Wörtern bestehen.
 * Es ist auf eine konsistente Groß- und Kleinschreibung der Labels zu achten.
-* Labels beginnen immer mit einem Großbuchstaben, auch Verben z.B. „Drucken", „Exportieren".
+* Labels beginnen immer mit einem Großbuchstaben, auch Verben z.B. „Drucken“, „Exportieren“.
 * Für deutschsprachige Anwendungen sollten möglichst deutsche Begriffe benutzt werden.
 * Abkürzungen müssen sparsam verwendet und immer mit einem Tooltip versehen werden, der die Abkürzung erläutert.
-* Zu lange Labels werden mit Auslassungszeichen „..." (eng.
+* Zu lange Labels werden mit Auslassungszeichen „...“ (eng.
 ellipsis) abgetrennt und ein Tooltip zeigt die ausgeschriebene Variante des Labels.
 * Bei Auswahl-Elementen wie Radiobuttons oder Checkboxen setzt ein Klick auf den Wert die entsprechende Option.
 
@@ -1867,12 +1867,12 @@ Neben diesen einzeiligen Eingabefeldtypen für das 4-Augen-Prinzip gibt es noch
 *Richtlinien zur Anwendung*
 
 * Die 4-Augen-Prinzip Eingabefelder sind durch ein Schloss-Icon zu erkennen. Es wird nur die Grafik für ein geöffnetes Schloss verwendet.
-* Das Schloss Icon als visuelle Kennzeichnung des 4-Augen-Prinzip Eingabefeldes steht rechtsseitig im Eingabefeld. Sollten auf Grund des Feldtyps noch weitere Icons im Eingabefeld angezeigt werden müssen (z.B. bei Datumsfeldern das Datumspicker-Icon), so steht das Schloss-Icon noch vor dem anderen Icon (s.a. <<image-vier-augen-grundstyles>>)
+* Das Schloss Icon als visuelle Kennzeichnung des 4-Augen-Prinzip Eingabefeldes steht rechtsseitig im Eingabefeld. Sollten aufgrund des Feldtyps noch weitere Icons im Eingabefeld angezeigt werden müssen (z.B. bei Datumsfeldern das Datumspicker-Icon), so steht das Schloss-Icon noch vor dem anderen Icon (s.a. <<image-vier-augen-grundstyles>>)
 * Die Breite des 4-Augen-Prinzip Eingabefeldes vergrößert sich durch das Schloss-Icon nicht.
 
 *JavaScript*
 
-Außer beim reinen Eingabefeld wird bei allen anderen Eingabefeldtypen (Validierung des Numerischen Wertes, Datumspicker, Werte-Plausibilitätsprüfungen, ...) JavaScript benötigt.
+Außer beim reinen Eingabefeld wird bei allen anderen Eingabefeldtypen (Validierung des numerischen Wertes, Datumspicker, Werte-Plausibilitätsprüfungen, ...) JavaScript benötigt.
 
 [[bsp-anwendungsfall-vier-augen, Ablauf eines Anwendungsfalls mit 4-Augen-Prinzip]]
 *Nutzungsvorgaben*
@@ -1896,7 +1896,7 @@ Beschreibung zum folgenden Screenshots:
 
 Beim Betreten der Maske, vor der Eingabe von Werten im oberen Abschnittsbereich, waren die Schloss-Icons der Felder `Gültig ab` und `Stundensatz` grau dargestellt.
 
-Nach der Eingabe eines Wertes ändert sich die jeweilige Schloss-Icon Farbe auf rot.
+Nach der Eingabe eines Wertes ändert sich die jeweilige Schloss-Icon Farbe auf Rot.
 
 [[image-vier-augen-eintrag-hinzufuegen]]
 .Nach Werteeingabe rote Schloss-Icons
@@ -2093,8 +2093,8 @@ Sollte die Auswahl des entsprechenden Wertes jedoch explizit hervorgehoben werde
 * Die Liste der Werte sollte nicht zu groß sein (maximal 10-12 Einträge), da der Benutzer sonst innerhalb des Auswahl-Menüs scrollen muss und es zu Usability-Problemen kommen kann.
 * Die Auswahl-Elemente sollten in einer logischen Reihenfolge angezeigt werden, z.B. sortiert nach der Wahrscheinlichkeit des Auftretens oder in zusammengehörigen Gruppen.
 Falls keine übergeordnete Logik angewendet wird, sollten die Elemente aufsteigend alphabetisch sortiert werden.
-* Falls es sich bei dem Dropdown Menü nicht um eine Pflichtangabe handelt, sollte eine Meta-Option wie „Keine Auswahl" angezeigt werden, statt das Dropdown Menü im geschlossen Zustand leer anzuzeigen.
-* Meta-Optionen wie „Keine Auswahl" oder „Alle" sollten am Anfang der Liste platziert sein.
+* Falls es sich bei dem Dropdown Menü nicht um eine Pflichtangabe handelt, sollte eine Meta-Option wie „Keine Auswahl“ angezeigt werden, statt das Dropdown Menü im geschlossen Zustand leer anzuzeigen.
+* Meta-Optionen wie „Keine Auswahl“ oder „Alle“ sollten am Anfang der Liste platziert sein.
 * Werden mehrere Dropdown Menüs übereinander platziert oder in Kombination mit anderen Bedienelementen wie Eingabefeldern genutzt, so sollten die Breiten der Bedienelemente angeglichen werden.
 * Bei sehr langen Werten sollte eine Maximalbreite definiert werden.
 * Die Werte in einem Dropdown Menü können mit Tastatur gewählt werden, so dass der Benutzer nicht zwischen Maus und Tastatur wechseln muss.
@@ -2266,7 +2266,7 @@ In diesem Fall sollte auf eine Liste zurückgegriffen werden.
 * Numerische Werte werden rechts ausgerichtet, wenn die Anzahl der Nachkommastellen in allen Zeilen identisch ist.
 * Überlaufende Textlabels sollten mit "…" abgetrennt und mit einem Tooltip ergänzt werden.
 * Die initale oder fixe Breite von Spalten muss sich an der zu erwartenden Maximalwortlänge orientieren.
-* In-Place Funktionen (Aktionen) sollten immer in der rechten äußeren Spalte platziert werden (z.B. „Preview Button" zur Vorschau von Details).
+* In-Place Funktionen (Aktionen) sollten immer in der rechten äußeren Spalte platziert werden (z.B. „Preview Button“ zur Vorschau von Details).
 * Die Spalten mit den größten Wortlängen sollten den maximal verfügbaren Platz einnehmen (Stretching).
 * Werteinheiten sollten im Spalten-Header angezeigt werden, wenn sie für alle Zeilen der Tabelle identisch sind.
 * Wird für die Zeilen ein Status in Form eines Icons angezeigt, so sollte das entsprechende Icon in der ersten Spalte ganz links dargestellt werden.
@@ -2393,8 +2393,7 @@ Zunächst wird dem Benutzer nur eine begrenzte Anzahl (10 oder 20 Zeilen) an Dat
 
 * Unterhalb der Tabelle befindet sich ein _Mehr anzeigen_ Button.
 Wird dieser vom Benutzer geklickt so wird der nächste Satz an Daten angezeigt.
-* Nach Klick auf den _Mehr anzeigen_ Button verlängert sich die Tabelle nach unten, so dass der Benutzer ggfls.
-nach unten scrollen muss.
+* Nach Klick auf den _Mehr anzeigen_ Button verlängert sich die Tabelle nach unten, so dass der Benutzer gegebenenfalls nach unten scrollen muss.
 * Nach Klick auf den _Mehr anzeigen_ Button sollte die erste Zeile des neu geladenen Datensatzes an der ursprünglichen Position des _Mehr anzeigen_ Buttons erscheinen.
 So kann sichergestellt werden, dass der neue Datensatz immer im Blickfeld des Benutzers erscheint.
 Die Selektion der Elemente bleibt unberührt.
@@ -2427,14 +2426,14 @@ image::Checkboxes_IE.png[align="center", scalewidth= "60%" ]
 *Ist dies das korrekte Bedienelement?*
 
 * Check Boxen können für das Setzen einer oder mehrerer, sich nicht gegenseitig ausschließender Optionen oder anderer Werte genutzt werden.
-* Falls nur eine Option existiert, die einer „Ein/Aus"-Semantik folgt, kann eine Check Box zum Setzen dieser Option verwendet werden.
+* Falls nur eine Option existiert, die einer „Ein/Aus“-Semantik folgt, kann eine Check Box zum Setzen dieser Option verwendet werden.
 * Eine Check Box darf nicht genutzt werden, um unmittelbar Funktionen auszuführen oder Aktionen auszulösen.
 Für diese Zwecke sollten Buttons verwendet werden.
 * Das Ein- oder Ausschalten einer Check Box kann jedoch dazu genutzt werden, um andere Elemente zu aktivieren oder zu deaktivieren.
 
 *Richtlinien zur Anwendung*
 
-* Checkboxen werden browserspezifisch dargestellt, dass heißt die Darstellung sieht in jedem Browser anders aus.
+* Checkboxen werden browserspezifisch dargestellt, das heißt die Darstellung sieht in jedem Browser anders aus.
 Beispielgrafik für den Internetexplorer 9 siehe <<image-darstellungsbeispielie>>.
 * In der Regel besteht eine Check Box immer aus dem Check Box Button, der gleichzeitig als Indikator für den Checked-State dient und einem zugehörigen Text-Label.
 * Für eine optimierte Usability sollte sowohl der Check Box Button als auch das Text Label geklickt werden können, um den Checked-State zu verändern.
@@ -2442,11 +2441,11 @@ Beispielgrafik für den Internetexplorer 9 siehe <<image-darstellungsbeispielie>
 * Das Text-Label einer Check Box steht immer hinter dem Bedienelement.
 * Für optimale Lesbarkeit sollten Check Boxes vertikal untereinander angeordnet sein.
 * In Einzelfällen kann die Check Box auch alleinstehend verwendet werden, um eine bestimmte Funktionalität an- und auszuschalten oder um bestimmte Inhaltsbereiche zu aktivieren/deaktivieren
-* Die Beschriftung einer Check Box sollte positiv formuliert sein, z. B. „Objekte einblenden" statt „Objekte ausblenden".
-* * Neben den normalen Zuständen „Ein/Aus" kann eine Check Box noch einen dritten Zustand „nicht definiert" annehmen, so z. B. wenn die Check Box in einer Hierarchie zur Selektion aller untergeordneten Elemente verwendet wird.
-Man spricht in diesem Fall von einer so genannten „Tri State Check Box"__.__
-* Solange die Werte der untergeordneten Optionen gleich sind (alle „Aus" oder alle „An"), zeigt dies die übergeordnete Check Box mit dem entsprechenden Wert an.
-* Sind die Werte der untergeordneten Optionen jedoch nicht mehr homogen gesetzt, so schaltet die übergeordnete Check Box in den Zustand „nicht definiert". Dieser Zustand wird häufig mit einem Quadrat innerhalb der Check Box symbolisiert.
+* Die Beschriftung einer Check Box sollte positiv formuliert sein, z. B. „Objekte einblenden“ statt „Objekte ausblenden".
+* * Neben den normalen Zuständen „Ein/Aus“ kann eine Check Box noch einen dritten Zustand „nicht definiert“ annehmen, so z. B. wenn die Check Box in einer Hierarchie zur Selektion aller untergeordneten Elemente verwendet wird.
+Man spricht in diesem Fall von einer sogenannten „Tri State Check Box“__.__
+* Solange die Werte der untergeordneten Optionen gleich sind (alle „Aus“ oder alle „An“), zeigt dies die übergeordnete Check Box mit dem entsprechenden Wert an.
+* Sind die Werte der untergeordneten Optionen jedoch nicht mehr homogen gesetzt, so schaltet die übergeordnete Check Box in den Zustand „nicht definiert“. Dieser Zustand wird häufig mit einem Quadrat innerhalb der Check Box symbolisiert.
 
 
 
@@ -2487,7 +2486,7 @@ image::RadioButtons_IE.png[align="center", scalewidth= "60%" ]
 
 * Wenn der Benutzer genau eine Option aus einer sich gegenseitig ausschließenden Menge wählen kann, wird ein Radio Button genutzt.
 * Kann der Benutzer mehr als eine Option wählen? Falls ja, dann muss statt eines Radio Buttons eine Check Box verwendet werden.
-* Existiert nur eine Option, die einer „Ein/Aus"-Bedeutung entspricht, so muss statt eines Radio Buttons eine Check Box verwendet werden.
+* Existiert nur eine Option, die einer „Ein/Aus“-Bedeutung entspricht, so muss statt eines Radio Buttons eine Check Box verwendet werden.
 * Die Verwendung von Radio Buttons empfiehlt sich für eine kleinere Anzahl an Optionen.
 Ist die Menge der zur Verfügung stehenden Optionen sehr groß oder hat der Platzbedarf eine große Bedeutung, so kann der Einsatz eines Dropdown Menüs in Betracht gezogen werden.
 * Ein Radio Button darf nicht genutzt werden, um unmittelbar Funktionen auszuführen oder Aktionen auszulösen.
@@ -2495,11 +2494,11 @@ Für diese Zwecke sollten Buttons verwendet werden.
 
 *Richtlinien zur Anwendung*
 
-* Radio Buttons werden browserspezifisch dargestellt, dass heißt die Darstellung sieht in jedem Browser anders aus.
+* Radio Buttons werden browserspezifisch dargestellt, das heißt die Darstellung sieht in jedem Browser anders aus.
 Beispielgrafik für den Internetexplorer 9 siehe <<image-ieradiobutton>>.
-* Eine Gruppe von Radio Buttons sollte immer eine Beschriftung aufweisen .
+* Eine Gruppe von Radio Buttons sollte immer eine Beschriftung aufweisen.
 * Für optimale Lesbarkeit sollten Radio Buttons vertikal untereinander angeordnet sein.
-* Sollte es wahrscheinlich sein, dass keine (oder alle) der angebotenen Optionen zutrifft, sollte eine Meta-Option wie „Keine Option" („Alle") angeboten werden.
+* Sollte es wahrscheinlich sein, dass keine (oder alle) der angebotenen Optionen zutrifft, sollte eine Meta-Option wie „Keine Option“ („Alle“) angeboten werden.
 * Das Text-Label des Radio Buttons steht immer hinter dem Bedienelement.
 
 
@@ -2526,7 +2525,7 @@ Das Element kann vom Benutzer bedient werden.
 Das Element kann nicht bedient werden.
 Es ist z.B. aufgrund der Auswahl einer anderen Option deaktiviert.
 Eventuell zuvor eingegebene Werte werden nicht berücksichtigt.
-Das Element selbst, dessen Beschriftung sowie eventuell existierende Eingaben, werden „ausgegraut" dargestellt.
+Das Element selbst, dessen Beschriftung sowie eventuell existierende Eingaben, werden „ausgegraut“ dargestellt.
 
 ** *Read-Only (nur lesbar)*
 +
@@ -2553,7 +2552,7 @@ Ein Element ist ausgewählt und bleibt in diesem Zustand.
 
 ** *Validierung*
 
-Elemente die einer Validierung unterzogen werden (vor allem in Formularen) werden bei fehlerhaften Eingaben gesondert hervorgehoben.
+Elemente, die einer Validierung unterzogen werden (vor allem in Formularen), werden bei fehlerhaften Eingaben gesondert hervorgehoben.
 
 [[design-patterns]]
 == Design Patterns
@@ -2832,7 +2831,7 @@ image::Picker_Datum_Beispiel.png[align="center"]
 * Nach einem Klick auf das Icon öffnet sich die Wertehilfe.
 * Sobald der Benutzer außerhalb der Wertehilfe klickt oder innerhalb der Wertehilfe seine Auswahl trifft, wird die Wertehilfe wieder geschlossen.
 * Wurde eine Auswahl getätigt, wird diese anschließend in das Eingabefeld übertragen.
-* Für den Anwendungsfall einer Mehrfachauswahl wird auf der Wertehilfe ein Button mit der Beschriftung „Übernehmen" angebracht.
+* Für den Anwendungsfall einer Mehrfachauswahl wird auf der Wertehilfe ein Button mit der Beschriftung „Übernehmen“ angebracht.
 Der Benutzer kann mehrere Einträge selektieren, ohne dass sich das Fenster schließt. Sobald der Button geklickt wird, wird die Wertehilfe geschlossen und die Werte in das Eingabefeld übertragen.
 * Sollte nach einer Mehrfachauswahl nicht die komplette Selektion im Eingabefeld angezeigt werden können, so muss dennoch die Möglichkeit bestehen, mit Hilfe der Pfeil-Tasten zu den abgeschnittenen Informationen zu gelangen.
 Ebenso ist wichtig, dass man per Tooltip die komplette Information einsehen kann.
@@ -2844,7 +2843,7 @@ Ebenso ist wichtig, dass man per Tooltip die komplette Information einsehen kann
 
 image::no-js.png[]
 
-Ohne JavaScript ist das anzeigen der Wertehilfen in einem extra Menü nicht möglich.
+Ohne JavaScript ist das Anzeigen der Wertehilfen in einem extra Menü nicht möglich.
 Zur Eingabe der Daten werden die normalen Eingabefelder genutzt.
 
 ===== Date Picker
@@ -2987,7 +2986,7 @@ image::Suchformular_Beispiel_2.png[align="center", width="629",height="252"]
 *Ist dies das korrekte Pattern?*
 
 * Dieses Pattern wird eingesetzt, wenn der Benutzer nach einem Objekt mit bestimmten Kriterien und Attributen sucht.
-* Es wird vorausgesetzt, dass der Benutzer einige dieser Attribute kennt und genau weiß nach was er suchen muss.
+* Es wird vorausgesetzt, dass der Benutzer einige dieser Attribute kennt und genau weiß, wonach er suchen muss.
 
 *Richtlinien zur Anwendung*
 
@@ -3003,7 +3002,7 @@ Um Ergebnisse schon beim Suchvorgang sinnvoll einzuschränken, können dem Benut
 ** Es können 2- oder 3-Spaltige Layouts benutzt werden.
 ** Die Suchkriterien sollten nach ihrer Bedeutung/Wichtigkeit angeordnet werden.
 Das wichtigste Suchkriterium wird oben links platziert, die anderen werden von links nach rechts und oben nach unten einsortiert.
-** Generell sollten die Layout-Regeln für Formulare in Kapitel Formulare beachtet werden.
+** Generell sollten die Layout-Regeln für Formulare in Kapitel Formulare beachtet werden.
 ** In speziellen Fällen kann es sinnvoll sein gewisse Eingabefelder im Suchformular voneinander abzugrenzen zwei Beispiele hierfür sind in <<image-suchformularbeispiel1>> und <<image-suchformularbeispiel2>> zu sehen.
 
 * Es können Eingabefelder, Dropdown Menüs, Wertehilfen, Radio Buttons, Checkboxen zur Eingabe von Attributen genutzt werden.
@@ -3011,12 +3010,12 @@ Das wichtigste Suchkriterium wird oben links platziert, die anderen werden von l
 * Ein Suchformular sollte immer zusammen mit einer Ergebnistabelle (siehe Kapitel Datentabelle) genutzt werden.
 * Die Gruppierungsüberschrift sollte mit dem aktuell aktiven Submenüpunkt identisch sein. Befindet sich der Benutzer aktuell in der Navigationsebene 2 und hat Submenü A ausgewählt. So entspricht die Gruppierungsüberschrift dem Label des aktiven Submenü A.
 * Der Suchvorgang wird durch das Klicken (alternativ Aktivierung per Tastatur) des Suchen Buttons ausgeführt.
-* Mit Hilfe des „Suche leeren" Buttons können alle Daten im Suchformular zurückgesetzt werden. Wurde bereits eine Ergebnistabelle angezeigt, so wird diese ebenfalls geleert.
+* Mit Hilfe des „Suche leeren“ Buttons können alle Daten im Suchformular zurückgesetzt werden. Wurde bereits eine Ergebnistabelle angezeigt, so wird diese ebenfalls geleert.
 * Buttons unterhalb eines Suchformulars sind immer am rechten Inhaltsende des Formulars ausgerichtet.
 ** Resizing
 ** Wird die Größe Browserfenster verändert, so behalten die Bedienelemente des Formulars ihre Größe bei. Die Abstände zwischen den Spalten können sich bis zu einer gewissen Grenze vergrößern bzw.
 verkleinern.
-** Das genaue Verhalten von Formularen beim Resizing kann in Kapitel Formulare - Layout Verhalten nachgelesen werden.
+** Das genaue Verhalten von Formularen beim Resizing kann in Kapitel Formulare - Layout Verhalten nachgelesen werden.
 
 
 [[filter-ueberschift]]
@@ -3058,7 +3057,7 @@ image::Toggle_Filter_Detail.png[align="center", width="600",height="299"]
 
 *Ist dies das korrekte Pattern?*
 
-* Der Toggle-Filter kommt zum Einsatz wenn nach bestimmten vordefinierten Optionen gefiltert werden soll.
+* Der Toggle-Filter kommt zum Einsatz, wenn nach bestimmten vordefinierten Optionen gefiltert werden soll.
 * Der Toggle-Filter kann zur Filterung von langen Tabellen oder Listen genutzt werden.
 * Zur Umschaltung der verschiedenen Ansichten innerhalb des Detail-Bereichs.
 
@@ -3069,7 +3068,7 @@ image::Toggle_Filter_Detail.png[align="center", width="600",height="299"]
 * Die Filteroptionen können z.B. Objekttypen, Werte oder Attribute sein.
 * Ist eine Filteroption aktiv (ausgewählt), so werden nur die passenden Objekte angezeigt.
 * Der Benutzer sollte immer die Möglichkeit haben sich alle Objekte einer Liste anzeigen zu lassen.
-Hierfür wird eine Filteroption zur Verfügung gestellt z.B. „Alle".
+Hierfür wird eine Filteroption zur Verfügung gestellt z.B. „Alle“.
 * Wird eine Filteroption per Klick auf den entsprechenden Button ausgewählt, so wird die Liste sofort neu aktualisiert.
 * Filter werden in der Toolbar oder, falls es diese nicht gibt, in der Kopfzeile des entsprechenden Elementes (z.B. Liste) platziert.
 * Nicht vorhandene und damit vom Benutzer nicht auswählbare Optionen (zum Beispiel Filter A) im Detailbereich werden nicht angezeigt.
@@ -3110,13 +3109,12 @@ Der Einsatz ist vor allem bei großen Datenmengen sinnvoll.
 * Die Filter-Zeile wird zwischen Tabellenkopf und dem ersten Tabelleneintrag eingefügt.
 * Die Filter-Zeile kann über einen Toggle-Button in der Toolbar der Tabelle ein- und ausgeblendet werden.
 * Wird die Filter-Zeile ausgeblendet so werden bereits eingegebene Daten zurückgesetzt.
-Beim erneuten Ausklappen sind die Eingabefelder leer oder ggfls.
-mit Platzhaltern versehen.
+Beim erneuten Ausklappen sind die Eingabefelder leer oder gegebenenfalls mit Platzhaltern versehen.
 * Gibt der Benutzer Text in eines der Eingabefelder ein, so wird der Inhalt dieser Spalte gefiltert.
 Es werden nur die Objekte angezeigt welche die entsprechende Eingabe beinhalten.
 * Beinhaltet keines der Objekte den eingegebenen Text, so wird die Tabelle leer angezeigt.
 * Die Inhalte der Eingabefelder können durch Klicken auf ein Löschen-Icon links im Eingabefeld gelöscht werden.
-Dieses Icon erscheint sobald der Benutzer mit der Texteingabe im Eingabefeld beginnt.
+Dieses Icon erscheint, sobald der Benutzer mit der Texteingabe im Eingabefeld beginnt.
 * Es gibt eine zusätzliche Löschen-Funktion rechts vom letzten Eingabe-Feld. Über diese Funktion können alle Eingaben in den Eingabefeldern der Filter-Zeile gemeinsam zurückgesetzt werden.
 * Werden in einer Spalte nur Icons dargestellt, wird statt eines Eingabefeldes ein Dropdown Menü zur Filterung benutzt.
 Das Menü enthält alle zur Auswahl stehenden Optionen als Text-Labels.
@@ -3155,14 +3153,14 @@ Die Quellliste wird nur im dazugehörigen Editier-Dialog angezeigt.
 ** Schritt 2: Durch Klick auf Button Objekte von einer Liste in die andere verschieben.
 
 * Es ist eine Mehrfachauswahl von Objekten möglich.
-* Wenn es für den Inhalt der Liste sinnvoll erscheint, dann können die Funktionen „Alle hinzufügen" / „Alle entfernen" integriert werden.
+* Wenn es für den Inhalt der Liste sinnvoll erscheint, dann können die Funktionen „Alle hinzufügen“ / „Alle entfernen“ integriert werden.
 * Die Breite der Liste orientiert sich am längsten Objekt.
 Die Labels der Objekte sollten so kurz wie möglich gehalten werden.
 Zielliste und Quellliste sollten immer gleich breit sein.
 * Wenn nötig, können die Listen vertikal gescrollt werden.
 * Wenn nötig, können die Listen vertikal gescrollt werden.
 * Es sollten nur verfügbare Objekte angezeigt werden.
-* Objekte die in die Zielliste übernommen werden, sind aus der Quellliste auszublenden.
+* Objekte, die in die Zielliste übernommen werden, sind aus der Quellliste auszublenden.
 * Sobald sich in einer Liste ein Objekt befindet, wird immer eine Selektion angezeigt, i.d.R. das zuletzt bewegte oder selektierte Objekt.
 * Sowohl Quell- als auch Zielliste können eine Filter-Zeile enthalten, mit der die Objekte sehr langer Listen eingegrenzt werden können.
 
@@ -3252,7 +3250,7 @@ Das Layout sollte sich an den Regeln des Formular-Layouts orientieren (siehe Kap
 image::no-js.png[]
 
 Ohne JavaScript ist die Vorschau innerhalb einer Tabelle nicht möglich.
-Die entsprechenden Buttons zum öffnen der Vorschau sollten nicht angezeigt werden.
+Die entsprechenden Buttons zum Öffnen der Vorschau sollten nicht angezeigt werden.
 
 
 [[master-detail]]
@@ -3281,7 +3279,7 @@ image::MasterDetail_Gruppierung.png[align="center", width="626",height="454"]
 * Das Master-Detail Konzept wird häufig mit anderen Patterns (z.B. Progressive Disclosure) oder Bedienelementen (Tabellen, Tabs) kombiniert.
 * Wird das Master-Detail Konzept auf der Detailseite benutzt, so können im Detail-Bereich weitere komplexe Objekte wie Tabellen auftreten.
 Hierbei gilt zu beachten, dass aus diesen Objekten nur noch Dialoge, aber keine weiteren Unterseiten aufgerufen werden können.
-* Der Titel des Details sollte das Haupidentifikationsmerkmal des Masters wiederholen (z.B: Details von <Objektname / ID>)
+* Der Titel des Details sollte das Haupidentifikationsmerkmal des Masters wiederholen (z. B.: Details von <Objektname / ID>)
 * Sollten das Master-Objekt oder dessen Details editierbar sein, erfolgt das Editieren immer über einen Dialog (siehe Kapitel Dialoge).
 * <<image-detailgruppierungscontainer>> zeigt ein Beispiel für ein Master-Detail Konzept. Hier stellt die Tabelle den Master dar und ein Gruppierungs-Container den Detail Bereich.
 * Redundante Informationen sollten vermieden werden.
@@ -3297,7 +3295,7 @@ Für sehr komplexe Daten kann es sinnvoll sein einen Expander (Progressive Discl
 image::no-js.png[]
 
 Ohne JavaScript können die Detaildaten nur durch Klick auf einen Button oder Link angezeigt werden.
-Hierfür kann zum Beispiel der Kennzeichner in einer Tabellenzeile genutzt werden (ähnlich wie beim Aufruf der Detailseite aus einer Tabelle heraus, siehe Kapitel Selektionsver halten in einer Tabelle).
+Hierfür kann zum Beispiel der Kennzeichner in einer Tabellenzeile genutzt werden (ähnlich wie beim Aufruf der Detailseite aus einer Tabelle heraus, siehe Kapitel Selektionsverhalten in einer Tabelle).
 
 [[gruppierung]]
 === Gruppierung
@@ -3306,7 +3304,7 @@ Patterns zur Gruppierung von Daten
 
 *Expander (Progressive Disclosure)*
 
-Mit einem Expander können bestimmte Inhaltsbereiche per Mausklick dynamisch ein- und ausgeblendet werden, das zugrundeliegende Prinzip wird häufig als „Progressive Disclosure" (engl. „schrittweises Enthüllen") oder auch als Information Hiding (engl. „Ausblenden von Information") bezeichnet.
+Mit einem Expander können bestimmte Inhaltsbereiche per Mausklick dynamisch ein- und ausgeblendet werden, das zugrundeliegende Prinzip wird häufig als „Progressive Disclosure“ (engl. „schrittweises Enthüllen") oder auch als Information Hiding (engl. „Ausblenden von Information“) bezeichnet.
 Ein Expander dient dazu die Informationskomplexität zu reduzieren.
 In einem Expander können sowohl Daten als auch Bedien-Elemente oder Optionen angezeigt werden.
 
@@ -3359,7 +3357,7 @@ image::Gruppierungsueberschriften.png[align="center", width="626",height="742"]
 
 *Ist dies das korrekte Pattern?*
 
-* Gruppierungs-Container sollten zur Strukturierung des Inhaltes eingesetzt werden sobald umfangreiche Informationen auf einer Seite angezeigt werden müssen und diese sich zu logischen Gruppen zusammenfassen lassen.
+* Gruppierungs-Container sollten zur Strukturierung des Inhaltes eingesetzt werden, sobald umfangreiche Informationen auf einer Seite angezeigt werden müssen und diese sich zu logischen Gruppen zusammenfassen lassen.
 * Gruppierungscontainer unterstützen das schnelle Erfassen von Informationen.
 
 *Richtlinien zur Anwendung*
@@ -3371,7 +3369,7 @@ Optional können Gruppierungsüberschriften Icons (vor Text) oder auch eine Tool
 Der Einsatz ist vom Inhalt des Gruppierungs-Containers abhängig.
 ** Die *einfache Gruppierungsüberschrift* (<<image-gruppierungsueberschriften>> **A**) kann ein Icon und Text enthalten.
 ** Eine *Gruppierungsüberschrift in Kombination mit Expander* (Progressive Disclosure) (<<image-gruppierungsueberschriften>> **D + E**) wird für Gruppierungs-Container eingesetzt.
-** Eine *Gruppierungsüberschrift mit Toolbar* (<<image-gruppierungsueberschriften>> **C**) kommt zum Einsatz wenn die Objekte die in der Gruppe enthalten sind, bearbeitet werden können (genauere Details siehe Kapitel Toolbar).
+** Eine *Gruppierungsüberschrift mit Toolbar* (<<image-gruppierungsueberschriften>> **C**) kommt zum Einsatz, wenn die Objekte, die in der Gruppe enthalten sind, bearbeitet werden können (genauere Details siehe Kapitel Toolbar).
 * Enthält ein Gruppierungs-Container weitere Objekte (Gruppierungen) so sollte die Anzahl der Objekte (<<image-gruppierungsueberschriften>> 106 **B**) hinter der Überschrift angezeigt werden.
 Dies kann dem Benutzer den Überblick bei sehr umfangreichen Gruppierungen erleichtern.
 * Gruppierungs-Container nehmen immer die zur Verfügung stehende Breite ein.
@@ -3437,7 +3435,7 @@ image::Toolbar_Seiten_Toolbar.png[align="center", width="626",height="25"]
 
 *Richtlinien zur Anwendung*
 
-* Die Seiten-Toolbar beinhaltet Funktionen, welche für die gesamte Seite gelten z.B. „Zurück zur Liste", „Seite drucken" oder „Hilfe".
+* Die Seiten-Toolbar beinhaltet Funktionen, welche für die gesamte Seite gelten z.B. „Zurück zur Liste“, „Seite drucken“ oder „Hilfe“.
 * Ganz links beinhaltet die Seiten-Toolbar immer eine Verlinkung, die zurück zur dazugehörigen Hauptseite führt.
 Diese Verlinkung muss in jeder Seiten-Toolbar vorhanden sein.
 * Der Navigationslink ist eine Kombination aus Icon und Text, alle anderen Buttons sind Icon-Buttons.
@@ -3486,7 +3484,7 @@ image::Gruppierung_Container_Toolbar.png[align="center", width="626",height="161
 == Formulare
 
 Ein gleichmäßiges und konsistentes Layout von Screens und Formularen ist essentiell, um dem Benutzer die Zugänglichkeit von Informationen zu erleichtern.
-Klar strukturierte Inhalte erleichtern dem Benutzer das schnelles Scannen und Erfassen von Informationen.
+Klar strukturierte Inhalte erleichtern dem Benutzer schnelles Scannen und Erfassen von Informationen.
 Schlecht gelayoutete Screens können die Produktivität und die Zufriedenheit des Benutzers erheblich verschlechtern.
 
 [[virtuelles-raster]]
@@ -3673,8 +3671,8 @@ image::Tooltip_Beispiel_Info.png[align="center", width="458",height="60"]
 * Der Name des Objekts wird nur angezeigt, wenn er relevant für das Verständnis der Funktion ist, und das Objekt nicht schon benannt ist.
 * Solange ein Tooltip lediglich das Label des entsprechenden Elements wiederholt, bietet er keinen Mehrwert.
 Stattdessen sollte der Tooltip kurz und prägnant beschreiben, was ein Objekt bewirkt.
-* Ein Tooltip sollte möglichst spezifische Informationen geben, z.B. für den Button „Drucken" die Erklärung „Druckt die dargestellte Liste auf dem Standarddrucker XY aus.".
-* Wenn ein Element deaktiviert ist, sollte ein Tooltip zusätzlich erklären, warum es deaktiviert ist, z. B. „Absenden ist erst nach Ausfüllen aller Pflichteingaben möglich."
+* Ein Tooltip sollte möglichst spezifische Informationen geben, z.B. für den Button „Drucken“ die Erklärung „Druckt die dargestellte Liste auf dem Standarddrucker XY aus.“.
+* Wenn ein Element deaktiviert ist, sollte ein Tooltip zusätzlich erklären, warum es deaktiviert ist, z. B. „Absenden ist erst nach Ausfüllen aller Pflichteingaben möglich.“
 
 *Kein JavaScript*
 
@@ -3750,7 +3748,7 @@ Der Benutzer muss die fehlenden bzw. nicht validen Eingaben korrigieren, damit d
 
 *Besonderheit: Optionale Pflichtfelder*
 
-*  Neben den Standardpflichtfeldern kann es auch „optionalen Pflichtfelder" geben.
+*  Neben den Standardpflichtfeldern kann es auch „optionalen Pflichtfelder“ geben.
 *  Optionale Pflichtfelder sind immer an ein Standardpflichtfeld gekoppelt.
 *  Bei optionalen Pflichtfeldern muss mindestens eine Anzahl X aus mehreren Eingabefeldern ausgefüllt werden.
 *  Optionale Pflichtfelder sollten, wenn möglich immer in einer separaten Gruppe zusammengefasst werden. Dies vereinfacht die Übersichtlichkeit.
@@ -3878,16 +3876,16 @@ Klicken mit der rechten Maustaste auf ein Objekt öffnet das Standard-Kontextmen
 *  Für manche Eingabefelder ist es sinnvoll gewisse Formate vorzudefinieren.
 *  Gibt der Benutzer ein Format oder eine Abkürzung ein, welche nicht dem Default-Format entspricht, so sollte das Eingabefeld zurück zum Default formatiert werden.
 Die Formatierung erfolgt, wenn das Feld verlassen oder die _Enter_ Taste gedrückt wird.
-*  Abkürzungen (z.B. „heute" bei einem Datumsfeld) werden immer sichtbar dargestellt.
+*  Abkürzungen (z.B. „heute“ bei einem Datumsfeld) werden immer sichtbar dargestellt.
 *  Der Benutzer sollte nicht gezwungen werden Separatoren einzugeben.
 Das System sollte das richtige Format automatisch zu erkennen.
 *  Eingabe freier Werte
-**  Bei der Eingabe freier Werte, sollten beide Separatoren „." und „," akzeptiert werden.
-Allerdings sollte das dargestellte Format nur mit „." Angezeigt werden, wenn das Feld verlassen wird oder gespeichert wird.
-**  Datumsformate werden wie folgt dargestellt: „TT.MM.JJJJ" (z.B. 25.03.2014).
-**  Alle Zeiten haben ein 24 Stunden Format: „HH:MM:SS" (z.B. 14:10:46).
-**  Wenn der Benutzer beispielsweise in einem deutschsprachigen System „1000.00" eingibt, formatiert das System diese Eingabe in „1000,00" um oder wenn der Benutzer „25032014" eingibt, wird dieses Format in „25.03.2014" umgewandelt.
-*  Unabhängig von den System Einstellungen, können für Datumsangaben Separatoren, Punkte, Schrägstriche „/" und Striche „-" eingegeben werden.
+**  Bei der Eingabe freier Werte sollten beide Separatoren „.“ und „,“ akzeptiert werden.
+Allerdings sollte das dargestellte Format nur mit „.“ Angezeigt werden, wenn das Feld verlassen wird oder gespeichert wird.
+**  Datumsformate werden wie folgt dargestellt: „TT.MM.JJJJ“ (z.B. 25.03.2014).
+**  Alle Zeiten haben ein 24 Stunden Format: „HH:MM:SS“ (z.B. 14:10:46).
+**  Wenn der Benutzer beispielsweise in einem deutschsprachigen System „1000.00“ eingibt, formatiert das System diese Eingabe in „1000,00“ um oder wenn der Benutzer „25032014“ eingibt, wird dieses Format in „25.03.2014" umgewandelt.
+*  Unabhängig von den Systemeinstellungen, können für Datumsangaben Separatoren, Punkte, Schrägstriche „/“ und Striche „-“ eingegeben werden.
 
 [[tastatursteuerung-ueberschrift]]
 === Tastatursteuerung
@@ -4039,7 +4037,7 @@ So werden Schaltflächen, Labels und andere interaktive Elemente gewöhnlich zue
 *  Einsatz von Überschriften und anderen Gliederungs-Elementen zur Strukturierung und besseren Übersicht.
 *  Vermeiden von redundanten Informationen.
 *  Fettschrift muss mit Bedacht verwendet werden, z.B. für Text, der gelesen werden **muss**.
-*  Fließtexte dürfen nicht komplett groß geschrieben werden.
+*  Fließtexte dürfen nicht komplett großgeschrieben werden.
 *  Unterstrichener Text darf nur für Hyperlinks benutzt werden.
 *  Fachterminologie muss entsprechend konsistent verwendet werden.
 *  Konsistente Verwendung von Groß- und Kleinschreibung.
@@ -4047,7 +4045,7 @@ So werden Schaltflächen, Labels und andere interaktive Elemente gewöhnlich zue
 
 *Verwendung von Grafiken*
 
-Bei der Verwendung von Grafiken (Schematische Darstellungen oder Photographien) und Icons ist darauf zu achten, dass diese in Größe, Stil und Farbschema mit den restlichen Inhalten harmonisieren.
+Bei der Verwendung von Grafiken (schematische Darstellungen oder Photographien) und Icons ist darauf zu achten, dass diese in Größe, Stil und Farbschema mit den restlichen Inhalten harmonisieren.
 
 
 *Richtlinien*
@@ -4062,14 +4060,14 @@ Bei der Verwendung von Grafiken (Schematische Darstellungen oder Photographien) 
 
 Grundsätzlich werden alle Bedienelemente mit einem Label versehen, Ausnahmen sind z.B. Schaltflächen, die nur mit einem Icon versehen sind.
 Das Label muss prägnant und leicht zu verstehen sein.
-Weitere Hinweise und Richtlinien sind im Kapitel Label bei den Bedienelementen nachzul esen.
+Weitere Hinweise und Richtlinien sind im Kapitel Label bei den Bedienelementen nachzulesen.
 
 [[rechtschreibung]]
 === Rechtschreibung
 
 Zu einem klaren, professionellen Gesamterscheinungsbild trägt auch eine korrekte Rechtschreibung sowie eine konsistente Groß- und Kleinschreibung bei.
 Während für englischsprachige User-Interfaces zwischen verschiedenen Formen der Groß- und Kleinschreibung unterschieden wird, muss für deutschsprachige Applikationen lediglich die korrekte deutsche Rechtschreibung angewendet werden.
-Eine Ausnahme besteht darin, dass das erste Wort der Beschriftung eines Bedienelements immer groß geschrieben wird, unabhängig von der jeweiligen Wortart.
+Eine Ausnahme besteht darin, dass das erste Wort der Beschriftung eines Bedienelements immer großgeschrieben wird, unabhängig von der jeweiligen Wortart.
 Zudem werden keine vollständig korrekten Sätze gebildet und nicht mit einem Satzzeichen abgeschlossen.
 Beispiele zur Benennung von Schaltflächen
 
@@ -4079,7 +4077,7 @@ Beispiele zur Benennung von Schaltflächen
 
 Verwendung von Auslassungspunkten
 
-Auslassungspunkte („...") können eingesetzt werden, um deutlich zu machen, dass mehr Text vorhanden ist, als aus Platzgründen aktuell angezeigt werden kann.
+Auslassungspunkte („...“) können eingesetzt werden, um deutlich zu machen, dass mehr Text vorhanden ist, als aus Platzgründen aktuell angezeigt werden kann.
 
 *Richtlinien*
 
@@ -4151,11 +4149,11 @@ Die folgende Liste zeigt einige negative Bezeichnungen und ihre neutralen Äquiv
 ** Besser: „Bitte selektieren Sie ein Objekt in der Liste"
 *  Positive Formulierungen
 ** Positiver Tonfall (als würde man zu einem Freund sprechen)
-** Inkorrekt: „Illegale String-Länge aufgetreten."
-** Besser: „Es wurden zu viele Zeichen eingegeben. Es sind maximal 20 Zeichen möglich."
+** Inkorrekt: „Illegale String-Länge aufgetreten.“
+** Besser: „Es wurden zu viele Zeichen eingegeben. Es sind maximal 20 Zeichen möglich.“
 * Allgemeinverständliche, positive Sprache
-** Inkorrekt: „Soll das Objekt gelöscht werden?"
-** Besser: „Wollen Sie das gewählte Objekt XY löschen?"
+** Inkorrekt: „Soll das Objekt gelöscht werden?“
+** Besser: „Wollen Sie das gewählte Objekt XY löschen?“
 
 [[visuelles-design-ueberschrift]]
 == Visuelles Design
@@ -4184,7 +4182,7 @@ Generell sollten nicht zu viele verschiedene Grundfarben für die Gestaltung ein
 
 *** Online-Werkzeug zur Kontrast-Analyse: xref:glossary:literaturextern:inhalt.adoc#litextern-juicystudio-kontrast-analyse[JuicyStudio Kontrast Analyse]
 ***  Colour Contrast Analyser: Freeware für Windows und Mac OS X:
-xref:glossary:literaturextern:inhalt.adoc#litextern-paciellogroup-kontrast-analyse[Paciello Group Kontrast Analyse]
+xref:glossary:literaturextern:inhalt.adoc#litextern-color-kontrast-analyse[Color Kontrast Analyse]
 
 *  *Berücksichtigung von Farbenfehlsichtigkeit*
 **  Bei der Auswahl der Farben sollte auch eine mögliche Farbenfehlsichtigkeit der Benutzer berücksichtigt werden.
@@ -4201,14 +4199,14 @@ finden sich hilfreiche Tools und Downloads, um die verschiedenen Formen der Farb
 [[applikationsfarben]]
 ==== Applikationsfarben
 
-Pro Applikationsgruppe kann eine Farbe definiert werden, welche an verschiedenen Stellen der Applikationsportals eingesetzt wird und so einen Wiedererkennungswert schafft.
+Pro Applikationsgruppe kann eine Farbe definiert werden, welche an verschiedenen Stellen des Applikationsportals eingesetzt wird und so einen Wiedererkennungswert schafft.
 Kann eine Applikation keiner Gruppe zugeordnet werden, so kann sie ihre eigene Farbe erhalten.
 Bei der Wahl der Farben sind die generellen Richtlinien zur Benutzung von Farben zu berücksichtigen.
 Die Farben sollten auch so gewählt werden, dass ein harmonisches Gesamtbild erhalten bleibt.
 
 *Richtlinien zur Anwendung*
 
-*  Die Applikationsfarbe repräsentiert eine Gruppe von Applikationen oder eine einzelne Applikation sofern sie keiner Gruppe zugeordnet werden kann.
+*  Die Applikationsfarbe repräsentiert eine Gruppe von Applikationen oder eine einzelne Applikation, sofern sie keiner Gruppe zugeordnet werden kann.
 *  Eine Applikationsgruppe kann immer nur eine Farbe annehmen.
 Die Applikationen innerhalb einer Gruppe erhalten keine unterschiedlichen Farben.
 *  Die Farben sollten so gewählt werden, dass ein harmonisches Gesamtbild erhalten bleibt.

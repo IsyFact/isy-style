@@ -60,6 +60,8 @@ Möglicherweise sind noch zusätzliche Styledefinitionen oder Korrekturen nötig
 2.  Die alte Datei src/assets/lib/bootstrap.min.js durch die neue ersetzen.
 3.  Funktionalität überprüfen.
 
+// TODO: Kapitel_ueberarbeiten
+// Begründung: Less wird nicht mehr nativ von bootstrap unterstützt; Links sind falsch.
 [[nutzungsvorgaben-less-stylesheet]]
 ==== LESS Stylesheets
 
@@ -75,8 +77,8 @@ Folgende Freeware-Lösungen können für diesen Schritt genutzt werden:
 
 Als Ergebnis der Stylesheet-Entwicklung werden Quelldateien im LESS-Format zur Verfügung gestellt.
 Diese werden in die Datei www/css/styles.css kompiliert und enthält alle relevanten Styles.
-Die Datei styles.less im Verzeichnis less/ ist die wichtigste CSS-Datei und Startpunkt für den CSSKompilierungsprozess.
-Mit Hilfe eines LESS Compilers (dieser sollte möglichst die Importe berücksichtigen – „import aware“) wird die Datei styles.less in in die Datei styles.css kompiliert.
+Die Datei styles.less im Verzeichnis less/ ist die wichtigste CSS-Datei und Startpunkt für den CSS Kompilierungsprozess.
+Mit Hilfe eines LESS Compilers (dieser sollte möglichst die Importe berücksichtigen – „import aware“) wird die Datei styles.less in die Datei styles.css kompiliert.
 Es wird empfohlen, in den Einstellungen des Compilers die Funktionen „Minimieren“ und „Kommentare entfernen“ einzuschalten.
 Dadurch kann die Dateigröße verkleinert werden.
 
@@ -87,7 +89,7 @@ Hierbei sollte beachtet werden, dass Styling-Änderungen nie in der Datei styles
 Ansonsten gehen Änderungen bei einem neuen Kompilierungsprozess verloren, da die Datei styles.css wie oben beschrieben beim Kompilieren überschrieben wird.
 
 LESS ermöglicht es, verschachtelte Selektoren zu benutzen, diese sind in den gelieferten Styles sehr häufig zu finden.
-Diese Verschachtelung erlaubt eine einfachere Wartbarkeit des Projektes, da so in den Styles teilweise die DOM-Struktur der Zielelemente widergespielt wird.
+Diese Verschachtelung erlaubt eine einfachere Wartbarkeit des Projektes, da so in den Styles teilweise die DOM-Struktur der Zielelemente widergespiegelt wird.
 
 [[nutzungsvorgaben-grunt-js]]
 ==== GruntJS Build System
@@ -97,10 +99,10 @@ Dieses Programm basiert auf JavaScript und baut auf xref:glossary:literaturexter
 
 GruntJS beinhaltet einen Task zur LESS-Kompilierung und einen Watch-Task.
 Diese sind für die Frontend-Entwicklung sehr komfortabel.
-Die Datei package.json beinhaltet alle notwendigen Bibliotheken-Abhängikeiten um Grunt Tasks zu installieren und das Projekt neu zu erstellen.
+Die Datei package.json beinhaltet alle notwendigen Bibliotheken-Abhängigkeiten um Grunt Tasks zu installieren und das Projekt neu zu erstellen.
 
 Um GruntJS zur Kompilierung von Stylesheets und Markup zu nutzen, muss als erstes NodeJS installiert werden.
-Des Weiteren müssen Grunt und die benötigten Tasks (Es werden die folgenden Grunt-Tasks benutzt: grunt-contrib-less, grunt-contrib-watch, grunt-contribconcat, grunt-contrib-copy, grunt-contrib-clean, grunt-contrib-jshin) via npm installiert werden.
+Des Weiteren müssen Grunt und die benötigten Tasks (es werden die folgenden Grunt-Tasks benutzt: grunt-contrib-less, grunt-contrib-watch, grunt-contribconcat, grunt-contrib-copy, grunt-contrib-clean, grunt-contrib-jshin) via npm installiert werden.
 Dies kann über die Funktion „npm install“ direkt in das Hauptverzeichnis erfolgen.
 Mit dem Befehl „grunt“ in einer Konsolenanwendung wird das Projekt neu erstellt.
 
@@ -116,11 +118,11 @@ Die Benennung von spezifischen Komponenten und Layout-Elementen im Code wurde de
 
 Dieses Projekt benutzt das Bootstrap Raster-System, um das Layout und die Bedienelemente der Applikation zu strukturieren und zu positionieren.
 
-Da keine Anpassungsfähigkeit (Responsivness) des Designs unterhalb der gängigen Desktop-Auflösung benötigt wird, wurden die „Mobile, „Small“, und „Medium“-Raster (in Bootstrap als „mobile grid“, „small grid“ und „medium grid“ gekennzeichnet) deaktiviert.
+Da keine Anpassungsfähigkeit (Responsivness) des Designs unterhalb der gängigen Desktop-Auflösung benötigt wird, wurden die „Mobile“, „Small“, und „Medium“-Raster (in Bootstrap als „mobile grid“, „small grid“ und „medium grid“ gekennzeichnet) deaktiviert.
 
 Entwickler sollten ausschließlich die CSS-Klassen des Large (LG) Rasters benutzen (col-lg-x) um auch in diesem Fall das Spaltenraster nutzen zu können.
 
-Weitere Informationen können der Bootstrap Dokumentation über das xref:glossary:literaturextern:inhalt.adoc#litextern-get-bootstrap-grid[Grid System] entnommen werden.
+Weitere Informationen können der Bootstrap Dokumentation über das xref:glossary:literaturextern:inhalt.adoc#litextern-bootstrap-grid-doc[Grid System] entnommen werden.
 
 Die Einstellungen für das genutzte Raster (z. B. Spaltenbreite) können in der Datei src/less/es/customvariables.less nachgelesen werden.
 
@@ -142,11 +144,11 @@ Zusätzliche JavaScript-Komponenten für erweiterte Bootstrap-Bedienelemente (af
 
 *Modernizr 2.7.1*
 
-Ermöglicht es, herauszufinden, welche Features durch den Browser unterstützt werden und setzt dementesprechende CSS-Klassen. (- Bisher ungenutzt -)
+Ermöglicht es, herauszufinden, welche Features durch den Browser unterstützt werden und setzt dementsprechende CSS-Klassen. (- Bisher ungenutzt -)
 
 *Bootstrap Datepicker 1.8.0*
 
-Implementiert einen interaktiven xref:glossary:literaturextern:inhalt.adoc#litextern-eternicode-boostrap-date-picker[Standard Date Picker]
+Implementiert einen interaktiven xref:glossary:literaturextern:inhalt.adoc#litextern-eternicode-bootstrap-datepicker[Standard Date Picker]
 
 *Bootstrap Select 1.13.9*
 
@@ -154,11 +156,11 @@ Implementiert eine xref:glossary:literaturextern:inhalt.adoc#litextern-snapappoi
 
 *Bootstrap Timepicker*
 
-Implementiert einen interaktiven xref:glossary:literaturextern:inhalt.adoc#litextern-jdewit-boostrap-time-picker[Standard Time Picker]
+Implementiert einen interaktiven xref:glossary:literaturextern:inhalt.adoc#litextern-jdewit-bootstrap-time-picker[Standard Time Picker]
 
 *ExtendedBootstrapTab 0.1*
 
-Eine erweiterte Version der Bootstrap Tabs, die das Anzeigen der Inhalte aller Tabs innnerhalb eines Tabs ermöglicht.
+Eine erweiterte Version der Bootstrap Tabs, die das Anzeigen der Inhalte aller Tabs innerhalb eines Tabs ermöglicht.
 
 *harmonizePanelHeadlineWidth 0.1*
 
@@ -233,10 +235,10 @@ LESS Stylesheets sollten im Verzeichnis /less abgelegt werden.
 Um Styles besser lesen und verstehen zu können, sollten ein paar grundlegende Konventionen bei der Definition von neuen Styles und Stylesheets eingehalten werden:
 
 * Es sollten keine IDs für das Styling benutzt werden, sondern immer Klassen.
-* Klassen-und ID-Namen sollten die semantische Bedeutung des Elements im Markup beschreiben und keine Styling-Informationen enthalten (z. B. eService-area statt center-column).
+* Klassen- und ID-Namen sollten die semantische Bedeutung des Elements im Markup beschreiben und keine Styling-Informationen enthalten (z. B. eService-area statt center-column).
 
 Unnötige Klassen und Verschachtelungen („wrapper“-Elemente) sollten vermieden werden.
-Es sollten keine Inline-Styles (style=”…”). im HTML-Dokument eingesetzt werden
+Es sollten keine Inline-Styles (style=”…”) im HTML-Dokument eingesetzt werden.
 Die Styles einzelner Elemente werden logisch auf verschiedene Dateien aufgeteilt, einige davon nutzen die Namen der Bootstrap Original-Dateien.
 
 [[nutzungsvorgaben-less-format]]
@@ -282,7 +284,7 @@ Für klassische Webanwendungen wird `isy-style` als Maven Bibliothek installiert
 </dependency>
 ----
 
-Während des Build-Prozesses der Anwendung werden die statische Ressourcen (CSS, JavaScript, Bilder) automatisch aus `isy-style` geladen und in der Webanwendung bereitgestellt.
+Während des Build-Prozesses der Anwendung werden die statischen Ressourcen (CSS, JavaScript, Bilder) automatisch aus `isy-style` geladen und in der Webanwendung bereitgestellt.
 Im Projekt selbst sind diese Ressourcen nicht sichtbar und können somit auch nicht geändert werden.
 Änderungen an Stylesheets aus `isy-style` sind somit nur durch ein Überschreiben der Ressourcen möglich.
 In der Anwendung definierte Stylesheets sollten immer nach den Ressourcen aus `isy-style` geladen werden, damit diese überschrieben werden.
