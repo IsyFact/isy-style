@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>isy-style</artifactId>
-    <version>5.4.2</version>
+    <version>5.4.3-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>IsyFact Styles</name>
@@ -17,7 +17,8 @@
     <properties>
         <maven.build.timestamp.format>dd.MM.yyyy</maven.build.timestamp.format>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <node.version>v12.16.0</node.version>
+        <node.version>v16.16.0</node.version>
+        <frontend-maven-plugin.version>1.12.1</frontend-maven-plugin.version>
         <enforced.jdk.version>[1.8,1.9)</enforced.jdk.version>
         <enforced.maven.version>[3.1.1,4)</enforced.maven.version>
     </properties>
@@ -94,7 +95,7 @@
                     <plugin>
                         <groupId>com.github.eirslett</groupId>
                         <artifactId>frontend-maven-plugin</artifactId>
-                        <version>1.8.0</version>
+                        <version>${frontend-maven-plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>install-node-and-npm</id>
