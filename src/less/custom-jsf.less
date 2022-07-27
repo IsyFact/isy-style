@@ -506,13 +506,13 @@ select.form-selectonedropdown {
 // Optics of focused buttons adapted
 .btn-default {
   &:focus {
-    border: 1px solid #33c6f5; background-color: #89909a;
-  }
-}
-
-.btn-default {
-  &:focus {
-    border: 1px solid #33c6f5; background-color: #89909a;
+    border: 1px solid #33c6f5; background-color: @es-dark-gray;
+    &:hover{
+      background-color: @es-gray-80;
+      &:active{
+        background-color: #1c1d1f;
+      }
+    }
   }
 }
 
