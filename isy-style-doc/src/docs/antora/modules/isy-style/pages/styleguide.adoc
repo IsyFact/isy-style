@@ -256,8 +256,7 @@ Der Styleguide gibt nur ein minimales Set von zu unterstützenden Browserversion
 
 Es müssen mindestens folgende Browser und Konstellationen in SXGA- und UXGA-Auflösung (s. Layout & Resizing) getestet werden:
 
-* Internet Explorer 11
-* Microsoft Edge (für Windows 10)
+* Microsoft Edge (Die Chromiumversion für Windows 10)
 * Firefox ESR, jeweils aktuelle Version (xref:glossary:literaturextern:inhalt.adoc#litextern-firefox-esr[Firefox Extended Support Release [ESR]])
 * Chrome, jeweils aktuelle stabile Version
 
