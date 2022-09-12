@@ -20,5 +20,8 @@
     "less-plugin-clean-css": "^1.5.1",
     "minimatch": "^3.1.2"
   },
-  "version": "0.0.0-SNAPSHOT"
+  "version": "0.0.0-SNAPSHOT",
+  "overrides": {
+    "resolve": "1.22.1"
+  }
 }
