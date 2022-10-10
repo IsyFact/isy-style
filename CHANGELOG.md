@@ -2,6 +2,7 @@
 
 ## v5.4.3
 - `IFS-1701`: Buttons setzen ihren Farbstatus nach Ende des Klicks zurück
+- `IFS-1642`: Anhebung Node Version 16.16.0
 
 ## v5.4.2
 - `IFS-1160`: Anpassung der min-width im body, um die Druckansicht korrekt darzustellen
