@@ -289,60 +289,6 @@ Im Projekt selbst sind diese Ressourcen nicht sichtbar und können somit auch ni
 Änderungen an Stylesheets aus `isy-style` sind somit nur durch ein Überschreiben der Ressourcen möglich.
 In der Anwendung definierte Stylesheets sollten immer nach den Ressourcen aus `isy-style` geladen werden, damit diese überschrieben werden.
 
-[[einbindung-isy-style-nodejs]]
-==== Installation in Angular Projekten
-
-Für die Verwendung von `isy-style` in Angular Projekten muss zunächst die Bibliothek über installiert werden.
-
-    $ npm i -S @isyfact/isy-style
-
-IMPORTANT: Für die Installation der Bibliothek wird eine Verbindung zum internen npm Repository der IsyFact benötigt.
-
-Die statischen Ressourcen müssen anschließend an der passenden Stelle in der Angular Anwendung importiert werden.
-Stylesheets aus `isy-style` werden typischerweise immer am Anfang des projektspezifischen Templates deklariert und bei Bedarf modifiziert (siehe <<listing-isy-style-less>>)
-
-[[listing-isy-style-less]]
-.Einbinden der Stylesheets von isy-style in Angular Projekt
-[source,less]
-----
-@import '~@isyfact/isy-style/dist/css/styles.css';
-@import '~@isyfact/isy-style/dist/css/color.css';
-
-@import './variables.less';
-
-/* ggf. Anpassungen oder eigene Klassen */
-----
-
-Bilder, Schriftarten und andere statische Ressourcen werden über die `assets` Konfiguration in der `angular.json` bereitgestellt (siehe <<listing-isy-style-angular>>).
-
-[[listing-isy-style-angular]]
-.Bereitstellen von statischen Ressourcen aus isy-style in Angular Projekten
-[source,json]
-----
-{
- "projects": {
-    "my-project": {
-      "architect": {
-        "build": {
-          "assets": [
-              {
-                "glob": "**/*",
-                "input": "node_modules/@isyfact/isy-style/img",
-                "output": "/img"
-              },
-              {
-                "glob": "*.svg",
-                "input": "node_modules/@isyfact/isy-style/webfonts",
-                "output": "/font-data"
-              }
-          ]
-        }
-      }
-    }
- }
-}
-----
-
 [[konfiguration-portalfarbe]]
 === Konfiguration Portalfarbe
 
