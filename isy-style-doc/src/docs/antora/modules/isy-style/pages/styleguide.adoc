@@ -260,8 +260,6 @@ Es müssen mindestens folgende Browser und Konstellationen in SXGA- und UXGA-Auf
 * Firefox ESR, jeweils aktuelle Version (xref:glossary:literaturextern:inhalt.adoc#litextern-firefox-esr[Firefox Extended Support Release [ESR]])
 * Chrome, jeweils aktuelle stabile Version
 
-Die Unterstützung dieser Browser in der jeweils aktuellen supporteten Version entspricht auch der Empfehlung des BSI (Stand August 2016).
-
 [[fenstertypen-layout]]
 == Fenstertypen & Layout
 
