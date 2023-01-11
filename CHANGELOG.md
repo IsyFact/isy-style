@@ -1,3 +1,5 @@
+# v4.7.0
+
 # v4.6.0
 - `IFE-310`: Unsichtbare Checkboxen in `formSelectOneList` und `formSelectManyList` behoben
 - `IFE-430`: Behebt Fehler mit unsichtbarem klickbarem div in formUpload (Firefox)
