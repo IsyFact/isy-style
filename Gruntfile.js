@@ -83,6 +83,23 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.registerTask('sbom', 'Create CycloneDX sbom', function() {
+        // Use callback function to ensure that the command is completed before creating tgz
+        const done = grunt.task.current.async();
+        grunt.util.spawn({
+            cmd: 'node_modules/.bin/cyclonedx-npm',
+            args: ['--output-file', 'dist/sbom.json']
+        }, function (error) {
+            if (error) {
+                console.log('An error occurred while creating the sbom.json file:', error);
+                done(error);
+            } else {
+                console.log('Created sbom.json');
+                done();
+            }
+        });
+    });
+
     grunt.registerTask('copy_version_from_maven_to_package_json', function () {
         const buildPkgJson = grunt.file.readJSON('package.json');
         buildPkgJson.version = grunt.option('zielVersion')
@@ -91,6 +108,6 @@ module.exports = function (grunt) {
             JSON.stringify(buildPkgJson, null, 2));
     });
 
-    grunt.registerTask('build', ['clean', 'less', 'copy', 'copy_version_from_maven_to_package_json']);
+    grunt.registerTask('build', ['clean', 'less', 'sbom', 'copy', 'copy_version_from_maven_to_package_json']);
     grunt.registerTask('default', ['build']);
 };
