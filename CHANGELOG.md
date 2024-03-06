@@ -1,3 +1,5 @@
+# v4.8.0
+
 # v4.7.0
 - enthält nur Versionsanhebung von Parent POM auf 1.12.0
 
